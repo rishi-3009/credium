@@ -289,6 +289,10 @@ def create_app(
     return app
 
 
+# ops/run_demo.sh starts this with `uvicorn api.main:app --host <LAN IP> --port 8000`.
+app = create_app()
+
+
 def main() -> None:
     import uvicorn
 
