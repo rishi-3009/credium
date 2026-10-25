@@ -37,7 +37,7 @@ def load_deployments(path: str) -> dict:
 def load_abi(name: str) -> list:
     """Load ABI from contracts/out/<name>.sol/<name>.json."""
     base = Path(__file__).resolve().parents[1]
-    abi_path = base / "contracts" / "out" / name / f"{name}.json"
+    abi_path = base / "contracts" / "out" / f"{name}.sol" / f"{name}.json"
     if abi_path not in _abi_cache:
         with open(abi_path, "r", encoding="utf-8") as f:
             _abi_cache[abi_path] = json.load(f)["abi"]
@@ -101,7 +101,7 @@ def call_revert(fn: Any, sender: str) -> str | None:
 def decode_revert(data_hex: str) -> str:
     """Decode revert reason from error data."""
     try:
-        data = bytes.fromhex(data_hex)
+        data = bytes.fromhex(data_hex.removeprefix("0x"))
     except ValueError:
         return "Unknown(unknown)"
     
@@ -111,7 +111,7 @@ def decode_revert(data_hex: str) -> str:
     error_string_selector = keccak(text="Error(string)").hex()[:8]
     if selector == error_string_selector:
         try:
-            decoded_str = decode(["string"], data[4:]).decode()
+            decoded_str = decode(["string"], data[4:])[0]
             return f'Error("{decoded_str}")'
         except Exception:
             return 'Error("unknown")'
@@ -136,7 +136,7 @@ def decode_revert(data_hex: str) -> str:
         for entry in abi:
             if entry.get("type") != "error":
                 continue
-            sig = entry.get("name", "") + "(" + ",".join(entry.get("inputs", [])) + ")"
+            sig = entry.get("name", "") + "(" + ",".join(inp["type"] for inp in entry.get("inputs", [])) + ")"
             expected_sig = keccak(text=sig).hex()[:8]
             if selector == expected_sig:
                 types = [inp["type"] for inp in entry.get("inputs", [])]
