@@ -195,5 +195,106 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
   });
 })();
 </script>
+<script>
+(function() {
+  "use strict";
+  
+  function renderEval(ev) {
+    var el = document.getElementById("eval");
+    el.innerHTML = "<h2>Evaluation (designed attacks, synthetic)</h2>";
+    
+    var flag = ev.flag || {};
+    var summaryDiv = document.createElement("div");
+    summaryDiv.textContent = "Flag precision " + flag.precision + ", recall " + flag.recall + 
+      ", false positives " + flag.falsePositives + " (out of 70 genuine)";
+    el.appendChild(summaryDiv);
+    
+    var agreement = ev.agreement;
+    var agreeEl = document.createElement("div");
+    agreeEl.textContent = agreement
+      ? "Chain vs verifier agreement: " + agreement.match + "/" + agreement.total
+      : "agreement: pending (verifier not wired)";
+    el.appendChild(agreeEl);
+    
+    var heldOut = ev.heldOut || {};
+    var heldOutEl = document.createElement("div");
+    heldOutEl.textContent = "Held-out future-dated bill: " + heldOut.result + " 1/1";
+    el.appendChild(heldOutEl);
+    
+    var notCovered = ev.notCovered || [];
+    var coverDiv = document.createElement("div");
+    coverDiv.textContent = "Not covered:";
+    el.appendChild(coverDiv);
+    var bulletList = document.createElement("ul");
+    notCovered.forEach(function(item) {
+      var bullet = document.createElement("li");
+      bullet.textContent = item;
+      bulletList.appendChild(bullet);
+    });
+    el.appendChild(bulletList);
+    
+    var rows = ev.rows || [];
+    var rowsEl = document.createElement("table");
+    rowsEl.innerHTML = "<caption>Designed attacks, synthetic data. SIMULATED.</caption>"
+      + "<thead><tr><th>billNo</th><th>label</th><th>expected</th><th>chain result</th><th>flagged</th></tr></thead>"
+      + "<tbody></tbody>";
+    var tbody = rowsEl.querySelector("tbody");
+    
+    rows.forEach(function(r) {
+      var tr = document.createElement("tr");
+      tr.innerHTML = "<td>" + r.billNo + "</td>"
+        + "<td>" + r.label + "</td>"
+        + "<td>" + r.expected + "</td>"
+        + "<td>" + r.chainResult + "</td>"
+        + "<td>" + (r.flagged ? "true" : "false") + "</td>";
+      tbody.appendChild(tr);
+    });
+    
+    var scrollContainer = document.createElement("div");
+    scrollContainer.style.maxHeight = "320px";
+    scrollContainer.style.overflowY = "auto";
+    scrollContainer.appendChild(rowsEl);
+    el.appendChild(scrollContainer);
+    
+    localStorage.setItem("credium:eval", JSON.stringify(ev));
+  }
+  
+  function loadEval() {
+    var cached = localStorage.getItem("credium:eval");
+    if (cached) {
+      try {
+        var ev = JSON.parse(cached);
+        document.getElementById("status").textContent = "API: cached";
+        renderEval(ev);
+        return true;
+      } catch (e) {
+        log("Failed to parse cached eval: " + e.message);
+        return false;
+      }
+    }
+    
+    return getJSON("/api/eval").then(function(ev) {
+      localStorage.setItem("credium:eval", JSON.stringify(ev));
+      renderEval(ev);
+      return ev;
+    }).catch(function(e) {
+      log("Failed to fetch eval: " + e.message);
+      return null;
+    });
+  }
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    var statusEl = document.getElementById("status");
+    var evalEl = document.getElementById("eval");
+    loadEval().then(function(ev) {
+      if (!ev) {
+        evalEl.innerHTML = "<p style='color:#f00;'>Evaluation not generated yet.<br>Run: python -m sim.eval_run --deployments contracts/deployments.json --bills sim/fixtures/bills.json --out sim/fixtures/eval.json</p>";
+      }
+    }).catch(function(e) {
+      evalEl.innerHTML = "<p style='color:#f00;'>Evaluation not generated yet.<br>Run: python -m sim.eval_run --deployments contracts/deployments.json --bills sim/fixtures/bills.json --out sim/fixtures/eval.json</p>";
+    });
+  });
+})();
+</script>
 </body>
 </html>
