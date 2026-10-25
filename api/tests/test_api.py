@@ -31,10 +31,26 @@ def client(tmp_path):
 
 
 def test_bills_returns_public_fields_only(client):
-    body = client.get("/api/bills").json()
-    assert len(body["bills"]) == 100
-    for row in body["bills"]:
+    rows = client.get("/api/bills").json()
+    assert len(rows) == 100
+    for row in rows:
         assert set(row) == PUBLIC_KEYS
+
+
+def test_bills_is_a_bare_list_for_the_frontend(client):
+    # web/index.html calls list.forEach on the response body directly.
+    assert isinstance(client.get("/api/bills").json(), list)
+
+
+def test_down_chain_has_numeric_vault_fields(client, tmp_path):
+    # Without numbers the page renders NaN for a chain that is down.
+    dep = tmp_path / "deployments.json"
+    dep.write_text(json.dumps({"simulated": True, "chains": {}}), encoding="utf-8")
+    app_client = TestClient(create_app(deployments=dep, bills=BILLS))
+    chain = app_client.get("/api/state").json()["chains"][0]
+    assert chain["up"] is False
+    assert chain["vault"]["balancePaise"] == 0
+    assert chain["vault"]["releasedPaise"] == 0
 
 
 def test_bills_never_contain_items_or_salt(client):
