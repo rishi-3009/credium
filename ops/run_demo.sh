@@ -16,6 +16,8 @@ PY="$HOME/credium-venv/bin/python"
 export PATH="$PATH:/home/ayaan/.config/.foundry/bin"
 LOGS="$HOME/credium-logs"
 LAN_IP="${LAN_IP:-127.0.0.1}"
+# deploy.py needs DEPLOYER_KEY. Default: anvil account #0 (public test key, SIMULATED). Override by exporting your own.
+export DEPLOYER_KEY="${DEPLOYER_KEY:-0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80}"
 
 cd "$ROOT"
 
