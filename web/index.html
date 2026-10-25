@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CREDIUM Demo</title>
+<style>
+body { font-family: monospace; background: #1a1a2e; color: #e0e0e0; margin: 0; padding: 16px; }
+#banner { background: #ffcc00; color: #000; font-weight: bold; padding: 8px; text-align: center; }
+.hook { color: #aaa; padding: 8px 0; }
+.panels { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.panel { border: 1px solid #444; padding: 12px; border-radius: 4px; }
+.panel.frozen { border-color: #f00; background: #300; }
+#meter { border: 1px solid #444; padding: 12px; margin: 16px 0; }
+.meter-row { display: flex; justify-content: space-between; padding: 2px 0; }
+button { margin: 4px; padding: 8px 12px; cursor: pointer; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+th, td { border: 1px solid #444; padding: 4px 8px; text-align: left; }
+th { background: #2a2a4e; }
+#console { background: #000; color: #0f0; padding: 8px; max-height: 220px; overflow-y: auto; font-size: 12px; }
+#eval { border: 1px solid #444; padding: 12px; margin: 16px 0; }
+footer { color: #666; padding: 16px 0; font-size: 12px; }
+#status { font-size: 12px; color: #aaa; }
+</style>
+</head>
+<body>
+<div id="banner">SIMULATED: local chains, synthetic bills and keys. Designed attacks.</div>
+<p class="hook">A Rs 1.5 cr water pledge is swapped, bridged and spent through local vendors. Donors can't check.</p>
+<div class="panels">
+  <div class="panel" id="chain-31337"></div>
+  <div class="panel" id="chain-31338"></div>
+</div>
+<div id="meter"></div>
+<div>
+  <button id="btn-release-405">Step 3: Release #405</button>
+  <button id="btn-forge30">Step 4: Forge 30%</button>
+  <button id="btn-double-417">Step 5: Double-claim #417</button>
+  <button id="btn-scan">Step 6: Watcher scan</button>
+  <button id="btn-release-417">Step 7: Release #417 (after freeze)</button>
+  <button id="btn-encore-418">Encore: #418 60+60</button>
+  <button id="btn-reset">Reset</button>
+</div>
+<p id="status">API: live</p>
+<table>
+  <thead><tr><th>billId</th><th>billNo</th><th>vendor</th><th>amount (Rs)</th><th>verdict</th><th>tier</th><th>recovered signer</th><th>reason</th></tr></thead>
+  <tbody id="bills"></tbody>
+</table>
+<pre id="console"></pre>
+<section id="eval"><h2>Evaluation (designed attacks, synthetic)</h2></section>
+<footer>Honest scope: proves a vendor-signed invoice was paid and one bill was claimed twice. Does not prove the well was built. Freeze is permanent in v1.</footer>
+<script>
+(function() {
+  "use strict";
+  const STORAGE_KEY = "credium:state";
+  let buttonsDisabled = false;
+
+  function getJSON(url, opts) {
+    return fetch(url, opts).then(function(r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    });
+  }
+
+  function fmtRs(paise) {
+    return "Rs " + (paise / 100).toLocaleString("en-IN", {maximumFractionDigits: 0});
+  }
+
+  function log(msg) {
+    var c = document.getElementById("console");
+    var ts = new Date().toLocaleTimeString();
+    c.textContent += "[" + ts + "] " + msg + "\n";
+    var lines = c.textContent.split("\n");
+    if (lines.length > 200) c.textContent = lines.slice(-200).join("\n");
+  }
+
+  function renderState(state) {
+    document.getElementById("banner").textContent = state.stale
+      ? "SIMULATED (cached)"
+      : "SIMULATED: local chains, synthetic bills and keys. Designed attacks.";
+    state.chains.forEach(function(ch) {
+      var el = document.getElementById("chain-" + ch.chainId);
+      el.className = "panel" + (ch.frozen ? " frozen" : "");
+      el.innerHTML = "<strong>" + ch.label + "</strong><br>"
+        + "Status: " + (ch.up ? "UP" : "DOWN") + "<br>"
+        + "Block: " + ch.block + "<br>"
+        + "Vault: " + ch.vault.address + "<br>"
+        + "Balance: " + fmtRs(ch.vault.balancePaise) + "<br>"
+        + "Released: " + fmtRs(ch.vault.releasedPaise) + "<br>"
+        + (ch.frozen ? "<strong>FROZEN: " + ch.vault.frozenReason + "</strong>" : "FROZEN: false");
+    });
+    var m = state.meter;
+    document.getElementById("meter").innerHTML = ""
+      + "<div class='meter-row'><span>Pledged:</span><span>" + fmtRs(m.pledgedPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Deposited:</span><span>" + fmtRs(m.depositedPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Unexplained:</span><span>" + fmtRs(m.unexplainedPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Verified:</span><span>" + fmtRs(m.verifiedPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Amber:</span><span>" + fmtRs(m.amberPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Released:</span><span>" + fmtRs(m.releasedPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Invariant:</span><span style='color:" + (m.invariantOk ? "#0f0" : "#f00") + "'>" + (m.invariantOk ? "OK" : "BROKEN") + "</span></div>";
+    document.getElementById("status").textContent = state.stale ? "API: cached" : "API: live";
+  }
+
+  function renderBills(list) {
+    var tbody = document.getElementById("bills");
+    tbody.innerHTML = "";
+    list.forEach(function(b) {
+      var tr = document.createElement("tr");
+      tr.innerHTML = "<td>" + b.billId + "</td><td>" + b.billNo + "</td>"
+        + "<td>" + b.vendorName + "</td><td>" + fmtRs(b.amountPaise) + "</td>"
+        + "<td>" + b.verdict + "</td><td>" + b.tier + "</td>"
+        + "<td>" + (b.recoveredSigner || "") + "</td><td>" + (b.reason || "") + "</td>";
+      tbody.appendChild(tr);
+    });
+  }
+
+  function refreshAll() {
+    Promise.all([
+      getJSON("/api/state").catch(function() {
+        var cached = localStorage.getItem(STORAGE_KEY);
+        if (cached) return JSON.parse(cached);
+        throw new Error("no state");
+      }),
+      getJSON("/api/bills").catch(function() { return []; })
+    ]).then(function(results) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(results[0]));
+      renderState(results[0]);
+      renderBills(results[1]);
+    }).catch(function(e) {
+      log("Fetch error: " + e.message);
+    });
+  }
+
+  function act(button, url, body, handler) {
+    return function() {
+      if (buttonsDisabled) return;
+      buttonsDisabled = true;
+      var btns = document.querySelectorAll("button");
+      btns.forEach(function(b) { b.disabled = true; });
+      var jsonBody = body ? JSON.stringify(body) : null;
+      getJSON(url, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: jsonBody
+      }).then(function(data) {
+        handler(data);
+        refreshAll();
+      }).catch(function(e) {
+        log("Request failed: " + e.message);
+      }).finally(function() {
+        buttonsDisabled = false;
+        btns.forEach(function(b) { b.disabled = false; });
+      });
+    };
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("btn-release-405").addEventListener("click",
+      act(document.getElementById("btn-release-405"), "/api/release", {chainId: 31337, billNo: 405, fractionBps: 10000},
+      function(d) { log("Release 405: " + JSON.stringify(d)); }));
+
+    document.getElementById("btn-forge30").addEventListener("click",
+      act(document.getElementById("btn-forge30"), "/api/attack/forge30", null,
+      function(d) {
+        log("Forge summary: " + JSON.stringify(d.summary));
+        (d.rows || []).forEach(function(r) {
+          log("  billNo=" + r.billNo + " label=" + r.label + " expected=" + r.expected + " revert=" + r.revert + " status=" + r.status);
+        });
+      }));
+
+    document.getElementById("btn-double-417").addEventListener("click",
+      act(document.getElementById("btn-double-417"), "/api/attack/double-claim", {billNo: 417, fractionBps: 10000},
+      function(d) { log("Double claim 417: " + JSON.stringify(d.steps)); }));
+
+    document.getElementById("btn-scan").addEventListener("click",
+      act(document.getElementById("btn-scan"), "/api/watcher/scan", null,
+      function(d) {
+        log("Scan: " + JSON.stringify(d.equivocations));
+        refreshAll();
+      }));
+
+    document.getElementById("btn-release-417").addEventListener("click",
+      act(document.getElementById("btn-release-417"), "/api/release", {chainId: 31337, billNo: 417, fractionBps: 10000},
+      function(d) { log("Release 417: " + JSON.stringify(d)); }));
+
+    document.getElementById("btn-encore-418").addEventListener("click",
+      act(document.getElementById("btn-encore-418"), "/api/attack/double-claim", {billNo: 418, fractionBps: 6000},
+      function(d) { log("Encore 418: " + JSON.stringify(d.steps)); }));
+
+    document.getElementById("btn-reset").addEventListener("click",
+      act(document.getElementById("btn-reset"), "/api/reset", null,
+      function() { location.reload(); }));
+
+    refreshAll();
+    setInterval(refreshAll, 2000);
+  });
+})();
+</script>
+</body>
+</html>
