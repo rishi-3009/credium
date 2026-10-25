@@ -7,7 +7,7 @@ from eth_abi import encode
 from sim.chainio import decode_revert, bill_tuple, alloc_tuple
 
 # Check if ABI files exist (written by Rishi's forge build from 15:30)
-_base = Path(__file__).resolve().parents[1]
+_base = Path(__file__).resolve().parents[2]
 _abi_available = (
     (_base / "contracts" / "out" / "MockINR.sol" / "MockINR.json").exists()
     and (_base / "contracts" / "out" / "VendorRegistry.sol" / "VendorRegistry.json").exists()

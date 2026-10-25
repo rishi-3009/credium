@@ -119,8 +119,10 @@ def create_app(
         return {str(e["billNo"]): verify_bill(e, vendors, dep["registrar"], now) for e in entries}
 
     def chain_state(dep: dict, chain_id: str) -> dict:
-        chain = dep["chains"][chain_id]
+        chain = dep["chains"].get(chain_id, {})
         try:
+            if not chain:
+                raise KeyError(f"chain {chain_id} not in deployments.json")
             w3 = web3_for(dep, int(chain_id))
             vault = contract(w3, chain["vault"], "PurposeVault")
             token = contract(w3, chain["token"], "MockINR")
@@ -146,7 +148,7 @@ def create_app(
         except Exception as e:  # chain down: report it, do not fail the whole state call
             sys.stderr.write(f"chain {chain_id} unreachable: {e}\n")
             return {"chainId": int(chain_id), "label": CHAIN_LABELS[chain_id], "up": False, "block": None,
-                    "frozen": False, "vault": {"address": chain["vault"]}, "_deposited": 0, "_released": []}
+                    "frozen": False, "vault": {"address": chain.get("vault")}, "_deposited": 0, "_released": []}
 
     @app.get("/")
     def index() -> FileResponse:
