@@ -103,7 +103,7 @@ def create_app(
             from verifier.verify import verdict as verify_bill
         except ImportError:
             return {}
-        if dep is None:
+        if dep is None or "31337" not in dep["chains"]:
             return {}
         w3 = web3_for(dep, 31337)
         registry = contract(w3, dep["chains"]["31337"]["registry"], "VendorRegistry")
@@ -148,7 +148,10 @@ def create_app(
         except Exception as e:  # chain down: report it, do not fail the whole state call
             sys.stderr.write(f"chain {chain_id} unreachable: {e}\n")
             return {"chainId": int(chain_id), "label": CHAIN_LABELS[chain_id], "up": False, "block": None,
-                    "frozen": False, "vault": {"address": chain.get("vault")}, "_deposited": 0, "_released": []}
+                    "frozen": False,
+                    "vault": {"address": chain.get("vault"), "capPaise": 0, "balancePaise": 0, "releasedPaise": 0,
+                              "frozen": False, "frozenReason": ""},
+                    "_deposited": 0, "_released": []}
 
     @app.get("/")
     def index() -> FileResponse:
@@ -188,7 +191,7 @@ def create_app(
         }
 
     @app.get("/api/bills")
-    def bills_view() -> dict:
+    def bills_view() -> list[dict]:
         entries = bill_entries()
         try:
             dep = load_dep()
@@ -209,7 +212,7 @@ def create_app(
                 "reason": v.get("reason"),
             }
             rows.append({k: row[k] for k in PUBLIC_BILL_FIELDS})
-        return {"simulated": True, "bills": rows}
+        return rows  # web/index.html iterates this list directly
 
     @app.get("/api/eval")
     def eval_table() -> dict:
