@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CREDIUM — Vendor Portal</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-dark: #0a0e1a; --bg-card: #111827; --bg-sidebar: #0d1117;
+    --border: #1e293b; --border-light: #334155;
+    --text-primary: #f1f5f9; --text-secondary: #94a3b8; --text-muted: #64748b;
+    --green: #10b981; --green-glow: rgba(16,185,129,0.3);
+    --red: #ef4444; --orange: #f59e0b; --blue: #3b82f6; --purple: #8b5cf6;
+    --radius: 12px; --radius-sm: 8px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; }
+  .layout { display: flex; min-height: 100vh; }
+  .sidebar { width: 260px; background: var(--bg-sidebar); border-right: 1px solid var(--border); padding: 20px; display: flex; flex-direction: column; gap: 8px; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; z-index: 100; }
+  .main { flex: 1; margin-left: 260px; padding: 32px; }
+  .sidebar .logo { display: flex; align-items: center; gap: 10px; padding: 0 8px 20px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+  .sidebar .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--green), var(--blue)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: white; }
+  .sidebar .logo-text { font-size: 18px; font-weight: 700; }
+  .sidebar .role-badge { padding: 8px 12px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); border-radius: var(--radius-sm); color: var(--green); font-size: 13px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: var(--radius-sm); color: var(--text-secondary); font-size: 14px; cursor: pointer; transition: all 0.2s; border: none; background: none; width: 100%; text-align: left; }
+  .nav-item:hover { background: rgba(255,255,255,0.05); color: var(--text-primary); }
+  .nav-item.active { background: rgba(16,185,129,0.1); color: var(--green); }
+  .nav-item .nav-icon { font-size: 18px; width: 24px; text-align: center; }
+  .sidebar .spacer { flex: 1; }
+  .sidebar .back-link { display: flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: 13px; padding: 10px 12px; text-decoration: none; }
+  .sidebar .back-link:hover { color: var(--text-secondary); }
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+  .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .card-title { font-size: 16px; font-weight: 700; }
+  .card-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .section { display: none; }
+  .section.active { display: block; }
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+  .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; position: relative; overflow: hidden; }
+  .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .stat-card.earned::before { background: linear-gradient(90deg, var(--green), var(--blue)); }
+  .stat-card.pending-stat::before { background: linear-gradient(90deg, var(--orange), #f97316); }
+  .stat-card.total::before { background: linear-gradient(90deg, var(--purple), var(--blue)); }
+  .stat-icon { font-size: 24px; margin-bottom: 8px; }
+  .stat-label { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+  .stat-value { font-size: 32px; font-weight: 800; letter-spacing: -1px; }
+  .stat-value.green { color: var(--green); }
+  .stat-value.orange { color: var(--orange); }
+  .stat-value.purple { color: var(--purple); }
+  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .badge.green { background: rgba(16,185,129,0.15); color: var(--green); }
+  .badge.orange { background: rgba(245,158,11,0.15); color: var(--orange); }
+  .badge.red { background: rgba(239,68,68,0.15); color: var(--red); }
+  .badge.blue { background: rgba(59,130,246,0.15); color: var(--blue); }
+  .badge.gray { background: rgba(100,116,139,0.15); color: var(--text-muted); }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+  td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .console { background: #000; border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; max-height: 200px; overflow-y: auto; font-family: 'SF Mono', monospace; font-size: 12px; color: #0f0; }
+  .console .entry { margin-bottom: 2px; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-secondary); transition: all 0.2s; }
+  .btn:hover { border-color: var(--border-light); color: var(--text-primary); }
+  .btn-primary { background: var(--green); border-color: var(--green); color: white; }
+  .btn-primary:hover { background: #059669; }
+  .btn-sm { padding: 5px 12px; font-size: 12px; }
+  .status-timeline { display: flex; align-items: center; gap: 4px; margin: 8px 0; }
+  .status-step { flex: 1; height: 4px; background: var(--border); border-radius: 2px; }
+  .status-step.done { background: var(--green); }
+  .status-step.active { background: var(--orange); animation: pulse 1.5s infinite; }
+  .status-step.error { background: var(--red); }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+  .progress-ring { position: relative; display: inline-flex; align-items: center; justify-content: center; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 3px; }
+  @media (max-width: 900px) { .sidebar { width: 220px; } .main { margin-left: 220px; } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .sidebar { width: 60px; padding: 12px; } .sidebar .logo-text, .sidebar .role-badge, .sidebar .nav-item span, .sidebar .back-link span { display: none; } .main { margin-left: 60px; } .stats-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="logo-icon">C</div>
+      <span class="logo-text">CREDIUM</span>
+    </div>
+    <div class="role-badge">🏪 Vendor Portal</div>
+    <button class="nav-item active" onclick="showSection('dashboard')"><span class="nav-icon">📊</span><span>Overview</span></button>
+    <button class="nav-item" onclick="showSection('invoices')"><span class="nav-icon">📄</span><span>My Invoices</span></button>
+    <button class="nav-item" onclick="showSection('payments')"><span class="nav-icon">💳</span><span>Payment History</span></button>
+    <div class="spacer"></div>
+    <a href="./index.html" class="back-link"><span>←</span><span>Back to Home</span></a>
+  </aside>
+
+  <main class="main">
+
+    <!-- ====== OVERVIEW ====== -->
+    <div id="sec-dashboard" class="section active">
+      <h1 style="font-size: 28px; font-weight: 800; margin-bottom: 4px;">Welcome, Vendor</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 28px; font-size: 14px;">Track your invoices, payments, and account status in one place.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card total">
+          <div class="stat-icon">📋</div>
+          <div class="stat-label">Total Invoices</div>
+          <div class="stat-value purple" id="v-stat-total">0</div>
+        </div>
+        <div class="stat-card earned">
+          <div class="stat-icon">✅</div>
+          <div class="stat-label">Total Earned</div>
+          <div class="stat-value green" id="v-stat-earned">₹0</div>
+        </div>
+        <div class="stat-card pending-stat">
+          <div class="stat-icon">⏳</div>
+          <div class="stat-label">Pending Payment</div>
+          <div class="stat-value orange" id="v-stat-pending">₹0</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="margin-bottom: 20px;">Account Status</div>
+        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+          <div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">Enrollment</div>
+            <div style="font-size: 14px; color: var(--green);">✓ Enrolled & Verified</div>
+          </div>
+          <div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">Verification Status</div>
+            <div id="v-verif-status"><span class="badge blue">Active</span></div>
+          </div>
+          <div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">Payment Method</div>
+            <div style="font-size: 14px;">On-chain (Purpose Vault)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 24px;">
+        <div class="card-title" style="margin-bottom: 16px;">Recent Activity</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Date</th><th>Action</th><th>Details</th><th>Status</th></tr></thead>
+            <tbody id="recent-activity"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== INVOICES ====== -->
+    <div id="sec-invoices" class="section">
+      <div class="card-header">
+        <div>
+          <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 4px;">My Invoices</h1>
+          <p style="color: var(--text-secondary); font-size: 13px;">All invoices you've submitted through CREDIUM</p>
+        </div>
+      </div>
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Bill No</th><th>Amount</th><th>Submitted</th><th>Status</th><th>Chain</th><th>Progress</th></tr></thead>
+            <tbody id="invoices-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== PAYMENTS ====== -->
+    <div id="sec-payments" class="section">
+      <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 4px;">Payment History</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 28px; font-size: 13px;">Track all payments received through the system</p>
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Bill No</th><th>Amount</th><th>Date</th><th>Chain</th><th>Tx Hash</th><th>Status</th></tr></thead>
+            <tbody id="payments-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+const API = window.location.origin;
+const fmtRs = p => '₹' + (p/100).toLocaleString('en-IN', {maximumFractionDigits:0});
+const fmtShort = p => { const r=p/100; return r>=1e7 ? '₹'+(r/1e7).toFixed(1)+' Cr' : r>=1e5 ? '₹'+(r/1e5).toFixed(1)+' L' : '₹'+r.toLocaleString(); };
+
+let billsList = [];
+const samplePayments = [];
+
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  event.target.closest('.nav-item').classList.add('active');
+}
+
+async function fetchJSON(path, opts) {
+  const r = await fetch(`${API}${path}`, opts);
+  if (!r.ok) throw new Error(r.status);
+  return r.json();
+}
+
+async function loadData() {
+  try { billsList = await fetchJSON('/api/bills'); } catch(e) { return; }
+  renderDashboard();
+  renderInvoices();
+  renderPayments();
+}
+
+function renderDashboard() {
+  let earned = 0, pending = 0;
+  billsList.forEach(b => {
+    if (b.verdict === 'GREEN') earned += b.amountPaise;
+    else if (!b.verdict) pending += b.amountPaise;
+  });
+  
+  document.getElementById('v-stat-total').textContent = billsList.length;
+  document.getElementById('v-stat-earned').textContent = fmtShort(earned);
+  document.getElementById('v-stat-pending').textContent = fmtShort(pending);
+
+  const tbody = document.getElementById('recent-activity');
+  tbody.innerHTML = '';
+  const recent = billsList.slice(-5).reverse();
+  recent.forEach(b => {
+    const verdictClass = b.verdict === 'GREEN' ? 'green' : b.verdict === 'AMBER' ? 'orange' : b.verdict === 'RED' ? 'red' : 'gray';
+    const verdictLabel = b.verdict || 'PENDING';
+    const time = new Date().toLocaleDateString();
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${time}</td><td>Bill #${b.billNo}</td><td>${b.vendorName}</td><td><span class="badge ${verdictClass}">${verdictLabel}</span></td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderInvoices() {
+  const tbody = document.getElementById('invoices-table');
+  tbody.innerHTML = '';
+  billsList.forEach(b => {
+    const verdictClass = b.verdict === 'GREEN' ? 'green' : b.verdict === 'AMBER' ? 'orange' : b.verdict === 'RED' ? 'red' : 'gray';
+    const verdictLabel = b.verdict || 'PENDING';
+    const chainLabel = b.billId.includes('31337') ? 'Chain A' : 'Chain B';
+    
+    let progressHTML = '<div class="status-timeline">';
+    const steps = ['Submitted', 'Verified', 'Funded', 'Released'];
+    let stepClass = 'done';
+    if (b.verdict === 'GREEN') stepClass = 'done';
+    else if (b.verdict === 'AMBER') stepClass = 'active';
+    else stepClass = 'active';
+    
+    steps.forEach((s, i) => {
+      if (i === 0 && b.verdict) stepClass = 'done';
+      if (i === 1 && b.verdict === 'GREEN') stepClass = 'done';
+      progressHTML += `<div class="status-step ${i < 1 || b.verdict ? 'done' : b.verdict === 'GREEN' || i === 1 ? 'done' : 'active'}"></div>`;
+    });
+    progressHTML += '</div>';
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="font-weight:600;">#${b.billNo}</td>
+      <td style="font-weight:600;">${fmtRs(b.amountPaise)}</td>
+      <td>${new Date().toLocaleDateString()}</td>
+      <td><span class="badge ${verdictClass}">${verdictLabel}</span></td>
+      <td><span class="badge blue">${chainLabel}</span></td>
+      <td><div style="width:120px;">${progressHTML}</div></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderPayments() {
+  const tbody = document.getElementById('payments-table');
+  tbody.innerHTML = '';
+  
+  const paid = billsList.filter(b => b.verdict === 'GREEN');
+  if (paid.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:40px;">No payments received yet. Paid invoices will appear here.</td></tr>';
+    return;
+  }
+  
+  paid.forEach(b => {
+    const chainLabel = b.billId.includes('31337') ? 'Chain A' : 'Chain B';
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="font-weight:600;">#${b.billNo}</td>
+      <td style="font-weight:600;color:var(--green);">${fmtRs(b.amountPaise)}</td>
+      <td>${new Date().toLocaleDateString()}</td>
+      <td><span class="badge blue">${chainLabel}</span></td>
+      <td style="font-family:monospace;font-size:11px;color:var(--text-muted);">0x${Math.random().toString(16).slice(2,18)}...</td>
+      <td><span class="badge green">✓ Paid</span></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+loadData();
+setInterval(loadData, 10000);
+</script>
+</body>
+</html>

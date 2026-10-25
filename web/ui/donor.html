@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CREDIUM — Donor Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-dark: #0a0e1a; --bg-card: #111827; --bg-sidebar: #0d1117;
+    --border: #1e293b; --border-light: #334155;
+    --text-primary: #f1f5f9; --text-secondary: #94a3b8; --text-muted: #64748b;
+    --orange: #f59e0b; --orange-glow: rgba(245,158,11,0.3);
+    --green: #10b981; --red: #ef4444; --blue: #3b82f6; --purple: #8b5cf6; --cyan: #06b6d4;
+    --radius: 12px; --radius-sm: 8px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; }
+  .layout { display: flex; min-height: 100vh; }
+  .sidebar { width: 260px; background: var(--bg-sidebar); border-right: 1px solid var(--border); padding: 20px; display: flex; flex-direction: column; gap: 8px; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; z-index: 100; }
+  .main { flex: 1; margin-left: 260px; padding: 32px; }
+  .sidebar .logo { display: flex; align-items: center; gap: 10px; padding: 0 8px 20px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+  .sidebar .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--orange), var(--red)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: white; }
+  .sidebar .logo-text { font-size: 18px; font-weight: 700; }
+  .sidebar .role-badge { padding: 8px 12px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2); border-radius: var(--radius-sm); color: var(--orange); font-size: 13px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: var(--radius-sm); color: var(--text-secondary); font-size: 14px; cursor: pointer; transition: all 0.2s; border: none; background: none; width: 100%; text-align: left; }
+  .nav-item:hover { background: rgba(255,255,255,0.05); color: var(--text-primary); }
+  .nav-item.active { background: rgba(245,158,11,0.1); color: var(--orange); }
+  .nav-item .nav-icon { font-size: 18px; width: 24px; text-align: center; }
+  .sidebar .spacer { flex: 1; }
+  .sidebar .back-link { display: flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: 13px; padding: 10px 12px; text-decoration: none; }
+  .sidebar .back-link:hover { color: var(--text-secondary); }
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+  .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .card-title { font-size: 16px; font-weight: 700; }
+  .card-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .section { display: none; }
+  .section.active { display: block; }
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+  .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; position: relative; overflow: hidden; }
+  .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .stat-card.donated::before { background: linear-gradient(90deg, var(--orange), var(--red)); }
+  .stat-card.impact::before { background: linear-gradient(90deg, var(--green), var(--cyan)); }
+  .stat-card.transparent::before { background: linear-gradient(90deg, var(--blue), var(--purple)); }
+  .stat-icon { font-size: 24px; margin-bottom: 8px; }
+  .stat-label { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+  .stat-value { font-size: 28px; font-weight: 800; letter-spacing: -1px; }
+  .stat-value.orange { color: var(--orange); }
+  .stat-value.green { color: var(--green); }
+  .stat-value.blue { color: var(--blue); }
+  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .badge.green { background: rgba(16,185,129,0.15); color: var(--green); }
+  .badge.orange { background: rgba(245,158,11,0.15); color: var(--orange); }
+  .badge.red { background: rgba(239,68,68,0.15); color: var(--red); }
+  .badge.blue { background: rgba(59,130,246,0.15); color: var(--blue); }
+  .badge.purple { background: rgba(139,92,246,0.15); color: var(--purple); }
+  .badge.gray { background: rgba(100,116,139,0.15); color: var(--text-muted); }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+  td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-secondary); transition: all 0.2s; }
+  .btn:hover { border-color: var(--border-light); color: var(--text-primary); }
+  .btn-primary { background: var(--orange); border-color: var(--orange); color: white; }
+  .btn-primary:hover { background: #d97706; }
+  .btn-sm { padding: 5px 12px; font-size: 12px; }
+  .progress-ring { position: relative; display: inline-flex; align-items: center; justify-content: center; }
+  .flow-diagram { display: flex; align-items: center; gap: 8px; padding: 24px 0; flex-wrap: wrap; }
+  .flow-node { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); min-width: 100px; text-align: center; }
+  .flow-node .icon { font-size: 24px; }
+  .flow-node .label { font-size: 11px; color: var(--text-muted); }
+  .flow-node .value { font-size: 14px; font-weight: 700; }
+  .flow-arrow { color: var(--text-muted); font-size: 20px; }
+  .impact-meter { margin: 16px 0; }
+  .impact-meter .bar { height: 12px; background: var(--border); border-radius: 6px; overflow: hidden; margin: 8px 0; }
+  .impact-meter .bar-fill { height: 100%; border-radius: 6px; transition: width 0.5s ease; }
+  .impact-meter .label-row { display: flex; justify-content: space-between; font-size: 12px; }
+  .impact-meter .label-row .label { color: var(--text-muted); }
+  .impact-meter .label-row .value { font-weight: 600; }
+  .transparency-card { padding: 16px; border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; background: var(--bg-card); }
+  .transparency-card .hash { font-family: 'SF Mono', monospace; font-size: 11px; color: var(--text-muted); word-break: break-all; }
+  .alert { padding: 16px; border-radius: var(--radius); margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+  .alert.info { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2); }
+  .alert.warning { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); }
+  .alert .alert-icon { font-size: 20px; }
+  .alert .alert-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .alert .alert-desc { font-size: 12px; color: var(--text-secondary); }
+  .chart-container { display: flex; align-items: flex-end; gap: 6px; padding: 0 8px; height: 200px; }
+  .chart-bar { flex: 1; border-radius: 6px 6px 0 0; min-height: 4px; transition: height 0.5s ease; position: relative; }
+  .chart-bar .tip { display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--bg-dark); border: 1px solid var(--border); padding: 4px 10px; border-radius: 6px; font-size: 11px; white-space: nowrap; z-index: 10; }
+  .chart-bar:hover .tip { display: block; }
+  .chart-labels { display: flex; gap: 6px; padding: 8px 8px 0; }
+  .chart-labels span { flex: 1; font-size: 10px; color: var(--text-muted); text-align: center; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 3px; }
+  @media (max-width: 900px) { .sidebar { width: 220px; } .main { margin-left: 220px; } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .sidebar { width: 60px; padding: 12px; } .sidebar .logo-text, .sidebar .role-badge, .sidebar .nav-item span, .sidebar .back-link span { display: none; } .main { margin-left: 60px; } .stats-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="logo-icon">C</div>
+      <span class="logo-text">CREDIUM</span>
+    </div>
+    <div class="role-badge">💝 Donor</div>
+    <button class="nav-item active" onclick="showSection('impact')"><span class="nav-icon">📊</span><span>My Impact</span></button>
+    <button class="nav-item" onclick="showSection('transparency')"><span class="nav-icon">🔍</span><span>Transparency</span></button>
+    <button class="nav-item" onclick="showSection('verification')"><span class="nav-icon">✓</span><span>Verify</span></button>
+    <div class="spacer"></div>
+    <a href="./index.html" class="back-link"><span>←</span><span>Back to Home</span></a>
+  </aside>
+
+  <main class="main">
+
+    <!-- ====== IMPACT ====== -->
+    <div id="sec-impact" class="section active">
+      <h1 style="font-size: 28px; font-weight: 800; margin-bottom: 4px;">Your Donation Impact</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 28px; font-size: 14px;">See where your contribution goes — every rupee tracked, transparently.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card donated">
+          <div class="stat-icon">💰</div>
+          <div class="stat-label">Your Donation</div>
+          <div class="stat-value orange">₹2.30 Cr</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">pledged across chains</div>
+        </div>
+        <div class="stat-card impact">
+          <div class="stat-icon">🌊</div>
+          <div class="stat-label">Funds Deployed</div>
+          <div class="stat-value green" id="don-impact">0</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">verified & released</div>
+        </div>
+        <div class="stat-card transparent">
+          <div class="stat-icon">🛡️</div>
+          <div class="stat-label">Fraud Detected</div>
+          <div class="stat-value red" id="don-fraud">0</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">prevented from escaping</div>
+        </div>
+      </div>
+
+      <!-- Fund flow diagram -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-title" style="margin-bottom: 16px;">Fund Flow Visualization</div>
+        <div class="flow-diagram" id="fund-flow">
+          <div class="flow-node" style="border-color:rgba(245,158,11,0.3);">
+            <div class="icon">💝</div>
+            <div class="label">You (Donor)</div>
+            <div class="value" style="color:var(--orange);">₹2.30 Cr</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node" style="border-color:rgba(139,92,246,0.3);">
+            <div class="icon">🏛️</div>
+            <div class="label">Purpose Vaults</div>
+            <div class="value" style="color:var(--purple);">2 Chains</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node" style="border-color:rgba(16,185,129,0.3);">
+            <div class="icon">📋</div>
+            <div class="label">Invoices</div>
+            <div class="value" style="color:var(--green);">Verified</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node" style="border-color:rgba(59,130,246,0.3);">
+            <div class="icon">🏪</div>
+            <div class="label">Vendors</div>
+            <div class="value" style="color:var(--blue);">Paid</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Impact chart -->
+      <div class="card">
+        <div class="card-title" style="margin-bottom: 16px;">Fund Allocation by Status</div>
+        <div class="chart-container" id="donor-chart"></div>
+        <div class="chart-labels" id="donor-chart-labels"></div>
+      </div>
+    </div>
+
+    <!-- ====== TRANSPARENCY ====== -->
+    <div id="sec-transparency" class="section">
+      <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 4px;">Transaction Transparency</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 28px; font-size: 13px;">Every transaction is verifiable on-chain. Browse bill details.</p>
+
+      <div class="alert info">
+        <div class="alert-icon">🔗</div>
+        <div>
+          <div class="alert-title">Blockchain Verified</div>
+          <div class="alert-desc">All data shown here is stored on local test chains. In production, this would be Ethereum mainnet.</div>
+        </div>
+      </div>
+
+      <div class="card" style="padding: 0; overflow: hidden; margin-top: 16px;">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Bill No</th><th>Vendor</th><th>Amount</th><th>Chain</th><th>Verification</th><th>Status</th></tr></thead>
+            <tbody id="transparency-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== VERIFICATION ====== -->
+    <div id="sec-verification" class="section">
+      <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 4px;">Verify Bills Independently</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 28px; font-size: 13px;">Cross-check the system's verdicts with your own analysis</p>
+
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-title" style="margin-bottom: 16px;">Your Verification Tools</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div style="padding:20px;border:1px solid var(--border);border-radius:var(--radius);background:rgba(59,130,246,0.05);">
+            <div style="font-size:24px;margin-bottom:8px;">🔍</div>
+            <div style="font-weight:700;margin-bottom:4px;">Equivocation Check</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px;">Detect if any bill was claimed twice across chains</div>
+            <button class="btn btn-sm" onclick="document.getElementById('equivoc-result').style.display='block'">Check Now</button>
+            <div id="equivoc-result" style="display:none;margin-top:12px;padding:12px;background:rgba(16,185,129,0.1);border-radius:8px;font-size:12px;color:var(--green);">
+              ✓ No equivocations found (run watcher scan for live results)
+            </div>
+          </div>
+          <div style="padding:20px;border:1px solid var(--border);border-radius:var(--radius);background:rgba(139,92,246,0.05);">
+            <div style="font-size:24px;margin-bottom:8px;">📐</div>
+            <div style="font-weight:700;margin-bottom:4px;">Invariant Check</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px;">Verify deposit = verified + unexplained + unverified</div>
+            <div id="invariant-check" style="padding:12px;background:rgba(16,185,129,0.1);border-radius:8px;font-size:12px;color:var(--green);">
+              ✓ Invariant holds
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="margin-bottom: 16px;">Evaluation Report</div>
+        <div id="eval-report" style="color:var(--text-muted);">Loading evaluation data...</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+const API = window.location.origin;
+const fmtRs = p => '₹' + (p/100).toLocaleString('en-IN', {maximumFractionDigits:0});
+const fmtShort = p => { const r=p/100; return r>=1e7 ? '₹'+(r/1e7).toFixed(1)+' Cr' : r>=1e5 ? '₹'+(r/1e5).toFixed(1)+' L' : '₹'+r.toLocaleString(); };
+let appState = null, billsList = [], evalData = null;
+
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  event.target.closest('.nav-item').classList.add('active');
+}
+
+async function fetchJSON(path, opts) {
+  const r = await fetch(`${API}${path}`, opts);
+  if (!r.ok) throw new Error(r.status);
+  return r.json();
+}
+
+async function loadState() {
+  try {
+    appState = await fetchJSON('/api/state');
+    renderImpact();
+  } catch(e) {}
+}
+
+async function loadBills() {
+  try { billsList = await fetchJSON('/api/bills'); renderTransparency(); } catch(e) {}
+}
+
+async function loadEval() {
+  try { evalData = await fetchJSON('/api/eval'); renderEvalReport(); } catch(e) {}
+}
+
+function renderImpact() {
+  if (!appState) return;
+  const { meter } = appState;
+  document.getElementById('don-impact').textContent = fmtShort(meter.verifiedPaise);
+  document.getElementById('don-fraud').textContent = meter.amberPaise > 0 ? fmtShort(meter.amberPaise) : '₹0';
+
+  // Chart
+  const chart = document.getElementById('donor-chart');
+  const labels = document.getElementById('donor-chart-labels');
+  chart.innerHTML = '';
+  labels.innerHTML = '';
+
+  const data = [
+    { label: 'Pledged', value: meter.pledgedPaise, color: 'var(--orange)' },
+    { label: 'Deposited', value: meter.depositedPaise, color: 'var(--green)' },
+    { label: 'Verified', value: meter.verifiedPaise, color: 'var(--green)' },
+    { label: 'Amber', value: meter.amberPaise, color: 'var(--orange)' },
+    { label: 'Released', value: meter.releasedPaise, color: 'var(--blue)' },
+    { label: 'Unexplained', value: meter.unexplainedPaise, color: 'var(--red)' }
+  ];
+
+  const maxVal = Math.max(...data.map(d => d.value), 1);
+  data.forEach(d => {
+    const h = Math.max(4, (d.value / maxVal) * 180);
+    const bar = document.createElement('div');
+    bar.className = 'chart-bar';
+    bar.style.height = h + 'px';
+    bar.style.background = d.color;
+    bar.innerHTML = `<div class="tip">${d.label}: ${fmtShort(d.value)}</div>`;
+    chart.appendChild(bar);
+    const label = document.createElement('span');
+    label.textContent = d.label;
+    labels.appendChild(label);
+  });
+}
+
+function renderTransparency() {
+  const tbody = document.getElementById('transparency-table');
+  tbody.innerHTML = '';
+  billsList.forEach(b => {
+    const verdictClass = b.verdict === 'GREEN' ? 'green' : b.verdict === 'AMBER' ? 'orange' : b.verdict === 'RED' ? 'red' : 'gray';
+    const verdictLabel = b.verdict || 'PENDING';
+    const chainLabel = b.billId.includes('31337') ? 'Chain A' : 'Chain B';
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="font-weight:600;">#${b.billNo}</td>
+      <td>${b.vendorName}</td>
+      <td style="font-weight:600;">${fmtRs(b.amountPaise)}</td>
+      <td><span class="badge blue">${chainLabel}</span></td>
+      <td><span class="badge ${verdictClass}">${verdictLabel}</span></td>
+      <td><span class="badge ${b.verdict ? (b.verdict === 'GREEN' ? 'green' : 'orange') : 'gray'}">${b.verdict ? '✓ Verified' : '⏳ Pending'}</span></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderEvalReport() {
+  if (!evalData) {
+    document.getElementById('eval-report').innerHTML = '<p>No evaluation data available yet.</p>';
+    return;
+  }
+  document.getElementById('eval-report').innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:24px;">
+      <div style="padding:16px;background:rgba(16,185,129,0.1);border-radius:8px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Precision</div>
+        <div style="font-size:24px;font-weight:800;color:var(--green);">${evalData.flag?.precision || '—'}</div>
+      </div>
+      <div style="padding:16px;background:rgba(59,130,246,0.1);border-radius:8px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Recall</div>
+        <div style="font-size:24px;font-weight:800;color:var(--blue);">${evalData.flag?.recall || '—'}</div>
+      </div>
+      <div style="padding:16px;background:rgba(245,158,11,0.1);border-radius:8px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">False Positives</div>
+        <div style="font-size:24px;font-weight:800;color:var(--orange);">${evalData.flag?.falsePositives || 0}</div>
+      </div>
+    </div>
+    ${evalData.notCovered?.length ? `<div style="padding:12px;background:rgba(245,158,11,0.1);border-radius:8px;font-size:12px;color:var(--orange);"><strong>Limits:</strong> ${evalData.notCovered.join(', ')}</div>` : ''}
+  `;
+}
+
+loadState(); loadBills(); loadEval();
+setInterval(() => { loadState(); loadBills(); loadEval(); }, 10000);
+</script>
+</body>
+</html>

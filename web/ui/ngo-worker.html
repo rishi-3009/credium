@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CREDIUM — NGO Worker</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-dark: #0a0e1a; --bg-card: #111827; --bg-card-hover: #1e293b;
+    --bg-sidebar: #0d1117; --border: #1e293b; --border-light: #334155;
+    --text-primary: #f1f5f9; --text-secondary: #94a3b8; --text-muted: #64748b;
+    --accent: #3b82f6; --accent-glow: rgba(59,130,246,0.3);
+    --green: #10b981; --green-glow: rgba(16,185,129,0.3);
+    --red: #ef4444; --red-glow: rgba(239,68,68,0.3);
+    --orange: #f59e0b; --orange-glow: rgba(245,158,11,0.3);
+    --purple: #8b5cf6; --cyan: #06b6d4;
+    --radius: 12px; --radius-sm: 8px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; }
+  
+  /* Layout */
+  .layout { display: flex; min-height: 100vh; }
+  .sidebar { width: 260px; background: var(--bg-sidebar); border-right: 1px solid var(--border); padding: 20px; display: flex; flex-direction: column; gap: 8px; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; z-index: 100; }
+  .main { flex: 1; margin-left: 260px; padding: 32px; max-width: calc(100vw - 260px); }
+  
+  /* Sidebar */
+  .sidebar .logo { display: flex; align-items: center; gap: 10px; padding: 0 8px 20px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+  .sidebar .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--accent), var(--purple)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: white; }
+  .sidebar .logo-text { font-size: 18px; font-weight: 700; letter-spacing: -0.5px; }
+  .sidebar .role-badge { padding: 8px 12px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); border-radius: var(--radius-sm); color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: var(--radius-sm); color: var(--text-secondary); font-size: 14px; cursor: pointer; transition: all 0.2s; border: none; background: none; width: 100%; text-align: left; }
+  .nav-item:hover { background: rgba(255,255,255,0.05); color: var(--text-primary); }
+  .nav-item.active { background: rgba(59,130,246,0.1); color: var(--accent); }
+  .nav-item .nav-icon { font-size: 18px; width: 24px; text-align: center; }
+  .sidebar .spacer { flex: 1; }
+  .sidebar .back-link { display: flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: 13px; padding: 10px 12px; text-decoration: none; }
+  .sidebar .back-link:hover { color: var(--text-secondary); }
+
+  /* Cards */
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+  .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .card-title { font-size: 16px; font-weight: 700; }
+  .card-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+  /* Section views */
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* Stat cards */
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+  .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .stat-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .stat-value { font-size: 28px; font-weight: 800; letter-spacing: -1px; }
+  .stat-value.green { color: var(--green); }
+  .stat-value.blue { color: var(--accent); }
+  .stat-value.orange { color: var(--orange); }
+  .stat-value.red { color: var(--red); }
+  .stat-change { font-size: 11px; margin-top: 4px; }
+  .stat-change.up { color: var(--green); }
+  .stat-change.down { color: var(--red); }
+
+  /* Tables */
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+  td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .badge.green { background: rgba(16,185,129,0.15); color: var(--green); }
+  .badge.orange { background: rgba(245,158,11,0.15); color: var(--orange); }
+  .badge.red { background: rgba(239,68,68,0.15); color: var(--red); }
+  .badge.blue { background: rgba(59,130,246,0.15); color: var(--accent); }
+  .badge.purple { background: rgba(139,92,246,0.15); color: var(--purple); }
+  .badge.gray { background: rgba(100,116,139,0.15); color: var(--text-muted); }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-secondary); transition: all 0.2s; }
+  .btn:hover { border-color: var(--border-light); color: var(--text-primary); }
+  .btn-primary { background: var(--accent); border-color: var(--accent); color: white; }
+  .btn-primary:hover { background: #2563eb; }
+  .btn-danger { background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.3); color: var(--red); }
+  .btn-danger:hover { background: rgba(239,68,68,0.2); }
+  .btn-sm { padding: 5px 12px; font-size: 12px; }
+
+  /* Form */
+  .form-group { margin-bottom: 16px; }
+  .form-label { display: block; font-size: 12px; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px; }
+  .form-input, .form-select { width: 100%; padding: 10px 14px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 13px; outline: none; transition: border-color 0.2s; }
+  .form-input:focus, .form-select:focus { border-color: var(--accent); }
+  .form-select { cursor: pointer; }
+
+  /* Modal */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 1000; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; max-width: 480px; width: 90%; max-height: 90vh; overflow-y: auto; }
+  .modal-title { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
+  .modal-actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 24px; }
+
+  /* Console */
+  .console { background: #000; border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; max-height: 200px; overflow-y: auto; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px; color: #0f0; }
+  .console .entry { margin-bottom: 2px; }
+  .console .time { color: var(--text-muted); }
+
+  /* Charts placeholder */
+  .chart-container { position: relative; height: 200px; display: flex; align-items: flex-end; gap: 4px; padding: 0 8px; }
+  .chart-bar { flex: 1; border-radius: 4px 4px 0 0; min-height: 4px; transition: height 0.5s ease; position: relative; }
+  .chart-bar:hover { opacity: 0.8; }
+  .chart-bar .tooltip { display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--bg-dark); border: 1px solid var(--border); padding: 4px 8px; border-radius: 6px; font-size: 11px; white-space: nowrap; z-index: 10; }
+  .chart-bar:hover .tooltip { display: block; }
+  .chart-labels { display: flex; gap: 4px; padding: 8px 8px 0; }
+  .chart-labels span { flex: 1; font-size: 10px; color: var(--text-muted); text-align: center; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 3px; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .sidebar { width: 220px; }
+    .main { margin-left: 220px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .sidebar { width: 60px; padding: 12px; }
+    .sidebar .logo-text, .sidebar .role-badge, .sidebar .nav-item span, .sidebar .back-link span { display: none; }
+    .main { margin-left: 60px; }
+    .stats-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="logo-icon">C</div>
+      <span class="logo-text">CREDIUM</span>
+    </div>
+    <div class="role-badge">📋 NGO Worker</div>
+    <button class="nav-item active" onclick="showSection('overview')">
+      <span class="nav-icon">📊</span><span>Overview</span>
+    </button>
+    <button class="nav-item" onclick="showSection('bills')">
+      <span class="nav-icon">📄</span><span>Bill Management</span>
+    </button>
+    <button class="nav-item" onclick="showSection('vendors')">
+      <span class="nav-icon">🏪</span><span>Vendors</span>
+    </button>
+    <button class="nav-item" onclick="showSection('actions')">
+      <span class="nav-icon">⚡</span><span>Actions</span>
+    </button>
+    <button class="nav-item" onclick="showSection('logs')">
+      <span class="nav-icon">📝</span><span>Activity Log</span>
+    </button>
+    <div class="spacer"></div>
+    <a href="./index.html" class="back-link"><span>←</span><span>Back to Home</span></a>
+  </aside>
+
+  <main class="main">
+
+    <!-- ====== OVERVIEW ====== -->
+    <div id="sec-overview" class="section active">
+      <h1 style="font-size: 28px; font-weight: 800; margin-bottom: 4px;">Welcome back, Worker</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 28px; font-size: 14px;">Monitor your bill submissions, payment status, and vendor operations across chains.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Total Bills</div>
+          <div class="stat-value blue" id="stat-total-bills">0</div>
+          <div class="stat-change up" id="stat-total-bills-change"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Paid Out</div>
+          <div class="stat-value green" id="stat-released">₹0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Pending Review</div>
+          <div class="stat-value orange" id="stat-pending">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Flagged</div>
+          <div class="stat-value red" id="stat-flagged">0</div>
+        </div>
+      </div>
+
+      <!-- Chart: Bill status distribution -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Bill Status Overview</div>
+            <div class="card-subtitle">Distribution of bill verification results</div>
+          </div>
+        </div>
+        <div class="chart-container" id="chart-bills"></div>
+        <div class="chart-labels" id="chart-bills-labels"></div>
+      </div>
+
+      <!-- Chain status -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div class="card" id="chain-a-panel"></div>
+        <div class="card" id="chain-b-panel"></div>
+      </div>
+    </div>
+
+    <!-- ====== BILL MANAGEMENT ====== -->
+    <div id="sec-bills" class="section">
+      <div class="card-header">
+        <div>
+          <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 4px;">Bill Management</h1>
+          <p style="color: var(--text-secondary); font-size: 13px;">All submitted invoices and their verification status</p>
+        </div>
+        <button class="btn btn-primary" onclick="openNewBillModal()">+ New Bill</button>
+      </div>
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Bill No</th>
+                <th>Bill ID</th>
+                <th>Vendor</th>
+                <th>Amount</th>
+                <th>Verdict</th>
+                <th>Tier</th>
+                <th>Chain</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="bills-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== VENDORS ====== -->
+    <div id="sec-vendors" class="section">
+      <div class="card-header">
+        <div>
+          <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 4px;">Vendor Directory</h1>
+          <p style="color: var(--text-secondary); font-size: 13px;">Enrolled vendors and their transaction history</p>
+        </div>
+      </div>
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Vendor</th><th>Chain</th><th>Enrolled</th><th>Bills</th><th>Total Paid</th><th>Status</th></tr>
+            </thead>
+            <tbody id="vendors-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== ACTIONS ====== -->
+    <div id="sec-actions" class="section">
+      <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 4px;">Quick Actions</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 28px; font-size: 13px;">Execute operations on the blockchain</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+        <div class="card" style="text-align: center; cursor: pointer; border-color: rgba(16,185,129,0.3);" onclick="executeAction('release', 405, 31337)">
+          <div style="font-size: 32px; margin-bottom: 12px;">💰</div>
+          <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Release Bill #405</div>
+          <div style="font-size: 12px; color: var(--text-muted);">Pay a verified invoice on Chain A</div>
+        </div>
+        <div class="card" style="text-align: center; cursor: pointer; border-color: rgba(239,68,68,0.3);" onclick="executeAction('release', 417, 31337)">
+          <div style="font-size: 32px; margin-bottom: 12px;">💰</div>
+          <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Release Bill #417</div>
+          <div style="font-size: 12px; color: var(--text-muted);">Pay a verified invoice on Chain A</div>
+        </div>
+        <div class="card" style="text-align: center; cursor: pointer; border-color: rgba(245,158,11,0.3);" onclick="executeAction('watcher', 0, 0)">
+          <div style="font-size: 32px; margin-bottom: 12px;">🔍</div>
+          <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Run Scanner</div>
+          <div style="font-size: 12px; color: var(--text-muted);">Detect fraud across both chains</div>
+        </div>
+        <div class="card" style="text-align: center; cursor: pointer; border-color: rgba(139,92,246,0.3);" onclick="executeAction('forge30', 0, 0)">
+          <div style="font-size: 32px; margin-bottom: 12px;">⚔️</div>
+          <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Forge 30%</div>
+          <div style="font-size: 12px; color: var(--text-muted);">Simulate vendor signature forgery</div>
+        </div>
+        <div class="card" style="text-align: center; cursor: pointer; border-color: rgba(239,68,68,0.3);" onclick="executeAction('double-claim', 417, 31337)">
+          <div style="font-size: 32px; margin-bottom: 12px;">🔄</div>
+          <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Double Claim</div>
+          <div style="font-size: 12px; color: var(--text-muted);">Submit bill twice (fraud demo)</div>
+        </div>
+        <div class="card" style="text-align: center; cursor: pointer; border-color: rgba(100,116,139,0.3);" onclick="executeAction('reset', 0, 0)">
+          <div style="font-size: 32px; margin-bottom: 12px;">🔄</div>
+          <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Reset System</div>
+          <div style="font-size: 12px; color: var(--text-muted);">Reset to initial state</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== ACTIVITY LOG ====== -->
+    <div id="sec-logs" class="section">
+      <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 4px;">Activity Log</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 28px; font-size: 13px;">All actions and events from the system</p>
+      <div class="console" id="worker-console"></div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+const API = window.location.origin;
+const fmtRs = (p) => '₹' + (p / 100).toLocaleString('en-IN', {maximumFractionDigits: 0});
+const fmtRsShort = (p) => { const r = p/100; return r >= 1e7 ? '₹' + (r/1e7).toFixed(1) + ' Cr' : r >= 1e5 ? '₹' + (r/1e5).toFixed(1) + ' L' : '₹' + r.toLocaleString(); };
+
+let appState = null;
+let billsList = [];
+let consoleLines = [];
+
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('sec-' + id).classList.add('active');
+  event.target.closest('.nav-item').classList.add('active');
+}
+
+function addLog(msg) {
+  const ts = new Date().toLocaleTimeString();
+  consoleLines.push(`[${ts}] ${msg}`);
+  const consoleEl = document.getElementById('worker-console');
+  if (consoleEl) {
+    consoleEl.innerHTML = consoleLines.map(l => `<div class="entry">${l}</div>`).join('');
+    consoleEl.scrollTop = consoleEl.scrollHeight;
+  }
+}
+
+function addLog(msg) {
+  const ts = new Date().toLocaleTimeString();
+  consoleLines.push(`[${ts}] ${msg}`);
+  const consoleEl = document.getElementById('worker-console');
+  if (consoleEl) {
+    consoleEl.innerHTML = consoleLines.map(l => `<div class="entry">${l}</div>`).join('');
+    consoleEl.scrollTop = consoleEl.scrollHeight;
+  }
+}
+
+async function fetchJSON(path) {
+  const r = await fetch(`${API}${path}`);
+  if (!r.ok) throw new Error(r.status);
+  return r.json();
+}
+
+async function loadState() {
+  try {
+    appState = await fetchJSON('/api/state');
+    renderOverview();
+  } catch(e) { console.log('State unavailable:', e.message); }
+}
+
+async function loadBills() {
+  try {
+    billsList = await fetchJSON('/api/bills');
+    renderBillsTable();
+    renderVendorTable();
+  } catch(e) { console.log('Bills unavailable:', e.message); }
+}
+
+function renderOverview() {
+  if (!appState) return;
+  const { chains, meter } = appState;
+  
+  document.getElementById('stat-total-bills').textContent = billsList.length;
+  document.getElementById('stat-released').textContent = fmtRsShort(meter.releasedPaise);
+  document.getElementById('stat-pending').textContent = billsList.filter(b => !b.verdict).length;
+  document.getElementById('stat-flagged').textContent = billsList.filter(b => b.verdict === 'RED' || b.verdict === 'AMBER').length;
+
+  // Chain panels
+  chains.forEach(ch => {
+    const el = document.getElementById(`chain-${ch.chainId === 31337 ? 'a' : 'b'}-panel`);
+    const frozen = ch.frozen ? 'frozen' : '';
+    const borderColor = ch.frozen ? 'rgba(239,68,68,0.5)' : 'var(--border)';
+    const statusColor = ch.up ? 'var(--green)' : 'var(--red)';
+    el.style.borderColor = borderColor;
+    el.innerHTML = `
+      <div class="card-header">
+        <div>
+          <div class="card-title">${ch.label}</div>
+          <div class="card-subtitle">Chain ID: ${ch.chainId}</div>
+        </div>
+        <span class="badge ${ch.frozen ? 'red' : 'green'}">${ch.frozen ? '⛔ FROZEN' : (ch.up ? '● UP' : '● DOWN')}</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Block</div><div style="font-size:18px;font-weight:700;">${ch.block || '—'}</div></div>
+        <div><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Vault Balance</div><div style="font-size:18px;font-weight:700;">${fmtRs(ch.vault.balancePaise)}</div></div>
+        <div><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Released</div><div style="font-size:18px;font-weight:700;color:var(--green);">${fmtRs(ch.vault.releasedPaise)}</div></div>
+        <div><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Cap</div><div style="font-size:18px;font-weight:700;">${fmtRs(ch.vault.capPaise)}</div></div>
+      </div>
+      ${ch.frozen ? `<div style="margin-top:16px;padding:10px;background:rgba(239,68,68,0.1);border-radius:8px;font-size:12px;color:var(--red);">⛔ ${ch.vault.frozenReason}</div>` : ''}
+    `;
+  });
+
+  // Chart
+  renderBillChart();
+}
+
+function renderBillChart() {
+  const container = document.getElementById('chart-bills');
+  const labels = document.getElementById('chart-bills-labels');
+  container.innerHTML = '';
+  labels.innerHTML = '';
+  
+  const verdicts = { 'GREEN': 0, 'AMBER': 0, 'RED': 0, 'PENDING': 0 };
+  billsList.forEach(b => {
+    const v = b.verdict || 'PENDING';
+    verdicts[v]++;
+  });
+  
+  const total = billsList.length || 1;
+  const colors = { 'GREEN': 'var(--green)', 'AMBER': 'var(--orange)', 'RED': 'var(--red)', 'PENDING': 'var(--text-muted)' };
+  
+  Object.entries(verdicts).forEach(([v, count]) => {
+    const h = Math.max(4, (count / total) * 180);
+    const bar = document.createElement('div');
+    bar.className = 'chart-bar';
+    bar.style.height = h + 'px';
+    bar.style.background = colors[v];
+    bar.innerHTML = `<div class="tooltip">${v}: ${count} bills</div>`;
+    container.appendChild(bar);
+    const label = document.createElement('span');
+    label.textContent = v;
+    labels.appendChild(label);
+  });
+}
+
+function renderBillsTable() {
+  const tbody = document.getElementById('bills-table-body');
+  tbody.innerHTML = '';
+  billsList.forEach(b => {
+    const chainKey = b.billId.includes('31337') ? '31337' : '31338';
+    const chainLabel = chainKey === '31337' ? 'Chain A' : 'Chain B';
+    const verdictClass = b.verdict ? b.verdict.toLowerCase() : 'gray';
+    const verdictLabel = b.verdict || 'PENDING';
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="font-weight:600;">#${b.billNo}</td>
+      <td style="font-family:monospace;font-size:11px;color:var(--text-muted);">${b.billId.slice(-8)}</td>
+      <td>${b.vendorName}</td>
+      <td style="font-weight:600;">${fmtRs(b.amountPaise)}</td>
+      <td><span class="badge ${verdictClass}">${verdictLabel}</span></td>
+      <td>${b.tier || '—'}</td>
+      <td><span class="badge blue">${chainLabel}</span></td>
+      <td><button class="btn btn-sm" onclick="executeAction('release', ${b.billNo}, ${chainKey})">Release</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderVendorTable() {
+  const tbody = document.getElementById('vendors-table-body');
+  tbody.innerHTML = '';
+  const vendorMap = {};
+  billsList.forEach(b => {
+    const key = b.vendorName;
+    if (!vendorMap[key]) vendorMap[key] = { name: b.vendorName, chain: b.billId.includes('31337') ? 'Chain A' : 'Chain B', bills: 0, total: 0, verdicts: [] };
+    vendorMap[key].bills++;
+    if (b.verdict === 'GREEN') vendorMap[key].total += b.amountPaise;
+    vendorMap[key].verdicts.push(b.verdict);
+  });
+  
+  Object.values(vendorMap).forEach(v => {
+    const hasRed = v.verdicts.includes('RED');
+    const hasAmber = v.verdicts.includes('AMBER');
+    const statusBadge = hasRed ? 'red' : hasAmber ? 'orange' : 'green';
+    const statusLabel = hasRed ? 'Flagged' : hasAmber ? 'Warning' : 'Active';
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="font-weight:600;">${v.name}</td>
+      <td><span class="badge blue">${v.chain}</span></td>
+      <td>Enrolled</td>
+      <td>${v.bills}</td>
+      <td style="font-weight:600;color:var(--green);">${fmtRs(v.total)}</td>
+      <td><span class="badge ${statusBadge}">${statusLabel}</span></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+async function executeAction(action, billNo, chainId) {
+  addLog(`Executing: ${action} ${billNo ? '#' + billNo : ''} ${chainId ? 'on ' + chainId : ''}...`);
+  
+  try {
+    let path, body;
+    switch(action) {
+      case 'release':
+        path = '/api/release';
+        body = { chainId: parseInt(chainId), billNo, fractionBps: 10000 };
+        const res = await fetchJSON(path, { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body) });
+        addLog(res.ok ? `✓ Release #${billNo} successful` : `✗ Release #${billNo} reverted: ${res.revert}`);
+        break;
+      case 'watcher':
+        const scanRes = await fetchJSON('/api/watcher/scan', { method: 'POST' });
+        addLog(scanRes.equivocations.length > 0 ? `🔍 ${scanRes.equivocations.length} equivocations detected` : '🔍 No equivocations found');
+        break;
+      case 'forge30':
+        const forgeRes = await fetchJSON('/api/attack/forge30', { method: 'POST' });
+        addLog('⚔️ Forge attack simulated');
+        break;
+      case 'double-claim':
+        const dcRes = await fetchJSON('/api/attack/double-claim', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ billNo, fractionBps: 10000 }) });
+        addLog(`🔄 Double-claim #${billNo} simulated`);
+        break;
+      case 'reset':
+        await fetchJSON('/api/reset', { method: 'POST' });
+        addLog('↻ System reset');
+        setTimeout(() => location.reload(), 500);
+        return;
+    }
+    loadState();
+    loadBills();
+  } catch(e) {
+    addLog(`✗ Error: ${e.message}`);
+  }
+}
+
+// Simulate a few console entries
+consoleLines.push('[INIT] NGO Worker dashboard loaded');
+consoleLines.push('[INIT] Connected to CREDIUM API');
+
+// Auto-refresh
+loadState();
+loadBills();
+setInterval(() => { loadState(); loadBills(); }, 5000);
+</script>
+</body>
+</html>
