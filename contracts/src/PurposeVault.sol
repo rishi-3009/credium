@@ -57,6 +57,8 @@ contract PurposeVault {
     error OverAllocated(uint256 usedBps);
     error CapExceeded();
     error InsufficientBalance();
+    // Added for Block 10: two allocations do not prove a double claim (identical, or total within 100%).
+    error NotEquivocation();
 
     bytes32 public constant BILL_TYPEHASH = keccak256(
         "Bill(address vendor,address buyerNGO,uint256 billNo,uint256 amountPaise,uint256 issuedAt,bytes32 category,bytes32 itemsCommitment)"
@@ -149,6 +151,32 @@ contract PurposeVault {
             ngoSig,
             tier
         );
+    }
+
+    // Permissionless: anyone can submit two NGO-signed allocations for one bill. No-op if already frozen.
+    // Chain-free: the two allocations may come from different chains (chain B evidence checked here).
+    function submitEquivocation(
+        Allocation calldata a,
+        bytes calldata sigA,
+        Allocation calldata b,
+        bytes calldata sigB
+    ) external {
+        if (frozen) return;
+
+        address signerA = allocationSigner(a, sigA);
+        if (signerA != ngo) revert BadNgoSig(signerA);
+        address signerB = allocationSigner(b, sigB);
+        if (signerB != ngo) revert BadNgoSig(signerB);
+
+        if (a.billNullifier != b.billNullifier) revert NullifierMismatch();
+        if (_allocationStructHash(a) == _allocationStructHash(b)) revert NotEquivocation();
+        if (a.fractionBps > 10_000) revert BadFraction(a.fractionBps);
+        if (b.fractionBps > 10_000) revert BadFraction(b.fractionBps);
+        if (a.fractionBps + b.fractionBps <= 10_000) revert NotEquivocation();
+
+        frozen = true;
+        frozenReason = "equivocation";
+        emit Frozen("equivocation", a.billNullifier, msg.sender);
     }
 
     function _billNullifier(Bill calldata b) internal pure returns (bytes32) {
