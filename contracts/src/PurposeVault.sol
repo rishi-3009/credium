@@ -101,10 +101,13 @@ contract PurposeVault {
         return err == ECDSA.RecoverError.NoError ? signer : address(0);
     }
 
-    // Release checks run in the §8a order. Block 6 adds the rest: donorVault, nullifier,
-    // NGO signature, fraction, usedBps, cap, balance, transfer and the Released event.
-    // ngoSig joins the signature when Block 6 lands.
-    function release(Bill calldata b, bytes calldata vendorSig, Allocation calldata a) external {
+    // Order is fixed by plan §8a: frozen, category, NGO, tier, vendor sig, chainId,
+    // donorVault, nullifier, NGO sig, fraction, cumulative usedBps, cap, balance.
+    // ASSUMPTION (plan Block 6, not yet confirmed): cap = total paid out of this vault may not exceed capPaise.
+    // Released.amountPaise carries the paid amount (floor of amountPaise * fractionBps / 10000).
+    function release(Bill calldata b, bytes calldata vendorSig, Allocation calldata a, bytes calldata ngoSig)
+        external
+    {
         if (frozen) revert VaultFrozen(frozenReason);
         if (b.category != category) revert WrongCategory();
         if (b.buyerNGO != ngo) revert WrongNGO();
@@ -117,6 +120,39 @@ contract PurposeVault {
         if (vendorSigner != b.vendor) revert BadVendorSig(vendorSigner);
 
         if (a.chainId != block.chainid) revert WrongChain(a.chainId);
+        if (a.donorVault != address(this)) revert WrongVault();
+        if (a.billNullifier != _billNullifier(b)) revert NullifierMismatch();
+
+        address ngoSigner = allocationSigner(a, ngoSig);
+        if (ngoSigner != ngo) revert BadNgoSig(ngoSigner);
+
+        if (a.fractionBps == 0 || a.fractionBps > 10_000) revert BadFraction(a.fractionBps);
+        uint256 newUsed = usedBps[a.billNullifier] + a.fractionBps;
+        if (newUsed > 10_000) revert OverAllocated(newUsed);
+
+        uint256 amount = b.amountPaise * a.fractionBps / 10_000;
+        if (released + amount > cap) revert CapExceeded();
+        if (token.balanceOf(address(this)) < amount) revert InsufficientBalance();
+
+        usedBps[a.billNullifier] = newUsed;
+        released += amount;
+        token.safeTransfer(b.vendor, amount);
+        emit Released(
+            a.billNullifier,
+            b.vendor,
+            b.billNo,
+            amount,
+            a.donorVault,
+            a.chainId,
+            a.fractionBps,
+            a.reportId,
+            ngoSig,
+            tier
+        );
+    }
+
+    function _billNullifier(Bill calldata b) internal pure returns (bytes32) {
+        return keccak256(abi.encode(b.vendor, b.billNo, _billStructHash(b)));
     }
 
     function _billStructHash(Bill calldata b) internal pure returns (bytes32) {
