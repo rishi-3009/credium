@@ -13,6 +13,7 @@ set -euo pipefail
 # ---------------------------------------------------------------------------
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 PY="$HOME/credium-venv/bin/python"
+export PATH="$PATH:/home/ayaan/.config/.foundry/bin"
 LOGS="$HOME/credium-logs"
 LAN_IP="${LAN_IP:-127.0.0.1}"
 
