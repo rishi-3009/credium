@@ -60,7 +60,7 @@ def rpc(w3: Web3, method: str, params: list) -> list:
     result = w3.provider.make_request(method, params)
     if isinstance(result, list) and len(result) > 0 and "error" in result[0]:
         raise RuntimeError(result[0]["error"]["message"])
-    return result[0] if isinstance(result, list) else result
+    return result if isinstance(result, list) else [result]
 
 
 def time_warp(w3: Web3, seconds: int) -> None:
@@ -71,11 +71,10 @@ def time_warp(w3: Web3, seconds: int) -> None:
 
 def send_tx(w3: Web3, fn: Any, private_key: str, gas: int = 600000) -> dict:
     """Send transaction and wait for receipt."""
-    sender = Web3.to_checksum_address(Web3.to_checksum_address(Web3.keccak(text=private_key)[:20]))
     sender_account = w3.eth.account.from_key(private_key)
     nonce = w3.eth.get_transaction_count(sender_account.address)
     tx = fn.build_transaction({
-        "from": sender,
+        "from": sender_account.address,
         "nonce": nonce,
         "gas": gas,
         "gasPrice": w3.eth.gas_price,
@@ -84,7 +83,7 @@ def send_tx(w3: Web3, fn: Any, private_key: str, gas: int = 600000) -> dict:
     signed = w3.eth.account.sign_transaction(tx, private_key)
     h = w3.eth.send_raw_transaction(signed.raw_transaction)
     receipt = w3.eth.wait_for_transaction_receipt(h, timeout=30)
-    return {"txHash": h.hex(), "status": receipt["status"].int() or 0}
+    return {"txHash": h.hex(), "status": receipt["status"]}
 
 
 def call_revert(fn: Any, sender: str) -> str | None:
@@ -148,7 +147,7 @@ def decode_revert(data_hex: str) -> str:
                 except Exception:
                     continue
     
-    return f"Unknown({data_hex[:8]})"
+    return f"Unknown(0x{data_hex[:8]})"
 
 
 def format_decode(decoded, entry):
