@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CREDIUM — Role Selection</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  :root {
+    --bg-dark: #0a0e1a;
+    --bg-card: #111827;
+    --bg-card-hover: #1e293b;
+    --border: #1e293b;
+    --border-light: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #3b82f6;
+    --accent-blue-glow: rgba(59, 130, 246, 0.3);
+    --accent-green: #10b981;
+    --accent-green-glow: rgba(16, 185, 129, 0.3);
+    --accent-purple: #8b5cf6;
+    --accent-purple-glow: rgba(139, 92, 246, 0.3);
+    --accent-orange: #f59e0b;
+    --accent-orange-glow: rgba(245, 158, 11, 0.3);
+    --accent-red: #ef4444;
+    --accent-cyan: #06b6d4;
+    --radius: 12px;
+    --radius-lg: 16px;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Animated background */
+  .bg-grid {
+    position: fixed;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+
+  .bg-gradient {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(139, 92, 246, 0.06) 0%, transparent 50%);
+    animation: bgShift 20s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+
+  @keyframes bgShift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-5%, 5%); }
+  }
+
+  /* Header */
+  .header {
+    position: relative;
+    padding: 24px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(20px);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 4px 20px var(--accent-blue-glow);
+  }
+
+  .logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .status-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .status-badge.live {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--accent-green);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+
+  .status-badge .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-green);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    padding: 80px 40px 40px;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-blue);
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+
+  /* Role Selection Grid */
+  .roles-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  .roles-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .roles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .role-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  .role-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .role-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-light);
+    background: var(--bg-card-hover);
+  }
+
+  .role-card:hover::before {
+    opacity: 1;
+  }
+
+  .role-card.ngo-worker::before { background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan)); }
+  .role-card.ngo-manager::before { background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue)); }
+  .role-card.vendor::before { background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan)); }
+  .role-card.donor::before { background: linear-gradient(90deg, var(--accent-orange), var(--accent-red)); }
+
+  .role-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto 20px;
+  }
+
+  .role-card.ngo-worker .role-icon { background: rgba(59, 130, 246, 0.1); }
+  .role-card.ngo-manager .role-icon { background: rgba(139, 92, 246, 0.1); }
+  .role-card.vendor .role-icon { background: rgba(16, 185, 129, 0.1); }
+  .role-card.donor .role-icon { background: rgba(245, 158, 11, 0.1); }
+
+  .role-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+
+  .role-card .role-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .role-card .role-features {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .role-card .feature {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+    justify-content: center;
+  }
+
+  .feature .check {
+    color: var(--accent-green);
+    font-size: 14px;
+  }
+
+  .role-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--border-light);
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+
+  .role-card.ngo-worker .role-btn { }
+  .role-card.ngo-worker .role-btn:hover { background: rgba(59, 130, 246, 0.1); color: var(--accent-blue); border-color: rgba(59, 130, 246, 0.3); }
+  
+  .role-card.ngo-manager .role-btn:hover { background: rgba(139, 92, 246, 0.1); color: var(--accent-purple); border-color: rgba(139, 92, 246, 0.3); }
+  
+  .role-card.vendor .role-btn:hover { background: rgba(16, 185, 129, 0.1); color: var(--accent-green); border-color: rgba(16, 185, 129, 0.3); }
+  
+  .role-card.donor .role-btn:hover { background: rgba(245, 158, 11, 0.1); color: var(--accent-orange); border-color: rgba(245, 158, 11, 0.3); }
+
+  .role-btn .arrow { transition: transform 0.2s; }
+  .role-btn:hover .arrow { transform: translateX(3px); }
+
+  /* Simulation notice */
+  .sim-notice {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 40px;
+  }
+
+  .sim-notice-inner {
+    background: rgba(245, 158, 11, 0.05);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: var(--radius);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--accent-orange);
+  }
+
+  .sim-notice-inner .icon { font-size: 18px; }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 40px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .roles-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero h1 { font-size: 36px; }
+  }
+
+  @media (max-width: 600px) {
+    .roles-grid { grid-template-columns: 1fr; }
+    .header { padding: 16px 20px; }
+    .hero { padding: 40px 20px; }
+    .roles-container { padding: 0 20px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-gradient"></div>
+
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon">C</div>
+    <span class="logo-text">CREDIUM</span>
+  </div>
+  <div class="status-badge live">
+    <span class="dot"></span>
+    <span class="status-text">Checking API...</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-badge">
+    <span>🔗</span>
+    <span>Transparent Donation Infrastructure</span>
+  </div>
+  <h1>Choose Your Workspace</h1>
+  <p>CREDIUM enables end-to-end traceability of donation flows across multiple blockchains. Select your role to access your customized dashboard.</p>
+</section>
+
+<div class="roles-container">
+  <div class="roles-label">Select Dashboard</div>
+  <div class="roles-grid">
+
+    <div class="role-card ngo-worker" onclick="navigateTo('ngo-worker')">
+      <div class="role-icon">📋</div>
+      <h3>NGO Worker</h3>
+      <p class="role-desc">Create invoices, enroll vendors, and manage bill submissions</p>
+      <div class="role-features">
+        <div class="feature"><span class="check">✓</span> Create & submit bills</div>
+        <div class="feature"><span class="check">✓</span> Track payment status</div>
+        <div class="feature"><span class="check">✓</span> Vendor enrollment</div>
+      </div>
+      <a href="#" class="role-btn" onclick="event.preventDefault(); navigateTo('ngo-worker')">
+        Open Workspace <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="role-card ngo-manager" onclick="navigateTo('ngo-manager')">
+      <div class="role-icon">🛡️</div>
+      <h3>NGO Manager</h3>
+      <p class="role-desc">Oversee operations, monitor fraud alerts, and manage allocations</p>
+      <div class="role-features">
+        <div class="feature"><span class="check">✓</span> Fraud detection</div>
+        <div class="feature"><span class="check">✓</span> Chain health monitor</div>
+        <div class="feature"><span class="check">✓</span> Allocation management</div>
+      </div>
+      <a href="#" class="role-btn" onclick="event.preventDefault(); navigateTo('ngo-manager')">
+        Open Workspace <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="role-card vendor" onclick="navigateTo('vendor')">
+      <div class="role-icon">🏪</div>
+      <h3>Vendor</h3>
+      <p class="role-desc">View invoices, track payments, and monitor earnings</p>
+      <div class="role-features">
+        <div class="feature"><span class="check">✓</span> Invoice status</div>
+        <div class="feature"><span class="check">✓</span> Payment tracking</div>
+        <div class="feature"><span class="check">✓</span> Earnings summary</div>
+      </div>
+      <a href="#" class="role-btn" onclick="event.preventDefault(); navigateTo('vendor')">
+        Open Workspace <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="role-card donor" onclick="navigateTo('donor')">
+      <div class="role-icon">💝</div>
+      <h3>Donor</h3>
+      <p class="role-desc">Monitor your donation impact and fund utilization</p>
+      <div class="role-features">
+        <div class="feature"><span class="check">✓</span> Fund transparency</div>
+        <div class="feature"><span class="check">✓</span> Impact metrics</div>
+        <div class="feature"><span class="check">✓</span> Independent verification</div>
+      </div>
+      <a href="#" class="role-btn" onclick="event.preventDefault(); navigateTo('donor')">
+        Open Workspace <span class="arrow">→</span>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<div class="sim-notice">
+  <div class="sim-notice-inner">
+    <span class="icon">⚠️</span>
+    <span>This is a <strong>simulated</strong> environment using local blockchains and synthetic data. Designed attacks demonstrate fraud detection capabilities.</span>
+  </div>
+</div>
+
+<footer>
+  CREDIUM v1.0 — Simulated demo for IIIT hackathon. All data is synthetic.
+</footer>
+
+<script>
+const API_BASE = window.location.origin;
+
+function navigateTo(role) {
+  window.location.href = `./${role}.html`;
+}
+
+// Check API status
+(async function checkStatus() {
+  try {
+    const res = await fetch(`${API_BASE}/api/health`);
+    const data = await res.json();
+    const badge = document.querySelector('.status-badge');
+    const text = document.querySelector('.status-text');
+    if (data.ok) {
+      badge.className = 'status-badge live';
+      text.textContent = `${data.chains['31337'] && data.chains['31338'] ? '2/2 chains' : '1/2 chains'} UP`;
+    } else {
+      badge.className = 'status-badge';
+      badge.style.background = 'rgba(239, 68, 68, 0.1)';
+      badge.style.color = 'var(--accent-red)';
+      badge.style.border = '1px solid rgba(239, 68, 68, 0.2)';
+      text.textContent = 'Chains partially down';
+    }
+  } catch (e) {
+    const badge = document.querySelector('.status-badge');
+    badge.className = 'status-badge';
+    badge.style.background = 'rgba(100, 116, 139, 0.1)';
+    badge.style.color = 'var(--text-muted)';
+    badge.style.border = '1px solid rgba(100, 116, 139, 0.2)';
+    document.querySelector('.status-text').textContent = 'API offline';
+  }
+})();
+</script>
+</body>
+</html>

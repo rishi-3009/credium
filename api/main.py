@@ -16,6 +16,7 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,6 +46,8 @@ DEFAULT_BILLS = ROOT / "sim" / "fixtures" / "bills.json"
 DEFAULT_SNAPSHOT = ROOT / "sim" / "fixtures" / "snapshot.json"
 DEFAULT_EVAL = ROOT / "sim" / "fixtures" / "eval.json"
 WEB_INDEX = ROOT / "web" / "index.html"
+WEB_UI = ROOT / "web" / "ui" / "index.html"
+WEB_UI_DIR = ROOT / "web" / "ui"
 
 
 class AsciiJSONResponse(JSONResponse):
@@ -155,7 +158,10 @@ def create_app(
 
     @app.get("/")
     def index() -> FileResponse:
-        return FileResponse(WEB_INDEX)
+        return FileResponse(WEB_UI)
+
+    # Mount new UI static files
+    app.mount("/ui", StaticFiles(directory=str(WEB_UI_DIR)), name="ui")
 
     @app.get("/api/health")
     def health() -> dict:
