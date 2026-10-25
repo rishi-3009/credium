@@ -54,7 +54,8 @@ def bill_nullifier(bill: dict) -> str:
     )
 
 
-def _allocation_struct_hash(alloc: dict) -> bytes:
+def allocation_digest(alloc: dict) -> bytes:
+    """Struct hash of an Allocation."""
     return keccak(
         encode(
             ["bytes32", "bytes32", "address", "uint256", "uint256", "bytes32"],
@@ -92,4 +93,4 @@ def recover_bill_signer(bill: dict, sig: str) -> str:
 
 
 def recover_allocation_signer(alloc: dict, sig: str) -> str:
-    return _recover(_typed_digest(_allocation_struct_hash(alloc)), sig)
+    return _recover(_typed_digest(allocation_digest(alloc)), sig)
