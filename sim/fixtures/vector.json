@@ -1,0 +1,53 @@
+{
+  "simulated": true,
+  "domain": {
+    "name": "Credium",
+    "version": "1"
+  },
+  "domainSeparator": "0xc7a23ea26a14cd896e2268f230f9ec1dd1235be5a8922a0a6b925d7c58a675fd",
+  "ngo": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+  "vendor": "0xaf55c794F706Dc68e250984eB933D553B5c162bD",
+  "bill": {
+    "vendor": "0xaf55c794F706Dc68e250984eB933D553B5c162bD",
+    "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "billNo": 417,
+    "amountPaise": 18000000,
+    "issuedAt": 1792861200,
+    "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
+    "itemsCommitment": "0x9825f2272f427d9ba3c2289d28464211903f12125becb39800ed0e5db187d1f5"
+  },
+  "billDigest": "0x93fc9b21507920dc2d271b43cb52902d8e42a30d82026dfb81ef639a34bc6a2b",
+  "billNullifier": "0x78180eee281b45dbfd8213e5b09efa0350d5027528eb37e5a790d8d077d0d050",
+  "vendorSig": "0x941a93cd3ac84adb9acf2844e8e51a80913cd783e19f56e828f0119e12fff33f1be944b653d1a42c1049b228d3c6ea5445923ed359a25d697bd46d58004882131b",
+  "allocation": {
+    "billNullifier": "0x78180eee281b45dbfd8213e5b09efa0350d5027528eb37e5a790d8d077d0d050",
+    "donorVault": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+    "chainId": 31337,
+    "fractionBps": 10000,
+    "reportId": "0xc02aa87a320fc33a5472a7ca26553aa7ecc83da8bb5af94693becb5642f7fbd7"
+  },
+  "allocDigest": "0x8dd98caf022929fce1d2ca1a0137f5e5786048d6718dd28e1c5db43c74166786",
+  "ngoSig": "0xa2ed2ccd25c7fe46b26519edce7d80030e8ea7c40129378744222686d82f60be0afcc7fdf28d4f9b6a511e5922d18574524e39456a4ac08ff336d6e3a72b2deb1b",
+  "chainB": {
+    "allocation": {
+      "billNullifier": "0x78180eee281b45dbfd8213e5b09efa0350d5027528eb37e5a790d8d077d0d050",
+      "donorVault": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+      "chainId": 31338,
+      "fractionBps": 10000,
+      "reportId": "0xc02aa87a320fc33a5472a7ca26553aa7ecc83da8bb5af94693becb5642f7fbd7"
+    },
+    "allocDigest": "0xb8f60b5d15d65328a2daf5b6dbf560c94116b5fd2fdde714b6a890aa303cea96",
+    "ngoSig": "0x5c323d5c9d68b3d5f489881f28f2f523517c086b629a9260655dd295f75bfe6b1cbe08ce79aba2402c2ff615b55b961cef45314912946777dee3c945f16bceef1c"
+  },
+  "tampered": {
+    "allocation": {
+      "billNullifier": "0x78180eee281b45dbfd8213e5b09efa0350d5027528eb37e5a790d8d077d0d050",
+      "donorVault": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+      "chainId": 31337,
+      "fractionBps": 6000,
+      "reportId": "0xc02aa87a320fc33a5472a7ca26553aa7ecc83da8bb5af94693becb5642f7fbd7"
+    },
+    "allocDigest": "0x5fb9f1d29193c15ee01fa62dfa086b123104831472c6d915b84378d114cde7c6",
+    "ngoSig": "0xa2ed2ccd25c7fe46b26519edce7d80030e8ea7c40129378744222686d82f60be0afcc7fdf28d4f9b6a511e5922d18574524e39456a4ac08ff336d6e3a72b2deb1b"
+  }
+}
