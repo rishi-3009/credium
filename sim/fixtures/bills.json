@@ -3,38 +3,47 @@
   "vendors": [
     {
       "name": "Ramesh Hardware",
+      "address": "0x13ED931D1757cc871F465ab98d42C77DFB60c339",
       "tier": "GREEN"
     },
     {
       "name": "Lakshmi Pipes",
+      "address": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
       "tier": "GREEN"
     },
     {
       "name": "Bharat Electricals",
+      "address": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
       "tier": "GREEN"
     },
     {
       "name": "Gupta Cement",
+      "address": "0x6C572a7c6668B28aa707AB0Db4e39c671b3f8735",
       "tier": "GREEN"
     },
     {
       "name": "Nagpur Tools",
+      "address": "0x53905A4A49cD25fA520114c34a4405cb285173dD",
       "tier": "GREEN"
     },
     {
       "name": "Vidarbha Plumbing",
+      "address": "0x4fc944003aa393f501b82d4ae4cE967521Ab253D",
       "tier": "GREEN"
     },
     {
       "name": "Shree Supplies",
+      "address": "0x3B42b9BB32448236712663b213Fd65B6bA9c82D2",
       "tier": "AMBER"
     },
     {
       "name": "Om Enterprises",
+      "address": "0xB933EF914f1210BA355E07C1D125E809d0D6E969",
       "tier": "AMBER"
     },
     {
       "name": "Sharma Traders",
+      "address": "0x34FB109BE1bE6b65d9F0761E1ec4244a15aadf8B",
       "tier": "UNREGISTERED"
     }
   ],
@@ -52,10 +61,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792800000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xa282b5808f161095d1561f094602dd2194244488b7bcdbe9edf94c27e698e9b5"
+        "itemsCommitment": "0x6b086c46225ee23550f6ffed969a93f0c766602bf42c12496baee92edf862004"
       },
-      "vendorSig": "0x03cf407ba16c3ebbe34a1e521fa6a472ce90ef5cfe2b2502bef1ed24a192024d6ebd58380b717d9b0082006819c3b8072b411a5d171d87d5c4753833a4656b421b",
-      "nullifier": "0xe20ac7856f3742ff4dd35c44362f850ae782db200d7df78f84d48c0a29936532",
+      "vendorSig": "0xa67d0138f76795d5beb1c7d4ba6b32dee19b64435177fb0ae23abc145ce9161310ade756ccf9d7393a5934372e1f86d339b6f17eed04ed10ab3772feb40a695f1c",
+      "nullifier": "0x406c396e99155df645ad887815d5d8f9f9788d9ac40b8ac007544c643d33c638",
       "reportId": "0x52d7cf69b435aefe22838d6cb09787622f04a8fe4981ed68a9974bece80e2f90"
     },
     {
@@ -71,10 +80,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792803600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x08c290def972a572dc786ea9a02c7c21716086986d8cb47ed543249d9be13850"
+        "itemsCommitment": "0x35caa9376a6c69b58b9eb93aefba4a566533d6354adb4f6d747aa8b1b8a0ece3"
       },
-      "vendorSig": "0xd5b2da122d11979c4256179f71cfed2e87c1f4f1bf9d67f0a9431bbc89229dfe4fcff0d1ce0ddae94e98dde9c305221e66e2a4416ca05953521d0aefc7c414391c",
-      "nullifier": "0x21901effaf2511f06a39fd78ac2f1d10064bf2148bd3736a4867fd380d85f66f",
+      "vendorSig": "0x5d09f11eddf6c82586432f6d1036ee3662e75fc9132994e54c46a20da61074933c1171f9fb0ed2c228c26c7752d6dd8c75ab4ce0ce6a9cd47747d253ef0c64e41c",
+      "nullifier": "0x6ff3264972539ccf4322884eb7586c3f7634fd8a78742a7c6dcad856e7c9623d",
       "reportId": "0x8689b0742a227d21079a065d0efca0525afdc6c40c8f2676710f95b580c40bb1"
     },
     {
@@ -90,10 +99,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792807200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x41ea70239f9845421f91a0e3c186afef65af7b4816f42558436f854a34ee3cce"
+        "itemsCommitment": "0xd4aba9da0fa6c3dd7da52f30f63a38dbf415f6abc941c40bc2e0fb73923ec428"
       },
-      "vendorSig": "0xde83de68d6422685c8062103611515ec998b46135da4c37aafcfa45b80d6f3f22c0a8add7c7c5a93cd586fa9b7775673cada25a5dfbf6e98b774281b47f98b0c1b",
-      "nullifier": "0x27b8b2c51722979153d710527a7210f716b3075e00978d80f157c48d2d5f7757",
+      "vendorSig": "0x6bc9e867f591832d65287e95be2548467729d0c693b4f20176601056bd26d7c0069d1ca50305d6b647d447b9651f6fcd86e5c639b1b19fe2f93adaedac6d3a001b",
+      "nullifier": "0x96fd7860b6b19e52bcdbc21f0006b6c541a8e1c31741cc9a31fc7060290c8ad6",
       "reportId": "0xc06e1519c325083c4c615a75cee0f75b7160dd1e37e4d8b0d159184e4248d96d"
     },
     {
@@ -109,10 +118,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792810800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x1d045acc709e1bf111cdaeb0ec1e149224c08c0d5a1bef28f21c1df96af3c11d"
+        "itemsCommitment": "0xafefdf4067951f943f660bd929319d129a0c3cde495e33bc8ae1449618d24174"
       },
-      "vendorSig": "0x1498bd52f7e14376f3d4ae7c0d74b7505682f2d62d44bae05a298578463395135172c67037f5ac4f0dbe7b300e422d7e5da35fe5ccbb4d6e07fd0deb9c9351501b",
-      "nullifier": "0xf3b1aa7686fab38c1d5fdab0bbb6fcc9c364283ba49fc89989b915bada067b6b",
+      "vendorSig": "0xa3a42342d8994f75f2cfb75c94df43c5ad266ed9960c99aabfec93528240533e154d752c4dbd9cbafb09ac29101645b67d82764e7f14eed1cd7f273e2c68249f1b",
+      "nullifier": "0x1ca643486294207e8b7f461c29fbe2ff720dd245f725a2cc1903cad0ee9fc2cf",
       "reportId": "0x1221a35bcf9f1031b5c82060c7bdc6a8015ad09b6f03aeeb4753a0a30a287cb1"
     },
     {
@@ -128,10 +137,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792814400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xdc441398ec1d141a28d110d70dcbcda2ee63f7d79f15ef8af5595871451e09fb"
+        "itemsCommitment": "0xae6b46b0c478ac120b9cbc09bb2352b75be897f00c4c4a6178ac8262f565eeb3"
       },
-      "vendorSig": "0x1a85c4703c08443a3fb57deaa4f96ff143c4e945dc1ac66ae7e55ed84a5cfd366df97be88d5f67d6f911125f9f15b6b17c37b13fe1d4b81ddfd8f21d622e42411c",
-      "nullifier": "0x5d51383f774b4e283a436d856388872981c754840fec3011a76c57152afb7219",
+      "vendorSig": "0x0badbe67e563e304ea8803e659984666a94df14a98ba57cb719a67f1f6e6bd503a330f19d0c5cc068f71394ae0a5ca809a7b5f116741e7dfdbc81a960fee67621c",
+      "nullifier": "0x303005b932a92a86f3bad9a41dd4da6674085d969bbf90a8ae123d16faa4514d",
       "reportId": "0xafcd8b7dc449df07ac894006ed29025386cc7fc32641b36b02420c0da6afb695"
     },
     {
@@ -147,10 +156,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792818000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x8576903a53d2dad19fa60b7990d379ce048b5b888d80b52ef8909ac19dcd22c2"
+        "itemsCommitment": "0x06690ff31d0a750accc649df05b4dc3d5d71a364095e1713c65aa9a96bf35386"
       },
-      "vendorSig": "0xa307d40e8425f6a073854ac4b3fd5f1c9c22492c54be80b37bdde43508946f45721badbf5c6c36ade9fea5a00a5e371d75d11559f37a08a46eaf304f1b56c7301c",
-      "nullifier": "0x78625b07913d462f6c3697ca1ace5667f569e56ae7c0a7bfee407388f56f9464",
+      "vendorSig": "0xc0ec614c70b34c9a105fa2ec9b5f7d0e20776d2d9226575107b21819e982cb232aeb7ac0565782dee565fe8db850775d58b384b0d78eb666fa1ad5be589937b71b",
+      "nullifier": "0x1413680123d83c20fd6c925afc0e09cdb969f6cd19db433f385cb82b4d809cb1",
       "reportId": "0xda5235527d3102e4cf69e86036db2b35c61cf5d4bd2684820b0164b303dc9329"
     },
     {
@@ -166,10 +175,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792821600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xed931071ba8c8bd7aa61a100388c842ee3b47c0423e6e07361c4d854fc12fef2"
+        "itemsCommitment": "0xb9969154367897207feec21ea9a0505953c6789f824743cb567d112f7c537b17"
       },
-      "vendorSig": "0xa30ae2018d18c946efa8da192506bb4a9a8e1b9a69afa7f136ab3c7652faabea799b79dd1b25c13dd3aa5e95be2c8f4f834b096b0a70f7372c9366a2fe64e8611c",
-      "nullifier": "0xadbc9c66919e6190d5bc69d2aad2461ac4a269539978c38ddf3b0a3b94d65034",
+      "vendorSig": "0xc35fbf85d35a2695d6a124778bda227232ad34ee53da49bef39d38ab37c7bb016241b56ec5de575c6a912ae2f4fb640ca06cb28f243e3123704e849acee4d2061c",
+      "nullifier": "0x586c602b089cfe9a6dc9f84d40bbf12a84e702d3a25bbfe1caf4dd1fa53d4b08",
       "reportId": "0xb93997fa64191d19c1837921ef7d29881ebc347012d55b01759972f4ca3ca9bf"
     },
     {
@@ -185,10 +194,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792825200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xe7bd1206c3703555c04b992fddf70a0ad5c9a83676428b360db7bfc14b23b99d"
+        "itemsCommitment": "0x91ac93cdfb31fdf8d09351afc61a3aee163501df169af1df01c172246f08c9cc"
       },
-      "vendorSig": "0x9ad71a363e6ec882081573fbbc584821eccb03f26e33793d4b79d40a7671b9d362da0314e1f77fd8dd4eac79bc26354e68d4db526b141c1bf9c922956d5c58581b",
-      "nullifier": "0x4bc1981c36a67ea2a09236399c784531333f9c6d04aa2798a39f65380c7cd182",
+      "vendorSig": "0x6a0c920fcd5e8c972a545e0a371fbffb1aac983f21d7ebd8bc26239660bac7a256837b94aafa9dfe75bbd4a7b6734e21f177c8b1033dff2cab43adf8c1370f591c",
+      "nullifier": "0xac091962754d3e2220e58d2a0e45df0a93fc96d6ffcbcb36a65ffb28b63b3e85",
       "reportId": "0xa05f095f09e67121ba4c09de2d75013cd4cef530d5107de8f6aee76485557bb7"
     },
     {
@@ -204,10 +213,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792828800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x190da95559a285c94658ba153085314911d80eec4bbcf5389eaa02c14bf9fc6e"
+        "itemsCommitment": "0x3a05fdd3761f61e6c3caf0c8107b98bc9fe6263f94ba9cf8a27e64bd8d3faa51"
       },
-      "vendorSig": "0x28a890d3fe20e063ee171bb7cff38814da41aacdf198dbd4ebcdade8f0c0cac97c7e3d37f72a50ef399db8aa8980d2534d05cf0646ea7d4e977f951eedfdc8bd1c",
-      "nullifier": "0x4639b3248c3bc2575c1b36ca336108039940dece1fc260d938e491216df7dfdd",
+      "vendorSig": "0xf78ac0c08007f120d3f6f2f3f4a2cd3984cf1a57c8628857a92ac7af89822ac5656c40c6666cedb9cc1b8c0d7103ac45456627b79ce274a798e33d87ae847c391c",
+      "nullifier": "0x03a5628369549e933529db10c0227ccc815a048b64b00d70712d0398f6861cf9",
       "reportId": "0x96ac40fe8cc76c05f3e23748aeebc329dfd1f7833732758b6db3329f2ef6d00d"
     },
     {
@@ -223,10 +232,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792832400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x0df5a44a7b1f15a481cfa8863aeb4cc69236014aec4a08dedf359d5735456c2f"
+        "itemsCommitment": "0xcae86675e759462f9b799050f4d4d33a96b675b76d0a24e573f138627e07e4dc"
       },
-      "vendorSig": "0xd05b049a4e0ed420c454de9b172fd31c5ed1b0f51ec5be848f612f85331f87213057527e1e01f4495497364d453dd1fe5ee9470bff49ac613a6370b96fb44c6b1c",
-      "nullifier": "0x1a018fddcde21146469ed5f920baf88cdf4b1a7ecc808061bca5c05fe2554a73",
+      "vendorSig": "0x0c2ff24ab9fe3bc460bf172af29f3f232e0015171d00c8e6dc794022b0e9f37469370824480590426f5ceb2351d69e35c6e48b91f6c0e7d649b98abee64faacc1b",
+      "nullifier": "0x2550f0a35f3f4f78c2df2a4d91aa43fec454e3cf7615ca3e0263a8478164ba2e",
       "reportId": "0x68d5a5d3ad25b5141dd053a7ae251c67773f42d169e3e37ae6f3aee5ef731701"
     },
     {
@@ -242,10 +251,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1792836000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xa49388b72da8b0ca562ddb7ce764c698677ede879a9863bb33edb50379c278b5"
+        "itemsCommitment": "0x04baa65dbb419332a84b13da878623823d3c898fa4b20826a208c7d305eb2679"
       },
-      "vendorSig": "0x443060bf7cabf9dfa2fbd9f8bf325beb8e06a48d4805ef7df6272ed4550f94d8570fa94fdbdfd24f057e432077711ef379b413df8c0465f34ee1fe8a1c63e19f1c",
-      "nullifier": "0xc007138b97ef589de3840a8c4eaa0b1f90d77dba53caff8caf07baddf10113a1",
+      "vendorSig": "0xacd7cbe14177056ba3189829d7e9e35eab4c36b756f6986f317b3ae66da965e75176deb6644355f4f4a89b531bc0f4f9ed7cd7ecf5a80a396f18f029a807925f1c",
+      "nullifier": "0x7120e734e293180bc64e623488fb262657707dd24741625a5b329f21c9d52a13",
       "reportId": "0x315813f63a9813f9e8bbbcceed391e74870493f3c93bbed0195e8d1a3fce17d0"
     },
     {
@@ -261,10 +270,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792839600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x077a87bcd08ae463a1b5c23df69e12d5fbcb3586df10d9f18bafebc5e770dbf2"
+        "itemsCommitment": "0xcc354505d2bd2b524a6f55894efd1296f0aa7527fcea39b86be4b75dfca557a0"
       },
-      "vendorSig": "0xddcb024df0490703a55de0d7e13cbaaebb5dccd96628499e9526fe8e0fa99f0761300fe31d6f3b388da5a38358399e425f90ffe05a391149c169bd5e583a77861c",
-      "nullifier": "0x2e395acf5489214be01a9c7735b37354629da43ed4ee126263e36da3dbc2348f",
+      "vendorSig": "0x0de05a93c03341ee8393f311a139572838db3c96608f76aa7b8e66e88b23138738054ac282ff318aee871195d48cd7cf4a68b9234a0eb311a33d61e2cf1ffa321c",
+      "nullifier": "0x72c5d818208701f652b6cb20ca82bf969453b3ad5f6e894d2d425d23b6029981",
       "reportId": "0x97d183b9f93a6de3e52386d90d891e35db77ff7d7da08deae206c97ea66ef42f"
     },
     {
@@ -280,10 +289,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792843200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x20a444df0bd6809894e04fc5d865fa2b47128879d92d38d162d77efc3eee660f"
+        "itemsCommitment": "0x2d2f94cc030be8e05f2eb0142af659f104b7339f45681665e9095d8a87b53a4c"
       },
-      "vendorSig": "0xe2f1e23f8b3325566711aa2d663848450f824169c9134045d944b785788617f53073cb48a8ad2534705b73e7f6474f8d1819a94f7afe95ff2bad68fb7e134cb61c",
-      "nullifier": "0x83a2fafebab1e30878d8826b9659b3d2b78f7265b6f71886d90d09997dfc976c",
+      "vendorSig": "0xc9b84de7641541270f1dd0fac3ec9c539d1fdbbd80982a9b9980e8ec0182e8e30abe71defc42c1d871dda174dd16730002a4bf313a277950e9a4b155983559c71c",
+      "nullifier": "0x7a4788c55eed7b744f470456192e29be48e79fea269a43e7611240dd8fbf8f12",
       "reportId": "0xee9b0735d26d3cecd2768b4e7919addbd526f2829446e513053a6f96ba232731"
     },
     {
@@ -299,10 +308,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792846800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x80242f514e32c5b2292916570b9317e4c6b44176cc6b5ca4abae7759b4105c29"
+        "itemsCommitment": "0x94fa68c1ecda7afec7737b4c9544083bd70d82de03ece323044fba2f097105af"
       },
-      "vendorSig": "0xa125378d902e3be79419c1c68ac1628da963c2e939d2bdfdccf9da3dac2314c8169c4dc588ebd96d410da984377ca7756076f918fd0a3c5421f97b9a7a0656ef1b",
-      "nullifier": "0xcf92baeb593cc2bc038ddc027a7e6a0f358013dc167ee6bf44134bd5c599214f",
+      "vendorSig": "0xe10a6a42fbba0d2c1841df461d0e3aa7f7cb683c90e8cad463bdf04ab21f9f532322ed7143bf5dca2d64d6e5faf1d483116040cb1b6afc62bdd3f191bf55660c1c",
+      "nullifier": "0x1bcf42d6b095b591481657d97cf87f3347a060c8583d184fe1673c3b1c60a2a7",
       "reportId": "0x0c4edb9e400bfa13008a40cb649913af969cb661f9a6a2d957b1db65168ba4f0"
     },
     {
@@ -318,10 +327,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1792850400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x50bcf35c761928fa46d898f3fbc5ef61f2d1a25ac9d364c73188eef650feaa76"
+        "itemsCommitment": "0x8514443a71255105262e2005a38636a8d334a96960812f04c69f918f37156634"
       },
-      "vendorSig": "0x32260a81af6496aca593e2ce2e9f03108f70f34a26c59eac5f1bec77a311c37178b14c4878d98ae910fa45ea0635c1f6060b794732584e0a45d065509fa66b8b1c",
-      "nullifier": "0xde85a0d892b52df3fe51d86b32bbe64571b1192785fdea1b144431366d600a5c",
+      "vendorSig": "0x157c631406aedd72ccdb98074f24ee37fe47f5f7790716f05fcb63dcc154d3b76788f0d2849d35aec92918b69074f6f2e826df091c08eb9940c08599419aa16c1b",
+      "nullifier": "0xb1641582b1c8ce3da81e955aa27fdc56960eb7fbf82a976ced34832309d8ed98",
       "reportId": "0xd1359c761ee8c37346adce4aa4736b53b928bdbd1dfa70a6f751bd21490b34ad"
     },
     {
@@ -337,10 +346,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792854000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x334fd5feab56110912e6aaf7700b4a7959bc12b4b6b78d1489a807e65e18b816"
+        "itemsCommitment": "0xe635e9158d43e6e47d7fe7b6fbf65784d5f6d6afbfb9096a7009693f2b6f7191"
       },
-      "vendorSig": "0x1430e50f8e9518d048ee11a0ee3b8a36610f6dabce35894609ec914cc7c64f070d7817ef03bbf8fd244ad16a123f6be97e73040c82a751a499ca226098f023511b",
-      "nullifier": "0x64a82b1794d7769f27b80b2795e57ba00a5861550275893a0d80022fab868eec",
+      "vendorSig": "0x3315edd733035daceb7589d53d8da7453c648264de0ae5c364bab51f3921980d394d6f1eeb61904c5e49a126be6d8a77c6ef6a0defc1afbe1425dcf8cfb15fd01c",
+      "nullifier": "0x5c38b89d13d41fa50147567b1783a885deac3abdadfec00fdff95e83cbdae1f9",
       "reportId": "0x45341370d18624231e379d5892d56455e8900ad4991cdd06f305cac6b2606803"
     },
     {
@@ -356,10 +365,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792857600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xf9fdd855635b68e38b5e8dcf5ab7dd788519d7b2605b1239059ba7803742a6da"
+        "itemsCommitment": "0x342af6e3adb6ef8b6378a10d4b1d78f3fafc4fe06791277cfead95b39a19f8a8"
       },
-      "vendorSig": "0x3062d6a685b43794dbe376b96ee30a6584a432031cfa65dbc754066de440c4d41d75ab9ae6183f26379af497ebf5952cc3a5f0345de0b065ad9a7a1b06e3c3671c",
-      "nullifier": "0x58612470ea0b1e2fa05c887bd2d1d15b3cc8b93da562b4de77f14a5d1376a927",
+      "vendorSig": "0x18ff8086f4b7832b5a0caecd5adafc087edb1f7c056488a6bce82ddd7435098f70dd992150943bc2f48ab08ea5ef0e6ef9dea4d603d0bb5267b1ba2febafcc6d1c",
+      "nullifier": "0x3fbbe9746822a5326fe37bbb91ccea405ed072f7d637b7fd35aa9413f5e6bda8",
       "reportId": "0x85015b3d72948e6be20697d5fbf2274f0292522e7d32501d09061d3dba2abfe1"
     },
     {
@@ -375,10 +384,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792861200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x55c946abe6f1a63608aa059ffef3818e092fc4a89164da13a5e64d56f3809b3a"
+        "itemsCommitment": "0x57d1643bc173ebe2848a2cdd7c68197da2934210c049c0c2357d17e05cab7033"
       },
-      "vendorSig": "0x9a7b71886d5105e4eb3c526f4c9db21f1dda5ae897129a6b4ea6b686e0854a112ece9b7d33dd3edca3b65c7c68ee507a8861a210d6044b1e7af787bddd3499461c",
-      "nullifier": "0x4a83a1e6b6ed59f8336b553f9bc34f51046631333f70312507dc8af7a27ca311",
+      "vendorSig": "0x92e9a3c5bb4cfa97036de41a1863bbed68a22a01b75ef97dc46bad001da94b794ceb46311ae0299f634f5ee9e0d9de2a921ee1d6a948571849d97fcaccd3dc131c",
+      "nullifier": "0xc42411ac746244e3e85ae85cc9a823effa6bee42f97ab4a6eb5917c477f75ac6",
       "reportId": "0xc02aa87a320fc33a5472a7ca26553aa7ecc83da8bb5af94693becb5642f7fbd7"
     },
     {
@@ -394,10 +403,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792864800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x02dc9264461472a319b71a6b6d7b2c3045ccb4fd11db84934520bfa9c1a444c8"
+        "itemsCommitment": "0xf7eb5ac21d674c928ca6827dccc0be5fd5ec5606bc7562f2479e203bdf6b62ee"
       },
-      "vendorSig": "0xc7a9a3ed26a052f2279c087725fbaed639a16755fd328a8f53816c3a456ec2ab2974335142477ee480516feded7ca5b47de737d88295c89ab7a536311ed911331b",
-      "nullifier": "0x9e4ae7a7d4f3a365fa1488244c6db73099c212f3855dcb68dacb6e57b6838fed",
+      "vendorSig": "0xdb72b8a90f696911892e94a7ffc74b700db6cae78ec22de105a92c8caefcb5534d5093f209f4585f5bbcdd5e2c982c8e7023bb2ab37196796aaa5ea12bd038521b",
+      "nullifier": "0x2c5d966e9f66242011070bcd4e46f03a96e07fcc23bf94c832c6b1a144f19e8e",
       "reportId": "0xb98ba7bd1666e0d45961a7ddea75cdaea5f1e866516866ee7be24d95ca822ba4"
     },
     {
@@ -413,10 +422,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792868400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x3173c187012d3cc9e147ea37639518438fee5bbf0841a2f250670812cd66916b"
+        "itemsCommitment": "0x1419052697698125885d07033a4f81500bff20dabf66936bc520a962f6b916b6"
       },
-      "vendorSig": "0x89c2b1cf3f7c6b6354a060283cc3efdb575136e7bd35221bd6df34d1f0c701fb2bcd23a8ba97a11190aff129ea8f07a85abb88f13ab5437ef0534026a96ae99e1c",
-      "nullifier": "0x79ba228c7924d11e5f5297b16dfacd6e7044c2790e22dd3979ec0a6c75950452",
+      "vendorSig": "0x8cc42ab0f6e3eb675a618e0336a68d5887dc99c183a7c68acfe4513b811d9d494f81d23da0738f2efd176a340067ed0af921b636b7555bb8adbc35262ed304c41c",
+      "nullifier": "0x2c38b9b7c4d52cbea81e155cd7421cf2d9257f2bdc921de18200b3bf14db9d80",
       "reportId": "0x91ef7a926979d3105b264383fa3ec7808f07c522138bb10f922ea5f2e7b96e1e"
     },
     {
@@ -432,10 +441,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792872000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xd4ed1e8632c08c74abc467e9a5a2be57a69b5f798ca3edcc4dba2ef0336d24dd"
+        "itemsCommitment": "0xf47bb04dc65635bc47440bcad713177296dee4030c8237dd4f730f0afb8343e4"
       },
-      "vendorSig": "0x8db4b8ea94403b4944443fc72ba4d90e8c8569fa1f11264fa6f9f3f13b67ed4d617ef8e4c6a53f368ff1d19af34ff29e182025d9df66c3540f9c476340e6f6441c",
-      "nullifier": "0x00b32001005d3ca4b1911e8a9e4490d70ffa7a6394f99ad405b7fa783f88571d",
+      "vendorSig": "0x625ff3c71f906929faeb3713037245d721eb8debc94ec2f8f31ffb75ec405989549f4e9630587528e23d18fe015f69725b78fc352ca0e6fd607c6c46355875e11c",
+      "nullifier": "0x2bf1f880e22c7958192c8cf4dc6f12c32e94ec55f567edc5a768cb300c4fab0a",
       "reportId": "0x3e147638437bfea2597f0527d0d444b2880a7836a1bb2898f781091dfa7eff50"
     },
     {
@@ -451,10 +460,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1792875600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xe06115f3a5befc7a6ff1969e1aac5bb9167382a9056002f68781d2d2e65c7d8b"
+        "itemsCommitment": "0xd416f60b8e76edb1492b4f3a88b69b3c4e978d5b9928971df889eb6551e23eae"
       },
-      "vendorSig": "0x824663a557fa7fd763bf02060d346a5b8d17a0f041ad875b0a05aff510a021484b6b45e07420ee4f70447ca2e8519c3579bd3bd5bd26d4aac0ee00655114f93b1c",
-      "nullifier": "0xd339f1e24483044602b5f808e47683016e04e1a7e95031bbf39b2ed3dd1c40f9",
+      "vendorSig": "0x51183ec660b36e69826fd74e4ad1f27bf5487b97371333375a8827569495e1872b1dd38e950599e43bb312ba8ac6d603632e7908b06ed4f4202dea329ad81dc51b",
+      "nullifier": "0x1ea6901dc3bfb06ef39d14757e5e7ffad1eb0a8e905da3b119af02e52ec1d16f",
       "reportId": "0x32f5385e64d1ff700f77686cc130ba617385c188b3d0ac085b77aeee89ec71a5"
     },
     {
@@ -470,10 +479,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792879200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x8d9ce3ede060619c8b76a951fb46ec785dc23350ecdfd942794b409a1b338588"
+        "itemsCommitment": "0xbe4d87f955130b6a93fbc2c662ef3f806ac3254b144bde2b496569032db3ff8a"
       },
-      "vendorSig": "0x0e8341f125fd587a3f73f1f5b18d148435308d51b64a796a4d51e438e1c0713a5c23346c2d4475c769778007a3b95dffd65fb1852c8335ab4f91b23712e404011b",
-      "nullifier": "0xd6d0635e0372369bc43b5180a00267eb6677586315cdc290d3b923f8ba05869e",
+      "vendorSig": "0x18084a9b2391dda763b38961485c3aecf9ac2384cbd6fe08d9728cf3e630fd46790d67b4af2397977c6a69bd46022143f25e9f0611c80100a5d47c75a976911f1c",
+      "nullifier": "0xf9eee219e3217f2471f3a735c3d01d832519f75b4fbab30518de3edba4bd71c0",
       "reportId": "0x53612b52a988f334e1818a7661414bf31b6f09af36aab50674ddc0a4ede9f22d"
     },
     {
@@ -489,10 +498,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1792882800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x84930321dcd41fd7349dc0f71780e544c0cc55817cc16952d0769c2e577b31a6"
+        "itemsCommitment": "0x09c0789f479f71b5b90b365885f2767ad16d90a134e9b4ff60c19fb5aeb27e0b"
       },
-      "vendorSig": "0xbb101eed25b1ea2213a1b161172af29b8a3d3f5d9be375d7138af74f3e95bf0508e08a0055f9d09f79982ee932f44ed60fb4ac98fcd7f8a755b3f8b9c70d875e1b",
-      "nullifier": "0x7569607324e98a235f8f62a0b9b18fd54b82d9e3ff2bd84ab2775220f820d4af",
+      "vendorSig": "0xffd7110815b8893287f58af1841d95e44e57e91e0f5b7bb05d82e4033bc487ff54adcdddd8d28d3d4b8744122c58cdefe46db09b363ad51895db34448b93c38b1c",
+      "nullifier": "0x598b461dd3dcdb4ae07a8e57f21003e5a1170756a3a86d60f653b46e31ab3541",
       "reportId": "0xfdf10d797ee72d31e8144bed1083e649912c3ffc7fd800894e4ffa045e07f07f"
     },
     {
@@ -508,10 +517,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1792886400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xf8d1d1f7895b67b0b923f5291119340e2ddf48ebac769a8750d9600d95d52840"
+        "itemsCommitment": "0x7c3aea5d139ee02ee8963ed47843621ee4d0195a385634100c06c349c6881925"
       },
-      "vendorSig": "0x314bea2617ecc48596f6d33b5df56b9e9272e7ec01cd4277758904d13c0195d8410f3a6ace18e509371dba5956ac19aeac17a3b545fdde3154a000aafa0eb9811c",
-      "nullifier": "0x68e92f4091e82a7b1b5c16fbd8f94a6ffbe4f245ebb668e4d9b299c19f3e0184",
+      "vendorSig": "0xf592abeeb8194e6421d49fccac2551acde235828b5839506ac09efe869054f49784636e5af99316d2cf9af67f3d99bdb614ee5aca64e1446165080423b612fce1c",
+      "nullifier": "0x1feca54dbb4f7293473f10dce4c68d449ab9c37aa620e1b8086117f875864550",
       "reportId": "0x2066473d5b4da5e86917129914c128427ff3d57c7836f8f5db2411280ade47e4"
     },
     {
@@ -527,10 +536,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792890000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x072ebfa1c0bb8693641345580ffff3edf025c9c1fb5c9e0f2b02f07a6a5a5110"
+        "itemsCommitment": "0xd81d6362301c431b49845f67f339e69695b90c6dbad3d497acc6cd6b9181cea6"
       },
-      "vendorSig": "0xb61e72c28a09df9a1312215da00854121d4bb4ef787d3ab57597062c9006b18952b70c8504ac7ed569445d948343d2d00ffa389eeddfc878e4f4d732d709b9bc1b",
-      "nullifier": "0x4293f3b1b97e734ace4ed4089373f4dc51063196a60d2bf19b8aef11fa9a6f6c",
+      "vendorSig": "0xf8690af3b467568652dfd3d2f40d3cef11d577124d1eeeac66de738e2908e22362a7b5988e9b18efeeb7010e0c33aa15cce64cba2af54e9cae454b7b81e14ac61c",
+      "nullifier": "0x32760413fe7990e1ec879df3b6c72e954df96a0a32991f83aadfb12fbd78807f",
       "reportId": "0x154d009c068e17859e2146dc05a4e2ac353907c2f073b2f0a31598fec942b6b5"
     },
     {
@@ -546,10 +555,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792893600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x08a7d0f2f1dd4265bc373fb3c602d0b4843d417aa8a775e779f6f4d669842d2f"
+        "itemsCommitment": "0x6efeff8d70e026a26f81739f379ddb9482258bd1c2ba4f3cf6e9fc8fbe736b41"
       },
-      "vendorSig": "0x4859388c7bb300d2b93e6843b619fc3a0c67edc915d41e130d356539514d26e834a5fa82578e16cfda8a6fa6a9e57bf2c74fe2f0fed7311c42b88cac43841db51b",
-      "nullifier": "0x31ad2aa243f3a56b31492050ed9b74b97cb5593830d4f7c4b468a348b2df96b4",
+      "vendorSig": "0xa3690f23d4ed3335bdfafab572d9af1234fa8cbb3f7de41583d4aae7eb48cd536591d2113a74812420294792d36d2de57c7884775a69c2d5b1562bfd6d39ebec1b",
+      "nullifier": "0x32bf8f8d20e857600aa6f143444bacc332cef504c05d3164fb6cc01232c87bc5",
       "reportId": "0xa73fc52c1c7963572d1d21f190073bee4cbff7319711500a2f7bcfa18b9f64f9"
     },
     {
@@ -565,10 +574,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1792897200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x92b1facf4f2a1299710c1ad693669dc6afbdb204d50490c1c124ae59051cd353"
+        "itemsCommitment": "0x94396da8ab13c808f754f1352934d26ce77a144e934e5c03cc8795b333370558"
       },
-      "vendorSig": "0x1f0174e7b6e7d71c5a328a53020d1dfbca08fc8524bdb242448ecb012a8b8ec1252e74dd62ce0f544eb4b53d95581583521c9f87552fafffae53aa36c8b177981b",
-      "nullifier": "0xab01a319b2161de20af8186def3f0f9a9b5ed068b10af02098b339087ec6c420",
+      "vendorSig": "0xc9ad6ceec7aba1158767e438eb256f4fdec830a87290a0e893245f64af49beec63b98ef5fdacc3c09bd9d0273a1d58496a222911050034044546604b804c9bb91b",
+      "nullifier": "0x372dedbfd48478dc24f6a7fe44474a37aad18da860a56b07314e1f9b65248f93",
       "reportId": "0xea80add6841188da7f733f3f0657a560c0360e859bfb3c37c2d9b2c19fc7d58e"
     },
     {
@@ -584,10 +593,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792900800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x26c53748dc721e3c69d6508b28540f653e960ef3a9facd23e25794345f6c93ed"
+        "itemsCommitment": "0x5738e2bf386c12c7f645a7fba9319924bce076693ec2ea167d4667dbbf2d16bd"
       },
-      "vendorSig": "0x32d2f527aae582d5a9783bc6eacb6e567ba1ebb994ea8e71f30e87d0b15d3388788f067267f5960f93121dc3d84790f8724a60e1bf7c9d86395d5fb1c88fdf421c",
-      "nullifier": "0x97bc555f66f85b541646bf401e93807b3ee468e98fe06cf62cf42da743c11c1b",
+      "vendorSig": "0xd397239b44e205eb129c3105daf13b0caafe0cf6c3e6dd13e8d442497f015fd330943bf15031e3d389c0dcc347f02d3d2178c054a0b6a82df8e7b4b9a4c309fb1c",
+      "nullifier": "0x27dcd0af3a5c94d04e87d217ae9a53341818cfaf5e2c6e2c84b323a1e85be330",
       "reportId": "0x7b37d9c710c8e2581f3ddf5f81a207df31f5b163ad8ed12d3ba1c8e858183786"
     },
     {
@@ -603,10 +612,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792904400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x1512dc8bcd65665af07273c25f213959dc9636f5b9466265926911b67c86d1b6"
+        "itemsCommitment": "0x4e147f79124ed16c82a6debca3e1f879632c102760437436691eb4da77e4065b"
       },
-      "vendorSig": "0x052a327bf5a99b917cac460dd9e84e3dda92b9586c211c21f3891c4562b159491cac67a02051487aa6b26e5916dc989e6006a365bfc6541f194ca1decd6af5981b",
-      "nullifier": "0xe76bf13415f9cc3499e21a16f38fc81f0eab7622e4c32e5a6a8f5a2ff910a03e",
+      "vendorSig": "0xf4f5a7e32021d23b86f04bb02d980e1fc55b650fc6d3c3aeaaaea2464c0f833d39ac7176284e0acb884adcfeea2eb3f1e82e5998b6e7b9fc71a39150ec36bebe1b",
+      "nullifier": "0x27e863b688da7df09daaa807e6738e735739ab1cde8b6aee59c75c4c184dc9b1",
       "reportId": "0x28fd45005754dd4834f09178aa30a4fa1da31c8b518fd63b47bc40bcf2dab343"
     },
     {
@@ -622,10 +631,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792908000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x4d253f865a6224bc893ebb1c9d815d05307ba5743edc91c98d592fd988364bb0"
+        "itemsCommitment": "0x13124afb9008340f16b742985ba769f657023aa486a74ea04bf80c5182902ef6"
       },
-      "vendorSig": "0x1d87191fa2393f67c7bfcec387f1c805350d9493f54d2d02b184463c93bb126172a6f581ef9dd04345119c3af7f897c24129e6fd8242777f6d1678264c90cdfb1c",
-      "nullifier": "0xdccfa7e356177dde2cf77a725aa131882b7c04cc043e359fc8b4db5a22d0f979",
+      "vendorSig": "0xff817556b94dbfd9a60fd05460ef9793fb6ce7fc8447c8033a120fbd5aa4f927130d6b9e54c23f58fa9aa4a61d7f8def7bd3ecbe06c74ad299c8271aa86e8d921b",
+      "nullifier": "0x6f234e8c38d3b9de79c73164f81412de4921bf8cc8f06cca1122068e6626a86e",
       "reportId": "0x62d3ec292e65b3086a3120d2c25406a03c55f134f93c7b322dcfe3c484b4cca0"
     },
     {
@@ -641,10 +650,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792911600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x98635ce9d45f100ee5ab9a4369141c1babfec0511044346f8619022f6fa5409b"
+        "itemsCommitment": "0x181bf3a1182a25876c12c686ee84e5d26a62aa8cac413e446060bc0fbf2d9880"
       },
-      "vendorSig": "0x0f2526a115ebec4e9c6aa3da3385ad8e2314ef4cd312bc27daecb34ef650aefc27661d2ddef6822720c2684f13a48f2a4c5f9fc5809b7eeb3da4cd0f2409c5261c",
-      "nullifier": "0xd629e797df401ee55150c111197fa6f5796941db711408f5780c90cb7ab8eb80",
+      "vendorSig": "0xfe405a30aaaf81b2b77d83f7c0fae66e216a9c1a7391b52d51b0502b350415682627284869667ed20e5da558af985458b5b99f4c94b29716f979764e5f00b4391b",
+      "nullifier": "0x3748f413a57069f12daf9e0a165f4d1889a34a3cb5e379dbeee9e712251b5c94",
       "reportId": "0xafc32ab89e76c552a16f2a132cbf3725d41ff77eedce8b62bf2f55a059574eb5"
     },
     {
@@ -660,10 +669,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792915200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xc49e5ae329310c4afd1f43bb90b4b184500753f8aaac40480ec5c073ea280dc7"
+        "itemsCommitment": "0x90043baa6a9f6cf5f58beb0ffb8c067f7ad8076d5b1d382fb0c8c8835563eb19"
       },
-      "vendorSig": "0xa2069a6c596d566fd7776c9a6609b891a1aba46d97bc3a564c643e1d5b4fe45a1ed4ab1df424854ab9a6b1bec6f579d534bc96a03ecc5403d4ba2b9efab3eb581c",
-      "nullifier": "0xcec975b6ec6a0f04cf4b4079e470256ff2fe4c436d1037a263aad3558a38263e",
+      "vendorSig": "0xd3841ddca55cba2dd5f3e53e34f0d3dbdfc32ab18d6d0a1dad52975638e43bd479859b9667ab5f4c15f0699d59f25c4b539f867fe79986f32c0dc9d250f939231b",
+      "nullifier": "0x8c18df455cb9b548719fb23cf659547af71131e625b7ed87356ef56bcf772a7c",
       "reportId": "0x801f1d039fb25532799abd7759074fb38c171aecdaa23aea1a5f784d2467a155"
     },
     {
@@ -679,10 +688,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792918800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xc218e63d992dca4220b8423614d6c5d2931415a39ca370d0c68807ad3fa3a74c"
+        "itemsCommitment": "0xdfa4b8c5365b6dbe1b27ced98a4aed7a8cb32e48780b7ea14e9fe59856b0cba1"
       },
-      "vendorSig": "0xa64cc5640276d24dd5baf7a1443f41af7098ecd91148d8050f9bdb4b8dab40b84b5850b73e3c45ecf290ac81671fff1854f8257431e3876358ddbfb108b5b5f51b",
-      "nullifier": "0xf0b06d08f6a97c71d023a1f61e5f53ebb75a9a7baf2e2968aa0e41d52bd294ba",
+      "vendorSig": "0xa486cb48d6c5e5bef779f6b266d77c01c664fc358fb7b4aa560440a0074a5014677ea73610cebe5342dcb38ab9d64d879986665dbe58f95ec103115b53d2f1a31b",
+      "nullifier": "0xa59686464f071abc4cf2f6381ea44c7685c976b16eefd06608fc68ab6fdc10c1",
       "reportId": "0xea05418971a61f2920dc3b20e7c4ddc192f68a9705038195f1c5f46a66a4a4fd"
     },
     {
@@ -698,10 +707,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792922400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x40a47dd14d6352b8b3913de02288fb4e7f24ba30bb22126a0334f37e325899a3"
+        "itemsCommitment": "0xbc28293590247c30356266afeaf92dad63d66b1d447fee2952dc9d0b58c5afbb"
       },
-      "vendorSig": "0x21a18cda6a50b775ec150df29a7376ac52d6303d0f4103b2da88758101f2282e7269cf8d8e3f633263f435459ebb2c75a66d7c3721c239e5610ff8fbdd18426c1b",
-      "nullifier": "0x558299646cf8f80c1b60cb932fe5dad64da764aeb7c97aef042dc091e961fca8",
+      "vendorSig": "0x2231aed11cfd7755fbf43fa3887c4aff020ffdc5e7c2f8969448cfe2f01154d06db928aed539f27d1fde80f4c36c1e2e7985dd19d3c963fb468a8fb49d78008e1c",
+      "nullifier": "0x651f85b988a3f4cd549b05d01878ee2a6decde589ec73fee6a745c8fe71392c4",
       "reportId": "0xa00ed810652076adc7b956499d8856327b384b2af5aa060d592dd0ab0bfb4dab"
     },
     {
@@ -717,10 +726,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1792926000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x95f18763fab1eb8555a870a4aae1c09b2d42c3dc9eb3dbd020dab989930e0a32"
+        "itemsCommitment": "0xe595779f3b46236a27ad54cee87a758f4b4075215c16311edf215665bdbe95a0"
       },
-      "vendorSig": "0x5d16476a86882a947746a434560696dfbd407f89f34ed54e32347f4e4f55724812bfbb17cc7a74979e5081af245c560b30d645a7550c818c352ad29bfb33a39e1b",
-      "nullifier": "0xa46eba02ad25949ae622c6eb46dfd93af2be15c3098d41138d9e1d957fda18a2",
+      "vendorSig": "0x30ceb19bafc22c74f70b61a1c7fef6958dc533e0056e0dad313b0022f146b0c102b33a080c545c15e0b3adaaa530bf01c26bb7246d8d334550b3d469678e4bdb1b",
+      "nullifier": "0x890eb0bfb3239990403cf27b3c0aa029dde0c8e3a05ff89d1bfcd9660f48b34b",
       "reportId": "0x928c8d6dc977e02cf7534bcf12c858bbc3be7dd7f653ea6459457bebcebe782a"
     },
     {
@@ -736,10 +745,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792929600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x8d7449131cd096db2d24bd0f504dcac9ba0121047f89604c2342b847394e97df"
+        "itemsCommitment": "0xa5807bb3154be2a376c9a0f88b3ba80732882ad0c33b6c5fe3e749bfa54a97f4"
       },
-      "vendorSig": "0x7b7467982c256331c70315690eff67690c7b5078d03650855a67af789265527a3dccc8f4a57628db18867fefe63d87184e962e1cfca61c767ee9f2756a71793b1c",
-      "nullifier": "0xad4862cab842e465526952793519c4ce5cd8aa378522f032c7fa3b6a394a40ea",
+      "vendorSig": "0x0378684dff449fd86f93a19869b31d7cb9216878c3302f9a53eab5ca0b084ea62b601cb00fd93a852be5b9b29f8143e448d68af5bb9cb4e62485bc4b06d3c4731c",
+      "nullifier": "0x70e9a7754ab729efce06254a5d9f9c7bef690de13a26d1717cc9eb3ea754cc0c",
       "reportId": "0x045a9551707cb1d347e9507857cce6df01ad82a4a12261b78bdad56e2fd226be"
     },
     {
@@ -755,10 +764,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792933200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x12b1bfd4e504d7b53c528948e43469866532d80c2789f704abc0e1d4fff9456c"
+        "itemsCommitment": "0x255e39c19a76d6aae51d48d8439a19bd83fd39b7e24c9c9144b9dab46725c5c4"
       },
-      "vendorSig": "0xea1d18ef93a3872682eee6af8191412f1ba74c83a1329b1126cd26107a5cc1512454fdd5e4b3515e938c3080ff102ec60338ff2db8da94770e5d4e6d7a3aee8d1c",
-      "nullifier": "0x1e89014c1e512fb83cbc8979f15732050226c3ed0d51b4026cc582cff78b2c94",
+      "vendorSig": "0x49c6f7bba11c083b80304874599b832114782112f1667e9a6eed7f7977171be03ea38a53fc14d5ce199f948f2fed79bafa1f23bd0079826c447f44f549179cff1c",
+      "nullifier": "0xf8982f50dd349afaef880793733811168214cf2a767147e2995d621aa9a5c883",
       "reportId": "0x0f750a8251b69a122a7c539aee144222ef156263e16f3805aa68d7fce3fc8c9e"
     },
     {
@@ -774,10 +783,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1792936800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xfcd525725eda1f82b1caa9ea4311833cfdfe9940e4cd3b792ef571113a4ef0c8"
+        "itemsCommitment": "0x8fab606afda88966a14e4fd67a6ffedbf159975e14cd10715cd1924ecac27afd"
       },
-      "vendorSig": "0x3e4d828366e050ef555c96219aa1113999232320a1b9fd60c58704596b49f5e466df055eba20089fcb1be04821def758fbe886f216ba44026af62ac3489141721c",
-      "nullifier": "0x9660e8f025dc6d1103acda4bb3729fac74f1eaabd85416c318ea2f945d6955e5",
+      "vendorSig": "0x550fe19974e2e101eac24ea43d4fd19613cf163956cb30b20f9e9455300973b0473010981e1b03145241a5fdc1fe3d35fc163a45cca685f182481c9f7f6742d61b",
+      "nullifier": "0xff474a18c92b5acf5a3985f6554d63afd2190262f92c738e23a7258456623d21",
       "reportId": "0x357f3eebf55f11b015110f22097e10841be54b93bce8d71deab7f59189fb56e0"
     },
     {
@@ -793,10 +802,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792940400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x31de095c1728531ec178a82b7d0371de7d0e03506d69e49305431f6784af48c2"
+        "itemsCommitment": "0x625047716a16f76fbdc369ba5c37cd07e01f007e5c4f2704e0d8b2eba576aac0"
       },
-      "vendorSig": "0xf10a51a656bdf70bb3be3b2300dd4eb1c29d574fc2cf161d8ad60db9386790546aa3358958329ff4ec3fdd28b27f545be5b8559a70fff948d362cc3b92fbe6a31b",
-      "nullifier": "0xbb027f9bbccc2e3622f35af55de603d85a184468008be988ecade746bdf1b673",
+      "vendorSig": "0xd627a2bdcbe610a6dc34a650ed0be01be5a3fbe3327aa3a877dc66a213488c2b2f9a8785ee2324c5ae81ef5c363d330274165245b5ae8da7bf78fab359f31c321b",
+      "nullifier": "0x57b4cc0f9eef7d6128815a5e2957aa87ab9d9538b139bb918bc2b7740da491a5",
       "reportId": "0x9b28cc3448c3053709321c35dcb257c369b91b6e5fc6ffa7096a8250392abac4"
     },
     {
@@ -812,10 +821,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792944000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xbdc4edb77053ae638732f1a9bc03e66e0beec878a68e240957988fe8b32e6f06"
+        "itemsCommitment": "0xb144785aad9d09ae15e92bafee53ae29d748f29a4ac0fa9f3744b1936c3725d3"
       },
-      "vendorSig": "0x6b66528fd915a32b50b34bbcbc23ed3987b91a73c10acc8a11ba79402a1a73fa5fd90cdaa71e4fb1b8bba689f0381584bef66ff5b848c8f53d8a66989a87511e1c",
-      "nullifier": "0x6fb68e9ebfa936fd29499097466a930604ab1108fa0b78618e3b2146f0f3edfc",
+      "vendorSig": "0xb20ba52405e298115fa5b8632e895476beace9d033f8fbd284b8073467fe890a1dad04dd21e3b2d20099e91f4bf6dbe0dd23d89c9b9c394e7836f05254a0f9541c",
+      "nullifier": "0xca13326068d8c4b9059fc4dce56a90be2fc8f7046273b77fffce5292cac54bec",
       "reportId": "0xcd8d87b34d70c4252d7baa5682bbfe01955659335b1f9a33e119544952bf7194"
     },
     {
@@ -831,10 +840,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792947600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xc8550fd739d812311ac3e137fa6eacd16643fe4ee1304f8640f6788d6254b811"
+        "itemsCommitment": "0xab3a13ff83e0a72f4301d4e822b4cc9b779f8eea8302c6f1ad126fe601eeb5fc"
       },
-      "vendorSig": "0x322932e878dc4d3cd3408afef75ffb7748362b2e0f14d98e9e51072736b746aa35e80ee5522aa27476f0415a381416810c38c2a1465ec6866cbaf7a6151924771b",
-      "nullifier": "0x3503d0b4ce0cf68cab495fedb674fcd476afe5cae7f87966de13492aa38c3ea6",
+      "vendorSig": "0x198ff1c3021671323779aad5f089b77829b5482f2ec107e9e3a1c13743563aff6afbe3af0396be46c29f58ac17452f020fff8c92d7f6996d6c1e6a5088af771e1b",
+      "nullifier": "0x9a1f9de65c14acee7c4b5bf165d559bdb24e8ac45d672def2257c98498eb31e6",
       "reportId": "0xc625d906c14b533ac151d17bdf2fdb6ad9d2f21f9e288fd108545d7d9c717722"
     },
     {
@@ -850,10 +859,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1792951200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xf18154df4fde44bbc7496e337c2ae69ca05ca4993747940e01def18dcdee9f38"
+        "itemsCommitment": "0x5864e33e47e470616ac11353c6ebf7dd63bc8f0987eb36123fbb52237ef2d774"
       },
-      "vendorSig": "0xc29a6b19a5fd48ca8c7e556be7637f7e9a4b7343b9f7e021c3cf5c6bcf0f13531dbcebaf014e84711146abddd50feb65e86f4a5cd8f2d7fa299d0a18ac9b0a081b",
-      "nullifier": "0x40a76ba602f20480cc81aa8784c77be61a9e15bb96c3cd115905dc38f61537da",
+      "vendorSig": "0x531c546038e4d52e31f21e9e4eeab1a29edd83f42a49d4a75530fc151defc365370acbaf833b23367d8c5de25f72118a3c20298d1f7e28eed6ed625885a501121b",
+      "nullifier": "0xcc1e41d977f8086f8add923dda163fbf45c0d9ba426263d37d51b14fa74a95ca",
       "reportId": "0x9d320bb127ebc25ddbcbd9653fe557c1e2b8052f907801abc89dc9dafb920500"
     },
     {
@@ -869,10 +878,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792954800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x787a0419bff6fb33c09dbfe880b3cb91f44d64956e6739e663120cc1175f20ae"
+        "itemsCommitment": "0x2ff666d670f2ad85d26fd09b59ed8316d0ce5226ef10a348f745b2777cb89014"
       },
-      "vendorSig": "0x8076c2bd5f65e0ef465947b7618685415a684bb6f72554eaa73876818cbc441357ead59996bf371946906a912000588d3401a0d5ab43926d8ef0acddfc21a0f71c",
-      "nullifier": "0xfff5dcb44be5081dbbb7518afbe77f4a7d37741605e126c64bc9b53871c3763b",
+      "vendorSig": "0x3c0781d9dc2d9e4e677b87348ae26f8119be02dbd304bb418f392b66b8123d5c4ddfcd207dc1ab4286c3b4b7fdd3ba3135547b5ee9292d34fae556dff4b3bff81c",
+      "nullifier": "0xf4c8d1aa2468e9113c0ed8ef294f45c52a65fee2854e8c0063cc0c5c8993f323",
       "reportId": "0xb1c06cb8471d25b501e73845544634d78bebb7fd6662b4765ddc3ebf3db630b1"
     },
     {
@@ -888,10 +897,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792958400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x7e8d1e954c4a797f335bfe0eed22c08cfdf2ba1fbe1bd31749467c4935dcaf14"
+        "itemsCommitment": "0x21ad01e4313c39386b5854c5e2db56e72eb7050bf3d6954e233db35a81aee3c0"
       },
-      "vendorSig": "0x6b5194ce7c3eddef4eb2ad7e57b74cc41396e47728fb7845f1b1c37fe38406e40e85f68f3d142802af91ab66024648662f4222fc5b0fb29c6355c44fc3d574a81c",
-      "nullifier": "0x02749ad63ac4f35bd694d60f67042e1a5323b6f6f07cd58e8bd75434ec3f745d",
+      "vendorSig": "0xe6f052fb4157381112d60b2ac65b0367f9f945947992b5569138dede14fb29b16c99136fe90fe070cabe0f50b92380fac0a15e92f5d96f21eb69dcdd9ff92e381b",
+      "nullifier": "0x81b1069cec80be954db9b527333590de39136d5de8d267a1bb312c21abbd7537",
       "reportId": "0xf049453dd2dce86e0c8b12ae41e484d8341fa8b0a7581a3ffe80ccaa53b5987e"
     },
     {
@@ -907,10 +916,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1792962000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x83aef063e2f602023cc49b59bba2b986c5ffa6d8e72254a40ff1563814f4ce3c"
+        "itemsCommitment": "0x3273d5067528e2ec89b280f61604ec8ca558a9a14b5b08284e061baf4a3dd47c"
       },
-      "vendorSig": "0xa560d2b51347e05d187bbbade315e271cf8b1bbb22cb1c359f3848882c0d3d0159d58243221df37fcdf5181d16450b24311ad6afa601a1ac0e8e39f8038b403b1c",
-      "nullifier": "0x20d61bbfb53d149f616fedbac2e63bdd4a3bc77782695107e0089fb8b3e11822",
+      "vendorSig": "0x0380de2effd2ab3d866b9c28f301e44a1b93fed0b38c792f28bb5465522335c16233a1c69e14afcbffcec34f50c9a9b978c527d66e6ecf9ba4527de02c74ae2a1c",
+      "nullifier": "0x735f06002b36121d7d015e5767d7c90adffd6440e78bcde7013c08f463db1885",
       "reportId": "0x78002012c554349e47252cb0f1ee84475554f6ee7b92152223a3ec6b244b6065"
     },
     {
@@ -926,10 +935,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792965600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xba7931f2e9a57692d1531b5bc4be392711653be60511fe080ef02a00a3309470"
+        "itemsCommitment": "0xbe0a04cc781ecdb42936f2785f4ea963daaf0eb0109b7225f3c944d1accdc11f"
       },
-      "vendorSig": "0x89a6b9b013938c24a7aa90ebb64c2648ae268e2607c1df8b2a19270fe4c03f3d063ef1d46003483b1275f99d09054e7b6cabe2c7438080d863288257aaab880a1b",
-      "nullifier": "0x5849c059a88ddd4516f2263cf94611e86bf641db30252d49722ecf9392c097fd",
+      "vendorSig": "0x495edbae1392b244434360988d00e6a00ab5f82f1775b8e8a0a4e7da9bc7d99667098afadd058bb84fddb4542dcf57476ee55912d69976068461c48e9b0113931b",
+      "nullifier": "0x962569c3dfe4f0a6cfc161d1dba33367e4bd1860613a4acb580da663948dc9b6",
       "reportId": "0xd85a026f8ac8e75ce0472af3f917bf1fee4d726eb8007c06154e6ecabd290ccf"
     },
     {
@@ -945,10 +954,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792969200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xc23f36ed9625abf8b36eb514b5e1bd846949ad50074548d2c88e45efb21ab6ed"
+        "itemsCommitment": "0x07890bdab984f02f81c2ff2703fcdcfc1fca03276eacc7e6f3375b1ef12f5625"
       },
-      "vendorSig": "0x4490ab77877ed72181fb0b81f915e174a23d745ceb26f02b0cc4b0b65d7062d52480255b30d9c98094294ff02b42a5932ae4b5c356116426abe656f7c27401fc1c",
-      "nullifier": "0x4c09580522de9a95e84103e790410cc61e1ec9ed7360b30487f3b7461bbe61e0",
+      "vendorSig": "0x05324606b02b5745f61ed4e0790dc97bc5dc77b9cbc83930bf81686a6fa23df47fd6076574172081e241252ce7c1de5baf7c095fef7c6b705d6f7b4cc0b194801b",
+      "nullifier": "0xbe36ee336c495920ddfc65de4c14d0aad37b47685c57b420273e97a5c0b7e88c",
       "reportId": "0xf485ce43cac3ef83c2fa66046162c3aa08ae0b4b582cbda15fee7f4cc43c7658"
     },
     {
@@ -964,10 +973,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792972800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x553ab7df82b60383fc7094eea3090a0ae095a3286f4d60c80e2e969a4e5adbd1"
+        "itemsCommitment": "0x6242b41b330f1a72ea9e4cac0ac6e957f6c52d0bde97f1db474d011f7e6ee59b"
       },
-      "vendorSig": "0x9a2de85d1eb5f71c0b790b203f1e24fef4d4951a89eaec0b13329e3d5eab94507ecbdc6d1077ae3ab5899500b7a89f01d751f1b5ce10588aba7cee065ffd01411c",
-      "nullifier": "0x75b895eb9ed41a8daf4fdbd70544ba2efbf9090bdeb3146827aa80c6e88f461f",
+      "vendorSig": "0x6bfebaab8ba2bf4214da0d8327274373799b651c062f5b34800c247ad4238e7c3d72803c36210e8a4031226148ed373627e6e812c6de2d1390e76000208a9fbc1b",
+      "nullifier": "0xd434f2728314d350232a27ef5bdde3b3e89c3794d816a1445d861dd52878af0b",
       "reportId": "0x1ebcfef3a4abfe659435c726fc6c463e1184c2e16a6973455bfecfd8633c8391"
     },
     {
@@ -983,10 +992,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792976400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x5d1d8c730aa9b146d44f06e6dcde911ddb5d5c7c8b4759111da34f85b6e986c4"
+        "itemsCommitment": "0x6e670ad05afcc9d59beb33a05fae45b06fe3870aafb261e85207b9bac187fd6d"
       },
-      "vendorSig": "0x6b8b387ec72980e936581457368c719f4f03e7800bc05cd9fa947d33c96b4a8e6433202cf8ee1d87b40a084cd80e23fbc5a0762fb5cef47cf43786117d2d40811c",
-      "nullifier": "0x9b5e32139f959fbd30889509757e63ef2921d13e3bf7625bdb3420d8309b5800",
+      "vendorSig": "0x5dcfb4f342ae28a0a73f15f33c48c698e1a94044f66b798f8947d9d26b2999b06104caf2a6a8be97d7c1328d63829c9e94a8d1c16f81c5ec2bb06db357ba99251c",
+      "nullifier": "0xec0c3fa8c18e39cf45cd664a29fcf4062c44eae8035e63d1d16470f6c67558ba",
       "reportId": "0x5ddb8f33b7a08af67beac48b3cd8e9487bf2faf67bb37d4e91147666d66bdf12"
     },
     {
@@ -1002,10 +1011,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792980000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xcdccaea8d116e54434fa7e3cbf25b9e7a541e79191eb0d158b3ea6b30d5b5a90"
+        "itemsCommitment": "0xcd9106c2cc0ec37bf5e8cd2f8da2eca9c58e6a65c643b922f6ec3d45509253db"
       },
-      "vendorSig": "0xdd7ff152781b323bbbd9b7d3aedb0e334843afbac031fc30c27067940e6d9d171a3ea4bd60cd17d044fa9e1991ffd508a6406ea3a58c6146a6a58f63e6ad20bc1b",
-      "nullifier": "0xa3c541176f8ebbd23b8849163e0fe27877ed09f43e53514ddcca0dc71cfc8650",
+      "vendorSig": "0x64c076bfc0cee42668c368dbe6fe3f978428cfd3eeb384adecb7c3ca8ccfe3fb113b61aff21d61befdeb3b989caca3c57486497aac38690c6f43df156168efd21b",
+      "nullifier": "0x008fdc52efd206e8441a86048555dce68d091a27b92962ffd2aed6b2ec90c6ff",
       "reportId": "0x13b39ac6bafc43696b71e906d8adaba2b53c7c915c8e126091a60946bf93b42b"
     },
     {
@@ -1021,10 +1030,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792983600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x8c2b8d9d06e570c800fdc0cc8e38d17c88d1edecbc758e251a599096b606456a"
+        "itemsCommitment": "0x86c3e9e292a91c879f19bfc81d4f4a1f811cd7216f25e4422508d841eb907ab8"
       },
-      "vendorSig": "0x0911696cb2ada3744263cc189a26e947c30ebd2a563e41c4f79e569f475431b75c3619c6a77065515f2e8fa5b98295561afc4f34cdcd67964d999974c99fa1301c",
-      "nullifier": "0x831fd00d5ea3cfee2a757eef180a6be79afdfce30de86c927f1fd8787583b374",
+      "vendorSig": "0x102b5ce592435e687dc61e9161dec6ab92a74dc53bc17237aaefc0bb3b6e25373ff6215d8f47c7239dbe924783898f6041b476b4adf73a14a687a8236962c8841c",
+      "nullifier": "0x7b4361179565ad8d7c0320307fe6c2869647f51378b9a2d4d677fbaf77fdcaa8",
       "reportId": "0x263f4e4578b45b4389a19b00fe92b2f17d13943f40b75d876dba917190c88126"
     },
     {
@@ -1040,10 +1049,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792987200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xfb61a366d8fe09aa6f5d25ed40df513e2287d9135267be6b904b8d9d6f1c01c0"
+        "itemsCommitment": "0x3d3ab58585d197ab2d658e9f5232897848ebde4679d93d3ff079b7fe54dcb42b"
       },
-      "vendorSig": "0xb5007594037103ad7b8d4028b0d996b170006e19a82da08375b71f69c1aa2e2b7b4c0547542096d33e5d95aa216e14be0a604d8405f3cd4a2c904eec850ad6c51b",
-      "nullifier": "0x9cc5aedf194f84d22ed48827dd999ef020078d786d98df048ee5350701cc9452",
+      "vendorSig": "0xd08c13cebbe9b3ba512f54ce9ebd686949b66b58582a4ff7393b4ad9051a60bd13b00f95a33cb0930410c7b6b88f0063949f15811cf5d185069e87a4bdc466401c",
+      "nullifier": "0xa9f0b327062c0ae541e4717b661e2b64e348b2128f7bcdd4e339c64f639fffe8",
       "reportId": "0xc2c5366aa9629b30aa46af6d86f9f87f2dd7feae9f6da7bf76dd74ef4f886c7a"
     },
     {
@@ -1059,10 +1068,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792990800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x8db656a60d9a022196c3851e167f45a6bd46c0517cc6906600329aef3eb20932"
+        "itemsCommitment": "0xa0f2afb9d5eb59996160a2e52a33577b561ce826e683c42fb642fa3da5898706"
       },
-      "vendorSig": "0x8f86cf2e1bfd7119f0e0568211c88b0f372074785eb96d50284bfa355fe1c1053825b562784a127cb67fc7e9b8db994e04ce1c5007d587705174830cf62f49741c",
-      "nullifier": "0x207c19f27ba84db4a0db8ef80a757206e02cd92da4b142e5b96c6f31a69e05c2",
+      "vendorSig": "0xbce7ad0caf58cf2fb2e00d59b232f5eac6691f6d04fdf4ff43b2c33b30e7dfdf7be8617ad31980c0787033037227075d8347e3345429f9181890cc0819e8e81e1b",
+      "nullifier": "0x32ea9cdf7fb35e7162833a1fdecd1092aafc896e04dbb68ff26aec6dad6c1c16",
       "reportId": "0xa3dfb53f2e20b23db7255cd277dab3566c708f1a0dc2fcfd88bbfe9f117cdeed"
     },
     {
@@ -1078,10 +1087,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792994400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x1ca9d1afe6bf396f6e75ea4ae888431f78d5f4c636aae3478f0c0a9f2f3d11cf"
+        "itemsCommitment": "0x6d3aaea78be603020c83314384b2886f09a85871caab8f117e09e82df334b5fb"
       },
-      "vendorSig": "0xa64e957b11fbe88206b42692f4088347819570e50d9d6ea5ad49af6132f961380cd0554e90d4a7ef68fb7cdb94852088bec9097b73703a7e2b17bc75aabb13711b",
-      "nullifier": "0xefd6db8bb283970e016c926fbfbec469a0bda332c284cc2543968382ca7d8219",
+      "vendorSig": "0x87762cc7e2a426c11885db6a8947b6e97e765a0127a5f3e4d795d8f74340861e1913d0cd9e1681e888aa6fec9f813498c15f7a521c83fa3d6e949781008a1ab91c",
+      "nullifier": "0x11f09729c083831029b44d8b41ca3cba9bbec031756cf5e30368bd7f51134c35",
       "reportId": "0xc348a346b95f82ad247772a6b56d1758b373b753a4e804e9ab50036da2246c7d"
     },
     {
@@ -1097,10 +1106,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792998000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x9ccc90d5d5fc62fd0a28c59d2a37e7011c7510a52a5a3d081cb6943708db72af"
+        "itemsCommitment": "0x0b488f41b350c312a99409f426f08de48ca4e4f0bb6f34ef160fff128320671a"
       },
-      "vendorSig": "0x44d961991d5ba803eab40a288da742ae97cf017fc9adad072ae106adb994ddad4bb375aa6381118d12d479cf52f4a84344dcf7db8768b3065127c12342a428bc1c",
-      "nullifier": "0x712d41ab1c3d8f378e93147fbf95dcf6c3158d4a57a4a1c5ed486e8d656244fd",
+      "vendorSig": "0x8a7eaab66ff2c8b319c0e1159d389be39c86603d47a2346e7f059a783919e6f867b496a90174a959993febb638cc6779c7adf0cb8b9e20da16179bea87eb37281c",
+      "nullifier": "0x3e1c76b1944893b442d036551991bb0006fbbb14d56bbd67e35a621131ad8d21",
       "reportId": "0xbc8a734db00911f18c17aeafa6169723942190a40165de6f7e8f560ba11fa62d"
     },
     {
@@ -1116,10 +1125,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793001600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x273c45322bd692efc535e54590f2a284553b42ee01e41a96505621f3b2458018"
+        "itemsCommitment": "0x2d2989ee12e72b7e06d7069e713e081ff444035b023147262697411e540b6120"
       },
-      "vendorSig": "0x98e385ac96f904d7c551a82a376878c1bdefe87a64be50220f08b6dd6c88f3db3eda03496d176f09e4aeba6270624fa3be23188cbbca908bc68b318db43470401c",
-      "nullifier": "0x6f6ec6d6ffa5a9aed77d1b1176d2ed399f22446084868f302d199e203a013d0c",
+      "vendorSig": "0x12299db95167eda5d8f2a1ce115212aef36885248f4b9ab262557cfea215bec5433e607c681ecae7ab9ffade35a7dbb70db035159d3eea92066bc7278afc5dbf1c",
+      "nullifier": "0xeef3a1a18a5c10fc5fbe393e59cddd1d71847b3549642f8673c7f6ed8a881cb8",
       "reportId": "0xa9ff159c3f123c532e1f0271c0fc148500fe04f1448a235122c2a2da27683f41"
     },
     {
@@ -1135,10 +1144,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793005200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x128cd08214dcd8771f653cb6ba408e096b3526a571222ec58e3a0994b348fa5a"
+        "itemsCommitment": "0x6c8eee31710ac86a1e604f72ce88ca44dbd5d341af0349118c91b409ff107b81"
       },
-      "vendorSig": "0x01bf294ac30e350068d66e66b4fa340dec838b0ce822cdbd1e8a529ba19bfa3d3dd6c3766830091fb7325e5ecb3366b4f914fb6be072b35a0732e2e581e8ea761c",
-      "nullifier": "0x5c8c58428118371cdd11a45add013c9c5f199b016e40ccbb9a435b000f8094e3",
+      "vendorSig": "0xb00cc32bc2282548235ddc84167948f3da7e6238001f9dd83fb653a20b0baddc4d0bd07c343585d1b697d17f24df706dd241d6bfae0fdc8ee303df3dd7a9f6281c",
+      "nullifier": "0x2d2c4196864a5556faa73180f43403e9a6f520c11f935f6b6e442d3c3f7134ab",
       "reportId": "0x93a19083f32a8f957951ca6f3174383959f54b05dbf21f6e0d544e2011824a35"
     },
     {
@@ -1154,10 +1163,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793008800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x2a18f79bc3eb46520d2c011918aaf215b44e135453d592818412285c4f2896cb"
+        "itemsCommitment": "0x50e7251c681eca4469083dcb1740c4533314fc6859d0d371bce98448332d3db7"
       },
-      "vendorSig": "0x9d1c3ebeb15e98ac1a54b3646b32cddda35ddacd782ce57eec0759a80921def67a0b65655ca5b6a98879a61d628cf1c0f6fca2b9ad468a236df2511eac1eedd51c",
-      "nullifier": "0x58225694fc7dda31208fc2e4b5ccfc41c4b4465604105d5fa78a8e23d6dd9a5b",
+      "vendorSig": "0x23e471eb68b258ed916cc191c91f11970be26ae0bc5f8179ac77df5c501929d56d94ac544cf89130fe84e9ce21a7186af3a849caaeec223c06af277af582559b1b",
+      "nullifier": "0xc6fb672b9973408f2019f52f7e0f769c1520a773fcececf8ee0ca84f8175a43e",
       "reportId": "0x866e66d8971693ec661011e74f6f14c8c71d0ce86fdf87c53401e53494b5c8df"
     },
     {
@@ -1173,10 +1182,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1793012400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x74532cbf5f6e4f005a3f87680ee0e0b0f1567ddcc03e1120b1d239fdbc0cb002"
+        "itemsCommitment": "0x6ac0bdbcb98d45fbb04f6400bdf9d20a001194febf66af516c1a7bc9b29c1eb8"
       },
-      "vendorSig": "0x9eda6e7e3b6b2705e947bdbb58b34d32a32c4b38becc618f99fa862b30eb0f522deec504220e9bb7b318d8da22213360a04a41bbcb20a051a783da3d35a4e8c21c",
-      "nullifier": "0xf9d0f99cc3cc83b324fc63c0a1458b2e5982b3140504ceeae91a02b92d11ad2e",
+      "vendorSig": "0x282536cfec43f278aff253f96fd39bfe2ed9bb05b0a47e30ce4af4f7da968ae93cb855ba8a911a08eca4e0969fb75ed4471cf0bd56fd291062bc0f7704f8df261c",
+      "nullifier": "0xeba772f76b5dd7218419f21908ed90183336f70317ab02b8295561e02b07a095",
       "reportId": "0x50f7f0600e9b3d2400bdcdd93c1452e5bcb2306abbb493ab17f1a20f1de30acd"
     },
     {
@@ -1192,10 +1201,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793016000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xb0bed51d5c2427dbb930cf01fbcfc523d7ef748e9f9eece87d3406b0048e4b56"
+        "itemsCommitment": "0x1eba556715376067db9a505d1dad739b143a8e9f98fdfc6ad7c94e4f14589f48"
       },
-      "vendorSig": "0xfafb0e3af9b00d62b37328c3a12485131a8239ac9608561222bab972be8e2da66a45b87e54826b7fa6fc6da354bb224774df30b41f8f2d878a4c563940e000951b",
-      "nullifier": "0x0dcf40a293564662a73c8356f338d5d75b3982f25da9985ca5357a62293f3006",
+      "vendorSig": "0x3ddf0b929845d1334104d9d4ff04e2aac664817c5c6c179ed97a2b62989d3fe467dc1c0a06d7959a7500f4da4cacd6bc149be7240010d30a3d9c56bd13ebceda1b",
+      "nullifier": "0xe5b0300bea9145870a8be9be22c4be8b0255eb58013a3227cabcae563954f744",
       "reportId": "0xbc8fbb9eddcb23f5c0c78c0d05bd259a922ae9027ba888716e79a3617c14d703"
     },
     {
@@ -1211,10 +1220,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793019600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x47cb17ebc9b4ed3bee61d9329f66c466afd6ac12943257f4ab43e3251d694141"
+        "itemsCommitment": "0xc612571cca6fc29ed947726e0e50f645a1a619640a59fff53ed405d5ce8cead0"
       },
-      "vendorSig": "0x5f2746aec7b37205763120ada2f9086c781bed7b788f94dae34addcc64f8405b0d2e4d78e0a7cc97ed4c4deb955600689996ed4839035850e0d694b0b3759f461c",
-      "nullifier": "0x42dd8dc2615cd4d66f7aa8d0c9b016ce4ff441eebaac8d3ba06e12386de0144c",
+      "vendorSig": "0x87e38704143e92a9be1d62bb4dc787141f0834c8e1b8b844e48658b5cd942c0e20041d70e76ef5bf9cde144f244cf380cabad7aa7b47673b5afc00cfb695c7b71c",
+      "nullifier": "0xfe708fd6dd24c1245bd0b7097b5e7df609e748c68eb0834a2a0e66c08ade2b0a",
       "reportId": "0xf6d344f6f37ee7fefe494a24af5ae3995d777e99b0c18cf7b0c57cc4c308b0d5"
     },
     {
@@ -1230,10 +1239,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793023200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x6451203245d9ef69f82d5e6592bd662ba2928df5532a1af6e20401fb413f6587"
+        "itemsCommitment": "0x878ee43ffa9f5d245dafa78a557d61f438d1a1b0640d3b0c8f14fe839eeb04f6"
       },
-      "vendorSig": "0xa7d77ea14e2426e8e7b3cbe6b1aa3bae5dc08032a3fb8434a795694ac13da67d44d4cdf338b141984ab85d31d90e23d0bb14f0545db322eccb795d735eb894ef1b",
-      "nullifier": "0x65eef64480e2eacb687952ae0d12928ec75591bc1706645d33ab730727ce1386",
+      "vendorSig": "0x1eea1ab21764eec5dd49bc31c4daae8196f9e028ad63c7e6a3a949afb069bdf12f7d30a238aafe319ff98188bd284652a3f6aac3922572bcdf512e6b00dcdd181c",
+      "nullifier": "0xc03dfd00a7fd8d1d8a189d8ece040845d98e807a80be366d9d5a8daf1aa2c66d",
       "reportId": "0x083e9023c9875201ad4704ad842f60c2bb1852917b90482ab01ec30ac0657bc7"
     },
     {
@@ -1249,10 +1258,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793026800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x7316d1c11a770f5f9c223b652351c20329d9b02166181f8cbfb2ecb4fe17f3b3"
+        "itemsCommitment": "0x4a17d9c52c82b3b8fecfeb98b8a7c9ee3c3e06eeac1d0239cbdb603482a2bedb"
       },
-      "vendorSig": "0x910268d03cd422c2f4fddedfe6439e11971bf800e1771e2900e0fcf7912f308928e7c2eb78081e98227730c334d2f86bb64f592d69984d1631e1ffcac9cebe5d1b",
-      "nullifier": "0x463a432be2827d75ff3829959ed7788a830900199a5f2f9ffc3538eae0f1e760",
+      "vendorSig": "0xde1df7353b0466e73d1cd40feca8b06b958282b1ff77308894eee0420adc967d580967a030b550a51b16983a7c27f17d56237a0b2f9f0e3bf958da7b4163f56d1b",
+      "nullifier": "0x70e3c86822a8989b48dd0d15b0274620b764ec20932b71efa76f93d0da4592b0",
       "reportId": "0x579eb72b1b2a2867cc320597378ae89a9eeed8a9ecbab34b9c1aabdeb71132fa"
     },
     {
@@ -1268,10 +1277,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793030400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xd03c07214e46e42e8b97f858022b08fe5ac62b465519cfdbdc4658ceb6c07a55"
+        "itemsCommitment": "0x6a2ea5e1fe34adf83f42c10d0d38155318cd20d1eef537e41b0355138b7f9d20"
       },
-      "vendorSig": "0xd0f21a2cff1eae4dcf1aaae33c84f92d6bccacca666695c85273c6fc05d52eb852b7bdf9e403a65b8fb5832d3d075aaf73a938a6331a4946fe69f19f966351351b",
-      "nullifier": "0x13ffdaa08157dc30cf3c842ff0ef632e7faf7298d7e28040b5ef013dc2d4005c",
+      "vendorSig": "0xa5e22b8466f6c8bb86164a68b1d1fb236f79abc5590f99328e3bf646be0cd9357a2016d0e42f22a7a13281160b74501ce8f3ff492bab2ff14f89bdd6e2e7c0491c",
+      "nullifier": "0xaca74f4053b9bd4fba79d5d95b3a99ae2783ed05f54c19fd2741240cf559d7e3",
       "reportId": "0xac32c456f220c9df81f58a6a4a6c46ced92051e1677324d0f6fc809561151855"
     },
     {
@@ -1287,10 +1296,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1793034000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xbe3b10bb30458e6d6c83c5370ec0f006d5e93929b91958ccd7a3ffa2b4c52557"
+        "itemsCommitment": "0xf6109dc4a3118c9a3d87179abdbacb107b44c61c339a8dc697300b55fb6e3e29"
       },
-      "vendorSig": "0x4a0b9a7241a338bc3044de30efc2fb7d2054c36311541308c6143e3bf33b37a1257c68b549d1018a94b7d34b969bcaf694b10795cf7ab988a659a5b2e79af7641b",
-      "nullifier": "0x34e419b249ac0ecec80a15f64ede6e12a998b59090ac55607506f0335b21d03a",
+      "vendorSig": "0xe06db57bf66ba446752fedbd10b589febcb31935b4cc802051ff33c701b4170d2bc948ed21ef3ba0680d691dc2fb71f85d8bb3e71e7a830da8bb793a747557a31b",
+      "nullifier": "0xc267990a2e4dc287608d8872a0df85ea66c38820e4378203e9d4e03cdc2ba18f",
       "reportId": "0x0cfadc46e97923b45cb8aebcd61e20fc1bd5594e6b54d28fc94678fa23d4f347"
     },
     {
@@ -1306,10 +1315,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1793037600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xcb1e5a8f40d2e30359acc8ed2a7461881186573be222d456d55947f44137a0b2"
+        "itemsCommitment": "0x685665f5a256d6db669f071bad389cfb3838c002a14776c3c5b9640f335275bd"
       },
-      "vendorSig": "0x977f59bdda0261100835d0def1151c3930da0efda42e32f5b3c6c9199cf09b3522a191d02fc99c504334c24dc09727e1e05c1b7c890b9251610f2678f8503e251b",
-      "nullifier": "0x917afdbc69b689ea72564d743d2cb53269ae70cc413a5b2b7907c98f6b646779",
+      "vendorSig": "0x8c888124b0be84d8cdfcab9941578cd0c601bda3ce16339efa85d405905fbc0d23d47ede03191739e6765360b44eed2bcddd46f1f21b36d2433839db5aea6a0c1b",
+      "nullifier": "0xb0150a2aa5b8b888bf0a847f1b0f1a8269214e35c8969af8d864b8f737e08027",
       "reportId": "0x6d17357c8ce5c6c7fef794d3cd0e9146ef16664713ea03a64cd13a9be89d67e8"
     },
     {
@@ -1325,10 +1334,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793041200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x5359194b2da5c439ada93a8c39b5e254919c0f0154cebd96b148a2e8d4e10375"
+        "itemsCommitment": "0x0e922eb6a18a02c42d5b8f1a82119166e03626525ebf283c329324d1fddc7654"
       },
-      "vendorSig": "0xb5a320d5134470138379579ba95ff228a970c5deaa76e4abd201c33c00f01001225cfd432caf4adf36af8db68ff3948f64d9aa79ca256d3078b1001422189c381c",
-      "nullifier": "0xb76289587690984cd1481f27074081ca3b78402750e3100969a59f30190d560a",
+      "vendorSig": "0xb06c67772808c7e99d900d3f20cbef2da778f6d9c049735c62376981dbc0f4ab7b62756528871c756438cbc5ff1c297bf6a07434104475efdc49f822959a54201b",
+      "nullifier": "0xedfc5f3b9a386f88bb41b624fd945626a9106190a8eb66d940285ce20d1e914b",
       "reportId": "0xc64a6d5377188cc1466334c449f1c74d046872820894a9fbd2f1d9473a32b29c"
     },
     {
@@ -1344,10 +1353,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793044800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x9d329226334f416dd09d194b49d6d180d0b3d4b7feccf592403e590165b57dff"
+        "itemsCommitment": "0x14af52baa96eef00839fa89b27421e146c90df12c99f09684ebdb8a18762a5e9"
       },
-      "vendorSig": "0x48bd3a6e8082523fd06987967f4637820492cf57c2760f629905edecbe5054093bdf5f5e03b98732ce46c7f520b75e0ec8d3f43a5de29cd484a1ad5177a4b4911c",
-      "nullifier": "0x0aa3a50c70bd3345eadb79989181b9674f094e053ad3b83522ac5099296ec19c",
+      "vendorSig": "0xa00ce8c1dfd58a778ccf75de7c2d75187da39a90fb391afcc87c4d2eb3da97c61b7b4cdd69a825b8471edabfeef243beb76e555f6ec114a082a865a70a4232b71b",
+      "nullifier": "0xbb521a59a376bfc711310afe84d070cbaa86ccfb13e32d73432970fca908a295",
       "reportId": "0x3adec2dd5a9d283b6b590664171d566c9fd57f407420c680fda3682d23e77a72"
     },
     {
@@ -1363,10 +1372,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793048400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x53cc2653c43936940e8858a14c77fc61a3f6480a5aee4738c46ee7482a9e1df6"
+        "itemsCommitment": "0x2035f162d62144e677357edb044022f07b615a13203bea538336e48d640e1206"
       },
-      "vendorSig": "0xd590d669f2c58e6d6584d7f7272098d93025e22c85df7ed9ffc0d5184c1e9109349709c86550f6d86b588ba32cb55b53167d4b002f425cc0af2c25518905431b1b",
-      "nullifier": "0x408640731482f4a32a943ea17c83fff0f8f5593e7d4ce5f22be3279be20f0716",
+      "vendorSig": "0x0b4dce3b6dec4e7af46cec099ee47ec0db4b1b70fcafd5f48f142a1ad6a9979634d43d9791201e4cf334e5cac0187fdf9378f88e7a939753f8512c78b2f7b42d1b",
+      "nullifier": "0x2606a69ba9b589584ab6ad31f5e002f77afb7d2910f2de829e6ba63aa88c254e",
       "reportId": "0x822414ac5e65d4a8b5ee313d8d62c5d5b5265aea3f48e693f616c1399cf33df4"
     },
     {
@@ -1382,10 +1391,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1793052000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x1a3bc0d000b7f581da1395ab7108398af6aa81e98c82bf44560afe037d83751a"
+        "itemsCommitment": "0xe59371d0c64da7a3a8e814accd19db08faadf6a8dcae909068265b96ee354ae2"
       },
-      "vendorSig": "0x716ea201de5c362e647526dc24ab5f3c2398e94493f11eff05fc1ea2126b15b716bf990679367038954b73321e02446fe7f24c56c862b84d7f2544589c2c65f51b",
-      "nullifier": "0x615278f4bcd7d31a3a310457b40cdd7fe81c45293b44ec6666327e47c6b9ca5e",
+      "vendorSig": "0x3eb968070bcec8ef6cea8e3a522ea31981f7bb94d956c9caf2a7c1780b1721df10e13641cca762938d87e0880af7c3f4497d8d65711494bce7a1d1ff81d645ea1c",
+      "nullifier": "0x174052316bf222924c689029a7c4c981fd8eade5e29002d8a8c0350f54952e15",
       "reportId": "0x59b4dadc61de89e05a9dc2fae901e64ff7c358f5ac936f8efe14b4e93ed2de6c"
     },
     {
@@ -1401,10 +1410,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793055600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x1f1d59de0608d1ec8140e4871a63ebdae15e49c3621efef19ccbe0bbae1e7eef"
+        "itemsCommitment": "0xfdfff9ebc4a1629fb0e318d5c44dcb851e10691145547abcd6ec8a4b0ade471d"
       },
-      "vendorSig": "0xf3400346fc3360b8b845ad361696cc7f53d145ee59bd86d5295fd9c1a745cff21e00cd7cfa4e070f96b9706484077363b6d083a97be66e6570649dcc2c74e9d31c",
-      "nullifier": "0xac06921d51a255f399d313711b6842373580c0858336fe6e5881f65b4c38ff9f",
+      "vendorSig": "0x9142d5368de1c8ec5497ca76f5a14cedbf45b43c6803de8dcfad2f998916c5f261422e7d4c7a260241f68e932fc402f8447f0adf51cb3e627f3a910de7a1644a1b",
+      "nullifier": "0x2d835bdd561f2a1cf8a13ac303b5cfde4d9343a353795e3b0d4f0c32366c1d0e",
       "reportId": "0x6f6122af79c93a33471f6dd2cee6a2ab1ad3315cae2973cf2fc5f145398e5cdb"
     },
     {
@@ -1420,10 +1429,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793059200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x85e7a851ddc8fdfff8ab280ac6b266a01d3cd6b551d02116ebf6652517549c0c"
+        "itemsCommitment": "0x7011481372e6a75bde4f22f0423a0b38a4d1d294a202ed211b153064013c617d"
       },
-      "vendorSig": "0x3de56b61e71d093434b2a4be89af4b59e408a77e2ad95c98795c8e1a119f60911e71c85571b539ba085970b4f74b7616383ea73ac9fcb07cca600988dbc579341b",
-      "nullifier": "0x21076a580f8c8c41739ec934e90e86286b6b12e391ae3877c9b7af44fc89784a",
+      "vendorSig": "0x311210386be8b7d6ff323227744857737f7f0f76fbe1a452433ea67bd48e1a0e61bee169de579c02c3d7c96e0bd7e76cb42f74371c44497c0b2c48e2a494ae081b",
+      "nullifier": "0xc6f7e4d19d59f4398d9b4cdc5b083599e0c12d454692d3c18aa578b9c7078cb6",
       "reportId": "0x429624844f1e2c503a92f5ebfb7336266da25acd69b2f65ff338e8aae771f945"
     },
     {
@@ -1439,10 +1448,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793062800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xec666abd8dca2685a301a321e151f82948a2cad39363bb7a0dd4b8a6de758cd0"
+        "itemsCommitment": "0x86553d1002578cfe951d8ede4b6b8040ce201ee4006f985400bd919dcc5426a7"
       },
-      "vendorSig": "0x47d448e04ae20ec63e41b688469e3f0b0b8ead98ad1a89c0500813fc3cab4a550a3f6a719bb02ea47edae1266911c5f9266698c86f99138954c39edf0c5ef4961b",
-      "nullifier": "0xe06eaaa7884f1dccc59192ee4a60995591a2125559b854cb2a47e672eff79d68",
+      "vendorSig": "0xfeca621a45a728504268e3bf96fae7ee489a7bd1737bd642888247bfb6dd67123df5acbc07e8a445b0158d0b786bf577b3c82bf757c24044db5b5dd6a1fb013b1c",
+      "nullifier": "0xf197f0e7118cd1f14e738cdd716bf5f35ecb024fe92fee9bb9df140b5ad53997",
       "reportId": "0x8fa0e1b84c9c88921ba739d8e612caa6313770a4051d050d6f7db3ac0d6b26c8"
     },
     {
@@ -1458,10 +1467,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793066400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xe1542768e19e9ff1011752f4a3ca327c77ec574948847fb6b2fc69f3583b6df9"
+        "itemsCommitment": "0xb4b0f551a57e9e923aa0724954314ca0acbc6b1ddf43e995f64ee60903a17b6c"
       },
-      "vendorSig": "0xcdefddd82e21a358a393177ab3e55d767b68c54a699a82a6c7fc33898fa07e892318e344e7d432f055db44c5922f11e2605085ecfc16744b0847e2e04e3e5db91c",
-      "nullifier": "0xaea106eebe7dd78a25631661d400372bc7e50293c35272e152abb66a59b8450b",
+      "vendorSig": "0x9daef6b1c74b741314b50588c87f2605fac9db22cc2e774ad88b8869578c78ac0a35bf57a1aaf84a0f44034e673f97c9e9cec5dbb4838d266d669f82a92b131c1c",
+      "nullifier": "0x4b3ef9a6a8d565d877b86a51f9d4fb2c011db3d3090d76511e89d9eefc516edc",
       "reportId": "0x9f972dfe48de619062d569d0437a7781f79900c91790b305d946ab148be8899b"
     },
     {
@@ -1477,10 +1486,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793070000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x1a32f01426934ab5d2f9ac1220cf7489fc09921968dddd0517ca4f92505fceb7"
+        "itemsCommitment": "0x0f8495e6e4e534b764b9e8c748071b6c6cd5cf44491e1e20bcffe2e949a0b55d"
       },
-      "vendorSig": "0x59458bc797f7b64e4903041fd38b0e77c0822e72cc03e97d69560d6e64b5616e23e3c478935b284b1864b9b5fd835ca23902f7286d7fce3dffc9bf9c750d4d2c1b",
-      "nullifier": "0x7676c460ec6eb62b4def325bfdeaf9ff7f94cef0f7a83a5f00de975674d9e1e7",
+      "vendorSig": "0x2def617904c17e8827fc64db749abfa20d962b061b188d2913f7c3741309d304066ecba72d1bffd8471cb8647646dcbd12f70884f559d9eb35c9689ce0d3077b1b",
+      "nullifier": "0xbcb2ab230547b413d78bbd70873b7f3cf713c97a94f4fa7252ac32964e31d662",
       "reportId": "0xc3ddd1931dac766ad60acb1a73bb57f4b5be762f9be0b511dcb1f2c1a9b76802"
     },
     {
@@ -1496,10 +1505,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793073600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xb3bc8b413d7ed89e6a9244d8c77bf376eda0f36a87b189bfb6b620bea12d21b4"
+        "itemsCommitment": "0x12058e47ef43e128768a9dcd6eedecb06b122999b9bb97f3638ec73676c459cb"
       },
-      "vendorSig": "0x778f378be9e2099c2997ef1f1dbd360e5b10db1d5a7604d0519183b01e1413313b8e309b4b480d803ea7296e6934de9262642aae8a3dacc786911a153dcce6e41c",
-      "nullifier": "0x1b1a4ff245f03b83508433b45b944ad5d7ace1ff0a7e8b912bcc446e07369d41",
+      "vendorSig": "0xa33a0e9d19af5d65a02e0498d089652999700dcf5b7ca455ad56d512502de998605dad5798255d68de6160ab3b2590ee7a71b16aa533812a97f16e669f9fa54d1c",
+      "nullifier": "0xc752d9d430bd24067d97d830dc567897ab39ad70ad3209b63afb9074bec8bbef",
       "reportId": "0x6508b7bd81c281e75a7c9a454e257dfa303d58e50a5080466fac500d91d1c971"
     },
     {
@@ -1515,10 +1524,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793077200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xbfd6e347279129fc9c7ebed7307e0ecf1eea5b11ccc4234d26f511577d92b7c1"
+        "itemsCommitment": "0x80aa97967d4b1b20c1f289918a10f0d19b89cd4fcc112515b693f4738b72f135"
       },
-      "vendorSig": "0xe088988f328f8247fac7eee14fefda1b4f991f176263a547cdf7374816eab8f02b221748ebf8b7baf4088232eb839137fd14b75b2d75d9e1910f74ab5a357c961c",
-      "nullifier": "0xe67c2bc75318a625360d716da6cda50f665dcf2149b35a7d33433e287f04cec0",
+      "vendorSig": "0x57e2880382dad42dc65cdbed742d5193fdc94951f564dc2e1064d3779b0a354d1b44746903707beb2c4fca6cd7ab887c00019c3efd9a7be703c74967704368fc1b",
+      "nullifier": "0x267a4694ed5349fff4faff6ac8ccaf8480ebdc61f75f94fe0828b8a8db89687c",
       "reportId": "0x94db40b84c7b601dba1da6049af55e1891c6dffc98c52c822569b49f4ec6e8ee"
     },
     {
@@ -1534,10 +1543,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793080800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x4ed811bb537560df455fef9bf668d4a9d8d93e008eb2e3aa5e5a5a219d13c833"
+        "itemsCommitment": "0xb8a03f735461575a825d118d0dc141e3500e9514338e5efb066689be069496ed"
       },
-      "vendorSig": "0x3d029ae657276764dcf983b3a7b60d0ddbb9b2158398958c42686705dec08c64010562962e84b4ff9f8474f5dd9940d3c3d243fb0002466ecafc22a4ed8a7d211c",
-      "nullifier": "0x3014a1621d543c3facf3b07235508db5b26fc916737c2f501448f4325954fbed",
+      "vendorSig": "0x090ffc2960d889785ec3bb2298a8c1fbe5597d74cdd7b3e2eef86b426bdf032543adea8bc1a571037a8d8d5f65ff10da53d1ded4e953ffe8618d5af7a86045281b",
+      "nullifier": "0xe2700d5861e955aa9671c451162469d6a476f029bb7a877862dc8779d24f1d53",
       "reportId": "0x32286f313ddd41b799615fd15ab96ad7ebea130369af5b8b4bae7263bdb350e0"
     },
     {
@@ -1553,10 +1562,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1793084400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x3820207f209855bbed3c152a8ab859ac4f706299ff674181f7d30726d0800557"
+        "itemsCommitment": "0xa5fe098dca6fb894b01fe00e4d232b805880d7ea4604235cb79ded204e1c57c7"
       },
-      "vendorSig": "0xb8bd26945554861d20a2e33405016e448ec7174338a5d76ed0c60306e43e17f530d9e5ae257b208753eb3b914c28d3cedb012a8a8bae4b5f7c4192e3b67ed17b1c",
-      "nullifier": "0x2982bd53c724f002ee5a79bd82a6df3986c5ac5c3a28d6da56d15aa393c810dc",
+      "vendorSig": "0x30607a7a5069385dc2c371b5c3e135cc094532d94612d008b1d058ef80f52bdd7eeeae53158f0f43e60d95fb315818eb73bddc54faaebf1ec6dfa8a703d3c5591c",
+      "nullifier": "0xee4ea571f122967066bf55a45691653878981d7f74fa1105808b20ac87c2b94d",
       "reportId": "0xdff38d9156732dfcdb9b3e0ed4b646d4bcad00243629023ddab14ef540733426"
     },
     {
@@ -1572,10 +1581,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793088000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x584cb1acd900d048429865ad003aa28de00573d398382d1973e2a97ef9d73131"
+        "itemsCommitment": "0x4925e293af834d4ba355af17d777a63188b74e509e76a0c81795274be7440b50"
       },
-      "vendorSig": "0x084ee5458f8cd16474706feaffdd23ae8c9a17674cd8fea6c1f43b0bc79bb0dc551950cd547eab9305b1e41ec4289a155f87548ea2b32322a43d18ac788c7eff1b",
-      "nullifier": "0xddcbfc9e7264462e295d13c297fa94fdd855dbe79b11f75dcac4fb33fd590ed6",
+      "vendorSig": "0xb7da617fe79ab1e158a84ecea42049ce9b27cf8618e23f2c29bd0a143ac903a749ae4be74386435d1fc16dbeb1263e24b4c96ffac70c53bc79eae1c816eb7e741b",
+      "nullifier": "0xfef2a317df43ab9953a46cc0d9ebb95ab027de1b41d041c757c39011974d8b28",
       "reportId": "0xfcfed87a53029ab2d1b1dcb763a4385f3808cf43837df6af2f75f55be8570705"
     },
     {
@@ -1591,10 +1600,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793091600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xb64fdf2c2532e5cd165a3e3b3c7570810df056d98375d0095cd9db9867bd1686"
+        "itemsCommitment": "0x291b2910d01c4068a026ef35f91ee686bad1ff7b97a1fc20719a660f91ee73aa"
       },
-      "vendorSig": "0x5617528d9f528dc1053cb43abe2d07077f6ae398e0e9022640db57038a239f9c331c0782e19fecb8dfceddaee3cc2f5bac4524f2f5cf934fadff665e6115e0091c",
-      "nullifier": "0xb415f673782fefef4f80087baac35632ac53418882dd79b3ba4c4a8b38e102d3",
+      "vendorSig": "0x47a313ddbf86faa90b1826c9a0d5b036bf962c46f8c3310733b2dbd84de365ae586fe176365a5413ba2dc46be54a8b87aa42f086e0d047c531b70ba404aa555c1b",
+      "nullifier": "0x549da0b77db90009d85275d237139178bec8e1f03965746d4363ef68f1d80b1d",
       "reportId": "0x05eeaa024edacb32f3517ade9256b49f221571ab111ef77d7c2d7c22755ddf04"
     },
     {
@@ -1610,10 +1619,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793095200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xb2d1aa1211972ad3f970a88dfa743f05ce622918d1dac84e1f0c37f60b4cbc5c"
+        "itemsCommitment": "0x25147bb41b935272beb002170486f57b43df85f09cf5ad6b7ce380474ecad878"
       },
-      "vendorSig": "0x924681b85a06b9cbf74ab3060b0753e2b2ad0c8af3377795b234b4d6d2898bb07f4900276b384c6fcbe6e0f5efeafd55acb884a5d6a99730b2bc02ed23bf69cb1c",
-      "nullifier": "0xae3aec8041620375fc7d5dc0179c788e4d6404d54a97e9affc1ed6c6501a26d5",
+      "vendorSig": "0x58452aa46ccc3f2ad990465e292543b361335aea6d483b966fe55f7038bca9487b0c2231bb3acd66b36e5b5d902b5ee06b8c87ce18c1ee910632adccf7311c151b",
+      "nullifier": "0xf91743d14a10b47e6c93dfea7f364a7e8a360ac841abe923935d503a48975e5f",
       "reportId": "0xfcd894dbc03e2f11e8e43c3c5e8e8e4a3359f8de10ebb4b024470fbc08686ec4"
     },
     {
@@ -1629,10 +1638,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793098800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x4cb3a1af74a34460c5fb395a21cd25ccaf85cddd91d0c275d64a27e14e3c9bf7"
+        "itemsCommitment": "0x6a513539e38c7de485842aa3a7bf23a73d08652bab2db7fe3651d5327711cc54"
       },
-      "vendorSig": "0x515dd166120b9c3b95b1b6077bb0d0dd7fca1a849b3610495ad132a03be908b10ca91e0b0294cc6256e5842d5ed2f23d0a5f6af197d9a680900523b50678bc3f1b",
-      "nullifier": "0x57b7145a4d0877cadedde2bc592a29b251407b3a689fd67838f18ef058253098",
+      "vendorSig": "0x1ee2f85374e4e99f2d3009b11ee475a858af481578be2a7632436e97c683e08e16d14191d0f0a6f91c162e47a4261ad7ba56c406fbc5a73e1be1e09e7332ea481c",
+      "nullifier": "0xe89f097fb81fb0b403cc9fc9aeb3c58a28e1b660cee05c2ffb828e90e05e82d7",
       "reportId": "0xf1f9728364bc246173c265d2ed40a4b44c0118732cd613f48f8cfed0e5ebef2e"
     },
     {
@@ -1648,10 +1657,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793102400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xc90967b1e7408671b276a8ed510034d838618e63c89bb5b628aa8ac40d1baa89"
+        "itemsCommitment": "0x5fdcc01929de943fb3fa07462d1100f6f4e4d884a4b670e92f293b62afdd6fce"
       },
-      "vendorSig": "0xa490040b90b57fd8b8970829dd2b89667017113004c0a3cd7c69abd38fdeea1f62facdbf23bc71bf9c98448fd8a30e69c05aca3e31e2c428ab5811e6538001931c",
-      "nullifier": "0x3a9b3cdd48e90bed0691ea3abf4d62948b6f80dc22fd19ee0f2d9ab0b5224803",
+      "vendorSig": "0x2cb30f9e33f54b7a69bbaafae367b867c6833d74c2cfba866150a7df231512a4365bf14923d8882371ba5faee83263c3bd40b46b01e129046ee0a40d0b1db1861c",
+      "nullifier": "0xa5e4651b829a9fb96a5d3f95efde4b78ad87399d2fff4dfdb0d207ce1e86271e",
       "reportId": "0x1a39cce2f5b6b41d3ed0bc08fffd9a3d0137e1e65d99dd515b52821e17142f4e"
     },
     {
@@ -1667,10 +1676,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793106000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xa8d34a7a0b6dc96aa82798eb467262b810032913c321063cb04ac1f25e626704"
+        "itemsCommitment": "0x23e92bb69aad59fb290a2e586ae8279414dc75839e45bd4ffb7b7726d8ce132b"
       },
-      "vendorSig": "0x06a27aecdbcbe20d633cc8815e3bab46648adb6184ed57bb259ba4d92a70ea30328d8942f1eab21bd9322d530431608e119d6142e8e8304a3057701ba652d9411c",
-      "nullifier": "0x5740a23a01adc679e315d2f59238ba521199e094ac5271891b4a9d6f77eae941",
+      "vendorSig": "0xb0cc473db1d97b7206f9654636e9bf4643d69e0e7654adeb6b360b87a64a2a59161fdc0aca83d2be5df7b1606cd24d5688bfdb7e0c675d8294a0b0738b1b8b2a1c",
+      "nullifier": "0x8f5332bafa7c5fa96c40f72976fddfa924aa3db93c5c8aa8d4666a577d45fe48",
       "reportId": "0xf13a08dac4b1ddb9cd21e649e4217412652849d333f534c1968f1f9a25dc536c"
     },
     {
@@ -1686,10 +1695,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793109600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x79be62bcf4c16438b99a1b989ca386217bb16d13c42909660308b6bb22f18b89"
+        "itemsCommitment": "0xc06e23845cce9fa3a124f1aef1834716b62c6789b13806941084a4fb62178b51"
       },
-      "vendorSig": "0x3f55ea39bfd7c8eb369bddefdd7c75ca28699fdab765b8b2c3437ed4ee769943698b5df5e0d3ff492b279326e23d82a0983d2690d0cf7148b8b02d765d7cb6f71b",
-      "nullifier": "0x915766d5c017012cddf5fbd31886a1ce0b6bf1c745547c485a8a4e029c418211",
+      "vendorSig": "0xe79bf803b3599f74ba6ae6123bbfc1c50a6c051648d10d7165f044b65514722d167404eb8b72ce0430382a5eecfe7127c7ab2debf1d71274ec99e7770c09a7061c",
+      "nullifier": "0xd07dee6dde0bfc1d00c88dcf5eb458b96b7712f392c7dcc46f7e321a450270d2",
       "reportId": "0x059f07da6a4ba1c5c5d658f8f2247588e5418677090e852c6fe723dcd52bc19d"
     },
     {
@@ -1705,10 +1714,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793113200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xa0230b6f47b5f94410800658f2d610a8961503c68e98f50a923ae2e484c3c1d6"
+        "itemsCommitment": "0xfec17a7404ffd6db70ff69f270a51a88892b455dd52770cc49c5385a54fd9558"
       },
-      "vendorSig": "0x8c03292522b40926e9346cfea66bca079cf648c6994a3857911ae94262fa152235e96309d620bce8d3f07f50e6d939165cfacc3eec9c570f00ad4ede6f2faf0a1b",
-      "nullifier": "0x8a27c541c79230a244186ed3b0f3e365a39b9d0813f310cbf7eab3cb57abaf5d",
+      "vendorSig": "0x91436c5ed7f2a0f93ec384bf9103026ebf7af0a2aec0216271175bbd3566503e1d00a9d6f8ed02d9c58aea07fe3b8b999147e757e131f7bd75f8108e48310e321c",
+      "nullifier": "0x0a7bb0b3858c98fe46fe476227c3b352c2a6cb332f5001a450bfe7b1b90d1e93",
       "reportId": "0x23eabdbc518d6e60f221424ec313c95d17084989c7a1093845a2f13caf6003ac"
     },
     {
@@ -1724,10 +1733,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793116800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x53287abf128da27c3996b92627bd50eb70af1d456294c8b282b08d68dcb8ccdd"
+        "itemsCommitment": "0xc01146a98ac5eb10055e9cbebeed36cb2c42e86d53d04c6269f58492b5c8e5bd"
       },
-      "vendorSig": "0x0785cc7b6b81e0ee446b63cd49e50ef39e0ab12b5ebbb4ac231331dfee777a644ea35a62fbab35e31e86fae410fe6a9cfffe6aec7e1f9b34832fae0a0e0c48741c",
-      "nullifier": "0x45af3c76b150a7712fc791a14e5b7050c529b9697cf14ef52b3dee4b2654eb73",
+      "vendorSig": "0x7de1688ac71649883ad1cec00ae2ddfd63309b4cb41f573d94ff3849b9fa0fa7764dd5cebb59e5eb4b9b497fe8bf17f170603f69cefb9687c871ed4b011f10601b",
+      "nullifier": "0x1785546e3d14d358e3f9450ca5072a02e663f3281adc886c4d061ea2d7eedfe0",
       "reportId": "0x11b62cec2e7734d40e1ea5c5f4427974fca768b231d6a88232a6a81439f812b0"
     },
     {
@@ -1743,10 +1752,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1793120400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x915ce216fcdf1ea18aa26ebe8cbb620666fcdc2384eb4225bd5124400fcf0130"
+        "itemsCommitment": "0xeb1ef87e9455e7940b7f8c37396ec860de24641881aef8b96c3f87850680960e"
       },
-      "vendorSig": "0x945c7a209c80a4099626edd1e059fade4c089ce57648f4419c9f6dce689ef65630db9c996dac50716043a742739c507329f0b9542b6a4ed8b729d509b0cf7a591b",
-      "nullifier": "0x946b9a966f597b82be4e19c8a0ba7ff73b3ba706f32fbf1bd653b156db7ec85f",
+      "vendorSig": "0x4ef40a3cb66224e1788cc0bd8520ab2c64ed2ec4b1edb13d6a6dd201b90126bd025809d466e97cf1ee73b3f7514d09513bc817c6da25bf83ac1f9531525d0fcb1c",
+      "nullifier": "0xa6327c32b9daac69cb5ce35ab1a62262ada1bb6eb07d62330b9544d222b5ecb0",
       "reportId": "0xed3631c7b80a7a77236aa14a322075745c9b347a90ead9dd4fd7572809a2f98d"
     },
     {
@@ -1762,10 +1771,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793124000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xce07a38540ba5bb4bab8c600084425f70272d833d50f9200b23996af7a818f9e"
+        "itemsCommitment": "0xb4ed29461fbbd9d2af49367c55eee20bb1b570190589b33480585c6dd252e442"
       },
-      "vendorSig": "0x8ed8ab245efa036f8b7c736da924396035eea794bb215bcd974e1a36e8d5a2f65f699e7f5a871a2c976bf51d10faf83caefbbcb17c335ceefca047245e3934fe1b",
-      "nullifier": "0xe866361b2299b827a2d4d2988c2d3a661ed7ab04cdc722697ea64843c6096e75",
+      "vendorSig": "0x7fcdd953958b5c86e1b1b65b0df9a4cd82c488204e36cef9f9aa2e813c4a880d359d31a76916876c4d21be2cb0f56f1b43a04b2e38acd91d8904a2d64bbbeb981b",
+      "nullifier": "0xd2981b548591d372fc557abc380a9cf33d3e295a8ed69e98a66bef4eb19197c1",
       "reportId": "0x98b1436a9185e51aac603bf6de11541325cc6c4414217a912faa66a4e4622381"
     },
     {
@@ -1781,10 +1790,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793127600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xaf5af81cd568ec6654c65c6bc472813e2d623ee1804586e19543ec84795ebd7f"
+        "itemsCommitment": "0x952c846f79143dddbd615772fea8bd2a41796e59de02011d55b13154662be536"
       },
-      "vendorSig": "0xebfcfb33f6e10b94198147d08f2ec5eb4fe422332801632618eca005fe745cec01b3d954b862878b09fb46ed9d714d57e5c7a204c9a7b570d8ad34566cd1dc871b",
-      "nullifier": "0x5adbb48281af48b4450bace221115f356391ebc567f0516d5dcf581e5d069962",
+      "vendorSig": "0x64b51c606f86f10f17123c9b9bb7851d6fae544d067b856915b670da09bee50f5d4ea1eb14d1880e2568233576d7fb59efe3b0f7f7c12a7636b52aa5fd64cc881b",
+      "nullifier": "0x6f1a3c0cb8a11d51c02a7dc78b55e69efc82e20415deb9de2fbcaa0efe2ad849",
       "reportId": "0x67788573e6e005df3477f6b93db60422cc198bc4705e010c658579c472625e62"
     },
     {
@@ -1800,10 +1809,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793131200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x202057fdb73cd7ab075f06d43527b2da0f20a2f8f84d35fa66caaca438a9d7f5"
+        "itemsCommitment": "0xa0412438ad33778f4fc4daf3b64eaaf16688de7b2e64ed22f15e5e7b15014c19"
       },
-      "vendorSig": "0xa76f2150ac3e13b306ae1ac1e0df2f6a94f5ce17e0c8d6dea6b4f8b64485fb0a5f1afed2c80c4587f3c927359aea02bfde7f5daf6f22b4fbb1ee807f2eb4acb31b",
-      "nullifier": "0xa0a36a2ec20e281c86942e881a0fcdbdec1dfbf479b820c675ad31b39c93c9b4",
+      "vendorSig": "0xd230926d730642030be3c814e761ecdc46c9ad05f54e4b4bdb65cf621f24ad457512d2868275c736a0d81ac6ecc602f436f4bab73298b131aec73cae0a6015c81c",
+      "nullifier": "0x0ff81dcf2ee7a15ee68385d38ee94d0e04e2bd9f5e0b53bfde0c867bd6e5f36d",
       "reportId": "0x0103a74a50d9a8efe9944ce7f366083234aae8b9dd6dd88fbf0e66cc56ae9bc3"
     },
     {
@@ -1819,10 +1828,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1793134800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xf73bb0daaf4c4c99cb42d662dcaa85bffece075a4abf31cf72b0201963878ded"
+        "itemsCommitment": "0xc9f9e266c40134952420aaf765eb89824c8709134dc342a1edd84b97b907cdcf"
       },
-      "vendorSig": "0x2480dc2cbbf0024033564e0115159bccd63489e31313e5dac8331affd47fdfdb741562de220d715892440c0b7f29562952e4d5819e075873b0c0246481f1cf181c",
-      "nullifier": "0xc9d5c19c9dc8a499e528d57ca68e69121e57ff43e9fcb33a105dbf2c5c729bcf",
+      "vendorSig": "0x44ae207c0813c6842c538b0bfc7f6c4b816dfb8e2fedf38d60de66a6b5345e034550fdfa0f82e486790ee105a90c2f1603748bd5d27a14d03a59e76ce4ff80521b",
+      "nullifier": "0xbc7749e1e1aac691522562b197494301bec2f72b61616dd2ffc0bc8dc63bbb8a",
       "reportId": "0xc30f05727068c8c9ff544cb148fbf4ac4072eaac14c4cba62d65270d72ba1786"
     },
     {
@@ -1838,10 +1847,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793138400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x55f841f1b92b71342acc9b0616ad63c89f520d00977bdc54a1f51b2ef5b40b15"
+        "itemsCommitment": "0xae8634c9b87e06625697f9939e6a7ec935670c5d7e9b92377d0072643460384f"
       },
-      "vendorSig": "0xdf37665f2184f424e7bf3cd72c6be12effb5ed81545422d81b3ba59b441e802b62d3c25817ae86df1b393b261af69704d44e9016f4c5ff1eae7b08f65f8686e91b",
-      "nullifier": "0x0034405f5e1953327bda87815b5a699f5c875c0b890c33c4457cacec8af5f564",
+      "vendorSig": "0x84d9b4a512479a1b667480a27645727069d8d522b1b5ff833c151da6e09b837b5802320e7471d6aa9e761c1e63d2229f3f17ce6932c419fc9e26f0b4fea443261b",
+      "nullifier": "0xec75c9b86f772a23a79898a647be1eefbb316aab48cea23c044241d78f61b682",
       "reportId": "0x21cf484de8dd6794df0c1be5cda53b08fbf81288d5d29b9a2acb011daf86dded"
     },
     {
@@ -1857,10 +1866,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793142000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x7006e6510b2c643b98ddb6820859f24fe0b704dd439da18af9b0d6b405c230db"
+        "itemsCommitment": "0xf28fd9bb9d6e0289703adf86a4e09ce352fff59044efcb7edf893c6f7d72324e"
       },
-      "vendorSig": "0x9128c3bf295cc72d13cb4dc817cf4149b3a38ffdcade4aa1832d291725d868ce69c8b82a5e28df460c5ab2a2c986e3f37fabcbac753b755aa7eb73bb6361b43e1b",
-      "nullifier": "0xe6f183df6c60019424cc3280a1340ffd670d85161c7f9bd30026ac82d5ff43ca",
+      "vendorSig": "0x90daccadc84cc6766150ee1daf5b931bfbb37a246cdfd1021bd0741b7af6f73060583cd271a96e1e3c4351a703483c2fcdb104b18bb3121f2eb01d6202b5ffc41c",
+      "nullifier": "0xbf09322ca43e428f3d7fbea26f072b50be29fabeb0ddfc042de35ef052ad146e",
       "reportId": "0x32eed51b8bd151756776e871821b9f99957349a7330c6f04f5aeceafc37263c7"
     },
     {
@@ -1876,10 +1885,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793145600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x969ecfedeeeda10335a2c4090c506e1ee499aff7fccf895990a63e524cdcf280"
+        "itemsCommitment": "0x32d26bc73b874a2eee715cc3a3b9669254de39640cf6f1b8302fceb5e156d1d1"
       },
-      "vendorSig": "0xc37a9fb30aa0c3544bdf781a5699bfd26c397c22253976a677ab0bb4143445a64fb58af96287af5661613f4239fbce71b808330c9e9c1613fabad9fc5d4bf68a1c",
-      "nullifier": "0x33da947a5a5a4cc603f0d428a8365800ace7505049377c88e1a60e7bb986089c",
+      "vendorSig": "0xeffddcad97b7e5e9e6bc0e9454f5948fe199b46aa4ad4030e80de4bd1302abc1299c8f540ff84256d3a2e015e25c89291fb86bc934b3602fdeceb42f4364e3871b",
+      "nullifier": "0x875ffc66594c248a507969c9831cdb47a75be82511ccbb3c48ac60b065f5c80e",
       "reportId": "0xf774889e24c14b270226f9d4152687fdcaa30dfad3fb3a03551c6d28199070b7"
     },
     {
@@ -1895,10 +1904,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793149200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x99195391a6bd85523a7c128eb96d1f787932088ae5239936882d4e71deacddf4"
+        "itemsCommitment": "0x6b7b51b1a594d67fbdbc10d08525f2ecfda2c4900759494c307c1e3e628bbeff"
       },
-      "vendorSig": "0x568a2e540d85384a1e54c88e7262bf568cb7422a133f57618b069dc7f7ae67410d01d4fcbfb692948df07836664ed4e9abc9d278022fa496a9b47cb8f11801071c",
-      "nullifier": "0x64764d4862ed39533014475c3891be3b19dce285c8351a5bcb91070efccc3442",
+      "vendorSig": "0x30e84e7c94bf3df7ba09b3ac89bf078792cb259498307b51ceac50620691343a63457aa43220bbc83774facf571f85ae4df86df6651fc94cd50b857ac81be70c1b",
+      "nullifier": "0x57c5c43ac1aff29de95d2635e07836f19860b83da96cda36ebf1a95884c03d5e",
       "reportId": "0xbf7725a20d313771852804279845aa44c2337f985fabbf51bf5fb0188ca8961a"
     },
     {
@@ -1914,10 +1923,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793152800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xbf72554431411aa68800b7c3b37eec625bbdf37095103f606a12993278b65e20"
+        "itemsCommitment": "0x52521467c40030c3f8947c5c0b4e8606b1e0c994ec81c098f4216068eea3f1a5"
       },
-      "vendorSig": "0xa2e2276ff5b313a908cb62ab1314df8db8b760e43da8fb92339292e534455d947a6a9dbae867d8c3850f6d1906eeed4783882724d41ec2c1d5900f06a00125ff1c",
-      "nullifier": "0xa1e821462ccb4447c2ae044815ffd76ed6f63484d363c89ed844e47dc51beb88",
+      "vendorSig": "0x1042790fc59d4a53e56734be8a48617827b6f714245da22d1acbf10c215a9d49213238cc484fb11e38eb44ba63d958a21bbb1b0cd2d01761d5a201888940a22f1c",
+      "nullifier": "0x5bff6dec1fd467ea8e20563c83dc740fad387e5c6cf842e839c5020e7d0b45f6",
       "reportId": "0xec667f135ce2a1af83e1a7a8db953db685f1faea850349ad37deae1c57cbab69"
     },
     {
@@ -1933,10 +1942,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1793156400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xd126e3654bf882fda1d4cd47b85b9894c353427375b9187e63b01abcf7be200c"
+        "itemsCommitment": "0xd2caeea23a059d9320217c95e63ded43dfc7b20023bf4eeaa348615307578f4b"
       },
-      "vendorSig": "0xfd1835e68426cf42e1ce4bf485ac4e1fb41709a101ff290d58e8ca74c657d2ee4a82212af4f6c98bb14867f34c81da075475dfb1ea236a645372c4bab155f4531b",
-      "nullifier": "0x6c1b853a261a22c1248c81b73ea4b985e9e6deb0738bc6ee3275d8e91fb5aca1",
+      "vendorSig": "0x41cb9de4a36f5a07d754cc43fab1c484bd458b545669edc07ab1d9757aa4702e78bf5f30e13493280d57170be1dadc6efb8189f7b13e8129843bb3cf3ec2fa381b",
+      "nullifier": "0x2567a50dc996498b27f53e4d96001669c952a8bf49b98d653d574a16a253a57e",
       "reportId": "0x52cd909ca6d95216f6dd7e5ac03516312dce5c4c05fed5aeb5b3dd1d1b5c5a2e"
     }
   ],
@@ -1954,10 +1963,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793160000,
         "category": "0x9adecaf25b3c35d4e7a76a0173d42d1ab4288c9a4d5e284038214365835af808",
-        "itemsCommitment": "0xfd185c671595375510b1e2d8d3c19410b98cfdb27748cddf9e98257f1045e469"
+        "itemsCommitment": "0xfeee93db4a2258f50e88e350d2cfc269be5af7677ddb3007a0d3e36452fcb0e2"
       },
-      "vendorSig": "0x4f15365a514bd2373ed75e9300923c966c6e5fe82196dbbf4e7e25e60910329314cfb2d20cacc1cbec6ca50a50dacf5d1478d67173cd09539cd366634f98bfd81c",
-      "nullifier": "0x3cbf663e63b7e989f68561e87fda492c43a0364c131e1980820ca856acd87553",
+      "vendorSig": "0x3070e50be8eb07db1425d11c7dc608293a2e7c77dbe160645d532afe2ecd6e0b763b8b159d64b061cc0d7864112cb07b8bc837c09a07152d6d4daabf5800632e1c",
+      "nullifier": "0x0a3a37c04d933d0b5bfa42fc04b169816ed67b961a7c8018faffaf2968e42c76",
       "reportId": "0xa974fb988e869fa2a1c9294800e406c328fd20e541bc5db287fdff5cb8c8b182"
     },
     {
@@ -1973,10 +1982,10 @@
         "amountPaise": 4000000,
         "issuedAt": 1794240000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xa8051adb3b512d5788891db5a979301bdd3f71cc81c51535578f8196c57905e4"
+        "itemsCommitment": "0x53661bd50fc62bc6bf1b3a6c1e39584525a8643116b70f32ef57540fbb35cf6f"
       },
-      "vendorSig": "0x9393458bc5b949afc0792bc036ad6450be9830605a1acf065d05c2ab5eada6d6159cd53fdc7ef4c261e972fde8abbabaa44fd1d99501002f5cd13910360af2c11c",
-      "nullifier": "0x106e454bcac919af394e153fec99f1bf8f97cd05a0ba2a6c3b080e72582fbd3d",
+      "vendorSig": "0x6be680825b7bac8ba842e322c7442930ab42be6fd44e467e2ff2928ae826c673443019ea916c4c815f077b7541b3e2c7ee30bd125389f1f51a774d1e490b74b71b",
+      "nullifier": "0x647cabbf17ed33adc3dcef4afbb265860369191005dc7af7754831909fb0368c",
       "reportId": "0xad64d547c83a901b1dc77a2b6504b5b55a19390b27465ae80b086c0b84d5f905"
     }
   ]
