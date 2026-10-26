@@ -40,7 +40,7 @@ def test_bills_returns_public_fields_only(client):
 def test_root_serves_the_demo_page_not_the_experimental_ui(client):
     # Plan 8f: GET / is web/index.html. The role-selection UI lives under /experimental.
     page = client.get("/").text
-    assert "<title>CREDIUM Demo</title>" in page
+    assert "<title>CREDIUM · Water fund ledger</title>" in page
     assert client.get("/experimental/index.html").status_code == 200
 
 
