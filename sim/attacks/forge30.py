@@ -67,7 +67,7 @@ def run(deployments_path: str, bills_path: str) -> dict:
             "fractionBps": 10000,
             "reportId": entry["reportId"],
         }
-        ngo_sig = sign_allocation(alloc, ngo_key["key"])
+        ngo_sig = sign_allocation(alloc, ngo_key)
 
         # Build release function call
         release_fn = vault.functions.release(

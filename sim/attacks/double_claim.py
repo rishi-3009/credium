@@ -49,6 +49,7 @@ def run(billNo: int, fractionBps: int, deployments_path: str,
         raise ValueError("bill is not GENUINE")
 
     sender = anvil_account(6)
+    sender_address = web3_for(deployments, 31337).eth.account.from_key(sender["key"]).address
     ngo_key = anvil_account(1)["key"]
 
     steps = []
@@ -67,7 +68,7 @@ def run(billNo: int, fractionBps: int, deployments_path: str,
             "fractionBps": fractionBps,
             "reportId": entry["reportId"],
         }
-        ngo_sig = sign_allocation(alloc, ngo_key["key"])
+        ngo_sig = sign_allocation(alloc, ngo_key)
 
         bill = entry["bill"]
 
@@ -79,7 +80,7 @@ def run(billNo: int, fractionBps: int, deployments_path: str,
             bytes.fromhex(ngo_sig[2:]),
         )
 
-        revert = call_revert(release_fn, sender["key"])
+        revert = call_revert(release_fn, sender_address)
 
         if revert is not None:
             # Step 4b: Reverted
