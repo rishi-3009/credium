@@ -3,51 +3,242 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CREDIUM Demo</title>
+<title>CREDIUM · Water fund ledger</title>
 <style>
-body { font-family: monospace; background: #1a1a2e; color: #e0e0e0; margin: 0; padding: 16px; }
-#banner { background: #ffcc00; color: #000; font-weight: bold; padding: 8px; text-align: center; }
-.hook { color: #aaa; padding: 8px 0; }
-.panels { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.panel { border: 1px solid #444; padding: 12px; border-radius: 4px; }
-.panel.frozen { border-color: #f00; background: #300; }
-#meter { border: 1px solid #444; padding: 12px; margin: 16px 0; }
-.meter-row { display: flex; justify-content: space-between; padding: 2px 0; }
-button { margin: 4px; padding: 8px 12px; cursor: pointer; }
-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-th, td { border: 1px solid #444; padding: 4px 8px; text-align: left; }
-th { background: #2a2a4e; }
-#console { background: #000; color: #0f0; padding: 8px; max-height: 220px; overflow-y: auto; font-size: 12px; }
-#eval { border: 1px solid #444; padding: 12px; margin: 16px 0; }
-footer { color: #666; padding: 16px 0; font-size: 12px; }
-#status { font-size: 12px; color: #aaa; }
+  /* Two families, no web fonts: the page must work offline (plan §6). */
+  :root {
+    --paper: #EDF0EA;
+    --paper-deep: #E2E7DF;
+    --ink: #18231E;
+    --muted: #5A6661;
+    --rule: #C5CEC7;
+    --ok: #1E6B4F;
+    --warn: #9A5B12;
+    --freeze: #A3271B;
+    --serif: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    --mono: "Cascadia Mono", Consolas, "Liberation Mono", monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font: 17px/1.6 var(--serif);
+    max-width: 1180px;
+    margin-inline: auto;
+    padding: 0 clamp(16px, 4vw, 40px) 48px;
+  }
+
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+  /* Banner: states the simulation, plainly. */
+  #banner {
+    margin: 20px 0 0;
+    padding: 10px 14px;
+    border-left: 6px solid var(--warn);
+    background: var(--paper-deep);
+    font: 14px/1.4 var(--mono);
+  }
+
+  header { padding: 40px 0 28px; border-bottom: 2px solid var(--ink); }
+  h1 {
+    font-weight: 400;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    max-width: 18ch;
+  }
+  .hook { margin: 0; max-width: 56ch; color: var(--muted); font-size: 19px; }
+
+  /* Pledge reconciliation, written as a ledger with leaders. */
+  .statement { margin: 36px 0 0; font: 16px/1.5 var(--mono); }
+  .statement h2, #eval h2, .section-title {
+    font: 600 13px/1.2 var(--mono);
+    letter-spacing: 0.02em;
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+  #meter { border-top: 1px solid var(--ink); }
+  .meter-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 7px 0;
+    border-bottom: 1px dotted var(--rule);
+  }
+  .meter-row > span:first-child { white-space: nowrap; }
+  .meter-row::after { content: ""; flex: 1; order: 1; border-bottom: 1px dotted var(--rule); }
+  .meter-row > span:last-child { order: 2; font-variant-numeric: tabular-nums; }
+  .meter-row .ok { color: var(--ok); font-weight: 600; }
+  .meter-row .broken { color: var(--freeze); font-weight: 600; }
+
+  /* Vaults: two ledgers side by side. */
+  .vaults { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 3vw, 32px); margin-top: 40px; }
+  .panel {
+    position: relative;
+    border-top: 3px solid var(--ink);
+    padding: 16px 0 0;
+    font: 15px/1.7 var(--mono);
+    overflow: hidden;
+  }
+  .panel h3 { font: 600 19px/1.3 var(--serif); margin: 0 0 8px; }
+  .panel dl { display: grid; grid-template-columns: auto 1fr; gap: 2px 16px; margin: 0; }
+  .panel dt { color: var(--muted); }
+  .panel dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .panel.frozen { border-top-color: var(--freeze); }
+  .panel .state { margin-top: 10px; font-weight: 600; }
+  .panel .state.down { color: var(--warn); }
+
+  .stamp {
+    position: absolute;
+    top: 46px;
+    right: 8px;
+    padding: 6px 12px;
+    border: 3px solid var(--freeze);
+    color: var(--freeze);
+    font: 700 15px/1 var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transform: rotate(-6deg);
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    pointer-events: none;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .stamp { animation: press 260ms cubic-bezier(.2, .9, .3, 1.2) both; }
+    @keyframes press {
+      from { transform: rotate(-6deg) scale(1.35); opacity: 0; }
+      to   { transform: rotate(-6deg) scale(1);    opacity: 1; }
+    }
+  }
+
+  /* Demo steps: a real sequence, so numbering is meaningful. */
+  .steps { margin: 44px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+  .steps li {
+    display: grid;
+    grid-template-columns: 2.4em max-content;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .steps .n { font: 14px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+  button {
+    font: 15px/1.2 var(--mono);
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--ink);
+    padding: 9px 14px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 120ms ease, color 120ms ease;
+  }
+  button:hover:not(:disabled) { background: var(--ink); color: var(--paper); }
+  button:disabled { opacity: 0.45; cursor: progress; }
+  button.danger { border-style: dashed; }
+
+  .section-title { margin-top: 48px; }
+  #status { font: 14px var(--mono); color: var(--muted); margin: 14px 0 0; }
+
+  /* Bills ledger */
+  .table-wrap { overflow-x: auto; border-top: 1px solid var(--ink); }
+  table { width: 100%; border-collapse: collapse; font: 14px/1.4 var(--mono); }
+  th, td { text-align: left; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; color: var(--muted); border-bottom-color: var(--ink); }
+  td { font-variant-numeric: tabular-nums; }
+  td.num, th.num { text-align: right; }
+  #bills td:nth-child(8) { font-family: var(--serif); font-size: 15px; color: var(--muted); }
+  .verdict { font-weight: 600; white-space: nowrap; }
+  .verdict.GREEN { color: var(--ok); }
+  .verdict.AMBER { color: var(--warn); }
+  .verdict.FORGED, .verdict.UNKNOWN { color: var(--freeze); }
+
+  /* Console: the machine's own voice, kept in mono. */
+  #console {
+    margin: 0;
+    padding: 14px 16px;
+    background: var(--ink);
+    color: #CFE3D7;
+    font: 13px/1.6 var(--mono);
+    max-height: 240px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+  }
+
+  /* Evaluation */
+  #eval { margin-top: 48px; }
+  #eval h2 { color: var(--ink); font-size: 14px; }
+  #eval > div { margin: 0 0 6px; font-family: var(--mono); font-size: 15px; }
+  #eval ul { margin: 4px 0 16px; padding-left: 20px; }
+  #eval li { margin: 2px 0; }
+  #eval caption { text-align: left; font: 14px var(--mono); color: var(--muted); padding: 8px 0; caption-side: top; }
+  #eval table { margin-top: 8px; }
+  #eval .scroll { max-height: 320px; overflow-y: auto; border-top: 1px solid var(--ink); }
+  #eval p.missing { color: var(--freeze); font: 15px var(--mono); }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 14px;
+    border-top: 2px solid var(--ink);
+    font: 14px/1.5 var(--serif);
+    color: var(--muted);
+    max-width: 70ch;
+  }
+
+  @media (max-width: 760px) {
+    .vaults { grid-template-columns: 1fr; }
+    .stamp { top: 40px; font-size: 13px; }
+  }
 </style>
 </head>
 <body>
+
 <div id="banner">SIMULATED: local chains, synthetic bills and keys. Designed attacks.</div>
-<p class="hook">A Rs 1.5 cr water pledge is swapped, bridged and spent through local vendors. Donors can't check.</p>
-<div class="panels">
-  <div class="panel" id="chain-31337"></div>
-  <div class="panel" id="chain-31338"></div>
+
+<header>
+  <h1>Where the water money went</h1>
+  <p class="hook">A Rs 1.5 cr water pledge is swapped, bridged and spent through local vendors. Donors can't check.</p>
+  <div class="statement">
+    <h2>Pledge reconciliation</h2>
+    <div id="meter"></div>
+  </div>
+</header>
+
+<h2 class="section-title">Vaults</h2>
+<div class="vaults">
+  <section class="panel" id="chain-31337" aria-live="polite"></section>
+  <section class="panel" id="chain-31338" aria-live="polite"></section>
 </div>
-<div id="meter"></div>
-<div>
-  <button id="btn-release-405">Step 3: Release #405</button>
-  <button id="btn-forge30">Step 4: Forge 30%</button>
-  <button id="btn-double-417">Step 5: Double-claim #417</button>
-  <button id="btn-scan">Step 6: Watcher scan</button>
-  <button id="btn-release-417">Step 7: Release #417 (after freeze)</button>
-  <button id="btn-encore-418">Encore: #418 60+60</button>
-  <button id="btn-reset">Reset</button>
-</div>
+
+<h2 class="section-title">Demo steps</h2>
+<ol class="steps">
+  <li><span class="n">3</span><button id="btn-release-405">Release bill #405</button></li>
+  <li><span class="n">4</span><button id="btn-forge30">Submit 30 forged bills</button></li>
+  <li><span class="n">5</span><button id="btn-double-417">Claim bill #417 on both chains</button></li>
+  <li><span class="n">6</span><button id="btn-scan">Scan for double claims</button></li>
+  <li><span class="n">7</span><button id="btn-release-417">Release #417 after the freeze</button></li>
+  <li><span class="n">+</span><button id="btn-encore-418">Encore: bill #418, 60 + 60</button></li>
+  <li><span class="n">↺</span><button id="btn-reset" class="danger">Reset the demo</button></li>
+</ol>
 <p id="status">API: live</p>
-<table>
-  <thead><tr><th>billId</th><th>billNo</th><th>vendor</th><th>amount (Rs)</th><th>verdict</th><th>tier</th><th>recovered signer</th><th>reason</th></tr></thead>
-  <tbody id="bills"></tbody>
-</table>
-<pre id="console"></pre>
-<section id="eval"><h2>Evaluation (designed attacks, synthetic)</h2></section>
+
+<h2 class="section-title">Bills</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th>Bill</th><th>No.</th><th>Vendor</th><th class="num">Amount</th><th>Verdict</th><th>Tier</th><th>Signed by</th><th>Reason</th></tr></thead>
+    <tbody id="bills"></tbody>
+  </table>
+</div>
+
+<h2 class="section-title">Activity</h2>
+<pre id="console" role="log" aria-live="polite"></pre>
+
+<section id="eval"><h2>Evaluation: designed attacks, synthetic data</h2></section>
+
 <footer>Honest scope: proves a vendor-signed invoice was paid and one bill was claimed twice. Does not prove the well was built. Freeze is permanent in v1.</footer>
+
 <script>
 (function() {
   "use strict";
@@ -65,6 +256,12 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
     });
   }
 
+  function esc(value) {
+    return String(value == null ? "" : value).replace(/[&<>"']/g, function(c) {
+      return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c];
+    });
+  }
+
   function fmtRs(paise) {
     return "Rs " + (paise / 100).toLocaleString("en-IN", {maximumFractionDigits: 0});
   }
@@ -75,32 +272,47 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
     c.textContent += "[" + ts + "] " + msg + "\n";
     var lines = c.textContent.split("\n");
     if (lines.length > 200) c.textContent = lines.slice(-200).join("\n");
+    c.scrollTop = c.scrollHeight;
   }
 
   function renderState(state) {
     document.getElementById("banner").textContent = state.stale
-      ? "SIMULATED (cached)"
+      ? "SIMULATED (cached). One or more chains are not responding."
       : "SIMULATED: local chains, synthetic bills and keys. Designed attacks.";
+
     state.chains.forEach(function(ch) {
       var el = document.getElementById("chain-" + ch.chainId);
       el.className = "panel" + (ch.frozen ? " frozen" : "");
-      el.innerHTML = "<strong>" + ch.label + "</strong><br>"
-        + "Status: " + (ch.up ? "UP" : "DOWN") + "<br>"
-        + "Block: " + ch.block + "<br>"
-        + "Vault: " + ch.vault.address + "<br>"
-        + "Balance: " + fmtRs(ch.vault.balancePaise) + "<br>"
-        + "Released: " + fmtRs(ch.vault.releasedPaise) + "<br>"
-        + (ch.frozen ? "<strong>FROZEN: " + ch.vault.frozenReason + "</strong>" : "FROZEN: false");
+      var stamp = ch.frozen
+        ? '<div class="stamp">Frozen: ' + esc(ch.vault.frozenReason) + "</div>"
+        : "";
+      var state = ch.up
+        ? '<p class="state">Up at block ' + esc(ch.block) + "</p>"
+        : '<p class="state down">Not responding. Start it with ops/run_demo.sh.</p>';
+      el.innerHTML = stamp
+        + "<h3>" + esc(ch.label) + "</h3>"
+        + "<dl>"
+        + "<dt>Vault</dt><dd>" + esc(ch.vault.address || "not deployed") + "</dd>"
+        + "<dt>Balance</dt><dd>" + fmtRs(ch.vault.balancePaise) + "</dd>"
+        + "<dt>Released</dt><dd>" + fmtRs(ch.vault.releasedPaise) + "</dd>"
+        + "<dt>Frozen</dt><dd>" + (ch.frozen ? esc(ch.vault.frozenReason) : "no") + "</dd>"
+        + "</dl>"
+        + state;
     });
+
     var m = state.meter;
+    var invariant = m.invariantOk
+      ? '<span class="ok">OK</span>'
+      : '<span class="broken">BROKEN</span>';
     document.getElementById("meter").innerHTML = ""
-      + "<div class='meter-row'><span>Pledged:</span><span>" + fmtRs(m.pledgedPaise) + "</span></div>"
-      + "<div class='meter-row'><span>Deposited:</span><span>" + fmtRs(m.depositedPaise) + "</span></div>"
-      + "<div class='meter-row'><span>Unexplained:</span><span>" + fmtRs(m.unexplainedPaise) + "</span></div>"
-      + "<div class='meter-row'><span>Verified:</span><span>" + fmtRs(m.verifiedPaise) + "</span></div>"
-      + "<div class='meter-row'><span>Amber:</span><span>" + fmtRs(m.amberPaise) + "</span></div>"
-      + "<div class='meter-row'><span>Released:</span><span>" + fmtRs(m.releasedPaise) + "</span></div>"
-      + "<div class='meter-row'><span>Invariant:</span><span style='color:" + (m.invariantOk ? "#0f0" : "#f00") + "'>" + (m.invariantOk ? "OK" : "BROKEN") + "</span></div>";
+      + "<div class='meter-row'><span>Pledged</span><span>" + fmtRs(m.pledgedPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Deposited</span><span>" + fmtRs(m.depositedPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Unexplained</span><span>" + fmtRs(m.unexplainedPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Verified</span><span>" + fmtRs(m.verifiedPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Amber, blocked</span><span>" + fmtRs(m.amberPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Released</span><span>" + fmtRs(m.releasedPaise) + "</span></div>"
+      + "<div class='meter-row'><span>Invariant</span><span>" + invariant + "</span></div>";
+
     var statusEl = document.getElementById("status");
     // Do not clobber the sticky "cached" note set by the eval loader (card 16).
     if (!statusEl.getAttribute("data-cached")) {
@@ -113,10 +325,11 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
     tbody.innerHTML = "";
     list.forEach(function(b) {
       var tr = document.createElement("tr");
-      tr.innerHTML = "<td>" + b.billId + "</td><td>" + b.billNo + "</td>"
-        + "<td>" + b.vendorName + "</td><td>" + fmtRs(b.amountPaise) + "</td>"
-        + "<td>" + b.verdict + "</td><td>" + b.tier + "</td>"
-        + "<td>" + (b.recoveredSigner || "") + "</td><td>" + (b.reason || "") + "</td>";
+      tr.innerHTML = "<td>" + esc(b.billId) + "</td><td>" + esc(b.billNo) + "</td>"
+        + "<td>" + esc(b.vendorName) + "</td><td class='num'>" + fmtRs(b.amountPaise) + "</td>"
+        + "<td><span class='verdict " + esc(b.verdict) + "'>" + esc(b.verdict) + "</span></td>"
+        + "<td>" + esc(b.tier) + "</td>"
+        + "<td>" + esc(b.recoveredSigner || "") + "</td><td>" + esc(b.reason || "") + "</td>";
       tbody.appendChild(tr);
     });
   }
@@ -134,7 +347,7 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
       renderState(results[0]);
       renderBills(results[1]);
     }).catch(function(e) {
-      log("Fetch error: " + e.message);
+      log("Could not load the ledger (" + e.message + "). Is the API running?");
     });
   }
 
@@ -155,9 +368,9 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
       }).catch(function(e) {
         // A 409 from /api/reset means the anvil snapshot expired: say what to do.
         if (e && e.status === 409) {
-          log("Reset failed: snapshot expired. Restart the demo: ./ops/run_demo.sh");
+          log("Reset failed: the saved snapshot expired. Restart with ./ops/run_demo.sh.");
         } else {
-          log("Request failed: " + e.message);
+          log("Request failed (" + e.message + ").");
         }
       }).finally(function() {
         buttonsDisabled = false;
@@ -169,7 +382,7 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
   document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("btn-release-405").addEventListener("click",
       act(document.getElementById("btn-release-405"), "/api/release", {chainId: 31337, billNo: 405, fractionBps: 10000},
-      function(d) { log("Release 405: " + JSON.stringify(d)); }));
+      function(d) { log(d.ok ? "Released bill #405 on Chain A." : "Release of #405 reverted: " + d.revert); }));
 
     document.getElementById("btn-forge30").addEventListener("click",
       act(document.getElementById("btn-forge30"), "/api/attack/forge30", null,
@@ -193,7 +406,7 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
 
     document.getElementById("btn-release-417").addEventListener("click",
       act(document.getElementById("btn-release-417"), "/api/release", {chainId: 31337, billNo: 417, fractionBps: 10000},
-      function(d) { log("Release 417: " + JSON.stringify(d)); }));
+      function(d) { log(d.ok ? "Released #417 on Chain A." : "Release of #417 refused: " + d.revert); }));
 
     document.getElementById("btn-encore-418").addEventListener("click",
       act(document.getElementById("btn-encore-418"), "/api/attack/double-claim", {billNo: 418, fractionBps: 6000},
@@ -240,7 +453,7 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
     el.textContent = "";
 
     var h2 = document.createElement("h2");
-    h2.textContent = "Evaluation (designed attacks, synthetic)" + (cached ? " [cached]" : "");
+    h2.textContent = "Evaluation: designed attacks, synthetic data" + (cached ? " (cached copy)" : "");
     el.appendChild(h2);
 
     var flag = ev.flag || {};
@@ -253,12 +466,12 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
     var agreeEl = document.createElement("div");
     agreeEl.textContent = agreement
       ? "Chain vs verifier agreement: " + agreement.match + "/" + agreement.total
-      : "agreement: pending (verifier not wired)";
+      : "Chain vs verifier agreement: pending (verifier not wired)";
     el.appendChild(agreeEl);
 
     var heldOut = ev.heldOut || {};
     var heldOutEl = document.createElement("div");
-    heldOutEl.textContent = "Held-out future-dated bill: " + heldOut.result + " 1/1";
+    heldOutEl.textContent = "Held-out future-dated bill: " + heldOut.result + " (1 of 1)";
     el.appendChild(heldOutEl);
 
     var coverDiv = document.createElement("div");
@@ -275,14 +488,15 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
 
     var rowsEl = document.createElement("table");
     var caption = document.createElement("caption");
-    caption.textContent = "Designed attacks, synthetic data. SIMULATED.";
+    caption.textContent = "Designed attacks, synthetic data.";
     rowsEl.appendChild(caption);
 
     var thead = document.createElement("thead");
     var headRow = document.createElement("tr");
-    ["billNo", "label", "expected", "chain result", "flagged"].forEach(function(name) {
+    ["Bill no.", "Label", "Expected", "Chain result", "Flagged"].forEach(function(name, i) {
       var th = document.createElement("th");
       th.textContent = name;
+      if (i === 4) th.className = "num";
       headRow.appendChild(th);
     });
     thead.appendChild(headRow);
@@ -292,9 +506,10 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
     (ev.rows || []).forEach(function(r) {
       var tr = document.createElement("tr");
       [r.billNo, r.label, r.expected, r.chainResult, r.flagged ? "true" : "false"]
-        .forEach(function(value) {
+        .forEach(function(value, i) {
           var td = document.createElement("td");
           td.textContent = String(value);
+          if (i === 4) td.className = "num";
           tr.appendChild(td);
         });
       tbody.appendChild(tr);
@@ -302,8 +517,7 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
     rowsEl.appendChild(tbody);
 
     var scrollContainer = document.createElement("div");
-    scrollContainer.style.maxHeight = "320px";
-    scrollContainer.style.overflowY = "auto";
+    scrollContainer.className = "scroll";
     scrollContainer.appendChild(rowsEl);
     el.appendChild(scrollContainer);
   }
@@ -311,8 +525,11 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
   function showNotGenerated() {
     var el = document.getElementById("eval");
     el.textContent = "";
+    var h2 = document.createElement("h2");
+    h2.textContent = "Evaluation: designed attacks, synthetic data";
+    el.appendChild(h2);
     var p = document.createElement("p");
-    p.style.color = "#f00";
+    p.className = "missing";
     p.textContent = NOT_GENERATED;
     el.appendChild(p);
   }
@@ -334,8 +551,7 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
       if (cached) {
         try {
           var ev = JSON.parse(cached);
-          // Card 16: append "cached" to #status. Mark it sticky so block 1's
-          // 2s refreshAll() poll cannot overwrite the note back to "API: live".
+          // Card 16: mark #status sticky so the 2s refreshAll() poll cannot overwrite it.
           var statusEl = document.getElementById("status");
           statusEl.textContent = "API: cached";
           statusEl.setAttribute("data-cached", "1");
