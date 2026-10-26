@@ -1,0 +1,931 @@
+{
+  "simulated": true,
+  "generatedAt": "2026-10-26T01:16:19.291953+00:00",
+  "flag": {
+    "positives": 30,
+    "flagged": 30,
+    "truePositives": 30,
+    "falsePositives": 0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "agreement": {
+    "total": 100,
+    "match": 100
+  },
+  "rows": [
+    {
+      "billId": 0,
+      "billNo": 400,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 1,
+      "billNo": 401,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 2,
+      "billNo": 402,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 3,
+      "billNo": 403,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 4,
+      "billNo": 404,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 5,
+      "billNo": 405,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 6,
+      "billNo": 406,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 7,
+      "billNo": 407,
+      "label": "FORGED_UNKNOWN_SIGNER",
+      "expected": "FLAG",
+      "chainResult": "UnknownVendor(\"0x34FB109BE1bE6b65d9F0761E1ec4244a15aadf8B\")",
+      "flagged": true,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "billId": 8,
+      "billNo": 408,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 9,
+      "billNo": 409,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 10,
+      "billNo": 410,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0x7B73a5D3DAE3c6aE6e1F83089C6e8EAA4d063C79\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 11,
+      "billNo": 411,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 12,
+      "billNo": 412,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 13,
+      "billNo": 413,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 14,
+      "billNo": 414,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0xa1404204E7B3022caCcAd422ee0fae4C3204cE0b\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 15,
+      "billNo": 415,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 16,
+      "billNo": 416,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 17,
+      "billNo": 417,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 18,
+      "billNo": 418,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 19,
+      "billNo": 419,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 20,
+      "billNo": 420,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 21,
+      "billNo": 421,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0xFEFBD41e52BC0Bf7Ad5d64A4924064fa6DC45986\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 22,
+      "billNo": 422,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 23,
+      "billNo": 423,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0x9336eb91b4906D0d8db0a4a6d8EDB87ab233991b\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 24,
+      "billNo": 424,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0x339307D3a1efa0871960F4cDB373f00218F37730\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 25,
+      "billNo": 425,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 26,
+      "billNo": 426,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 27,
+      "billNo": 427,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0x5Ff666EC52F5772F1BFE5e26b68d818acdEC77d8\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 28,
+      "billNo": 428,
+      "label": "FORGED_UNKNOWN_SIGNER",
+      "expected": "FLAG",
+      "chainResult": "UnknownVendor(\"0x34FB109BE1bE6b65d9F0761E1ec4244a15aadf8B\")",
+      "flagged": true,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "billId": 29,
+      "billNo": 429,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 30,
+      "billNo": 430,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 31,
+      "billNo": 431,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 32,
+      "billNo": 432,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 33,
+      "billNo": 433,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 34,
+      "billNo": 434,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 35,
+      "billNo": 435,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0xC46F535681C923F412A3e2fE93a217b11c755072\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 36,
+      "billNo": 436,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 37,
+      "billNo": 437,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 38,
+      "billNo": 438,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0xA730993D8cd3ec7f0e3E6ACC10CCA3D24e03B268\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 39,
+      "billNo": 439,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 40,
+      "billNo": 440,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 41,
+      "billNo": 441,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 42,
+      "billNo": 442,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0x3ACD74Ee9D7bC5F867fEe05B8d4fa6261D58c4ee\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 43,
+      "billNo": 443,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 44,
+      "billNo": 444,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 45,
+      "billNo": 445,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0x7d22aa86ed9d05Ac073d112C153BC1154698E9D8\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 46,
+      "billNo": 446,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 47,
+      "billNo": 447,
+      "label": "FORGED_UNKNOWN_SIGNER",
+      "expected": "FLAG",
+      "chainResult": "UnknownVendor(\"0x34FB109BE1bE6b65d9F0761E1ec4244a15aadf8B\")",
+      "flagged": true,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "billId": 48,
+      "billNo": 448,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 49,
+      "billNo": 449,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 50,
+      "billNo": 450,
+      "label": "AMBER_SOCKPUPPET",
+      "expected": "FLAG",
+      "chainResult": "TierNotGreen(1)",
+      "flagged": true,
+      "verdict": "AMBER"
+    },
+    {
+      "billId": 51,
+      "billNo": 451,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 52,
+      "billNo": 452,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 53,
+      "billNo": 453,
+      "label": "FORGED_UNKNOWN_SIGNER",
+      "expected": "FLAG",
+      "chainResult": "UnknownVendor(\"0x34FB109BE1bE6b65d9F0761E1ec4244a15aadf8B\")",
+      "flagged": true,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "billId": 54,
+      "billNo": 454,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 55,
+      "billNo": 455,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 56,
+      "billNo": 456,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 57,
+      "billNo": 457,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 58,
+      "billNo": 458,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 59,
+      "billNo": 459,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0x46b74b0e81c65D58199c46e221e704cB8339d4c8\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 60,
+      "billNo": 460,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 61,
+      "billNo": 461,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 62,
+      "billNo": 462,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 63,
+      "billNo": 463,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 64,
+      "billNo": 464,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 65,
+      "billNo": 465,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0x66C6DF9D66F582f41d2bC21d408dCe91CDed0377\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 66,
+      "billNo": 466,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0xa2FE05E4ba56a15e7420a29e9e59b82A92c979DA\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 67,
+      "billNo": 467,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 68,
+      "billNo": 468,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 69,
+      "billNo": 469,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 70,
+      "billNo": 470,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0xB8A37Be31EbED33763c8617ea13B5eF86A427A2a\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 71,
+      "billNo": 471,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 72,
+      "billNo": 472,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 73,
+      "billNo": 473,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 74,
+      "billNo": 474,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 75,
+      "billNo": 475,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 76,
+      "billNo": 476,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 77,
+      "billNo": 477,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 78,
+      "billNo": 478,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 79,
+      "billNo": 479,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0xA7c3Ea2241f9F0ce49780585e0C8294f4DAaC398\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 80,
+      "billNo": 480,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 81,
+      "billNo": 481,
+      "label": "FORGED_UNKNOWN_SIGNER",
+      "expected": "FLAG",
+      "chainResult": "UnknownVendor(\"0x34FB109BE1bE6b65d9F0761E1ec4244a15aadf8B\")",
+      "flagged": true,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "billId": 82,
+      "billNo": 482,
+      "label": "FORGED_UNKNOWN_SIGNER",
+      "expected": "FLAG",
+      "chainResult": "UnknownVendor(\"0x34FB109BE1bE6b65d9F0761E1ec4244a15aadf8B\")",
+      "flagged": true,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "billId": 83,
+      "billNo": 483,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 84,
+      "billNo": 484,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 85,
+      "billNo": 485,
+      "label": "AMBER_SOCKPUPPET",
+      "expected": "FLAG",
+      "chainResult": "TierNotGreen(1)",
+      "flagged": true,
+      "verdict": "AMBER"
+    },
+    {
+      "billId": 86,
+      "billNo": 486,
+      "label": "AMBER_SOCKPUPPET",
+      "expected": "FLAG",
+      "chainResult": "TierNotGreen(1)",
+      "flagged": true,
+      "verdict": "AMBER"
+    },
+    {
+      "billId": 87,
+      "billNo": 487,
+      "label": "FORGED_UNKNOWN_SIGNER",
+      "expected": "FLAG",
+      "chainResult": "UnknownVendor(\"0x34FB109BE1bE6b65d9F0761E1ec4244a15aadf8B\")",
+      "flagged": true,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "billId": 88,
+      "billNo": 488,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 89,
+      "billNo": 489,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0x3B275905376FD60975F316fCC8d4763F62b2f841\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 90,
+      "billNo": 490,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 91,
+      "billNo": 491,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 92,
+      "billNo": 492,
+      "label": "AMBER_SOCKPUPPET",
+      "expected": "FLAG",
+      "chainResult": "TierNotGreen(1)",
+      "flagged": true,
+      "verdict": "AMBER"
+    },
+    {
+      "billId": 93,
+      "billNo": 493,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0x998F230387f2f9F01769A6b7796322c4768D1F91\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    },
+    {
+      "billId": 94,
+      "billNo": 494,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 95,
+      "billNo": 495,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 96,
+      "billNo": 496,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 97,
+      "billNo": 497,
+      "label": "GENUINE",
+      "expected": "PASS",
+      "chainResult": "OK",
+      "flagged": false,
+      "verdict": "GREEN"
+    },
+    {
+      "billId": 98,
+      "billNo": 498,
+      "label": "AMBER_SOCKPUPPET",
+      "expected": "FLAG",
+      "chainResult": "TierNotGreen(1)",
+      "flagged": true,
+      "verdict": "AMBER"
+    },
+    {
+      "billId": 99,
+      "billNo": 499,
+      "label": "FORGED_EDITED_AMOUNT",
+      "expected": "FLAG",
+      "chainResult": "BadVendorSig(\"0x86A61D9Ef3a9aB6AB53DF3Bf684C22C3A91fF453\")",
+      "flagged": true,
+      "verdict": "FORGED"
+    }
+  ],
+  "heldOut": {
+    "billNo": 599,
+    "label": "HELD_OUT_FUTURE",
+    "chainResult": "OK",
+    "flagged": false,
+    "result": "MISS"
+  },
+  "notCovered": [
+    "vendor collusion",
+    "off-chain spend",
+    "delivery",
+    "held-out future-dated bill: MISS 1/1"
+  ]
+}

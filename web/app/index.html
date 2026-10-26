@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101b26">
+<title>Credium · Vendor</title>
+<style>
+  :root{
+    --bg:#101b26; --card:#17242f; --card2:#1d2d3a; --line:#2a3b49;
+    --ink:#eaf2f8; --dim:#90a7b8; --mute:#5f7a8d;
+    --green:#37c08a; --amber:#e0a63c; --red:#e2574c; --blue:#4aa8e0;
+    --safe-b: env(safe-area-inset-bottom, 0px);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%}
+  body{
+    background:var(--bg); color:var(--ink);
+    font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    padding-bottom:calc(72px + var(--safe-b));
+    overscroll-behavior-y:contain;
+  }
+
+  /* ---- header ---- */
+  header{
+    position:sticky; top:0; z-index:20;
+    background:linear-gradient(180deg,#101b26 70%,rgba(16,27,38,.92));
+    backdrop-filter:blur(8px);
+    padding:14px 16px 10px; border-bottom:1px solid var(--line);
+  }
+  .brandrow{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .brand{display:flex;align-items:center;gap:9px}
+  .mark{
+    width:30px;height:30px;border-radius:9px;flex:0 0 30px;
+    background:linear-gradient(135deg,var(--green),var(--blue));
+    display:grid;place-items:center;font-weight:800;font-size:14px;color:#08202c;
+  }
+  .brand h1{font-size:16px;font-weight:700;letter-spacing:-.2px}
+  .brand .sub{font-size:11px;color:var(--dim);font-weight:500}
+  .pill{
+    font-size:10px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;
+    padding:5px 9px;border-radius:99px;border:1px solid;
+    background:rgba(224,166,60,.12);border-color:rgba(224,166,60,.35);color:var(--amber);
+  }
+  .simnote{
+    margin-top:9px;font-size:11px;color:var(--dim);
+    display:flex;gap:6px;align-items:flex-start;line-height:1.35;
+  }
+  .simnote b{color:var(--amber);font-weight:600}
+
+  /* ---- layout ---- */
+  main{padding:14px 16px 8px}
+  .sect{margin-bottom:18px}
+  .sect-h{
+    display:flex;align-items:baseline;justify-content:space-between;
+    font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+    color:var(--mute);margin-bottom:9px;
+  }
+
+  /* ---- stat strip ---- */
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:12px 13px}
+  .stat .k{font-size:10.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+  .stat .v{font-size:19px;font-weight:750;letter-spacing:-.5px;margin-top:3px;font-variant-numeric:tabular-nums}
+  .stat .v.green{color:var(--green)}
+  .stat .v.blue{color:var(--blue)}
+
+  /* ---- bills ---- */
+  .filters{display:flex;gap:7px;overflow-x:auto;padding-bottom:3px;scrollbar-width:none}
+  .filters::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;font:inherit;font-size:12.5px;font-weight:600;
+    padding:7px 13px;border-radius:99px;cursor:pointer;
+    background:var(--card);color:var(--dim);border:1px solid var(--line);
+  }
+  .chip[aria-pressed="true"]{background:rgba(55,192,138,.15);color:var(--green);border-color:rgba(55,192,138,.45)}
+
+  .bill{
+    display:flex;gap:12px;align-items:center;width:100%;text-align:left;
+    background:var(--card);border:1px solid var(--line);border-radius:13px;
+    padding:13px;margin-bottom:8px;font:inherit;color:inherit;cursor:pointer;
+  }
+  .bill:active{background:var(--card2)}
+  .bill .dot{width:8px;height:8px;border-radius:50%;flex:0 0 8px}
+  .bill .mid{flex:1;min-width:0}
+  .bill .vt{font-size:14.5px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bill .vn{font-size:11.5px;color:var(--dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bill .right{text-align:right;flex:0 0 auto}
+  .bill .amt{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums}
+  .bill .tag{
+    display:inline-block;margin-top:3px;font-size:9.5px;font-weight:750;
+    letter-spacing:.4px;text-transform:uppercase;padding:2px 6px;border-radius:5px;
+  }
+  .g-GREEN .dot{background:var(--green)}  .g-GREEN .tag{background:rgba(55,192,138,.16);color:var(--green)}
+  .g-AMBER .dot{background:var(--amber)}  .g-AMBER .tag{background:rgba(224,166,60,.16);color:var(--amber)}
+  .g-FORGED .dot{background:var(--red)}   .g-FORGED .tag{background:rgba(226,87,76,.16);color:var(--red)}
+  .g-UNKNOWN .dot{background:var(--mute)} .g-UNKNOWN .tag{background:rgba(95,122,141,.18);color:var(--dim)}
+
+  /* ---- sheet ---- */
+  .scrim{
+    position:fixed;inset:0;background:rgba(4,10,16,.65);z-index:40;
+    opacity:0;pointer-events:none;transition:opacity .18s;
+  }
+  .scrim.on{opacity:1;pointer-events:auto}
+  .sheet{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:var(--card);border-top:1px solid var(--line);
+    border-radius:20px 20px 0 0;padding:8px 18px calc(20px + var(--safe-b));
+    transform:translateY(101%);transition:transform .22s cubic-bezier(.3,.9,.3,1);
+    max-height:88vh;overflow-y:auto;
+  }
+  .sheet.on{transform:translateY(0)}
+  .grab{width:38px;height:4px;border-radius:99px;background:var(--line);margin:6px auto 16px}
+  .sheet h2{font-size:17px;font-weight:750;letter-spacing:-.2px}
+  .sheet .sub{font-size:12px;color:var(--dim);margin-top:3px}
+  .kv{margin-top:16px;border-top:1px solid var(--line)}
+  .kv .row{
+    display:flex;justify-content:space-between;gap:14px;
+    padding:10px 0;border-bottom:1px solid var(--line);font-size:13px;
+  }
+  .kv .k{color:var(--dim)}
+  .kv .v{text-align:right;font-weight:600;word-break:break-all;font-variant-numeric:tabular-nums}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px}
+  .verdictbox{
+    margin-top:16px;padding:12px 13px;border-radius:11px;font-size:12.5px;line-height:1.45;
+  }
+  .verdictbox.ok{background:rgba(55,192,138,.1);border:1px solid rgba(55,192,138,.3);color:#b6ebd5}
+  .verdictbox.bad{background:rgba(226,87,76,.1);border:1px solid rgba(226,87,76,.3);color:#f3c1bc}
+  .verdictbox.warn{background:rgba(224,166,60,.1);border:1px solid rgba(224,166,60,.3);color:#f0d9ab}
+
+  .actions{display:grid;grid-template-columns:1fr;gap:9px;margin-top:16px}
+  button.solid,button.ghost{
+    width:100%;font:inherit;font-size:15px;font-weight:700;padding:14px;
+    border-radius:12px;cursor:pointer;border:1px solid transparent;
+  }
+  button.solid{background:var(--green);color:#06211a}
+  button.solid:disabled{background:var(--card2);color:var(--mute);cursor:not-allowed}
+  button.ghost{background:transparent;color:var(--dim);border-color:var(--line)}
+  .hint{font-size:11px;color:var(--mute);text-align:center;margin-top:9px;line-height:1.4}
+
+  /* ---- tabbar ---- */
+  nav.tabs{
+    position:fixed;left:0;right:0;bottom:0;z-index:30;
+    display:flex;background:rgba(13,22,30,.96);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);padding:7px 6px calc(7px + var(--safe-b));
+  }
+  nav.tabs button{
+    flex:1;background:none;border:0;font:inherit;font-size:10px;font-weight:650;
+    color:var(--mute);display:grid;gap:3px;justify-items:center;padding:5px 0;cursor:pointer;
+  }
+  nav.tabs button .i{font-size:17px;line-height:1}
+  nav.tabs button[aria-current="true"]{color:var(--green)}
+
+  .empty{color:var(--mute);font-size:13px;text-align:center;padding:26px 10px}
+  .spin{display:grid;place-items:center;padding:30px;color:var(--mute);font-size:13px}
+  .live{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;margin-right:5px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brandrow">
+    <div class="brand">
+      <div class="mark">C</div>
+      <div>
+        <h1>Credium</h1>
+        <div class="sub" id="who">Vendor view</div>
+      </div>
+    </div>
+    <span class="pill">Simulated</span>
+  </div>
+  <p class="simnote"><b>SIMULATED</b> Local test chains, synthetic bills and public test keys. No real money moves.</p>
+</header>
+
+<main>
+  <section class="sect" id="dashboard">
+    <div class="stats">
+      <div class="stat"><div class="k">Paid out</div><div class="v green" id="s-paid">—</div></div>
+      <div class="stat"><div class="k">In escrow</div><div class="v blue" id="s-escrow">—</div></div>
+      <div class="stat"><div class="k">Bills signed</div><div class="v" id="s-count">—</div></div>
+      <div class="stat"><div class="k">Paid bills</div><div class="v" id="s-verified">—</div></div>
+    </div>
+  </section>
+
+  <section class="sect" id="billsect">
+    <div class="sect-h"><span>Your invoices</span><span id="bilcount"></span></div>
+    <div class="filters" id="filters">
+      <button class="chip" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" data-f="GREEN" aria-pressed="false">Green</button>
+      <button class="chip" data-f="AMBER" aria-pressed="false">Amber</button>
+      <button class="chip" data-f="FORGED" aria-pressed="false">Forged</button>
+      <button class="chip" data-f="UNKNOWN" aria-pressed="false">Unknown</button>
+    </div>
+    <div id="list" style="margin-top:10px"><div class="spin">Loading…</div></div>
+  </section>
+</main>
+
+<nav class="tabs">
+  <button data-tab="dashboard" aria-current="true"><span class="i">▤</span>Overview</button>
+  <button data-tab="billsect" aria-current="false"><span class="i">▥</span>Invoices</button>
+  <button data-tab="refresh" aria-current="false"><span class="i">↻</span>Refresh</button>
+</nav>
+
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title">
+  <div class="grab"></div>
+  <h2 id="sh-title">Bill</h2>
+  <p class="sub" id="sh-sub"></p>
+  <div class="verdictbox" id="sh-verdict"></div>
+  <div class="kv" id="sh-kv"></div>
+  <div class="actions" id="sh-actions"></div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var state = { bills: [], filter: "all", chain: 31337, selected: null };
+
+  function rupees(paise){
+    var r = paise / 100;
+    if (r >= 10000000) return "₹" + (r/10000000).toFixed(2) + " cr";
+    if (r >= 100000)   return "₹" + (r/100000).toFixed(2) + " L";
+    return "₹" + r.toLocaleString("en-IN");
+  }
+
+  function el(tag, cls, txt){
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (txt != null) n.textContent = txt;
+    return n;
+  }
+
+  function getJSON(path){
+    return fetch(path, {cache:"no-store"}).then(function(r){
+      if (!r.ok) throw new Error(path + " → " + r.status);
+      return r.json();
+    });
+  }
+
+  function postJSON(path, body){
+    return fetch(path, {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify(body || {})
+    }).then(function(r){
+      return r.json().then(function(j){
+        if (!r.ok) throw new Error((j && j.detail) ? j.detail : (path + " → " + r.status));
+        return j;
+      });
+    });
+  }
+
+  /* ---------- render ---------- */
+
+  function render(){
+    var rows = state.bills.filter(function(b){
+      return state.filter === "all" || b.verdict === state.filter;
+    });
+    var list = document.getElementById("list");
+    list.textContent = "";
+
+    document.getElementById("bilcount").textContent = rows.length + " of " + state.bills.length;
+
+    if (!rows.length){
+      list.appendChild(el("div","empty","No invoices in this filter."));
+      return;
+    }
+
+    rows.slice(0, 60).forEach(function(b){
+      var btn = el("button","bill g-" + (b.verdict || "UNKNOWN"));
+      btn.type = "button";
+
+      var dot = el("span","dot");
+      var mid = el("div","mid");
+      mid.appendChild(el("div","vt","#"+b.billNo+" · "+b.vendorName));
+      mid.appendChild(el("div","vn", b.reason || ""));
+
+      var right = el("div","right");
+      right.appendChild(el("div","amt", rupees(b.amountPaise)));
+      right.appendChild(el("span","tag", b.verdict || "?"));
+
+      btn.appendChild(dot); btn.appendChild(mid); btn.appendChild(right);
+      btn.addEventListener("click", function(){ openSheet(b); });
+      list.appendChild(btn);
+    });
+  }
+
+  function renderStats(){
+    getJSON("/api/state").then(function(s){
+      var released = 0, escrow = 0, verified = 0, count = 0;
+      (s.chains || []).forEach(function(c){
+        var v = c.vault || {};
+        released += v.releasedPaise || 0;
+        escrow   += v.balancePaise || 0;
+        if (c.chainId === state.chain) verified = v.releasedPaise || 0;
+      });
+      count = state.bills.length;
+      document.getElementById("s-paid").textContent = rupees(released);
+      document.getElementById("s-escrow").textContent = rupees(escrow);
+      document.getElementById("s-count").textContent = String(count);
+      document.getElementById("s-verified").textContent = rupees(verified);
+      document.getElementById("who").textContent =
+        "Vendor view · chain " + state.chain;
+    }).catch(function(){
+      document.getElementById("s-paid").textContent = "offline";
+    });
+  }
+
+  /* ---------- sheet ---------- */
+
+  function openSheet(b){
+    state.selected = b;
+    var sh = document.getElementById("sheet");
+    document.getElementById("sh-title").textContent = "#" + b.billNo + " · " + b.vendorName;
+    document.getElementById("sh-sub").textContent = rupees(b.amountPaise) + " · billId " + b.billId;
+
+    var vb = document.getElementById("sh-verdict");
+    vb.className = "verdictbox " +
+      (b.verdict === "GREEN" ? "ok" : b.verdict === "AMBER" ? "warn" : "bad");
+    vb.textContent =
+      b.verdict === "GREEN"   ? "Registrar-enrolled vendor, 7+ days old. Ready to release." :
+      b.verdict === "AMBER"   ? "Enrolled by the NGO, not the registrar. Release would revert TierNotGreen(1)." :
+      b.verdict === "FORGED"  ? "Signature does not recover to this vendor. Edited amount or forged bill." :
+      b.verdict === "UNKNOWN" ? "Signer is not a registered vendor. Release would revert UnknownVendor." :
+                                (b.reason || "No verdict.");
+
+    var kv = document.getElementById("sh-kv");
+    kv.textContent = "";
+    [
+      ["Verdict", b.verdict || "—"],
+      ["Tier", b.tier === 0 ? "GREEN (0)" : b.tier === 1 ? "AMBER (1)" : b.tier === 2 ? "UNREGISTERED (2)" : String(b.tier)],
+      ["Signed by", b.recoveredSigner || "—"],
+      ["Reason", b.reason || "—"]
+    ].forEach(function(pair){
+      var row = el("div","row");
+      row.appendChild(el("div","k", pair[0]));
+      row.appendChild(el("div","v" + (pair[0] === "Signed by" ? " mono" : ""), pair[1]));
+      kv.appendChild(row);
+    });
+
+    var acts = document.getElementById("sh-actions");
+    acts.textContent = "";
+
+    if (b.verdict === "GREEN"){
+      var pay = el("button","solid","Request release on chain " + state.chain);
+      pay.type = "button";
+      pay.addEventListener("click", function(){ doRelease(b, pay); });
+      acts.appendChild(pay);
+      acts.appendChild(el("p","hint","Signs an allocation for 100% of this bill on one chain."));
+    } else {
+      var blocked = el("button","solid","Release blocked");
+      blocked.type = "button";
+      blocked.disabled = true;
+      acts.appendChild(blocked);
+      acts.appendChild(el("p","hint","This bill fails a release check before the vault is reached."));
+    }
+
+    var close = el("button","ghost","Close");
+    close.type = "button";
+    close.addEventListener("click", closeSheet);
+    acts.appendChild(close);
+
+    sh.classList.add("on");
+    document.getElementById("scrim").classList.add("on");
+  }
+
+  function closeSheet(){
+    document.getElementById("sheet").classList.remove("on");
+    document.getElementById("scrim").classList.remove("on");
+  }
+
+  function doRelease(b, btn){
+    btn.disabled = true;
+    btn.textContent = "Signing…";
+    postJSON("/api/release", {chainId: state.chain, billNo: b.billNo, fractionBps: 10000})
+      .then(function(res){
+        var vb = document.getElementById("sh-verdict");
+        if (res && res.ok){
+          vb.className = "verdictbox ok";
+          vb.textContent = "Released. Vault paid " + rupees(b.amountPaise) + " to the vendor.";
+        } else {
+          vb.className = "verdictbox bad";
+          vb.textContent = "Refused: " + ((res && res.revert) || (res && res.detail) || "reverted");
+        }
+        refreshAll();
+      })
+      .catch(function(err){
+        var vb = document.getElementById("sh-verdict");
+        vb.className = "verdictbox bad";
+        vb.textContent = "Refused: " + err.message;
+      })
+      .finally(function(){
+        btn.textContent = "Request release on chain " + state.chain;
+        btn.disabled = false;
+      });
+  }
+
+  /* ---------- boot ---------- */
+
+  function refreshAll(){
+    return getJSON("/api/bills")
+      .then(function(rows){
+        state.bills = Array.isArray(rows) ? rows : [];
+        render();
+        renderStats();
+      })
+      .catch(function(){
+        var list = document.getElementById("list");
+        list.textContent = "";
+        list.appendChild(el("div","empty","Cannot reach the demo host."));
+      });
+  }
+
+  document.getElementById("filters").addEventListener("click", function(ev){
+    var chip = ev.target.closest(".chip");
+    if (!chip) return;
+    state.filter = chip.dataset.f;
+    [].forEach.call(document.querySelectorAll(".chip"), function(c){
+      c.setAttribute("aria-pressed", String(c === chip));
+    });
+    render();
+  });
+
+  document.getElementById("scrim").addEventListener("click", closeSheet);
+
+  document.querySelector("nav.tabs").addEventListener("click", function(ev){
+    var btn = ev.target.closest("button");
+    if (!btn) return;
+    var tab = btn.dataset.tab;
+    [].forEach.call(document.querySelectorAll("nav.tabs button"), function(b){
+      b.setAttribute("aria-current", String(b === btn));
+    });
+    if (tab === "refresh"){ refreshAll(); return; }
+    document.getElementById(tab).scrollIntoView({behavior:"smooth", block:"start"});
+  });
+
+  refreshAll();
+  setInterval(refreshAll, 5000);
+})();
+</script>
+</body>
+</html>

@@ -44,10 +44,18 @@ def load_abi(name: str) -> list:
     return list(_abi_cache.get(abi_path, []))
 
 
+_W3_CACHE: dict[tuple[str, int], Web3] = {}
+
+
 def web3_for(deployments: dict, chain_id: int) -> Web3:
-    """Get Web3 instance for given chain."""
+    """Get Web3 instance for given chain (cached: a new provider per call leaks sockets)."""
     rpc_url = deployments["chains"][str(chain_id)]["rpc"]
-    return Web3(Web3.HTTPProvider(rpc_url))
+    key = (rpc_url, int(chain_id))
+    cached = _W3_CACHE.get(key)
+    if cached is None:
+        cached = Web3(Web3.HTTPProvider(rpc_url))
+        _W3_CACHE[key] = cached
+    return cached
 
 
 def contract(w3: Web3, address: str, abi_name: str) -> Any:
