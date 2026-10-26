@@ -47,3 +47,28 @@ def verdict(record: dict, registry: dict, registrar: str, now: int) -> dict:
                 "reason": "vendor not enrolled by the registrar, or enrolled under 7 days"}
     return {"verdict": "GREEN", "tier": 0, "recoveredSigner": recovered,
             "reason": "registrar-enrolled vendor, enrolled 7+ days"}
+
+
+def verdict_for_entry(entry: dict, deployments_path: str) -> str:
+    """Convenience wrapper: load registry from chain 31337 and return the verdict word.
+
+    Returns "GREEN", "AMBER", "FORGED" or "UNKNOWN" (card 15 contract).
+    Used by sim/eval_run.py so it does not have to re-implement registry
+    loading. `now` is the latest block timestamp, never the wall clock.
+    """
+    from sim.chainio import load_deployments, web3_for, contract
+
+    dep = load_deployments(deployments_path)
+    w3 = web3_for(dep, 31337)
+    registry = contract(w3, dep["chains"]["31337"]["registry"], "VendorRegistry")
+    addr = entry["bill"]["vendor"]
+    name, enrolled_by, enrolled_at = registry.functions.vendors(addr).call()
+    vendors = {}
+    if enrolled_at:
+        vendors[addr] = {
+            "name": name,
+            "enrolledBy": enrolled_by,
+            "enrolledAt": enrolled_at,
+        }
+    now = w3.eth.get_block("latest")["timestamp"]
+    return verdict(entry, vendors, dep["registrar"], now)["verdict"]

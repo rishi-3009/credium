@@ -78,6 +78,7 @@ from sim.chainio import (
     send_tx,
     call_revert,
     alloc_tuple,
+    alloc_struct_tuple,
     decode_revert,
 )
 from sim.signing import anvil_account
@@ -112,7 +113,7 @@ def scan_once(deployments_path: str) -> dict:
                     alloc_tuple(alloc), bytes.fromhex(args.ngoSig.hex())
                 ).call()
                 records.append({
-                    "chainId": c,
+                    "chainId": int(c),
                     "billNo": args.billNo,
                     "billNullifier": billNullifier_hex,
                     "ngo": ngo_addr,
@@ -147,9 +148,9 @@ def scan_once(deployments_path: str) -> dict:
                 }
 
                 fn = vault.functions.submitEquivocation(
-                    alloc_tuple(alloc_a),
+                    alloc_struct_tuple(alloc_a),
                     bytes.fromhex(eq["a"]["ngoSig"][2:]),
-                    alloc_tuple(alloc_b),
+                    alloc_struct_tuple(alloc_b),
                     bytes.fromhex(eq["b"]["ngoSig"][2:]),
                 )
 

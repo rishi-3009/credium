@@ -39,11 +39,12 @@ def run(deployments_path: str, bills_path: str, out: str = "sim/fixtures/eval.js
         ngoSig = sign_allocation(alloc, anvil_account(1)["key"])
         
         chain_result = call_revert(
-            vault.functions.release,
-            bill_tuple(entry["bill"]),
-            bytes.fromhex(entry["vendorSig"][2:]),
-            alloc_tuple(alloc),
-            bytes.fromhex(ngoSig[2:]),
+            vault.functions.release(
+                bill_tuple(entry["bill"]),
+                bytes.fromhex(entry["vendorSig"][2:]),
+                alloc_tuple(alloc),
+                bytes.fromhex(ngoSig[2:]),
+            ),
             anvil_account(9)["address"],
         )
         
@@ -95,11 +96,12 @@ def run(deployments_path: str, bills_path: str, out: str = "sim/fixtures/eval.js
         }
         ngoSig_ho = sign_allocation(alloc_ho, anvil_account(1)["key"])
         chain_result_ho = call_revert(
-            vault.functions.release,
-            bill_tuple(held_out_entry["bill"]),
-            bytes.fromhex(held_out_entry["vendorSig"][2:]),
-            alloc_tuple(alloc_ho),
-            bytes.fromhex(ngoSig_ho[2:]),
+            vault.functions.release(
+                bill_tuple(held_out_entry["bill"]),
+                bytes.fromhex(held_out_entry["vendorSig"][2:]),
+                alloc_tuple(alloc_ho),
+                bytes.fromhex(ngoSig_ho[2:]),
+            ),
             anvil_account(9)["address"],
         )
         flagged_ho = chain_result_ho is not None

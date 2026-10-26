@@ -172,6 +172,9 @@ def generate_extras() -> list[dict]:
     bill100["expected"] = "WRONG_CATEGORY"
 
     # extras[1]: HELD_OUT_FUTURE (future-dated)
+    # Spec card 04: billNo 599, amountPaise 4000000, issuedAt = 1792800000 + 3600*400.
+    # Build the FINAL bill first, then sign it: signing before mutating issuedAt
+    # produces a signature that does not match the stored bill.
     bill101 = _make_bill(
         101, "Ramesh Hardware", buyerNGO,
         4000000, CATEGORY_WATER,
@@ -180,9 +183,11 @@ def generate_extras() -> list[dict]:
     bill101["billNo"] = 599
     bill101["label"] = "HELD_OUT_FUTURE"
     bill101["expected"] = "FLAG"
-    # Override issuedAt to be far in the future
+    bill101["bill"]["billNo"] = 599
+    bill101["bill"]["amountPaise"] = 4000000
     bill101["bill"]["issuedAt"] = 1792800000 + 3600 * 400
-    # Recompute nullifier with the new issuedAt
+    # Re-sign the final bill, then recompute the nullifier over it.
+    bill101["vendorSig"] = sign_bill(bill101["bill"], _vendor_key("Ramesh Hardware"))
     bill101["nullifier"] = bill_nullifier(bill101["bill"])
 
     return [bill100, bill101]
