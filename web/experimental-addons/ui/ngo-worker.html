@@ -366,7 +366,7 @@ function renderOverview() {
   document.getElementById('stat-total-bills').textContent = billsList.length;
   document.getElementById('stat-released').textContent = fmtRsShort(meter.releasedPaise);
   document.getElementById('stat-pending').textContent = billsList.filter(b => !b.verdict).length;
-  document.getElementById('stat-flagged').textContent = billsList.filter(b => b.verdict === 'RED' || b.verdict === 'AMBER').length;
+  document.getElementById('stat-flagged').textContent = billsList.filter(b => ['FORGED', 'UNKNOWN', 'AMBER'].includes(b.verdict)).length;
 
   // Chain panels
   chains.forEach(ch => {
@@ -403,9 +403,10 @@ function renderBillChart() {
   container.innerHTML = '';
   labels.innerHTML = '';
   
+  // FORGED and UNKNOWN are both shown in the red bucket.
   const verdicts = { 'GREEN': 0, 'AMBER': 0, 'RED': 0, 'PENDING': 0 };
   billsList.forEach(b => {
-    const v = b.verdict || 'PENDING';
+    const v = !b.verdict ? 'PENDING' : (b.verdict === 'FORGED' || b.verdict === 'UNKNOWN') ? 'RED' : b.verdict;
     verdicts[v]++;
   });
   
@@ -430,14 +431,15 @@ function renderBillsTable() {
   const tbody = document.getElementById('bills-table-body');
   tbody.innerHTML = '';
   billsList.forEach(b => {
-    const chainKey = b.billId.includes('31337') ? '31337' : '31338';
-    const chainLabel = chainKey === '31337' ? 'Chain A' : 'Chain B';
+    // /api/bills has no chain field; the demo releases on Chain A (31337).
+    const chainKey = '31337';
+    const chainLabel = 'Chain A';
     const verdictClass = b.verdict ? b.verdict.toLowerCase() : 'gray';
     const verdictLabel = b.verdict || 'PENDING';
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td style="font-weight:600;">#${b.billNo}</td>
-      <td style="font-family:monospace;font-size:11px;color:var(--text-muted);">${b.billId.slice(-8)}</td>
+      <td style="font-family:monospace;font-size:11px;color:var(--text-muted);">${b.billId}</td>
       <td>${b.vendorName}</td>
       <td style="font-weight:600;">${fmtRs(b.amountPaise)}</td>
       <td><span class="badge ${verdictClass}">${verdictLabel}</span></td>
@@ -455,14 +457,15 @@ function renderVendorTable() {
   const vendorMap = {};
   billsList.forEach(b => {
     const key = b.vendorName;
-    if (!vendorMap[key]) vendorMap[key] = { name: b.vendorName, chain: b.billId.includes('31337') ? 'Chain A' : 'Chain B', bills: 0, total: 0, verdicts: [] };
+    if (!vendorMap[key]) vendorMap[key] = { name: b.vendorName, chain: 'Chain A', bills: 0, total: 0, verdicts: [] };
     vendorMap[key].bills++;
     if (b.verdict === 'GREEN') vendorMap[key].total += b.amountPaise;
     vendorMap[key].verdicts.push(b.verdict);
   });
   
   Object.values(vendorMap).forEach(v => {
-    const hasRed = v.verdicts.includes('RED');
+    // Verdicts from /api/bills: GREEN, AMBER, FORGED, UNKNOWN. FORGED and UNKNOWN both mean flagged.
+    const hasRed = v.verdicts.includes('FORGED') || v.verdicts.includes('UNKNOWN');
     const hasAmber = v.verdicts.includes('AMBER');
     const statusBadge = hasRed ? 'red' : hasAmber ? 'orange' : 'green';
     const statusLabel = hasRed ? 'Flagged' : hasAmber ? 'Warning' : 'Active';
