@@ -179,12 +179,32 @@ def bill_tuple(b: dict) -> tuple:
 
 
 def alloc_tuple(a: dict) -> tuple:
-    """Parse allocation dictionary to tuple."""
+    """Parse allocation dictionary to tuple.
+
+    Flat field order; this is what web3 accepts for `release`, where the
+    Allocation struct is not the first argument. For `submitEquivocation`
+    (struct as arg 1) use `alloc_struct_tuple` instead.
+    """
     bill_nullifier = Web3.to_bytes(hexstr=a["billNullifier"])[:32]
     return (
         bill_nullifier,
         a["donorVault"],
-        a["chainId"],
-        a["fractionBps"],
+        int(a["chainId"]),
+        int(a["fractionBps"]),
         a["reportId"],
     )
+
+
+def alloc_struct_tuple(a: dict) -> dict:
+    """Parse allocation dictionary to a struct dict for web3.
+
+    Required by `submitEquivocation`, whose first argument is the struct.
+    web3's struct-tuple matching needs a named dict here, not a tuple.
+    """
+    return {
+        "billNullifier": a["billNullifier"],
+        "donorVault": a["donorVault"],
+        "chainId": int(a["chainId"]),
+        "fractionBps": int(a["fractionBps"]),
+        "reportId": a["reportId"],
+    }

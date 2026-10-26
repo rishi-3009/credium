@@ -56,7 +56,11 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
 
   function getJSON(url, opts) {
     return fetch(url, opts).then(function(r) {
-      if (!r.ok) throw new Error(r.status);
+      if (!r.ok) {
+        var err = new Error(String(r.status));
+        err.status = r.status;
+        throw err;
+      }
       return r.json();
     });
   }
@@ -97,7 +101,11 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
       + "<div class='meter-row'><span>Amber:</span><span>" + fmtRs(m.amberPaise) + "</span></div>"
       + "<div class='meter-row'><span>Released:</span><span>" + fmtRs(m.releasedPaise) + "</span></div>"
       + "<div class='meter-row'><span>Invariant:</span><span style='color:" + (m.invariantOk ? "#0f0" : "#f00") + "'>" + (m.invariantOk ? "OK" : "BROKEN") + "</span></div>";
-    document.getElementById("status").textContent = state.stale ? "API: cached" : "API: live";
+    var statusEl = document.getElementById("status");
+    // Do not clobber the sticky "cached" note set by the eval loader (card 16).
+    if (!statusEl.getAttribute("data-cached")) {
+      statusEl.textContent = state.stale ? "API: cached" : "API: live";
+    }
   }
 
   function renderBills(list) {
@@ -145,7 +153,12 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
         handler(data);
         refreshAll();
       }).catch(function(e) {
-        log("Request failed: " + e.message);
+        // A 409 from /api/reset means the anvil snapshot expired: say what to do.
+        if (e && e.status === 409) {
+          log("Reset failed: snapshot expired. Restart the demo: ./ops/run_demo.sh");
+        } else {
+          log("Request failed: " + e.message);
+        }
       }).finally(function() {
         buttonsDisabled = false;
         btns.forEach(function(b) { b.disabled = false; });
@@ -198,101 +211,147 @@ footer { color: #666; padding: 16px 0; font-size: 12px; }
 <script>
 (function() {
   "use strict";
-  
-  function renderEval(ev) {
+
+  // Block 1's getJSON()/log() are private to its IIFE, so define local ones here.
+  function getJSON(url, opts) {
+    return fetch(url, opts).then(function(r) {
+      if (!r.ok) {
+        var err = new Error(String(r.status));
+        err.status = r.status;
+        throw err;
+      }
+      return r.json();
+    });
+  }
+
+  function log(msg) {
+    var c = document.getElementById("console");
+    if (!c) return;
+    var ts = new Date().toLocaleTimeString();
+    c.textContent += "[" + ts + "] " + msg + "\n";
+  }
+
+  var NOT_GENERATED = "Evaluation not generated yet. Run: python -m sim.eval_run "
+    + "--deployments contracts/deployments.json --bills sim/fixtures/bills.json "
+    + "--out sim/fixtures/eval.json";
+
+  function renderEval(ev, cached) {
     var el = document.getElementById("eval");
-    el.innerHTML = "<h2>Evaluation (designed attacks, synthetic)</h2>";
-    
+    el.textContent = "";
+
+    var h2 = document.createElement("h2");
+    h2.textContent = "Evaluation (designed attacks, synthetic)" + (cached ? " [cached]" : "");
+    el.appendChild(h2);
+
     var flag = ev.flag || {};
     var summaryDiv = document.createElement("div");
-    summaryDiv.textContent = "Flag precision " + flag.precision + ", recall " + flag.recall + 
-      ", false positives " + flag.falsePositives + " (out of 70 genuine)";
+    summaryDiv.textContent = "Flag precision " + flag.precision + ", recall " + flag.recall
+      + ", false positives " + flag.falsePositives + " (out of 70 genuine)";
     el.appendChild(summaryDiv);
-    
+
     var agreement = ev.agreement;
     var agreeEl = document.createElement("div");
     agreeEl.textContent = agreement
       ? "Chain vs verifier agreement: " + agreement.match + "/" + agreement.total
       : "agreement: pending (verifier not wired)";
     el.appendChild(agreeEl);
-    
+
     var heldOut = ev.heldOut || {};
     var heldOutEl = document.createElement("div");
     heldOutEl.textContent = "Held-out future-dated bill: " + heldOut.result + " 1/1";
     el.appendChild(heldOutEl);
-    
-    var notCovered = ev.notCovered || [];
+
     var coverDiv = document.createElement("div");
     coverDiv.textContent = "Not covered:";
     el.appendChild(coverDiv);
+
     var bulletList = document.createElement("ul");
-    notCovered.forEach(function(item) {
+    (ev.notCovered || []).forEach(function(item) {
       var bullet = document.createElement("li");
       bullet.textContent = item;
       bulletList.appendChild(bullet);
     });
     el.appendChild(bulletList);
-    
-    var rows = ev.rows || [];
+
     var rowsEl = document.createElement("table");
-    rowsEl.innerHTML = "<caption>Designed attacks, synthetic data. SIMULATED.</caption>"
-      + "<thead><tr><th>billNo</th><th>label</th><th>expected</th><th>chain result</th><th>flagged</th></tr></thead>"
-      + "<tbody></tbody>";
-    var tbody = rowsEl.querySelector("tbody");
-    
-    rows.forEach(function(r) {
+    var caption = document.createElement("caption");
+    caption.textContent = "Designed attacks, synthetic data. SIMULATED.";
+    rowsEl.appendChild(caption);
+
+    var thead = document.createElement("thead");
+    var headRow = document.createElement("tr");
+    ["billNo", "label", "expected", "chain result", "flagged"].forEach(function(name) {
+      var th = document.createElement("th");
+      th.textContent = name;
+      headRow.appendChild(th);
+    });
+    thead.appendChild(headRow);
+    rowsEl.appendChild(thead);
+
+    var tbody = document.createElement("tbody");
+    (ev.rows || []).forEach(function(r) {
       var tr = document.createElement("tr");
-      tr.innerHTML = "<td>" + r.billNo + "</td>"
-        + "<td>" + r.label + "</td>"
-        + "<td>" + r.expected + "</td>"
-        + "<td>" + r.chainResult + "</td>"
-        + "<td>" + (r.flagged ? "true" : "false") + "</td>";
+      [r.billNo, r.label, r.expected, r.chainResult, r.flagged ? "true" : "false"]
+        .forEach(function(value) {
+          var td = document.createElement("td");
+          td.textContent = String(value);
+          tr.appendChild(td);
+        });
       tbody.appendChild(tr);
     });
-    
+    rowsEl.appendChild(tbody);
+
     var scrollContainer = document.createElement("div");
     scrollContainer.style.maxHeight = "320px";
     scrollContainer.style.overflowY = "auto";
     scrollContainer.appendChild(rowsEl);
     el.appendChild(scrollContainer);
-    
-    localStorage.setItem("credium:eval", JSON.stringify(ev));
   }
-  
+
+  function showNotGenerated() {
+    var el = document.getElementById("eval");
+    el.textContent = "";
+    var p = document.createElement("p");
+    p.style.color = "#f00";
+    p.textContent = NOT_GENERATED;
+    el.appendChild(p);
+  }
+
+  // Card 16: fetch first; fall back to the cached copy only when the API fails.
   function loadEval() {
-    var cached = localStorage.getItem("credium:eval");
-    if (cached) {
-      try {
-        var ev = JSON.parse(cached);
-        document.getElementById("status").textContent = "API: cached";
-        renderEval(ev);
-        return true;
-      } catch (e) {
-        log("Failed to parse cached eval: " + e.message);
-        return false;
-      }
-    }
-    
     return getJSON("/api/eval").then(function(ev) {
-      localStorage.setItem("credium:eval", JSON.stringify(ev));
-      renderEval(ev);
+      try {
+        localStorage.setItem("credium:eval", JSON.stringify(ev));
+      } catch (e) { /* storage may be unavailable; rendering still works */ }
+      renderEval(ev, false);
       return ev;
     }).catch(function(e) {
       log("Failed to fetch eval: " + e.message);
+      var cached = null;
+      try {
+        cached = localStorage.getItem("credium:eval");
+      } catch (err) { cached = null; }
+      if (cached) {
+        try {
+          var ev = JSON.parse(cached);
+          // Card 16: append "cached" to #status. Mark it sticky so block 1's
+          // 2s refreshAll() poll cannot overwrite the note back to "API: live".
+          var statusEl = document.getElementById("status");
+          statusEl.textContent = "API: cached";
+          statusEl.setAttribute("data-cached", "1");
+          renderEval(ev, true);
+          return ev;
+        } catch (err) {
+          log("Failed to parse cached eval: " + err.message);
+        }
+      }
+      showNotGenerated();
       return null;
     });
   }
-  
+
   document.addEventListener("DOMContentLoaded", function() {
-    var statusEl = document.getElementById("status");
-    var evalEl = document.getElementById("eval");
-    loadEval().then(function(ev) {
-      if (!ev) {
-        evalEl.innerHTML = "<p style='color:#f00;'>Evaluation not generated yet.<br>Run: python -m sim.eval_run --deployments contracts/deployments.json --bills sim/fixtures/bills.json --out sim/fixtures/eval.json</p>";
-      }
-    }).catch(function(e) {
-      evalEl.innerHTML = "<p style='color:#f00;'>Evaluation not generated yet.<br>Run: python -m sim.eval_run --deployments contracts/deployments.json --bills sim/fixtures/bills.json --out sim/fixtures/eval.json</p>";
-    });
+    loadEval();
   });
 })();
 </script>
