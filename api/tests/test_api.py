@@ -84,3 +84,75 @@ def test_decodes_bad_vendor_sig_address():
     signer = anvil_account(6)["address"]
     data = keccak(text="BadVendorSig(address)")[:4] + encode(["address"], [signer])
     assert decode_revert("0x" + data.hex()) == f'BadVendorSig("{signer}")'
+
+
+class _FakeProvider:
+    """Mimics anvil: evm_revert consumes the id, evm_snapshot mints a new one."""
+
+    def __init__(self, spent: set):
+        self.spent = set(spent)
+        self.counter = 100
+
+    def make_request(self, method, params):
+        if method == "evm_revert":
+            snapshot_id = params[0]
+            if snapshot_id in self.spent:
+                return {"result": False}
+            self.spent.add(snapshot_id)
+            return {"result": True}
+        if method == "evm_snapshot":
+            self.counter += 1
+            return {"result": hex(self.counter)}
+        raise AssertionError(f"unexpected {method}")
+
+
+def test_reset_succeeds_and_rotates_snapshot_ids(tmp_path, monkeypatch):
+    import api.main as api_main
+    deployments = tmp_path / "deployments.json"
+    deployments.write_text(json.dumps({"chains": {"31337": {}, "31338": {}}}), encoding="utf-8")
+    snapshot = tmp_path / "snapshot.json"
+    snapshot.write_text(json.dumps({"simulated": True, "snapshots": {"31337": "0x1", "31338": "0x2"}}),
+                        encoding="utf-8")
+    provider = _FakeProvider(spent=set())
+    monkeypatch.setattr(api_main, "web3_for",
+                        lambda dep, chain_id: type("W3", (), {"provider": provider})())
+    client = TestClient(create_app(deployments=deployments, bills=BILLS, snapshot=snapshot,
+                                   evaluation=tmp_path / "eval.json"))
+
+    first = client.post("/api/reset")
+    assert first.status_code == 200, first.text
+    ids_after_first = json.loads(snapshot.read_text())["snapshots"]
+    assert ids_after_first != {"31337": "0x1", "31338": "0x2"}, "ids must rotate after a revert"
+
+    # The regression: a second reset must work, because the file now holds
+    # ids that were never spent. Previously evm_revert returned false here.
+    second = client.post("/api/reset")
+    assert second.status_code == 200, second.text
+    assert json.loads(snapshot.read_text())["snapshots"] != ids_after_first
+
+
+def test_reset_with_expired_snapshot_reports_and_self_heals(tmp_path, monkeypatch):
+    import api.main as api_main
+    deployments = tmp_path / "deployments.json"
+    deployments.write_text(json.dumps({"chains": {"31337": {}, "31338": {}}}), encoding="utf-8")
+    snapshot = tmp_path / "snapshot.json"
+    snapshot.write_text(json.dumps({"simulated": True, "snapshots": {"31337": "0x1", "31338": "0x2"}}),
+                        encoding="utf-8")
+    provider = _FakeProvider(spent={"0x1", "0x2"})  # both ids already consumed
+    monkeypatch.setattr(api_main, "web3_for",
+                        lambda dep, chain_id: type("W3", (), {"provider": provider})())
+    client = TestClient(create_app(deployments=deployments, bills=BILLS, snapshot=snapshot,
+                                   evaluation=tmp_path / "eval.json"))
+
+    response = client.post("/api/reset")
+    assert response.status_code == 409
+    assert "run ops/run_demo.sh" in response.json()["detail"]
+
+    # Self-heal: the stale ids are replaced, so the file is not poisoned forever.
+    # The old code raised before writing, leaving the spent ids on disk and every
+    # later reset failing the same way.
+    ids = json.loads(snapshot.read_text())["snapshots"]
+    assert "0x1" not in ids.values() and "0x2" not in ids.values()
+
+    # And the next reset works again.
+    assert client.post("/api/reset").status_code == 200

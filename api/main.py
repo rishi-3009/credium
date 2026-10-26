@@ -283,17 +283,46 @@ def create_app(
 
     @app.post("/api/reset")
     def reset() -> dict:
-        """evm_revert each chain to its snapshot, then take a fresh snapshot (§8f)."""
+        """evm_revert each chain to its snapshot, then take a fresh snapshot (§8f).
+
+        anvil snapshots are single-use: a successful evm_revert consumes the id.
+        So every chain must be re-snapshotted and persisted even when a later
+        chain fails, otherwise snapshot.json keeps an id that can never be
+        reverted again and every future reset returns 500.
+        """
         dep = load_dep()
         snap = _read_json(snapshot)
-        for chain_id, snap_id in snap["snapshots"].items():
+        reverted: list[str] = []
+        stale: list[str] = []
+
+        for chain_id, snap_id in list(snap["snapshots"].items()):
             w3 = web3_for(dep, int(chain_id))
-            if not w3.provider.make_request("evm_revert", [snap_id])["result"]:
-                raise HTTPException(500, detail=f"evm_revert failed on chain {chain_id}")
-            snap["snapshots"][chain_id] = w3.provider.make_request("evm_snapshot", [])["result"]
-        with open(snapshot, "w", encoding="utf-8") as f:
-            json.dump(snap, f)
-        return {"ok": True}
+            result = w3.provider.make_request("evm_revert", [snap_id])["result"]
+            if result:
+                reverted.append(chain_id)
+            else:
+                stale.append(chain_id)
+            # Always take a fresh snapshot and persist it, whether or not the
+            # revert succeeded: the old id is spent either way.
+            snap["snapshots"][chain_id] = w3.provider.make_request(
+                "evm_snapshot", []
+            )["result"]
+            with open(snapshot, "w", encoding="utf-8") as f:
+                json.dump(snap, f)
+
+        if stale:
+            # A stale id means the chain moved past the snapshot (old anvil run,
+            # or the id was consumed by hand). Chain state is now arbitrary, so
+            # say so plainly instead of pretending the demo is at its baseline.
+            raise HTTPException(
+                409,
+                detail=(
+                    f"snapshot expired on chain(s) {', '.join(stale)}; "
+                    "run ops/run_demo.sh to redeploy and re-seed"
+                ),
+            )
+
+        return {"ok": True, "reverted": reverted, "snapshots": snap["snapshots"]}
 
     return app
 
