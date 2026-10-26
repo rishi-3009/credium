@@ -226,7 +226,7 @@ function renderDashboard() {
   tbody.innerHTML = '';
   const recent = billsList.slice(-5).reverse();
   recent.forEach(b => {
-    const verdictClass = b.verdict === 'GREEN' ? 'green' : b.verdict === 'AMBER' ? 'orange' : b.verdict === 'RED' ? 'red' : 'gray';
+    const verdictClass = b.verdict === 'GREEN' ? 'green' : b.verdict === 'AMBER' ? 'orange' : (b.verdict === 'FORGED' || b.verdict === 'UNKNOWN') ? 'red' : 'gray';
     const verdictLabel = b.verdict || 'PENDING';
     const time = new Date().toLocaleDateString();
     const tr = document.createElement('tr');
@@ -239,9 +239,10 @@ function renderInvoices() {
   const tbody = document.getElementById('invoices-table');
   tbody.innerHTML = '';
   billsList.forEach(b => {
-    const verdictClass = b.verdict === 'GREEN' ? 'green' : b.verdict === 'AMBER' ? 'orange' : b.verdict === 'RED' ? 'red' : 'gray';
+    const verdictClass = b.verdict === 'GREEN' ? 'green' : b.verdict === 'AMBER' ? 'orange' : (b.verdict === 'FORGED' || b.verdict === 'UNKNOWN') ? 'red' : 'gray';
     const verdictLabel = b.verdict || 'PENDING';
-    const chainLabel = b.billId.includes('31337') ? 'Chain A' : 'Chain B';
+    // /api/bills has no chain field; the demo releases on Chain A (31337).
+    const chainLabel = 'Chain A';
     
     let progressHTML = '<div class="status-timeline">';
     const steps = ['Submitted', 'Verified', 'Funded', 'Released'];
@@ -281,7 +282,8 @@ function renderPayments() {
   }
   
   paid.forEach(b => {
-    const chainLabel = b.billId.includes('31337') ? 'Chain A' : 'Chain B';
+    // /api/bills has no chain field; the demo releases on Chain A (31337).
+    const chainLabel = 'Chain A';
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td style="font-weight:600;">#${b.billNo}</td>

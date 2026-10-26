@@ -269,7 +269,7 @@ function renderDashboard() {
   const { chains, meter } = appState;
   document.getElementById('stat-deposited').textContent = fmtRsShort(meter.depositedPaise);
   document.getElementById('stat-unexplained').textContent = fmtRsShort(meter.unexplainedPaise);
-  document.getElementById('stat-fraud-flags').textContent = billsList.filter(b => b.verdict === 'RED' || b.verdict === 'AMBER').length;
+  document.getElementById('stat-fraud-flags').textContent = billsList.filter(b => ['FORGED', 'UNKNOWN', 'AMBER'].includes(b.verdict)).length;
 
   // Fund meter
   const pledged = meter.pledgedPaise;
