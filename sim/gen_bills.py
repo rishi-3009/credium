@@ -31,9 +31,39 @@ VENDORS: list[dict] = [
     {"name": "Gupta Cement", "tier": "GREEN"},
     {"name": "Nagpur Tools", "tier": "GREEN"},
     {"name": "Vidarbha Plumbing", "tier": "GREEN"},
+    {"name": "Sai Water Works", "tier": "GREEN"},
+    {"name": "Mahalaxmi Agro Supplies", "tier": "GREEN"},
+    {"name": "Deccan Pump House", "tier": "GREEN"},
+    {"name": "Kisan Borewell Services", "tier": "GREEN"},
+    {"name": "Shivaji Sanitation Co.", "tier": "GREEN"},
     {"name": "Shree Supplies", "tier": "AMBER"},
     {"name": "Om Enterprises", "tier": "AMBER"},
+    {"name": "Jai Bhavani Traders", "tier": "AMBER"},
     {"name": "Sharma Traders", "tier": "UNREGISTERED"},
+]
+
+# Realistic line items for water and sanitation works: (description, min paise, max paise).
+ITEM_CATALOGUE: list[tuple[str, int, int]] = [
+    ("PVC pipe 1 inch, 3 m", 18000, 42000),
+    ("GI pipe 0.5 inch, 6 m", 32000, 58000),
+    ("Gate valve 1 inch", 35000, 90000),
+    ("Hand pump washer set", 2500, 6000),
+    ("Hand pump cylinder assembly", 120000, 240000),
+    ("Cement bag 50 kg, OPC 53", 38000, 45000),
+    ("Submersible pump 0.5 HP", 680000, 950000),
+    ("Borewell casing pipe 4 inch, 3 m", 150000, 310000),
+    ("HDPE water tank 500 L", 420000, 610000),
+    ("Chlorine tablets, pack of 100", 15000, 30000),
+    ("Electric motor 1 HP", 540000, 780000),
+    ("Solar panel 150 W", 620000, 880000),
+    ("Copper cable 2.5 sq mm, 90 m", 310000, 420000),
+    ("Brass tap and faucet set", 9000, 28000),
+    ("Teflon tape, roll", 1500, 4000),
+    ("Sanitary pan with flush", 180000, 320000),
+    ("Water meter, 15 mm", 45000, 95000),
+    ("Pressure gauge 0-10 bar", 22000, 48000),
+    ("Masonry sand, tractor load", 240000, 360000),
+    ("Labour, skilled mason, day", 85000, 120000),
 ]
 
 GREEN_VENDOR_NAMES = [v["name"] for v in VENDORS if v["tier"] == "GREEN"]
@@ -55,17 +85,14 @@ def _make_bill(billId: int, vendor_name: str, buyerNGO: str,
     billNo = 400 + billId
     issuedAt = 1792800000 + 3600 * billId
     salt = secrets.token_bytes(32)
-    items = [
-        {
-            "desc": random.choice(
-                ["PVC pipe 1 inch", "Gate valve", "Hand pump washer",
-                 "Cement bag 50kg", "Water tank 500L"]
-            ),
+    items = []
+    for _ in range(random.randrange(1, 5)):
+        desc, low, high = random.choice(ITEM_CATALOGUE)
+        items.append({
+            "desc": desc,
             "qty": random.randrange(1, 11),
-            "unitPaise": random.randrange(5000, 500001, 100),
-        }
-        for _ in range(random.randrange(1, 5))
-    ]
+            "unitPaise": random.randrange(low, high + 1, 100),
+        })
     itemsCommitment = items_commitment(items, salt)
     reportId = "0x" + keccak(f"report-{billNo}".encode()).hex()
 
@@ -119,6 +146,7 @@ def generate_bills(seed: int = 417, n: int = 100) -> list[dict]:
         "AMBER_SOCKPUPPET": "AMBER",
     }
 
+    choice_rng = random.Random(seed + 4000)  # one stream for all bills, so vendors vary
     for billId in range(n):
         # Step 2: assign label
         if billId in (5, 17, 18):
@@ -127,7 +155,6 @@ def generate_bills(seed: int = 417, n: int = 100) -> list[dict]:
             label = pool.pop(0)
 
         # Step 3: assign vendor
-        choice_rng = random.Random(seed + 4000)
         if label in ("GENUINE", "FORGED_EDITED_AMOUNT"):
             vendor_name = choice_rng.choice(GREEN_VENDOR_NAMES)
         elif label == "FORGED_UNKNOWN_SIGNER":

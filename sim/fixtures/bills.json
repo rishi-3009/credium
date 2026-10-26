@@ -32,6 +32,31 @@
       "tier": "GREEN"
     },
     {
+      "name": "Sai Water Works",
+      "address": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
+      "tier": "GREEN"
+    },
+    {
+      "name": "Mahalaxmi Agro Supplies",
+      "address": "0x89FEB1e9c520Ff5083DCE5358C0Dff0A15E3A8c7",
+      "tier": "GREEN"
+    },
+    {
+      "name": "Deccan Pump House",
+      "address": "0xFB168836a2f58Aa1330E0EE4d4EE0e6ae2DeBFdc",
+      "tier": "GREEN"
+    },
+    {
+      "name": "Kisan Borewell Services",
+      "address": "0x243B3fD67E894d3F004F7b0e8a36a41f0815Abee",
+      "tier": "GREEN"
+    },
+    {
+      "name": "Shivaji Sanitation Co.",
+      "address": "0xC51971b03669Cb62Fe3103652BC7Ea6bDfea902C",
+      "tier": "GREEN"
+    },
+    {
       "name": "Shree Supplies",
       "address": "0x3B42b9BB32448236712663b213Fd65B6bA9c82D2",
       "tier": "AMBER"
@@ -39,6 +64,11 @@
     {
       "name": "Om Enterprises",
       "address": "0xB933EF914f1210BA355E07C1D125E809d0D6E969",
+      "tier": "AMBER"
+    },
+    {
+      "name": "Jai Bhavani Traders",
+      "address": "0x847E6c1B3CfB246FD26414dcFE1002D3cD24cfd2",
       "tier": "AMBER"
     },
     {
@@ -53,18 +83,18 @@
       "billNo": 400,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 400,
         "amountPaise": 18000000,
         "issuedAt": 1792800000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x6b086c46225ee23550f6ffed969a93f0c766602bf42c12496baee92edf862004"
+        "itemsCommitment": "0xf89bd0a32deff786c403120d5c8df0b83c44b5c8017e285ea6e041b587ee7cfb"
       },
-      "vendorSig": "0xa67d0138f76795d5beb1c7d4ba6b32dee19b64435177fb0ae23abc145ce9161310ade756ccf9d7393a5934372e1f86d339b6f17eed04ed10ab3772feb40a695f1c",
-      "nullifier": "0x406c396e99155df645ad887815d5d8f9f9788d9ac40b8ac007544c643d33c638",
+      "vendorSig": "0x29bfc313d35eb61c907556f290cfe9fa13cbd62479574d988bcd69b1965292e77bddf88022fe31fe50bcb90e7ff0a7425a32530cdea9ede4f5dac7ffa4cbff221c",
+      "nullifier": "0xa5dca74eb844fe5cd8e7f0a1a80d5ade1d4ef525347e17568d919e58867a6327",
       "reportId": "0x52d7cf69b435aefe22838d6cb09787622f04a8fe4981ed68a9974bece80e2f90"
     },
     {
@@ -72,18 +102,18 @@
       "billNo": 401,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 401,
         "amountPaise": 18000000,
         "issuedAt": 1792803600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x35caa9376a6c69b58b9eb93aefba4a566533d6354adb4f6d747aa8b1b8a0ece3"
+        "itemsCommitment": "0x14db2351187bb4ed1e48edbaba99b4e8a9a85d29d995c61a1478707dbc777041"
       },
-      "vendorSig": "0x5d09f11eddf6c82586432f6d1036ee3662e75fc9132994e54c46a20da61074933c1171f9fb0ed2c228c26c7752d6dd8c75ab4ce0ce6a9cd47747d253ef0c64e41c",
-      "nullifier": "0x6ff3264972539ccf4322884eb7586c3f7634fd8a78742a7c6dcad856e7c9623d",
+      "vendorSig": "0xd82c73f244405f4541a3b0398e9b96c1eb31cd27ac31ddbf7f4f054a02f386ad6a436763a0116fbcad4e8cdd2bdd1a4bcf537a3e7232c31791c98e40898f8d271b",
+      "nullifier": "0x6f5c8c1b314191c226751e03fd1c5a925daaffccbe1179c36309caad556a373d",
       "reportId": "0x8689b0742a227d21079a065d0efca0525afdc6c40c8f2676710f95b580c40bb1"
     },
     {
@@ -91,18 +121,18 @@
       "billNo": 402,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 402,
         "amountPaise": 18000000,
         "issuedAt": 1792807200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xd4aba9da0fa6c3dd7da52f30f63a38dbf415f6abc941c40bc2e0fb73923ec428"
+        "itemsCommitment": "0x2b835e8736614c7fa10350695ba682eff7492d8a302fcd7c79f0146cf234a772"
       },
-      "vendorSig": "0x6bc9e867f591832d65287e95be2548467729d0c693b4f20176601056bd26d7c0069d1ca50305d6b647d447b9651f6fcd86e5c639b1b19fe2f93adaedac6d3a001b",
-      "nullifier": "0x96fd7860b6b19e52bcdbc21f0006b6c541a8e1c31741cc9a31fc7060290c8ad6",
+      "vendorSig": "0xe209e463d983cb332edd682a19beaeb832cf140c7e272a01bc7aa21c02a2210813a6abe00d01728b19273a6e6880e628a30fe26ad41f735b1d9d8c525835f4a31b",
+      "nullifier": "0xdd4d20557ce5e30e8a5c2b91bccedba4796353817718df3ef7a8eadbc7356fe8",
       "reportId": "0xc06e1519c325083c4c615a75cee0f75b7160dd1e37e4d8b0d159184e4248d96d"
     },
     {
@@ -110,18 +140,18 @@
       "billNo": 403,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Sai Water Works",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 403,
         "amountPaise": 18000000,
         "issuedAt": 1792810800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xafefdf4067951f943f660bd929319d129a0c3cde495e33bc8ae1449618d24174"
+        "itemsCommitment": "0x4b13bbd689c6d8cda38a9fd9999070000a642b4250dfee34761ae29d10ad174e"
       },
-      "vendorSig": "0xa3a42342d8994f75f2cfb75c94df43c5ad266ed9960c99aabfec93528240533e154d752c4dbd9cbafb09ac29101645b67d82764e7f14eed1cd7f273e2c68249f1b",
-      "nullifier": "0x1ca643486294207e8b7f461c29fbe2ff720dd245f725a2cc1903cad0ee9fc2cf",
+      "vendorSig": "0x4fb87d58d5534d28c6177c74469e20337f6265e8f3e0cc7d61c887dfe49e15f33861c5e4e8d6dfcb30cefa2a02fe5431377a9870d845a7874de093b12e4c5ac71b",
+      "nullifier": "0xe9f9e40d33eeafcb1b5c1a86f488f5226153ea8e4c0c9ba5cd125270363fea87",
       "reportId": "0x1221a35bcf9f1031b5c82060c7bdc6a8015ad09b6f03aeeb4753a0a30a287cb1"
     },
     {
@@ -129,18 +159,18 @@
       "billNo": 404,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Vidarbha Plumbing",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x4fc944003aa393f501b82d4ae4cE967521Ab253D",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 404,
         "amountPaise": 18000000,
         "issuedAt": 1792814400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xae6b46b0c478ac120b9cbc09bb2352b75be897f00c4c4a6178ac8262f565eeb3"
+        "itemsCommitment": "0x408f8f1101f98cb05f86775236b3438ffb44dc5e856c6addeb874fbdc5ce588c"
       },
-      "vendorSig": "0x0badbe67e563e304ea8803e659984666a94df14a98ba57cb719a67f1f6e6bd503a330f19d0c5cc068f71394ae0a5ca809a7b5f116741e7dfdbc81a960fee67621c",
-      "nullifier": "0x303005b932a92a86f3bad9a41dd4da6674085d969bbf90a8ae123d16faa4514d",
+      "vendorSig": "0x1fb2435f9e81315494e970f103f400a01300c1d200fe9ec745f381342937117469ed7099c0ff5c2c7b626e03bf565a04745b673d06b632a45758fe5919ffc53b1c",
+      "nullifier": "0x7f9b86d6afcc09aeef3a73fd2be7b25faa18bc93808f961222c4e96485897a61",
       "reportId": "0xafcd8b7dc449df07ac894006ed29025386cc7fc32641b36b02420c0da6afb695"
     },
     {
@@ -156,10 +186,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792818000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x06690ff31d0a750accc649df05b4dc3d5d71a364095e1713c65aa9a96bf35386"
+        "itemsCommitment": "0x57a4c138a2bf277e4ac28aa0a9d8d7900cc5b91f4f3d7735f4828e5411221d38"
       },
-      "vendorSig": "0xc0ec614c70b34c9a105fa2ec9b5f7d0e20776d2d9226575107b21819e982cb232aeb7ac0565782dee565fe8db850775d58b384b0d78eb666fa1ad5be589937b71b",
-      "nullifier": "0x1413680123d83c20fd6c925afc0e09cdb969f6cd19db433f385cb82b4d809cb1",
+      "vendorSig": "0xa3a62750dfb9ecadc82de07e0e1cb4b9c02febf10908c2ade4fc3a905cd4dfbe1af63bc00fbc357567644e99ff7236c3909cf13e6253846e0f6064d4845360271b",
+      "nullifier": "0x52e03df43bd1013a85e8e7d1d389faba3f42eb97fcdf34a7953b57ec20347d94",
       "reportId": "0xda5235527d3102e4cf69e86036db2b35c61cf5d4bd2684820b0164b303dc9329"
     },
     {
@@ -167,18 +197,18 @@
       "billNo": 406,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Gupta Cement",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x6C572a7c6668B28aa707AB0Db4e39c671b3f8735",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 406,
         "amountPaise": 18000000,
         "issuedAt": 1792821600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xb9969154367897207feec21ea9a0505953c6789f824743cb567d112f7c537b17"
+        "itemsCommitment": "0x4c612aa539d77aae496b1525981e26c3a0a004b635f49434e59bbba55e3d26f2"
       },
-      "vendorSig": "0xc35fbf85d35a2695d6a124778bda227232ad34ee53da49bef39d38ab37c7bb016241b56ec5de575c6a912ae2f4fb640ca06cb28f243e3123704e849acee4d2061c",
-      "nullifier": "0x586c602b089cfe9a6dc9f84d40bbf12a84e702d3a25bbfe1caf4dd1fa53d4b08",
+      "vendorSig": "0xd538a8eac0cda6a497d365298d7d3c4deca6be7c5990a7e51e10ebbb27bc35964cc58ded3e44d60ab7b5819d50f52eb9b5b0df69473159cb6500366a03c4a8af1b",
+      "nullifier": "0x959c5d35be96e01956798ce4d784f34171bf2b1e0b567dcbf184182e1b71c4af",
       "reportId": "0xb93997fa64191d19c1837921ef7d29881ebc347012d55b01759972f4ca3ca9bf"
     },
     {
@@ -194,10 +224,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792825200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x91ac93cdfb31fdf8d09351afc61a3aee163501df169af1df01c172246f08c9cc"
+        "itemsCommitment": "0x31dc2963bf6c67c6cc10c136653dbc56fb6429793211065c648d0d7b49012e77"
       },
-      "vendorSig": "0x6a0c920fcd5e8c972a545e0a371fbffb1aac983f21d7ebd8bc26239660bac7a256837b94aafa9dfe75bbd4a7b6734e21f177c8b1033dff2cab43adf8c1370f591c",
-      "nullifier": "0xac091962754d3e2220e58d2a0e45df0a93fc96d6ffcbcb36a65ffb28b63b3e85",
+      "vendorSig": "0xdd5b7a4fe9973b8ed2472b186b217cec91467326b2b75ae5d1bef6e0f9d0401c615f802b49925ae3c5acf848244344324e6f50360cb28472f713db886a6a45731c",
+      "nullifier": "0x341cd94022f0f3f919db890f27e69c1732e8e8ea955f93c62c28939ad6a93f99",
       "reportId": "0xa05f095f09e67121ba4c09de2d75013cd4cef530d5107de8f6aee76485557bb7"
     },
     {
@@ -205,18 +235,18 @@
       "billNo": 408,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 408,
         "amountPaise": 18000000,
         "issuedAt": 1792828800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x3a05fdd3761f61e6c3caf0c8107b98bc9fe6263f94ba9cf8a27e64bd8d3faa51"
+        "itemsCommitment": "0x30db0b80f3cd83f34a93f9fc554a426fe0c34eca2062e3c5d23e34d6094916f0"
       },
-      "vendorSig": "0xf78ac0c08007f120d3f6f2f3f4a2cd3984cf1a57c8628857a92ac7af89822ac5656c40c6666cedb9cc1b8c0d7103ac45456627b79ce274a798e33d87ae847c391c",
-      "nullifier": "0x03a5628369549e933529db10c0227ccc815a048b64b00d70712d0398f6861cf9",
+      "vendorSig": "0x6b7a32bc0ca31728747b3062bea4d8a4cf7584a479c3ff7818616fca43acf8111883ff49839cb684006a1d8050323c902b4a20126d265e494be65cc69574138f1b",
+      "nullifier": "0xae12b61945444ec782be0ae140a7900eb612742251752a178ac005ba68156e2a",
       "reportId": "0x96ac40fe8cc76c05f3e23748aeebc329dfd1f7833732758b6db3329f2ef6d00d"
     },
     {
@@ -224,18 +254,18 @@
       "billNo": 409,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Vidarbha Plumbing",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x4fc944003aa393f501b82d4ae4cE967521Ab253D",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 409,
         "amountPaise": 18000000,
         "issuedAt": 1792832400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xcae86675e759462f9b799050f4d4d33a96b675b76d0a24e573f138627e07e4dc"
+        "itemsCommitment": "0x4502929d2a6d4a4feb6ec08efa5e7c7230c4a6f35943ada74812c83cd8fddc35"
       },
-      "vendorSig": "0x0c2ff24ab9fe3bc460bf172af29f3f232e0015171d00c8e6dc794022b0e9f37469370824480590426f5ceb2351d69e35c6e48b91f6c0e7d649b98abee64faacc1b",
-      "nullifier": "0x2550f0a35f3f4f78c2df2a4d91aa43fec454e3cf7615ca3e0263a8478164ba2e",
+      "vendorSig": "0xc1421bace87cea47df1fa82bd5737171f083246d9906c9030f245d1f78c6f15f77ca010b12e0bdc0d5fec93df099bb434626139960de999ceaa3d6910adbe7f81c",
+      "nullifier": "0xfab05fd157515a982c4ba4cb5e056d6ef57c7056212a7a066351d755841f5828",
       "reportId": "0x68d5a5d3ad25b5141dd053a7ae251c67773f42d169e3e37ae6f3aee5ef731701"
     },
     {
@@ -243,18 +273,18 @@
       "billNo": 410,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 410,
         "amountPaise": 19000000,
         "issuedAt": 1792836000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x04baa65dbb419332a84b13da878623823d3c898fa4b20826a208c7d305eb2679"
+        "itemsCommitment": "0xf407f4603c05a5a8859f0534a812fd83562bea4856e9da9a41be32d9a54324ef"
       },
-      "vendorSig": "0xacd7cbe14177056ba3189829d7e9e35eab4c36b756f6986f317b3ae66da965e75176deb6644355f4f4a89b531bc0f4f9ed7cd7ecf5a80a396f18f029a807925f1c",
-      "nullifier": "0x7120e734e293180bc64e623488fb262657707dd24741625a5b329f21c9d52a13",
+      "vendorSig": "0xb0f3bfdd6c6d45b948be02bc0588823196b6012f0bc4cafc29a9be16a351756c11c1e498406b98f977208c1032058c5a68af2a83d0b3e0ee83db5737e27844721b",
+      "nullifier": "0xdea399f549113f6a3bd9aae77327621c5736a1588f1f1b20d2b990bd8ff4ed1a",
       "reportId": "0x315813f63a9813f9e8bbbcceed391e74870493f3c93bbed0195e8d1a3fce17d0"
     },
     {
@@ -262,18 +292,18 @@
       "billNo": 411,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Sai Water Works",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 411,
         "amountPaise": 18000000,
         "issuedAt": 1792839600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xcc354505d2bd2b524a6f55894efd1296f0aa7527fcea39b86be4b75dfca557a0"
+        "itemsCommitment": "0x111f2700da886561d9dc0912cbe656ad99e860659d47f1aa5c80f396fe2c08ac"
       },
-      "vendorSig": "0x0de05a93c03341ee8393f311a139572838db3c96608f76aa7b8e66e88b23138738054ac282ff318aee871195d48cd7cf4a68b9234a0eb311a33d61e2cf1ffa321c",
-      "nullifier": "0x72c5d818208701f652b6cb20ca82bf969453b3ad5f6e894d2d425d23b6029981",
+      "vendorSig": "0xbdecd78f443a32c66fc108f6fd12f5c619a244cc1f30ebfb33994df9fdfe33bc046b3314e1c050ea8b0777b4425c708b67b219dbcc2a0a1c1447e547adc821a71b",
+      "nullifier": "0xecb1c6d0fb14e07a327ed06589a2efaa20b3d9a782da11b082599404da404b8f",
       "reportId": "0x97d183b9f93a6de3e52386d90d891e35db77ff7d7da08deae206c97ea66ef42f"
     },
     {
@@ -289,10 +319,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792843200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x2d2f94cc030be8e05f2eb0142af659f104b7339f45681665e9095d8a87b53a4c"
+        "itemsCommitment": "0x2ca77f1e5235d301d341129d77966dcf000e909aaf7a875aa5fc4775c809179f"
       },
-      "vendorSig": "0xc9b84de7641541270f1dd0fac3ec9c539d1fdbbd80982a9b9980e8ec0182e8e30abe71defc42c1d871dda174dd16730002a4bf313a277950e9a4b155983559c71c",
-      "nullifier": "0x7a4788c55eed7b744f470456192e29be48e79fea269a43e7611240dd8fbf8f12",
+      "vendorSig": "0xfdbc4b7ad4dad52b8a75a92966477c890378707f43cd50c0c52aa5a36e05c311112a113ff887eed1c6765c03ad5d4e7e43e30328befaaea8dc2c3a12e64581f71c",
+      "nullifier": "0xc578122d9b1f97f70a6a68245f919f85e95b971cf3a53d7e72ab8dd58c4cd5c5",
       "reportId": "0xee9b0735d26d3cecd2768b4e7919addbd526f2829446e513053a6f96ba232731"
     },
     {
@@ -300,18 +330,18 @@
       "billNo": 413,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Shivaji Sanitation Co.",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xC51971b03669Cb62Fe3103652BC7Ea6bDfea902C",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 413,
         "amountPaise": 18000000,
         "issuedAt": 1792846800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x94fa68c1ecda7afec7737b4c9544083bd70d82de03ece323044fba2f097105af"
+        "itemsCommitment": "0xb7fd172fe502799d450ad7f1fc781db3c12aa02dac5dcb062756b53bc55538ab"
       },
-      "vendorSig": "0xe10a6a42fbba0d2c1841df461d0e3aa7f7cb683c90e8cad463bdf04ab21f9f532322ed7143bf5dca2d64d6e5faf1d483116040cb1b6afc62bdd3f191bf55660c1c",
-      "nullifier": "0x1bcf42d6b095b591481657d97cf87f3347a060c8583d184fe1673c3b1c60a2a7",
+      "vendorSig": "0x3557535ce194fae4d4f15dd9ed3ca73c0c0a8efd04f261698b50e14ff00377cd5dc266ddd4433cf48a910b7e5a888cf5621fa75a36c5e624ededf93ae5ceb7111b",
+      "nullifier": "0x14538d7b8aa90dad3073485f8785d2d84518af87ebaafe73f93745242a6b078f",
       "reportId": "0x0c4edb9e400bfa13008a40cb649913af969cb661f9a6a2d957b1db65168ba4f0"
     },
     {
@@ -319,18 +349,18 @@
       "billNo": 414,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Deccan Pump House",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xFB168836a2f58Aa1330E0EE4d4EE0e6ae2DeBFdc",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 414,
         "amountPaise": 19000000,
         "issuedAt": 1792850400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x8514443a71255105262e2005a38636a8d334a96960812f04c69f918f37156634"
+        "itemsCommitment": "0xc30b2e52d988ffb9b9a186d8df7b1c38da35c3c776eb06a5b50665a2820c7a43"
       },
-      "vendorSig": "0x157c631406aedd72ccdb98074f24ee37fe47f5f7790716f05fcb63dcc154d3b76788f0d2849d35aec92918b69074f6f2e826df091c08eb9940c08599419aa16c1b",
-      "nullifier": "0xb1641582b1c8ce3da81e955aa27fdc56960eb7fbf82a976ced34832309d8ed98",
+      "vendorSig": "0x56340fca686269875d8207cb66210344d61bbc8a8d8d6bdf4946a7870862f45a1378e7742232a453d723f697fb6a6092f3afeab78d1ae91837e815c15fb06bc71b",
+      "nullifier": "0x0d90c6fa86c78cd2af690fef24d78ecb40caf264a57234bbcc840dc04d79f3b4",
       "reportId": "0xd1359c761ee8c37346adce4aa4736b53b928bdbd1dfa70a6f751bd21490b34ad"
     },
     {
@@ -338,18 +368,18 @@
       "billNo": 415,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Kisan Borewell Services",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x243B3fD67E894d3F004F7b0e8a36a41f0815Abee",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 415,
         "amountPaise": 18000000,
         "issuedAt": 1792854000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xe635e9158d43e6e47d7fe7b6fbf65784d5f6d6afbfb9096a7009693f2b6f7191"
+        "itemsCommitment": "0x6fa390e87763366de34624fda3aba62d7e6029d9dee1e95e122f46205a1803b8"
       },
-      "vendorSig": "0x3315edd733035daceb7589d53d8da7453c648264de0ae5c364bab51f3921980d394d6f1eeb61904c5e49a126be6d8a77c6ef6a0defc1afbe1425dcf8cfb15fd01c",
-      "nullifier": "0x5c38b89d13d41fa50147567b1783a885deac3abdadfec00fdff95e83cbdae1f9",
+      "vendorSig": "0x3bdb59be15b154d5a30c219e1d3d5f813e0d187efc3cdaf9663483ca9382d8464506f47fe6c4c6640435d14aa6320fe48723475507a0becc12b5e80eb313fc461c",
+      "nullifier": "0xe1c508b633ab5085a4989f3e5f2e6a8f21c40aa42107a6ba17b51be525ecb7d8",
       "reportId": "0x45341370d18624231e379d5892d56455e8900ad4991cdd06f305cac6b2606803"
     },
     {
@@ -357,18 +387,18 @@
       "billNo": 416,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Kisan Borewell Services",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x243B3fD67E894d3F004F7b0e8a36a41f0815Abee",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 416,
         "amountPaise": 18000000,
         "issuedAt": 1792857600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x342af6e3adb6ef8b6378a10d4b1d78f3fafc4fe06791277cfead95b39a19f8a8"
+        "itemsCommitment": "0xef12baeac35ed2ad984831b06af663b9ce4091a00e094b0107e1f2b90dd8db3d"
       },
-      "vendorSig": "0x18ff8086f4b7832b5a0caecd5adafc087edb1f7c056488a6bce82ddd7435098f70dd992150943bc2f48ab08ea5ef0e6ef9dea4d603d0bb5267b1ba2febafcc6d1c",
-      "nullifier": "0x3fbbe9746822a5326fe37bbb91ccea405ed072f7d637b7fd35aa9413f5e6bda8",
+      "vendorSig": "0x1e27c6a450c4a123841123b4f7a39a4a01534d21e8230335ddc756b3fd1a66610f605ae7907d41df55755a4576ea49cf95f20a029947c10781a21ae63f498d491c",
+      "nullifier": "0xcccbf7c2a367da6200ef26b9bbd40774cc3703b10e0c71747d72e3df8b11805c",
       "reportId": "0x85015b3d72948e6be20697d5fbf2274f0292522e7d32501d09061d3dba2abfe1"
     },
     {
@@ -376,18 +406,18 @@
       "billNo": 417,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Vidarbha Plumbing",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x4fc944003aa393f501b82d4ae4cE967521Ab253D",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 417,
         "amountPaise": 18000000,
         "issuedAt": 1792861200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x57d1643bc173ebe2848a2cdd7c68197da2934210c049c0c2357d17e05cab7033"
+        "itemsCommitment": "0x13092c8a92ccaf8c51b17430d2ab73d8fb4875f72bb2dec9c3f6330b0842fd82"
       },
-      "vendorSig": "0x92e9a3c5bb4cfa97036de41a1863bbed68a22a01b75ef97dc46bad001da94b794ceb46311ae0299f634f5ee9e0d9de2a921ee1d6a948571849d97fcaccd3dc131c",
-      "nullifier": "0xc42411ac746244e3e85ae85cc9a823effa6bee42f97ab4a6eb5917c477f75ac6",
+      "vendorSig": "0x357bf29e20307985591fb11bdd02b916491c0d9132b1199a773faabf496326ac61bd4be874206ec1c37a5e4a2ce612c2907848d98fb1d2f69f47dda96e2fafd41c",
+      "nullifier": "0x16ed5fa8eb2c5d8825d80a8b6dda17d413872550423d5bef1bcf5ae135cafb02",
       "reportId": "0xc02aa87a320fc33a5472a7ca26553aa7ecc83da8bb5af94693becb5642f7fbd7"
     },
     {
@@ -395,18 +425,18 @@
       "billNo": 418,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Deccan Pump House",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xFB168836a2f58Aa1330E0EE4d4EE0e6ae2DeBFdc",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 418,
         "amountPaise": 18000000,
         "issuedAt": 1792864800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xf7eb5ac21d674c928ca6827dccc0be5fd5ec5606bc7562f2479e203bdf6b62ee"
+        "itemsCommitment": "0x58ad117bbe76d9e9b73f5b4f818ef272d2c9010f2dcb3e7cdf1215fc6b4e1c84"
       },
-      "vendorSig": "0xdb72b8a90f696911892e94a7ffc74b700db6cae78ec22de105a92c8caefcb5534d5093f209f4585f5bbcdd5e2c982c8e7023bb2ab37196796aaa5ea12bd038521b",
-      "nullifier": "0x2c5d966e9f66242011070bcd4e46f03a96e07fcc23bf94c832c6b1a144f19e8e",
+      "vendorSig": "0x688a74fea27db81259a7870ef3fa11a9634415029c76a2c34451583f553f6519268dc90782f171704464b85839559d69e2289966430e9e2e37cce72f4436924e1b",
+      "nullifier": "0x80c1f55cb5ef170dd0236ddeb2546fefa792aacbdea8f80fb446abee32d3e38e",
       "reportId": "0xb98ba7bd1666e0d45961a7ddea75cdaea5f1e866516866ee7be24d95ca822ba4"
     },
     {
@@ -414,18 +444,18 @@
       "billNo": 419,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 419,
         "amountPaise": 18000000,
         "issuedAt": 1792868400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x1419052697698125885d07033a4f81500bff20dabf66936bc520a962f6b916b6"
+        "itemsCommitment": "0x87f3b3e774f8d1b5e58e4e7f93b0c4a5316e88e22cd7f82ac668cb085a7d9d9f"
       },
-      "vendorSig": "0x8cc42ab0f6e3eb675a618e0336a68d5887dc99c183a7c68acfe4513b811d9d494f81d23da0738f2efd176a340067ed0af921b636b7555bb8adbc35262ed304c41c",
-      "nullifier": "0x2c38b9b7c4d52cbea81e155cd7421cf2d9257f2bdc921de18200b3bf14db9d80",
+      "vendorSig": "0x14cca64e95725ae1aa3bf429226d6857eb10cab6a1df3da425852513d85fdb2336a85be3cbe0e87fba65e43edb0dcd346ce06c2bf8f195219847b6ffef82cc3d1c",
+      "nullifier": "0x55948e659f6216e410e039b555814801a875c2cab4df41fc7a82965d7ada0f86",
       "reportId": "0x91ef7a926979d3105b264383fa3ec7808f07c522138bb10f922ea5f2e7b96e1e"
     },
     {
@@ -433,18 +463,18 @@
       "billNo": 420,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Mahalaxmi Agro Supplies",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x89FEB1e9c520Ff5083DCE5358C0Dff0A15E3A8c7",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 420,
         "amountPaise": 18000000,
         "issuedAt": 1792872000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xf47bb04dc65635bc47440bcad713177296dee4030c8237dd4f730f0afb8343e4"
+        "itemsCommitment": "0x0299faae2f1e601b704eededfc9af0c51ba21a1c91047edc54d9fad240a563c7"
       },
-      "vendorSig": "0x625ff3c71f906929faeb3713037245d721eb8debc94ec2f8f31ffb75ec405989549f4e9630587528e23d18fe015f69725b78fc352ca0e6fd607c6c46355875e11c",
-      "nullifier": "0x2bf1f880e22c7958192c8cf4dc6f12c32e94ec55f567edc5a768cb300c4fab0a",
+      "vendorSig": "0x9a7838fa241a20c6e5b0343d24d9503e1ebd56a1893ac88ca5bd4e22b891704b377792e4e98365d6124aac7f6f9d3c2711dcf214480d314b94e579ccf7bb6ade1c",
+      "nullifier": "0x8c44e8c54a34b07fa42ebd2946dd8cf4cd325280977912f68fa54be0e19fbb06",
       "reportId": "0x3e147638437bfea2597f0527d0d444b2880a7836a1bb2898f781091dfa7eff50"
     },
     {
@@ -460,10 +490,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1792875600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xd416f60b8e76edb1492b4f3a88b69b3c4e978d5b9928971df889eb6551e23eae"
+        "itemsCommitment": "0x2622a71e8888d82a0f52c80b4751b5a4550404cff98ce1582a81b1a95f51faea"
       },
-      "vendorSig": "0x51183ec660b36e69826fd74e4ad1f27bf5487b97371333375a8827569495e1872b1dd38e950599e43bb312ba8ac6d603632e7908b06ed4f4202dea329ad81dc51b",
-      "nullifier": "0x1ea6901dc3bfb06ef39d14757e5e7ffad1eb0a8e905da3b119af02e52ec1d16f",
+      "vendorSig": "0x1b1c8711f28e27afb17c612f5f81733c880db79af46b615d5dca7de02e4366212f8c2590c36a0d6bb7d24987d639f546c67ddae62dc1eb4d411bec6ed37746411b",
+      "nullifier": "0x2875247fc2994549ee8179cb616b0797b9d934c855444c6350fb36945df6077e",
       "reportId": "0x32f5385e64d1ff700f77686cc130ba617385c188b3d0ac085b77aeee89ec71a5"
     },
     {
@@ -471,18 +501,18 @@
       "billNo": 422,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Shivaji Sanitation Co.",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xC51971b03669Cb62Fe3103652BC7Ea6bDfea902C",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 422,
         "amountPaise": 18000000,
         "issuedAt": 1792879200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xbe4d87f955130b6a93fbc2c662ef3f806ac3254b144bde2b496569032db3ff8a"
+        "itemsCommitment": "0x044aa41623cbd429f34f226da34eddee9be716566fd6d51c32ed9a07921fe6fc"
       },
-      "vendorSig": "0x18084a9b2391dda763b38961485c3aecf9ac2384cbd6fe08d9728cf3e630fd46790d67b4af2397977c6a69bd46022143f25e9f0611c80100a5d47c75a976911f1c",
-      "nullifier": "0xf9eee219e3217f2471f3a735c3d01d832519f75b4fbab30518de3edba4bd71c0",
+      "vendorSig": "0x0061a1b73d1c12581e65d7d90c21b8fdf216c8ffac8dee9cced9c3e6d532410d4c58769ab351fdd8645cc6d76843ae6522cf0d284c4b226f768ce2c174a0c7a31b",
+      "nullifier": "0x9d93125009f09206cbe9d281ee2c048aeb99ea9226f415f4e92fd4ab85a8e78e",
       "reportId": "0x53612b52a988f334e1818a7661414bf31b6f09af36aab50674ddc0a4ede9f22d"
     },
     {
@@ -490,18 +520,18 @@
       "billNo": 423,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Kisan Borewell Services",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x243B3fD67E894d3F004F7b0e8a36a41f0815Abee",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 423,
         "amountPaise": 19000000,
         "issuedAt": 1792882800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x09c0789f479f71b5b90b365885f2767ad16d90a134e9b4ff60c19fb5aeb27e0b"
+        "itemsCommitment": "0xffbedf60ce54522acba6bc2e4534d47890e56f0699d8c467ae16570355fae105"
       },
-      "vendorSig": "0xffd7110815b8893287f58af1841d95e44e57e91e0f5b7bb05d82e4033bc487ff54adcdddd8d28d3d4b8744122c58cdefe46db09b363ad51895db34448b93c38b1c",
-      "nullifier": "0x598b461dd3dcdb4ae07a8e57f21003e5a1170756a3a86d60f653b46e31ab3541",
+      "vendorSig": "0xd75b1ed4f5dd4313be9ef54fcf92e52bac5c684505f04962b475da2e3ad903751091ce4895b915d82903b2b63b908559b035263a7b168746bb372291897c576b1b",
+      "nullifier": "0x137ed0b11e9765b57e64e45fb3b32ff1ad00a7531100145a0084a6e860dd7234",
       "reportId": "0xfdf10d797ee72d31e8144bed1083e649912c3ffc7fd800894e4ffa045e07f07f"
     },
     {
@@ -509,18 +539,18 @@
       "billNo": 424,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Shivaji Sanitation Co.",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xC51971b03669Cb62Fe3103652BC7Ea6bDfea902C",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 424,
         "amountPaise": 19000000,
         "issuedAt": 1792886400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x7c3aea5d139ee02ee8963ed47843621ee4d0195a385634100c06c349c6881925"
+        "itemsCommitment": "0xc218e2db2d406feb4323890a981b5635a846122f58740490cae2b86c2968a268"
       },
-      "vendorSig": "0xf592abeeb8194e6421d49fccac2551acde235828b5839506ac09efe869054f49784636e5af99316d2cf9af67f3d99bdb614ee5aca64e1446165080423b612fce1c",
-      "nullifier": "0x1feca54dbb4f7293473f10dce4c68d449ab9c37aa620e1b8086117f875864550",
+      "vendorSig": "0xa9717cd4b9f190119f7bdfab60392c35290132c1bdb8f5c9de978a8b53eb345331ba03adc26a52b06d17220dbe628f14a0a33d936a0ba0b1dfce81ce109579861b",
+      "nullifier": "0xa5655fb14da7e5dd438420c0057159b88da9c5d6a8f419a703b6ff4a123e03e4",
       "reportId": "0x2066473d5b4da5e86917129914c128427ff3d57c7836f8f5db2411280ade47e4"
     },
     {
@@ -528,18 +558,18 @@
       "billNo": 425,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 425,
         "amountPaise": 18000000,
         "issuedAt": 1792890000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xd81d6362301c431b49845f67f339e69695b90c6dbad3d497acc6cd6b9181cea6"
+        "itemsCommitment": "0x901f1123d53927cb86a94412d0c92e78dcb92ea741049c7cec04f328fbe1b3c2"
       },
-      "vendorSig": "0xf8690af3b467568652dfd3d2f40d3cef11d577124d1eeeac66de738e2908e22362a7b5988e9b18efeeb7010e0c33aa15cce64cba2af54e9cae454b7b81e14ac61c",
-      "nullifier": "0x32760413fe7990e1ec879df3b6c72e954df96a0a32991f83aadfb12fbd78807f",
+      "vendorSig": "0xcf36867cf803ffabdf85c2005a5b661f0238224fecc780bc9d431ee9476414eb27d304b045d102ddb0928df404a34c269da7cc8aebf7a606f318fc3bf0ed45bb1b",
+      "nullifier": "0xc0c382930766bf58de3a0916b851a465fc52d97293cd22fadf2ff56ae668d070",
       "reportId": "0x154d009c068e17859e2146dc05a4e2ac353907c2f073b2f0a31598fec942b6b5"
     },
     {
@@ -547,18 +577,18 @@
       "billNo": 426,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Nagpur Tools",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x53905A4A49cD25fA520114c34a4405cb285173dD",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 426,
         "amountPaise": 18000000,
         "issuedAt": 1792893600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x6efeff8d70e026a26f81739f379ddb9482258bd1c2ba4f3cf6e9fc8fbe736b41"
+        "itemsCommitment": "0x2b45951d5b4c0fb1b98f98d88fd1416d7e581829b9b29c7e8facf678302ed767"
       },
-      "vendorSig": "0xa3690f23d4ed3335bdfafab572d9af1234fa8cbb3f7de41583d4aae7eb48cd536591d2113a74812420294792d36d2de57c7884775a69c2d5b1562bfd6d39ebec1b",
-      "nullifier": "0x32bf8f8d20e857600aa6f143444bacc332cef504c05d3164fb6cc01232c87bc5",
+      "vendorSig": "0x0721b3751cd8e580e5437c2667bb7758cd4e7ceda190ca107fba6e4f673a9d5d2b2f5085c49ab0a9cabea460ae5fc3cb5cb428141c61ec3093f454e9f104c29d1b",
+      "nullifier": "0x312439ce17b180240eded4ffbe34352ebdbd09e77c56f5eaa740f559da217dff",
       "reportId": "0xa73fc52c1c7963572d1d21f190073bee4cbff7319711500a2f7bcfa18b9f64f9"
     },
     {
@@ -566,18 +596,18 @@
       "billNo": 427,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Nagpur Tools",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x53905A4A49cD25fA520114c34a4405cb285173dD",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 427,
         "amountPaise": 19000000,
         "issuedAt": 1792897200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x94396da8ab13c808f754f1352934d26ce77a144e934e5c03cc8795b333370558"
+        "itemsCommitment": "0xa9edac44bea8a73a841cf5c51093103542535ce4fc3ec6aeb5bf5c82d4a7464e"
       },
-      "vendorSig": "0xc9ad6ceec7aba1158767e438eb256f4fdec830a87290a0e893245f64af49beec63b98ef5fdacc3c09bd9d0273a1d58496a222911050034044546604b804c9bb91b",
-      "nullifier": "0x372dedbfd48478dc24f6a7fe44474a37aad18da860a56b07314e1f9b65248f93",
+      "vendorSig": "0x44813b277648bb2caed1685883266af969981bdadb8ab9b326f334d18d28859963db866a704f46f50b17277ddf09d18776c23d7ddfe9f62a475bf0ca3999f6a31c",
+      "nullifier": "0xb4268baabc343ba5c7286ebde10d44b400b0c513d28e8249d7510cd90da4fbaf",
       "reportId": "0xea80add6841188da7f733f3f0657a560c0360e859bfb3c37c2d9b2c19fc7d58e"
     },
     {
@@ -593,10 +623,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792900800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x5738e2bf386c12c7f645a7fba9319924bce076693ec2ea167d4667dbbf2d16bd"
+        "itemsCommitment": "0xce7d231b91fceec6bb969be78236e4307eeee49bee48c2ea236328a4621600b2"
       },
-      "vendorSig": "0xd397239b44e205eb129c3105daf13b0caafe0cf6c3e6dd13e8d442497f015fd330943bf15031e3d389c0dcc347f02d3d2178c054a0b6a82df8e7b4b9a4c309fb1c",
-      "nullifier": "0x27dcd0af3a5c94d04e87d217ae9a53341818cfaf5e2c6e2c84b323a1e85be330",
+      "vendorSig": "0xf62444a98fd21adbbc7c2a0ac3b5f155efb3e42a756eb3dcf1f339f7c720c16b7bc499abc2116b62ff145b0cb747836754ce572546d66563479b816d7d0ed19e1c",
+      "nullifier": "0x61ebb064c3fe83fefa216662948d51d2493eba951fb7c2307333da0e1b9eca18",
       "reportId": "0x7b37d9c710c8e2581f3ddf5f81a207df31f5b163ad8ed12d3ba1c8e858183786"
     },
     {
@@ -604,18 +634,18 @@
       "billNo": 429,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 429,
         "amountPaise": 18000000,
         "issuedAt": 1792904400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x4e147f79124ed16c82a6debca3e1f879632c102760437436691eb4da77e4065b"
+        "itemsCommitment": "0x3f81852890e2c16459bd8d4fea469296d723921a9311f153ab383504890382e1"
       },
-      "vendorSig": "0xf4f5a7e32021d23b86f04bb02d980e1fc55b650fc6d3c3aeaaaea2464c0f833d39ac7176284e0acb884adcfeea2eb3f1e82e5998b6e7b9fc71a39150ec36bebe1b",
-      "nullifier": "0x27e863b688da7df09daaa807e6738e735739ab1cde8b6aee59c75c4c184dc9b1",
+      "vendorSig": "0x6112aeb4be17bf3bc600e515db69c9619dea4a5ec520c7eeec4451186b1b2520366a7fdc35b10933aeb2c01e4b9edb1c68a8e7764717047819f8ec9dfeb6e80c1c",
+      "nullifier": "0xa730a0490a6aec90807b2a056896e633a53bad79d06182c8a3ed946bcb1fb3f3",
       "reportId": "0x28fd45005754dd4834f09178aa30a4fa1da31c8b518fd63b47bc40bcf2dab343"
     },
     {
@@ -623,18 +653,18 @@
       "billNo": 430,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Sai Water Works",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 430,
         "amountPaise": 18000000,
         "issuedAt": 1792908000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x13124afb9008340f16b742985ba769f657023aa486a74ea04bf80c5182902ef6"
+        "itemsCommitment": "0x674705ae51fa12f464dedcfd53808894fbac02c747a557fb32119115c9644978"
       },
-      "vendorSig": "0xff817556b94dbfd9a60fd05460ef9793fb6ce7fc8447c8033a120fbd5aa4f927130d6b9e54c23f58fa9aa4a61d7f8def7bd3ecbe06c74ad299c8271aa86e8d921b",
-      "nullifier": "0x6f234e8c38d3b9de79c73164f81412de4921bf8cc8f06cca1122068e6626a86e",
+      "vendorSig": "0xf372f3c82ebe908d7ed49a9e9fdb8c41b825d39f9259e8422fe8bed5cc9a1fe022d461ee285af76e7d6cae0308a53cfaf11deb0981d4ae189cb13268f00e1dae1b",
+      "nullifier": "0x5b60c0c17deee12efec5ca91c70db1a583bfc77ddbe22938a0317bf154a86101",
       "reportId": "0x62d3ec292e65b3086a3120d2c25406a03c55f134f93c7b322dcfe3c484b4cca0"
     },
     {
@@ -642,18 +672,18 @@
       "billNo": 431,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Deccan Pump House",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xFB168836a2f58Aa1330E0EE4d4EE0e6ae2DeBFdc",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 431,
         "amountPaise": 18000000,
         "issuedAt": 1792911600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x181bf3a1182a25876c12c686ee84e5d26a62aa8cac413e446060bc0fbf2d9880"
+        "itemsCommitment": "0xd93350cd56413d327d0d4b3dcd8ec37e364530e1f63066446336f6548a8918ce"
       },
-      "vendorSig": "0xfe405a30aaaf81b2b77d83f7c0fae66e216a9c1a7391b52d51b0502b350415682627284869667ed20e5da558af985458b5b99f4c94b29716f979764e5f00b4391b",
-      "nullifier": "0x3748f413a57069f12daf9e0a165f4d1889a34a3cb5e379dbeee9e712251b5c94",
+      "vendorSig": "0x7e873a10087b71a5e00b427610ad376c2fedb045c5553ef7dd8388efe5e2652b21adba72802a265ae13828bc9f082ca379f31cd895bed4970c092519e3ca3a481b",
+      "nullifier": "0x0c916ee38a978dbd51e8264a7faf780a84041dd17ffa88bcacc57e5af54a0c6f",
       "reportId": "0xafc32ab89e76c552a16f2a132cbf3725d41ff77eedce8b62bf2f55a059574eb5"
     },
     {
@@ -661,18 +691,18 @@
       "billNo": 432,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Sai Water Works",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 432,
         "amountPaise": 18000000,
         "issuedAt": 1792915200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x90043baa6a9f6cf5f58beb0ffb8c067f7ad8076d5b1d382fb0c8c8835563eb19"
+        "itemsCommitment": "0x0898b323ad6d8dd904e22a006297094bea57954d5261dfa870eb3e3acd798750"
       },
-      "vendorSig": "0xd3841ddca55cba2dd5f3e53e34f0d3dbdfc32ab18d6d0a1dad52975638e43bd479859b9667ab5f4c15f0699d59f25c4b539f867fe79986f32c0dc9d250f939231b",
-      "nullifier": "0x8c18df455cb9b548719fb23cf659547af71131e625b7ed87356ef56bcf772a7c",
+      "vendorSig": "0x1041b1f3e8a922ec157faf8069300f029015f7ad9071b2356633d87efd8c89d14cdf4f10ebdf85a9329675fd4167257e6bd3760adfd10dd938c54a55649613e41c",
+      "nullifier": "0xd9637064a0a5b2be61843dab502613bb73ffd4927850823733e55c38834813ee",
       "reportId": "0x801f1d039fb25532799abd7759074fb38c171aecdaa23aea1a5f784d2467a155"
     },
     {
@@ -680,18 +710,18 @@
       "billNo": 433,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Sai Water Works",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 433,
         "amountPaise": 18000000,
         "issuedAt": 1792918800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xdfa4b8c5365b6dbe1b27ced98a4aed7a8cb32e48780b7ea14e9fe59856b0cba1"
+        "itemsCommitment": "0x2147de7bf72704f4df5c046195fbbea85bb9768113c00801be659a3d75d19ac9"
       },
-      "vendorSig": "0xa486cb48d6c5e5bef779f6b266d77c01c664fc358fb7b4aa560440a0074a5014677ea73610cebe5342dcb38ab9d64d879986665dbe58f95ec103115b53d2f1a31b",
-      "nullifier": "0xa59686464f071abc4cf2f6381ea44c7685c976b16eefd06608fc68ab6fdc10c1",
+      "vendorSig": "0x0050538bff3883c4ff9042051353c56bd714d926983d7dc470c28fbd62c0e9f20f6c59279f9d0ad6c7a73b059be46f07c01ddd1c090750c28492c56c6f0c0ecb1b",
+      "nullifier": "0x21a7902478ca920cf488135f5e7fd6267b3cacf11ccad1d2335722843d905c2a",
       "reportId": "0xea05418971a61f2920dc3b20e7c4ddc192f68a9705038195f1c5f46a66a4a4fd"
     },
     {
@@ -699,18 +729,18 @@
       "billNo": 434,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Deccan Pump House",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xFB168836a2f58Aa1330E0EE4d4EE0e6ae2DeBFdc",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 434,
         "amountPaise": 18000000,
         "issuedAt": 1792922400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xbc28293590247c30356266afeaf92dad63d66b1d447fee2952dc9d0b58c5afbb"
+        "itemsCommitment": "0x62374c599f9301b25b4360d521c51e762fbcbd11ef3989596a9504499b386356"
       },
-      "vendorSig": "0x2231aed11cfd7755fbf43fa3887c4aff020ffdc5e7c2f8969448cfe2f01154d06db928aed539f27d1fde80f4c36c1e2e7985dd19d3c963fb468a8fb49d78008e1c",
-      "nullifier": "0x651f85b988a3f4cd549b05d01878ee2a6decde589ec73fee6a745c8fe71392c4",
+      "vendorSig": "0x98ca84660216106e7052645be01bed77c30aa5f0ac06179c8de5682dc4b7fdc81ab36d30596f7000a5c9f999c1bcbfe6017b5d0eacd485af7ff8f6c5443f16c71c",
+      "nullifier": "0xb788085ff42f379ec1d588c0d0c1e9a162614f5bd834d4664fd3d6b1d9f34fb9",
       "reportId": "0xa00ed810652076adc7b956499d8856327b384b2af5aa060d592dd0ab0bfb4dab"
     },
     {
@@ -718,18 +748,18 @@
       "billNo": 435,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Kisan Borewell Services",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x243B3fD67E894d3F004F7b0e8a36a41f0815Abee",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 435,
         "amountPaise": 19000000,
         "issuedAt": 1792926000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xe595779f3b46236a27ad54cee87a758f4b4075215c16311edf215665bdbe95a0"
+        "itemsCommitment": "0x78f63803c39b8de4bc4c74636afd27045f400a9bc7ee3a93f84b97b12d65f0a4"
       },
-      "vendorSig": "0x30ceb19bafc22c74f70b61a1c7fef6958dc533e0056e0dad313b0022f146b0c102b33a080c545c15e0b3adaaa530bf01c26bb7246d8d334550b3d469678e4bdb1b",
-      "nullifier": "0x890eb0bfb3239990403cf27b3c0aa029dde0c8e3a05ff89d1bfcd9660f48b34b",
+      "vendorSig": "0x4233a83c1fd0fd826781fab9c211ada0a6784b6d84300553500ab210db2ce0ae18c1ce1bc103e0363d4a04527f359405f482ef71748dd0f15a80af726bb1235e1b",
+      "nullifier": "0x2c7c1a5b24cfa23b90c2cd1a4464a71ba72393ed89cd55143099ca628c7fb74d",
       "reportId": "0x928c8d6dc977e02cf7534bcf12c858bbc3be7dd7f653ea6459457bebcebe782a"
     },
     {
@@ -737,18 +767,18 @@
       "billNo": 436,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Kisan Borewell Services",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x243B3fD67E894d3F004F7b0e8a36a41f0815Abee",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 436,
         "amountPaise": 18000000,
         "issuedAt": 1792929600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xa5807bb3154be2a376c9a0f88b3ba80732882ad0c33b6c5fe3e749bfa54a97f4"
+        "itemsCommitment": "0x81d680e529d923ffaf6bd431890494a5500be334280fda3f04cef1b6777468ca"
       },
-      "vendorSig": "0x0378684dff449fd86f93a19869b31d7cb9216878c3302f9a53eab5ca0b084ea62b601cb00fd93a852be5b9b29f8143e448d68af5bb9cb4e62485bc4b06d3c4731c",
-      "nullifier": "0x70e9a7754ab729efce06254a5d9f9c7bef690de13a26d1717cc9eb3ea754cc0c",
+      "vendorSig": "0x3700213bf30292bbfb3d9c08111c756344e86d09ca56bfd2f82246f77dec75862da3ff1750edea8ff447fe1eaec8b6c4d7bd9866c4de3505ad05a72183595e471b",
+      "nullifier": "0x0f383c71e13aab4d6bd5e64ebdca62b8c039c8ae2b917536611150264cc388bb",
       "reportId": "0x045a9551707cb1d347e9507857cce6df01ad82a4a12261b78bdad56e2fd226be"
     },
     {
@@ -756,18 +786,18 @@
       "billNo": 437,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Kisan Borewell Services",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x243B3fD67E894d3F004F7b0e8a36a41f0815Abee",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 437,
         "amountPaise": 18000000,
         "issuedAt": 1792933200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x255e39c19a76d6aae51d48d8439a19bd83fd39b7e24c9c9144b9dab46725c5c4"
+        "itemsCommitment": "0x7a5a487a2136b9f248fc9f45707cad9e48d87a9a538f7472daa5ee1aef2561c4"
       },
-      "vendorSig": "0x49c6f7bba11c083b80304874599b832114782112f1667e9a6eed7f7977171be03ea38a53fc14d5ce199f948f2fed79bafa1f23bd0079826c447f44f549179cff1c",
-      "nullifier": "0xf8982f50dd349afaef880793733811168214cf2a767147e2995d621aa9a5c883",
+      "vendorSig": "0x0f2e41ea77562e5da0b049b6b3d4071367e40973ce051bf92d641cc63266eb697bd25679dfe3049b2122207a452973625c235a91ff5fa70de8a3fe13d767ef061b",
+      "nullifier": "0x88bf644bf15734eb3945f5f925228f74331843a5dd7473c28a5eb08e6f4725a7",
       "reportId": "0x0f750a8251b69a122a7c539aee144222ef156263e16f3805aa68d7fce3fc8c9e"
     },
     {
@@ -775,18 +805,18 @@
       "billNo": 438,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Vidarbha Plumbing",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x4fc944003aa393f501b82d4ae4cE967521Ab253D",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 438,
         "amountPaise": 19000000,
         "issuedAt": 1792936800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x8fab606afda88966a14e4fd67a6ffedbf159975e14cd10715cd1924ecac27afd"
+        "itemsCommitment": "0x639e2dfd3f024c68ccdf777bcfef8ac8b79dbb7f2426e894c546188789f48013"
       },
-      "vendorSig": "0x550fe19974e2e101eac24ea43d4fd19613cf163956cb30b20f9e9455300973b0473010981e1b03145241a5fdc1fe3d35fc163a45cca685f182481c9f7f6742d61b",
-      "nullifier": "0xff474a18c92b5acf5a3985f6554d63afd2190262f92c738e23a7258456623d21",
+      "vendorSig": "0xafe6aa4c6731adac231244b63374e3fd83f14bae60b07e8f4839ac2c20acbcf01889a694fd66ffe544e0137587ae7f28df106727205eb96ada651b4bae3ad3b11b",
+      "nullifier": "0x7f2f0073d824bc46e3e8eb1baffa0ce0ec57e8aba2f1f8bc5a89b70dc7fa015a",
       "reportId": "0x357f3eebf55f11b015110f22097e10841be54b93bce8d71deab7f59189fb56e0"
     },
     {
@@ -794,18 +824,18 @@
       "billNo": 439,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Nagpur Tools",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x53905A4A49cD25fA520114c34a4405cb285173dD",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 439,
         "amountPaise": 18000000,
         "issuedAt": 1792940400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x625047716a16f76fbdc369ba5c37cd07e01f007e5c4f2704e0d8b2eba576aac0"
+        "itemsCommitment": "0x4e1fd7392db4553e096e8fd42c38d60a2509f22935767e6b0592c3f66b628524"
       },
-      "vendorSig": "0xd627a2bdcbe610a6dc34a650ed0be01be5a3fbe3327aa3a877dc66a213488c2b2f9a8785ee2324c5ae81ef5c363d330274165245b5ae8da7bf78fab359f31c321b",
-      "nullifier": "0x57b4cc0f9eef7d6128815a5e2957aa87ab9d9538b139bb918bc2b7740da491a5",
+      "vendorSig": "0xbec2e93db5a73b40cb1705109d2def27a063bf3f56b7aeb0f4062e32dc3763634b4b3c56a1f75110c8cb36f26ee22799039aa1c6486bdb7f5a7bb481acc50e7c1b",
+      "nullifier": "0x37b03f37cc25ae9ef46960af0d3d6e3f3618e44d196f369322fcdbd618e5fadf",
       "reportId": "0x9b28cc3448c3053709321c35dcb257c369b91b6e5fc6ffa7096a8250392abac4"
     },
     {
@@ -813,18 +843,18 @@
       "billNo": 440,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Deccan Pump House",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xFB168836a2f58Aa1330E0EE4d4EE0e6ae2DeBFdc",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 440,
         "amountPaise": 18000000,
         "issuedAt": 1792944000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xb144785aad9d09ae15e92bafee53ae29d748f29a4ac0fa9f3744b1936c3725d3"
+        "itemsCommitment": "0x6e665eea26e25203c72628a632a79f0e4d0fed54765b4230815af35d2ef21739"
       },
-      "vendorSig": "0xb20ba52405e298115fa5b8632e895476beace9d033f8fbd284b8073467fe890a1dad04dd21e3b2d20099e91f4bf6dbe0dd23d89c9b9c394e7836f05254a0f9541c",
-      "nullifier": "0xca13326068d8c4b9059fc4dce56a90be2fc8f7046273b77fffce5292cac54bec",
+      "vendorSig": "0xb96712cb4124d01e5f5cd44787cce708dbf3149ca08860c11bb0ce6a2e20e6831c64930fe48b85ea0f4b2599f4f0a0a95a97d50159fff01605cbdd77cbd343481c",
+      "nullifier": "0x33a8473a9def6834dd608e37d4ec2a15781311a79c72c221d76e668442be4fe9",
       "reportId": "0xcd8d87b34d70c4252d7baa5682bbfe01955659335b1f9a33e119544952bf7194"
     },
     {
@@ -832,18 +862,18 @@
       "billNo": 441,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Nagpur Tools",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x53905A4A49cD25fA520114c34a4405cb285173dD",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 441,
         "amountPaise": 18000000,
         "issuedAt": 1792947600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xab3a13ff83e0a72f4301d4e822b4cc9b779f8eea8302c6f1ad126fe601eeb5fc"
+        "itemsCommitment": "0xe666751b1307164b28f6dd7bd13cf0ad1a6446d812c1bdf49295d4a3d979f8ff"
       },
-      "vendorSig": "0x198ff1c3021671323779aad5f089b77829b5482f2ec107e9e3a1c13743563aff6afbe3af0396be46c29f58ac17452f020fff8c92d7f6996d6c1e6a5088af771e1b",
-      "nullifier": "0x9a1f9de65c14acee7c4b5bf165d559bdb24e8ac45d672def2257c98498eb31e6",
+      "vendorSig": "0x5267f510e3dccea24b05ad6e6f1aae3673ae9978ec79ef14176fb3c50b0e5b715d5ceaf3dc92cda5cc549e2e4effccad744af2dbb56dc509b0dbb67ae37e8d1c1c",
+      "nullifier": "0x64dce4e08ecfe2a2023aaba834e3f4732cd81eb693f14a5b828143ff9e00bd18",
       "reportId": "0xc625d906c14b533ac151d17bdf2fdb6ad9d2f21f9e288fd108545d7d9c717722"
     },
     {
@@ -851,18 +881,18 @@
       "billNo": 442,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Deccan Pump House",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xFB168836a2f58Aa1330E0EE4d4EE0e6ae2DeBFdc",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 442,
         "amountPaise": 19000000,
         "issuedAt": 1792951200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x5864e33e47e470616ac11353c6ebf7dd63bc8f0987eb36123fbb52237ef2d774"
+        "itemsCommitment": "0x3fdd98610f388746e47c98bedfe5422c49c23efd3276c25cd99ccb589a04a632"
       },
-      "vendorSig": "0x531c546038e4d52e31f21e9e4eeab1a29edd83f42a49d4a75530fc151defc365370acbaf833b23367d8c5de25f72118a3c20298d1f7e28eed6ed625885a501121b",
-      "nullifier": "0xcc1e41d977f8086f8add923dda163fbf45c0d9ba426263d37d51b14fa74a95ca",
+      "vendorSig": "0xc0f670088dfe9a4d40590dc30854d70f687bc99f76b52c5937865625bac02b357e0bd9ba7f6797e27cc7d0302f2171f213c823485f112cba5736dd28d8914d5e1c",
+      "nullifier": "0x466f5e6975300e2426b6cd680ccbe3195a8c94d63caab1a23d9e59cf802e4d51",
       "reportId": "0x9d320bb127ebc25ddbcbd9653fe557c1e2b8052f907801abc89dc9dafb920500"
     },
     {
@@ -870,18 +900,18 @@
       "billNo": 443,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Ramesh Hardware",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x13ED931D1757cc871F465ab98d42C77DFB60c339",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 443,
         "amountPaise": 18000000,
         "issuedAt": 1792954800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x2ff666d670f2ad85d26fd09b59ed8316d0ce5226ef10a348f745b2777cb89014"
+        "itemsCommitment": "0x54f928a317e66ca4897299ffa1ec9064759513a93b6d2f4c6c1c602e4d9cd4b9"
       },
-      "vendorSig": "0x3c0781d9dc2d9e4e677b87348ae26f8119be02dbd304bb418f392b66b8123d5c4ddfcd207dc1ab4286c3b4b7fdd3ba3135547b5ee9292d34fae556dff4b3bff81c",
-      "nullifier": "0xf4c8d1aa2468e9113c0ed8ef294f45c52a65fee2854e8c0063cc0c5c8993f323",
+      "vendorSig": "0xe4fa06b6b317d4d63f4f4ae9645548ecf4cb149e85070bc0a737e13638ab69d524598fbabcb807d9272840ea2f716e8f1b31b8d75158039b2c1492b26464df911c",
+      "nullifier": "0x7af690d531b8ae68b45895eed1b24aee58dad4c9ac9b1f62aa6a47c8dc9a771b",
       "reportId": "0xb1c06cb8471d25b501e73845544634d78bebb7fd6662b4765ddc3ebf3db630b1"
     },
     {
@@ -889,18 +919,18 @@
       "billNo": 444,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 444,
         "amountPaise": 18000000,
         "issuedAt": 1792958400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x21ad01e4313c39386b5854c5e2db56e72eb7050bf3d6954e233db35a81aee3c0"
+        "itemsCommitment": "0x29b748013489cf5df0390adad3a10b0e09c578f7bba395ca223c446888644212"
       },
-      "vendorSig": "0xe6f052fb4157381112d60b2ac65b0367f9f945947992b5569138dede14fb29b16c99136fe90fe070cabe0f50b92380fac0a15e92f5d96f21eb69dcdd9ff92e381b",
-      "nullifier": "0x81b1069cec80be954db9b527333590de39136d5de8d267a1bb312c21abbd7537",
+      "vendorSig": "0xb60260171e01daec3dbac7add89285b7617ebc2047847c72b4e7bd11bfef91c73eef1ec7502ce5bc49da2a3dc6d0d79b3a53c5c290eb60dec57ce3846111db7b1b",
+      "nullifier": "0x4485d55721a5b41a91e6568698fa10f9b140d8e9fb639a53bcc3da5b4fdb8110",
       "reportId": "0xf049453dd2dce86e0c8b12ae41e484d8341fa8b0a7581a3ffe80ccaa53b5987e"
     },
     {
@@ -908,18 +938,18 @@
       "billNo": 445,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Sai Water Works",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 445,
         "amountPaise": 19000000,
         "issuedAt": 1792962000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x3273d5067528e2ec89b280f61604ec8ca558a9a14b5b08284e061baf4a3dd47c"
+        "itemsCommitment": "0xf441718c817cd458b9b1bf96ca2db818846613b41844ac839d1693a6b1920f8d"
       },
-      "vendorSig": "0x0380de2effd2ab3d866b9c28f301e44a1b93fed0b38c792f28bb5465522335c16233a1c69e14afcbffcec34f50c9a9b978c527d66e6ecf9ba4527de02c74ae2a1c",
-      "nullifier": "0x735f06002b36121d7d015e5767d7c90adffd6440e78bcde7013c08f463db1885",
+      "vendorSig": "0x7e17a0bee3601c5599e0ec0c9f4f8ce0baa6e9b41d878d99dc9316913775999419dd8bd9b46cb8bd1c544b2792655a37d30d1d5834c5dd6dcb352254c68d21ae1c",
+      "nullifier": "0xf38bb8409a4ca91851105f6ca11ab561c140452df1ff3554a814530ef7dc7162",
       "reportId": "0x78002012c554349e47252cb0f1ee84475554f6ee7b92152223a3ec6b244b6065"
     },
     {
@@ -927,18 +957,18 @@
       "billNo": 446,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Ramesh Hardware",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x13ED931D1757cc871F465ab98d42C77DFB60c339",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 446,
         "amountPaise": 18000000,
         "issuedAt": 1792965600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xbe0a04cc781ecdb42936f2785f4ea963daaf0eb0109b7225f3c944d1accdc11f"
+        "itemsCommitment": "0x1b1df698d36d0605e48f088996c043e5a087d340913fc52d390cb67ae3bda5e0"
       },
-      "vendorSig": "0x495edbae1392b244434360988d00e6a00ab5f82f1775b8e8a0a4e7da9bc7d99667098afadd058bb84fddb4542dcf57476ee55912d69976068461c48e9b0113931b",
-      "nullifier": "0x962569c3dfe4f0a6cfc161d1dba33367e4bd1860613a4acb580da663948dc9b6",
+      "vendorSig": "0x6bfd12720b6c895b3c0861511beb94919afdde788c1f180a206169fed329008b245e5958408a55c8a2e87d220c50d92c9c1d7bede2e4d2b94433c72b1f78838e1c",
+      "nullifier": "0x642cfc5cb63ab08dbb1ba57268141102fecd5180ab746f4eec6eff78e2b14e6a",
       "reportId": "0xd85a026f8ac8e75ce0472af3f917bf1fee4d726eb8007c06154e6ecabd290ccf"
     },
     {
@@ -954,10 +984,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792969200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x07890bdab984f02f81c2ff2703fcdcfc1fca03276eacc7e6f3375b1ef12f5625"
+        "itemsCommitment": "0xd686350aebf1f8c4462207e1332bf6062d132342a0a605df6b770933d65a0c65"
       },
-      "vendorSig": "0x05324606b02b5745f61ed4e0790dc97bc5dc77b9cbc83930bf81686a6fa23df47fd6076574172081e241252ce7c1de5baf7c095fef7c6b705d6f7b4cc0b194801b",
-      "nullifier": "0xbe36ee336c495920ddfc65de4c14d0aad37b47685c57b420273e97a5c0b7e88c",
+      "vendorSig": "0x4adcfb8053775a5255b97298e855b50f8e52e19e382d6740d0e27e91b245f3755669a636bd7989fadb6085241043f46f66305cd78d160e639db030cc5929a5b01c",
+      "nullifier": "0x7e9abaa41a4306ee3ace26f612ba06683ab9fbe8bce452e0cbb107c7121227d2",
       "reportId": "0xf485ce43cac3ef83c2fa66046162c3aa08ae0b4b582cbda15fee7f4cc43c7658"
     },
     {
@@ -965,18 +995,18 @@
       "billNo": 448,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Nagpur Tools",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x53905A4A49cD25fA520114c34a4405cb285173dD",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 448,
         "amountPaise": 18000000,
         "issuedAt": 1792972800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x6242b41b330f1a72ea9e4cac0ac6e957f6c52d0bde97f1db474d011f7e6ee59b"
+        "itemsCommitment": "0x3183fcb71b1c5c8e9fedd294c718ee2881fabf27377b1da4edad915071ba132d"
       },
-      "vendorSig": "0x6bfebaab8ba2bf4214da0d8327274373799b651c062f5b34800c247ad4238e7c3d72803c36210e8a4031226148ed373627e6e812c6de2d1390e76000208a9fbc1b",
-      "nullifier": "0xd434f2728314d350232a27ef5bdde3b3e89c3794d816a1445d861dd52878af0b",
+      "vendorSig": "0x6b268768120576453daffcb382b4864443d6ed7264e6e4ba7e0004cab7970f3b41d08a9f73490fb468eb5dbd8b81b9d59e334d93b05136396763b333239f229c1c",
+      "nullifier": "0x7c12a18100eaf6f190d0f77264c2b2c3ff677e36bd975f7e3fbb5cae7985d14f",
       "reportId": "0x1ebcfef3a4abfe659435c726fc6c463e1184c2e16a6973455bfecfd8633c8391"
     },
     {
@@ -984,18 +1014,18 @@
       "billNo": 449,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Mahalaxmi Agro Supplies",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x89FEB1e9c520Ff5083DCE5358C0Dff0A15E3A8c7",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 449,
         "amountPaise": 18000000,
         "issuedAt": 1792976400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x6e670ad05afcc9d59beb33a05fae45b06fe3870aafb261e85207b9bac187fd6d"
+        "itemsCommitment": "0xfa6fa70747dfa729f7adc02462e288bebcd23f0b47db0762d918e81d5f43b639"
       },
-      "vendorSig": "0x5dcfb4f342ae28a0a73f15f33c48c698e1a94044f66b798f8947d9d26b2999b06104caf2a6a8be97d7c1328d63829c9e94a8d1c16f81c5ec2bb06db357ba99251c",
-      "nullifier": "0xec0c3fa8c18e39cf45cd664a29fcf4062c44eae8035e63d1d16470f6c67558ba",
+      "vendorSig": "0x6069664584674025ad1f65d15e76417cdfa14cfba0eda4b642f95dcd6504f65931cf47bb831816a674ce5d24bb84c6dd7eb502ecd3940cb89191aa41d3bfa1fe1b",
+      "nullifier": "0x2bf19d9c208ea2f27c3dfdd6b5427e9bf3d9cc4624f9a9d28eda71eeb970d7e7",
       "reportId": "0x5ddb8f33b7a08af67beac48b3cd8e9487bf2faf67bb37d4e91147666d66bdf12"
     },
     {
@@ -1003,18 +1033,18 @@
       "billNo": 450,
       "label": "AMBER_SOCKPUPPET",
       "expected": "AMBER",
-      "vendorName": "Shree Supplies",
+      "vendorName": "Jai Bhavani Traders",
       "bill": {
-        "vendor": "0x3B42b9BB32448236712663b213Fd65B6bA9c82D2",
+        "vendor": "0x847E6c1B3CfB246FD26414dcFE1002D3cD24cfd2",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 450,
         "amountPaise": 18000000,
         "issuedAt": 1792980000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xcd9106c2cc0ec37bf5e8cd2f8da2eca9c58e6a65c643b922f6ec3d45509253db"
+        "itemsCommitment": "0x111ce73c557662aa9fa6310060330e18e34a7d2312650d62b88af55064f5da4c"
       },
-      "vendorSig": "0x64c076bfc0cee42668c368dbe6fe3f978428cfd3eeb384adecb7c3ca8ccfe3fb113b61aff21d61befdeb3b989caca3c57486497aac38690c6f43df156168efd21b",
-      "nullifier": "0x008fdc52efd206e8441a86048555dce68d091a27b92962ffd2aed6b2ec90c6ff",
+      "vendorSig": "0x6fcdda6003dc0170108acf94355c85ea7ed437e20a764a621f8e85cee0fe04a74ed52e49f8e6d0b044a756f51f581bae0fa025e749ba451e0062552208114f351b",
+      "nullifier": "0x740e355f6b5fcaa4c32b810fcd95b810975a7b767df2fb74fee866fce862a661",
       "reportId": "0x13b39ac6bafc43696b71e906d8adaba2b53c7c915c8e126091a60946bf93b42b"
     },
     {
@@ -1022,18 +1052,18 @@
       "billNo": 451,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Ramesh Hardware",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x13ED931D1757cc871F465ab98d42C77DFB60c339",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 451,
         "amountPaise": 18000000,
         "issuedAt": 1792983600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x86c3e9e292a91c879f19bfc81d4f4a1f811cd7216f25e4422508d841eb907ab8"
+        "itemsCommitment": "0x38e8a24b8cdd322279f2bff44e45521be2ab56b4bb75ec89b1670b32272fe6ad"
       },
-      "vendorSig": "0x102b5ce592435e687dc61e9161dec6ab92a74dc53bc17237aaefc0bb3b6e25373ff6215d8f47c7239dbe924783898f6041b476b4adf73a14a687a8236962c8841c",
-      "nullifier": "0x7b4361179565ad8d7c0320307fe6c2869647f51378b9a2d4d677fbaf77fdcaa8",
+      "vendorSig": "0x4d14067c38bebc96b18127fc1af298fb4f53547deca95544c41705e12dea9d925910be603ed494b24e25bcaf3fe0ffc71fe210dccd0781986441e5f08f30e21c1c",
+      "nullifier": "0xf5247df89792185671d2108deb41f4ef03c708d6d18126cbd97b284c381ef56f",
       "reportId": "0x263f4e4578b45b4389a19b00fe92b2f17d13943f40b75d876dba917190c88126"
     },
     {
@@ -1041,18 +1071,18 @@
       "billNo": 452,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Vidarbha Plumbing",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x4fc944003aa393f501b82d4ae4cE967521Ab253D",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 452,
         "amountPaise": 18000000,
         "issuedAt": 1792987200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x3d3ab58585d197ab2d658e9f5232897848ebde4679d93d3ff079b7fe54dcb42b"
+        "itemsCommitment": "0x48c8e44a4e62da20667b3fea3903255bde405d3a8c3a75a0c64a63b69e3eb60f"
       },
-      "vendorSig": "0xd08c13cebbe9b3ba512f54ce9ebd686949b66b58582a4ff7393b4ad9051a60bd13b00f95a33cb0930410c7b6b88f0063949f15811cf5d185069e87a4bdc466401c",
-      "nullifier": "0xa9f0b327062c0ae541e4717b661e2b64e348b2128f7bcdd4e339c64f639fffe8",
+      "vendorSig": "0xb4b28f53c0c8de86e7a15363a5b18fc1a72d2ee8cf2336ad96b682d6178b365e18e1ad87ebf199bb5895aa2ee18ed7aac6f43bb90b1c837a5e3ad16c811c8a161b",
+      "nullifier": "0x14f65cceb6262ed1b5ed1acb6d6c74d017ea1cb41c23655ebaf3444a5c0c977a",
       "reportId": "0xc2c5366aa9629b30aa46af6d86f9f87f2dd7feae9f6da7bf76dd74ef4f886c7a"
     },
     {
@@ -1068,10 +1098,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1792990800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xa0f2afb9d5eb59996160a2e52a33577b561ce826e683c42fb642fa3da5898706"
+        "itemsCommitment": "0x4b105c0b39494ea369ed0cf8645dc718d01c15ac35e2a42013356ffc5b168115"
       },
-      "vendorSig": "0xbce7ad0caf58cf2fb2e00d59b232f5eac6691f6d04fdf4ff43b2c33b30e7dfdf7be8617ad31980c0787033037227075d8347e3345429f9181890cc0819e8e81e1b",
-      "nullifier": "0x32ea9cdf7fb35e7162833a1fdecd1092aafc896e04dbb68ff26aec6dad6c1c16",
+      "vendorSig": "0xb020b2d79589b220b1c98945a4c0a1876e67daa86f612e601a25bd8899a67557624872a433c9f3ce30aaaee700cf965751a79698e9139128f57f44fa3a1c8ff21b",
+      "nullifier": "0x9a6831d2952e4f91d7003ac3319b259c0111d8b6d12a3fd4fedb4e702578bb82",
       "reportId": "0xa3dfb53f2e20b23db7255cd277dab3566c708f1a0dc2fcfd88bbfe9f117cdeed"
     },
     {
@@ -1079,18 +1109,18 @@
       "billNo": 454,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Nagpur Tools",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x53905A4A49cD25fA520114c34a4405cb285173dD",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 454,
         "amountPaise": 18000000,
         "issuedAt": 1792994400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x6d3aaea78be603020c83314384b2886f09a85871caab8f117e09e82df334b5fb"
+        "itemsCommitment": "0x98a999929916c456791db0cfda3d5b2b5003f68a1c0e3805fb55497fca62f891"
       },
-      "vendorSig": "0x87762cc7e2a426c11885db6a8947b6e97e765a0127a5f3e4d795d8f74340861e1913d0cd9e1681e888aa6fec9f813498c15f7a521c83fa3d6e949781008a1ab91c",
-      "nullifier": "0x11f09729c083831029b44d8b41ca3cba9bbec031756cf5e30368bd7f51134c35",
+      "vendorSig": "0x26596bdbb9f55f68cacf60d54278e69179826c13797c545303cff283234eae1e0d94ec1cc595c6edde3aea2a0e5f56f99fc31977ebec062a056db375df16107c1b",
+      "nullifier": "0xadaf1711c70df495060c27b9c9bd0a23754caa590edbf213055380e587fff26e",
       "reportId": "0xc348a346b95f82ad247772a6b56d1758b373b753a4e804e9ab50036da2246c7d"
     },
     {
@@ -1098,18 +1128,18 @@
       "billNo": 455,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Vidarbha Plumbing",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x4fc944003aa393f501b82d4ae4cE967521Ab253D",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 455,
         "amountPaise": 18000000,
         "issuedAt": 1792998000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x0b488f41b350c312a99409f426f08de48ca4e4f0bb6f34ef160fff128320671a"
+        "itemsCommitment": "0xce9c38bf50280b9254d53a35290973d2762a688a301436ef25f9a3718aeed613"
       },
-      "vendorSig": "0x8a7eaab66ff2c8b319c0e1159d389be39c86603d47a2346e7f059a783919e6f867b496a90174a959993febb638cc6779c7adf0cb8b9e20da16179bea87eb37281c",
-      "nullifier": "0x3e1c76b1944893b442d036551991bb0006fbbb14d56bbd67e35a621131ad8d21",
+      "vendorSig": "0xf6f085dc9ecc00ddb1bfbf690f62e0224382b092832cf6e051e6c944b73261d1378916acf72fc9594ff652ea35898800074cdb745ef5aa4ebec58197b327e3b91c",
+      "nullifier": "0xf0331da5c76d39c6daaab91f02f2dde592d574ddf5338393bd14ef39bae1a09f",
       "reportId": "0xbc8a734db00911f18c17aeafa6169723942190a40165de6f7e8f560ba11fa62d"
     },
     {
@@ -1117,18 +1147,18 @@
       "billNo": 456,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Vidarbha Plumbing",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x4fc944003aa393f501b82d4ae4cE967521Ab253D",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 456,
         "amountPaise": 18000000,
         "issuedAt": 1793001600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x2d2989ee12e72b7e06d7069e713e081ff444035b023147262697411e540b6120"
+        "itemsCommitment": "0x441bd5744e125a6c20b87496ec42ec0cc2073010993f915ad45785ea02edee3f"
       },
-      "vendorSig": "0x12299db95167eda5d8f2a1ce115212aef36885248f4b9ab262557cfea215bec5433e607c681ecae7ab9ffade35a7dbb70db035159d3eea92066bc7278afc5dbf1c",
-      "nullifier": "0xeef3a1a18a5c10fc5fbe393e59cddd1d71847b3549642f8673c7f6ed8a881cb8",
+      "vendorSig": "0x605395f8ff112271410a5a3b29dc4c498862c30119097c0b20421c295fdc154d6eaee2987884e55bde339bb6312e55dfb3667a9044aefbf14cbdcdf00fbb51751b",
+      "nullifier": "0xdc3596a6de4a8cc9014d33f89ad86e44361266755c0d0c27a37b48cd34c14d42",
       "reportId": "0xa9ff159c3f123c532e1f0271c0fc148500fe04f1448a235122c2a2da27683f41"
     },
     {
@@ -1136,18 +1166,18 @@
       "billNo": 457,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Deccan Pump House",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xFB168836a2f58Aa1330E0EE4d4EE0e6ae2DeBFdc",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 457,
         "amountPaise": 18000000,
         "issuedAt": 1793005200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x6c8eee31710ac86a1e604f72ce88ca44dbd5d341af0349118c91b409ff107b81"
+        "itemsCommitment": "0xf18863aefc5627e4717159246950338e4a4dfb7c8bf2e7639b4f7c4e8fa4bfe6"
       },
-      "vendorSig": "0xb00cc32bc2282548235ddc84167948f3da7e6238001f9dd83fb653a20b0baddc4d0bd07c343585d1b697d17f24df706dd241d6bfae0fdc8ee303df3dd7a9f6281c",
-      "nullifier": "0x2d2c4196864a5556faa73180f43403e9a6f520c11f935f6b6e442d3c3f7134ab",
+      "vendorSig": "0x0262590c68fad628bf791b7556757fef2ee7d922d3aa7d8770d9511a6b798fda699e74498e29f34668cba8898e6bc2b675c097823f579232e61bd81591ba8bfd1b",
+      "nullifier": "0x4ece7e6a67435c647af527404980c136bb9015cb26b1cebd529b46dc0e01d0e5",
       "reportId": "0x93a19083f32a8f957951ca6f3174383959f54b05dbf21f6e0d544e2011824a35"
     },
     {
@@ -1155,18 +1185,18 @@
       "billNo": 458,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Sai Water Works",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 458,
         "amountPaise": 18000000,
         "issuedAt": 1793008800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x50e7251c681eca4469083dcb1740c4533314fc6859d0d371bce98448332d3db7"
+        "itemsCommitment": "0x10cf6d123a08f1e59fa0f8cb5cb498391054cccf840cf66bc0b4a2370436cda6"
       },
-      "vendorSig": "0x23e471eb68b258ed916cc191c91f11970be26ae0bc5f8179ac77df5c501929d56d94ac544cf89130fe84e9ce21a7186af3a849caaeec223c06af277af582559b1b",
-      "nullifier": "0xc6fb672b9973408f2019f52f7e0f769c1520a773fcececf8ee0ca84f8175a43e",
+      "vendorSig": "0x650ea7231c11b9c3abc3b61d85729582975e5c4ecae1695891b2582e89cbfa472b3441c74816f42551c6809fc80ce70ff97b18a21074abe5cab95f697df5bf2a1b",
+      "nullifier": "0xb6f851b53760b263f9d5f5cfa1e20ae2a017c027b8eb920d2e34599af3a6290b",
       "reportId": "0x866e66d8971693ec661011e74f6f14c8c71d0ce86fdf87c53401e53494b5c8df"
     },
     {
@@ -1174,18 +1204,18 @@
       "billNo": 459,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Kisan Borewell Services",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x243B3fD67E894d3F004F7b0e8a36a41f0815Abee",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 459,
         "amountPaise": 19000000,
         "issuedAt": 1793012400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x6ac0bdbcb98d45fbb04f6400bdf9d20a001194febf66af516c1a7bc9b29c1eb8"
+        "itemsCommitment": "0xad3f449ac865b15aa0224db568377f270dcd021fcfaf87e7dc6dcd0269c090d4"
       },
-      "vendorSig": "0x282536cfec43f278aff253f96fd39bfe2ed9bb05b0a47e30ce4af4f7da968ae93cb855ba8a911a08eca4e0969fb75ed4471cf0bd56fd291062bc0f7704f8df261c",
-      "nullifier": "0xeba772f76b5dd7218419f21908ed90183336f70317ab02b8295561e02b07a095",
+      "vendorSig": "0x44301b2908c560c3bc9e07dd730bcaeda0d0b025b5ad76faea1585daf0ef119702807c91ef115236afa13c9411e52f61f2d0c9293a37a30d9c4c228032d7d2071b",
+      "nullifier": "0x8c6f8b9b6187d9e2cfe82dc52a121d427ca4653b0dd4fecf734b787b5a9e3c4e",
       "reportId": "0x50f7f0600e9b3d2400bdcdd93c1452e5bcb2306abbb493ab17f1a20f1de30acd"
     },
     {
@@ -1193,18 +1223,18 @@
       "billNo": 460,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Mahalaxmi Agro Supplies",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x89FEB1e9c520Ff5083DCE5358C0Dff0A15E3A8c7",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 460,
         "amountPaise": 18000000,
         "issuedAt": 1793016000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x1eba556715376067db9a505d1dad739b143a8e9f98fdfc6ad7c94e4f14589f48"
+        "itemsCommitment": "0x4ab02ec32b5396ec6ef55d56095ded328ac9e6cac54d70fcb1a32452d3e31e18"
       },
-      "vendorSig": "0x3ddf0b929845d1334104d9d4ff04e2aac664817c5c6c179ed97a2b62989d3fe467dc1c0a06d7959a7500f4da4cacd6bc149be7240010d30a3d9c56bd13ebceda1b",
-      "nullifier": "0xe5b0300bea9145870a8be9be22c4be8b0255eb58013a3227cabcae563954f744",
+      "vendorSig": "0x932d82b2205d5b9cbd62d242d4079de4f8c41179c87a699bbf0f9f99ace5ee044225c1d28265c7ec3c42f967e4e5e1d31ca1d82f6f02e19e0da96157f019d01a1b",
+      "nullifier": "0x61b0657e0ca5c4cf6ce0dd58b4c8e135d47b431d556e9f9ef18d9a7dc371c9a2",
       "reportId": "0xbc8fbb9eddcb23f5c0c78c0d05bd259a922ae9027ba888716e79a3617c14d703"
     },
     {
@@ -1212,18 +1242,18 @@
       "billNo": 461,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 461,
         "amountPaise": 18000000,
         "issuedAt": 1793019600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xc612571cca6fc29ed947726e0e50f645a1a619640a59fff53ed405d5ce8cead0"
+        "itemsCommitment": "0xb4531a528fa2e60059a6099299341024d330ecf2ae08208d51d3fb26e9a37289"
       },
-      "vendorSig": "0x87e38704143e92a9be1d62bb4dc787141f0834c8e1b8b844e48658b5cd942c0e20041d70e76ef5bf9cde144f244cf380cabad7aa7b47673b5afc00cfb695c7b71c",
-      "nullifier": "0xfe708fd6dd24c1245bd0b7097b5e7df609e748c68eb0834a2a0e66c08ade2b0a",
+      "vendorSig": "0xb80c5824cf77593510c9fcfeb18f231bcf5783ddbdf698d4161e3463545337d04b7b9069eed7c2cb884fcb1a598240ac30d3371934d2c1e20aedebfb3b2acaf01c",
+      "nullifier": "0x4a0bf33f80e76c9e293ad83a11439a15d840a02427f3310fbea735afcce86d80",
       "reportId": "0xf6d344f6f37ee7fefe494a24af5ae3995d777e99b0c18cf7b0c57cc4c308b0d5"
     },
     {
@@ -1231,18 +1261,18 @@
       "billNo": 462,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Mahalaxmi Agro Supplies",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x89FEB1e9c520Ff5083DCE5358C0Dff0A15E3A8c7",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 462,
         "amountPaise": 18000000,
         "issuedAt": 1793023200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x878ee43ffa9f5d245dafa78a557d61f438d1a1b0640d3b0c8f14fe839eeb04f6"
+        "itemsCommitment": "0x39fc6ce38ee52cfddbe35a67809494eae0c07ae3d8a2833a59cde8835b7d6102"
       },
-      "vendorSig": "0x1eea1ab21764eec5dd49bc31c4daae8196f9e028ad63c7e6a3a949afb069bdf12f7d30a238aafe319ff98188bd284652a3f6aac3922572bcdf512e6b00dcdd181c",
-      "nullifier": "0xc03dfd00a7fd8d1d8a189d8ece040845d98e807a80be366d9d5a8daf1aa2c66d",
+      "vendorSig": "0x9b15dd7c0680f2f1f9a4c8af0f0de5e809fc16c3ac9ae6af66e611dc9386f334763661c17b3088975ebb4fbf9966d2af5a610a11743d09b1b9a71ced52fdfebf1b",
+      "nullifier": "0x7c598cab5169e20f1ef039fc16ffc4ebbb13e85d8291a80428c2969e0567c866",
       "reportId": "0x083e9023c9875201ad4704ad842f60c2bb1852917b90482ab01ec30ac0657bc7"
     },
     {
@@ -1250,18 +1280,18 @@
       "billNo": 463,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 463,
         "amountPaise": 18000000,
         "issuedAt": 1793026800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x4a17d9c52c82b3b8fecfeb98b8a7c9ee3c3e06eeac1d0239cbdb603482a2bedb"
+        "itemsCommitment": "0xe1305288c06147b6e9656a667786f2fa93a66c9f0e41cf07e40a4dbcd4897907"
       },
-      "vendorSig": "0xde1df7353b0466e73d1cd40feca8b06b958282b1ff77308894eee0420adc967d580967a030b550a51b16983a7c27f17d56237a0b2f9f0e3bf958da7b4163f56d1b",
-      "nullifier": "0x70e3c86822a8989b48dd0d15b0274620b764ec20932b71efa76f93d0da4592b0",
+      "vendorSig": "0x7bc91a8fb7c0ae7adff5fcf1914a9d1fc0f424c78b2f21c1bf500196e044ec9177e1495eb92a35131642aaf02955fd8a5e89e98252c44420290c8974b47202671b",
+      "nullifier": "0xd1fc2617db7bd9fe4c8e5b171fac490f2e132c38622fba2b84fd04883557d141",
       "reportId": "0x579eb72b1b2a2867cc320597378ae89a9eeed8a9ecbab34b9c1aabdeb71132fa"
     },
     {
@@ -1269,18 +1299,18 @@
       "billNo": 464,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 464,
         "amountPaise": 18000000,
         "issuedAt": 1793030400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x6a2ea5e1fe34adf83f42c10d0d38155318cd20d1eef537e41b0355138b7f9d20"
+        "itemsCommitment": "0x29dd353d84caf386bfa68b1adf7ef22e0fe288802224ab5527a54c7b2715230d"
       },
-      "vendorSig": "0xa5e22b8466f6c8bb86164a68b1d1fb236f79abc5590f99328e3bf646be0cd9357a2016d0e42f22a7a13281160b74501ce8f3ff492bab2ff14f89bdd6e2e7c0491c",
-      "nullifier": "0xaca74f4053b9bd4fba79d5d95b3a99ae2783ed05f54c19fd2741240cf559d7e3",
+      "vendorSig": "0x986e0f974922906e7c3d14a152b45241417fad6cd844292e8be177fbddb6fa171495984a956bb33fa37c7aa63c1f3df2e530a8e6ef8f3b2772a8f7c5592188061c",
+      "nullifier": "0x8da4099fdb218b03b82150dcee8c81769a0fb8d278c40693154f314b30b8212f",
       "reportId": "0xac32c456f220c9df81f58a6a4a6c46ced92051e1677324d0f6fc809561151855"
     },
     {
@@ -1296,10 +1326,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1793034000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xf6109dc4a3118c9a3d87179abdbacb107b44c61c339a8dc697300b55fb6e3e29"
+        "itemsCommitment": "0xbb8d63adf7f4ad86ac4ab60f5f1b3c2602af458aab3afc4b6c0976d4d4235fb0"
       },
-      "vendorSig": "0xe06db57bf66ba446752fedbd10b589febcb31935b4cc802051ff33c701b4170d2bc948ed21ef3ba0680d691dc2fb71f85d8bb3e71e7a830da8bb793a747557a31b",
-      "nullifier": "0xc267990a2e4dc287608d8872a0df85ea66c38820e4378203e9d4e03cdc2ba18f",
+      "vendorSig": "0xadf77e370452d8bc3e37b485cb083a1f4baddb2b2e64fabce2169c4a83b026f27aba50b3a9acc59b5cf0897123bb2423e500c3794b2bdca97575bc3f725538711b",
+      "nullifier": "0x129f6aa67c2a8db65aaaf4ec3011a7e3ff07a8275083c80e9a0b73be12cd1a01",
       "reportId": "0x0cfadc46e97923b45cb8aebcd61e20fc1bd5594e6b54d28fc94678fa23d4f347"
     },
     {
@@ -1307,18 +1337,18 @@
       "billNo": 466,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Mahalaxmi Agro Supplies",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x89FEB1e9c520Ff5083DCE5358C0Dff0A15E3A8c7",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 466,
         "amountPaise": 19000000,
         "issuedAt": 1793037600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x685665f5a256d6db669f071bad389cfb3838c002a14776c3c5b9640f335275bd"
+        "itemsCommitment": "0x0c248c4086ce53e66d131be45ec0777c5f22572809be285f70eeef416c5f2301"
       },
-      "vendorSig": "0x8c888124b0be84d8cdfcab9941578cd0c601bda3ce16339efa85d405905fbc0d23d47ede03191739e6765360b44eed2bcddd46f1f21b36d2433839db5aea6a0c1b",
-      "nullifier": "0xb0150a2aa5b8b888bf0a847f1b0f1a8269214e35c8969af8d864b8f737e08027",
+      "vendorSig": "0xb929f4adf400032be321b4ddce5178698ababe4a8df27dd3450884fd4ae5ad615174b54565e2c2f4eca0c8819c2b6d72e097084cbac7924eeae96d5a624739a61c",
+      "nullifier": "0x32e3681f453f7a36e88b4c270dfeaa2651ecec49c32f06f257991b6aa38998a1",
       "reportId": "0x6d17357c8ce5c6c7fef794d3cd0e9146ef16664713ea03a64cd13a9be89d67e8"
     },
     {
@@ -1326,18 +1356,18 @@
       "billNo": 467,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Nagpur Tools",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x53905A4A49cD25fA520114c34a4405cb285173dD",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 467,
         "amountPaise": 18000000,
         "issuedAt": 1793041200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x0e922eb6a18a02c42d5b8f1a82119166e03626525ebf283c329324d1fddc7654"
+        "itemsCommitment": "0x4f0c970d16eab09ce43de7891784d40106de7588638353f731969ba823dc2d2d"
       },
-      "vendorSig": "0xb06c67772808c7e99d900d3f20cbef2da778f6d9c049735c62376981dbc0f4ab7b62756528871c756438cbc5ff1c297bf6a07434104475efdc49f822959a54201b",
-      "nullifier": "0xedfc5f3b9a386f88bb41b624fd945626a9106190a8eb66d940285ce20d1e914b",
+      "vendorSig": "0xae12521071b19b0e2651ef2ff31efbd66141c9e0fc83e2da232e75112f45ab6d4dbea98b9b42cea0f6e2e246c37faca0de047acdcbd0de2ed1572e29e911dc3f1b",
+      "nullifier": "0xbc0026af5fafbcfb78a05f2ecbf059724dfc68211d4cbbd02e77f64f8101dd9a",
       "reportId": "0xc64a6d5377188cc1466334c449f1c74d046872820894a9fbd2f1d9473a32b29c"
     },
     {
@@ -1345,18 +1375,18 @@
       "billNo": 468,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 468,
         "amountPaise": 18000000,
         "issuedAt": 1793044800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x14af52baa96eef00839fa89b27421e146c90df12c99f09684ebdb8a18762a5e9"
+        "itemsCommitment": "0xb2825ec179fb68da7965bd3f0c37d3d59b939a0ca0c8c454a7f8dd9d62d91cb2"
       },
-      "vendorSig": "0xa00ce8c1dfd58a778ccf75de7c2d75187da39a90fb391afcc87c4d2eb3da97c61b7b4cdd69a825b8471edabfeef243beb76e555f6ec114a082a865a70a4232b71b",
-      "nullifier": "0xbb521a59a376bfc711310afe84d070cbaa86ccfb13e32d73432970fca908a295",
+      "vendorSig": "0x3f6f41607a685c89266ff477e372e8c636c14dcb315b626af022e5e8e6ad734c6fae6cc2377d4293d32be50e64e08254914de9738416cd3819e3c471e6c271121c",
+      "nullifier": "0x97b7a7e727f04061b9430bc9c3cb413a3aaba5744d529b135049546c4b4f5bfc",
       "reportId": "0x3adec2dd5a9d283b6b590664171d566c9fd57f407420c680fda3682d23e77a72"
     },
     {
@@ -1364,18 +1394,18 @@
       "billNo": 469,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 469,
         "amountPaise": 18000000,
         "issuedAt": 1793048400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x2035f162d62144e677357edb044022f07b615a13203bea538336e48d640e1206"
+        "itemsCommitment": "0xaac20e4456b057afce4d49bbf084540a16be3b8420aafe91d96bb2b0e1550785"
       },
-      "vendorSig": "0x0b4dce3b6dec4e7af46cec099ee47ec0db4b1b70fcafd5f48f142a1ad6a9979634d43d9791201e4cf334e5cac0187fdf9378f88e7a939753f8512c78b2f7b42d1b",
-      "nullifier": "0x2606a69ba9b589584ab6ad31f5e002f77afb7d2910f2de829e6ba63aa88c254e",
+      "vendorSig": "0x390e7f55563572388d85e4ba63cb909bd24704c06f48bcbed4c1ed30b9440f4e46794d53a0945664cdfa4fd747a666d2850dcfd5e1701764a19a39aba45ae2651c",
+      "nullifier": "0x061926f65207fcb36f0bbe01758210fe55d03da2d96a78d9cff78d292790de4a",
       "reportId": "0x822414ac5e65d4a8b5ee313d8d62c5d5b5265aea3f48e693f616c1399cf33df4"
     },
     {
@@ -1383,18 +1413,18 @@
       "billNo": 470,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Gupta Cement",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x6C572a7c6668B28aa707AB0Db4e39c671b3f8735",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 470,
         "amountPaise": 19000000,
         "issuedAt": 1793052000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xe59371d0c64da7a3a8e814accd19db08faadf6a8dcae909068265b96ee354ae2"
+        "itemsCommitment": "0x210356db618ec82892926b8c7b1274c30c571cf7bfa856a21866744b13a9b957"
       },
-      "vendorSig": "0x3eb968070bcec8ef6cea8e3a522ea31981f7bb94d956c9caf2a7c1780b1721df10e13641cca762938d87e0880af7c3f4497d8d65711494bce7a1d1ff81d645ea1c",
-      "nullifier": "0x174052316bf222924c689029a7c4c981fd8eade5e29002d8a8c0350f54952e15",
+      "vendorSig": "0xbbed168d2dc0ecf188905826ae90e8f833a88fcfb3bd3cd23a445f3a704c94cd13117c0e706ce86ede2d651c326e065078729a98ac8fedc53a1b60ce77358a5d1b",
+      "nullifier": "0xb8af80887a32ef163f292f03d9f1a4003d89f30f832a2439787a87dc80e1ab3d",
       "reportId": "0x59b4dadc61de89e05a9dc2fae901e64ff7c358f5ac936f8efe14b4e93ed2de6c"
     },
     {
@@ -1402,18 +1432,18 @@
       "billNo": 471,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Shivaji Sanitation Co.",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xC51971b03669Cb62Fe3103652BC7Ea6bDfea902C",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 471,
         "amountPaise": 18000000,
         "issuedAt": 1793055600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xfdfff9ebc4a1629fb0e318d5c44dcb851e10691145547abcd6ec8a4b0ade471d"
+        "itemsCommitment": "0x66ff49fbd28bd641cae308cd57a9b5dac4a8ce2dbe3b2d6136e8413db75acd94"
       },
-      "vendorSig": "0x9142d5368de1c8ec5497ca76f5a14cedbf45b43c6803de8dcfad2f998916c5f261422e7d4c7a260241f68e932fc402f8447f0adf51cb3e627f3a910de7a1644a1b",
-      "nullifier": "0x2d835bdd561f2a1cf8a13ac303b5cfde4d9343a353795e3b0d4f0c32366c1d0e",
+      "vendorSig": "0x8bed140c9abb7515f579a6898c0b1c27c08f0c8eea10d15b574d9453372d8cf612169b566a141caa8f3c74759bdb48e99fb59a3a8b1e1d85361b709101c42d131c",
+      "nullifier": "0x930addd92da5c50283ea4c1a3de605ebf84a40b0f72c2dcff4cb39e92a9d8018",
       "reportId": "0x6f6122af79c93a33471f6dd2cee6a2ab1ad3315cae2973cf2fc5f145398e5cdb"
     },
     {
@@ -1421,18 +1451,18 @@
       "billNo": 472,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Sai Water Works",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 472,
         "amountPaise": 18000000,
         "issuedAt": 1793059200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x7011481372e6a75bde4f22f0423a0b38a4d1d294a202ed211b153064013c617d"
+        "itemsCommitment": "0x748631249c6e405cddf9de1a8ab697ddcb806dddc58d6867845596ea9b254164"
       },
-      "vendorSig": "0x311210386be8b7d6ff323227744857737f7f0f76fbe1a452433ea67bd48e1a0e61bee169de579c02c3d7c96e0bd7e76cb42f74371c44497c0b2c48e2a494ae081b",
-      "nullifier": "0xc6f7e4d19d59f4398d9b4cdc5b083599e0c12d454692d3c18aa578b9c7078cb6",
+      "vendorSig": "0x2ed4bd252eb668c8d29b70ba50a48b5670c23429a090ca8b9203e23690678289470191d8920a2ef5e415ee169251e660b9b7836d936d6f1f228dcf151cf188941b",
+      "nullifier": "0x0884e61590ed6f0481323e64392ac05c4ab4cb3acbe0e5e327e9e23afe8207e4",
       "reportId": "0x429624844f1e2c503a92f5ebfb7336266da25acd69b2f65ff338e8aae771f945"
     },
     {
@@ -1440,18 +1470,18 @@
       "billNo": 473,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Vidarbha Plumbing",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x4fc944003aa393f501b82d4ae4cE967521Ab253D",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 473,
         "amountPaise": 18000000,
         "issuedAt": 1793062800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x86553d1002578cfe951d8ede4b6b8040ce201ee4006f985400bd919dcc5426a7"
+        "itemsCommitment": "0xfee3a325d329f79a4282f4bc2c7c960a1b779daf24e2fc7a9d7d0be3ebc2d8a9"
       },
-      "vendorSig": "0xfeca621a45a728504268e3bf96fae7ee489a7bd1737bd642888247bfb6dd67123df5acbc07e8a445b0158d0b786bf577b3c82bf757c24044db5b5dd6a1fb013b1c",
-      "nullifier": "0xf197f0e7118cd1f14e738cdd716bf5f35ecb024fe92fee9bb9df140b5ad53997",
+      "vendorSig": "0xe4002f062e262b36b668b3143c77097e9d58cf91de2729b93e96ddd5665681bb4dd1d34018e76478a8972e4356ddfbaef6c722d8ca74400220b459bdd4aca3941c",
+      "nullifier": "0xb4acde3920de126b17c80b8e67a054484fbd07b75e6d846177c6269ab0f1fe9e",
       "reportId": "0x8fa0e1b84c9c88921ba739d8e612caa6313770a4051d050d6f7db3ac0d6b26c8"
     },
     {
@@ -1459,18 +1489,18 @@
       "billNo": 474,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Ramesh Hardware",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x13ED931D1757cc871F465ab98d42C77DFB60c339",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 474,
         "amountPaise": 18000000,
         "issuedAt": 1793066400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xb4b0f551a57e9e923aa0724954314ca0acbc6b1ddf43e995f64ee60903a17b6c"
+        "itemsCommitment": "0x1de174ef0921b41202ff257dc2efc95908581ecc3d0c3954773048ed0fbe4d7e"
       },
-      "vendorSig": "0x9daef6b1c74b741314b50588c87f2605fac9db22cc2e774ad88b8869578c78ac0a35bf57a1aaf84a0f44034e673f97c9e9cec5dbb4838d266d669f82a92b131c1c",
-      "nullifier": "0x4b3ef9a6a8d565d877b86a51f9d4fb2c011db3d3090d76511e89d9eefc516edc",
+      "vendorSig": "0x2f2db78add6a2299da21d5ab8114258642077e4e67fd8bbb66fa1c95495899941b925fe168ceefdc5929b61139dcaf909aa13e49353cf6f48dc8b34e310a9a1a1c",
+      "nullifier": "0x9a89ada9f38efbedcc22cb6c2b94b859e3b581b9e185f423da8db338f43cd0fe",
       "reportId": "0x9f972dfe48de619062d569d0437a7781f79900c91790b305d946ab148be8899b"
     },
     {
@@ -1478,18 +1508,18 @@
       "billNo": 475,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Mahalaxmi Agro Supplies",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x89FEB1e9c520Ff5083DCE5358C0Dff0A15E3A8c7",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 475,
         "amountPaise": 18000000,
         "issuedAt": 1793070000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x0f8495e6e4e534b764b9e8c748071b6c6cd5cf44491e1e20bcffe2e949a0b55d"
+        "itemsCommitment": "0x3a51310a7b89ae10a3257b3a2449fe22e4701f0b6daee7fa9c8b303cd52ef5e7"
       },
-      "vendorSig": "0x2def617904c17e8827fc64db749abfa20d962b061b188d2913f7c3741309d304066ecba72d1bffd8471cb8647646dcbd12f70884f559d9eb35c9689ce0d3077b1b",
-      "nullifier": "0xbcb2ab230547b413d78bbd70873b7f3cf713c97a94f4fa7252ac32964e31d662",
+      "vendorSig": "0xb9be7c8547539f22f7cb482c6a31c9d4562937bda6a4c0f0589fbd04ca29d9286b2d4f4fca044f5df58c7131667e465d01206317ba4daa04c580c421d1f2917e1b",
+      "nullifier": "0x788ded7347ad2ba0a62aadc89a0c7b128548d9ff32cf3e0d3944658021eb328b",
       "reportId": "0xc3ddd1931dac766ad60acb1a73bb57f4b5be762f9be0b511dcb1f2c1a9b76802"
     },
     {
@@ -1497,18 +1527,18 @@
       "billNo": 476,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Nagpur Tools",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x53905A4A49cD25fA520114c34a4405cb285173dD",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 476,
         "amountPaise": 18000000,
         "issuedAt": 1793073600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x12058e47ef43e128768a9dcd6eedecb06b122999b9bb97f3638ec73676c459cb"
+        "itemsCommitment": "0x2fd5343334cd3e3f709465784d21a9ddf1bd8bef4ecb948f2b55e06a5c8ce830"
       },
-      "vendorSig": "0xa33a0e9d19af5d65a02e0498d089652999700dcf5b7ca455ad56d512502de998605dad5798255d68de6160ab3b2590ee7a71b16aa533812a97f16e669f9fa54d1c",
-      "nullifier": "0xc752d9d430bd24067d97d830dc567897ab39ad70ad3209b63afb9074bec8bbef",
+      "vendorSig": "0xe452daf924879fb01c6c4c1cff6e369e2d6f8380aa1710ad728444b054149ab27a00091eb539f0117c34a120b05793d3873d271320505ac7bb70792781e47a281c",
+      "nullifier": "0xf019554d0e2381ef2b8c5cd4cca75f5c30ecc995b00e3d0e0a9ed52ca72c3670",
       "reportId": "0x6508b7bd81c281e75a7c9a454e257dfa303d58e50a5080466fac500d91d1c971"
     },
     {
@@ -1516,18 +1546,18 @@
       "billNo": 477,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Nagpur Tools",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x53905A4A49cD25fA520114c34a4405cb285173dD",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 477,
         "amountPaise": 18000000,
         "issuedAt": 1793077200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x80aa97967d4b1b20c1f289918a10f0d19b89cd4fcc112515b693f4738b72f135"
+        "itemsCommitment": "0x3f66e78116f84216056cef23bd38cb894fb5cb857e3c99a9cda9352ccae565bd"
       },
-      "vendorSig": "0x57e2880382dad42dc65cdbed742d5193fdc94951f564dc2e1064d3779b0a354d1b44746903707beb2c4fca6cd7ab887c00019c3efd9a7be703c74967704368fc1b",
-      "nullifier": "0x267a4694ed5349fff4faff6ac8ccaf8480ebdc61f75f94fe0828b8a8db89687c",
+      "vendorSig": "0xad02d2bd8bc6febf51057142143e92b528fadad5824065753749e2f094eb95fd5b42b443776d8ec63a77418d012be02d79d8129f667e1e1342c5f522715c07be1c",
+      "nullifier": "0x17984113484ff135d9b9dc8c4506114adc65b43d443c20df3f3609bfa39a153f",
       "reportId": "0x94db40b84c7b601dba1da6049af55e1891c6dffc98c52c822569b49f4ec6e8ee"
     },
     {
@@ -1535,18 +1565,18 @@
       "billNo": 478,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Kisan Borewell Services",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x243B3fD67E894d3F004F7b0e8a36a41f0815Abee",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 478,
         "amountPaise": 18000000,
         "issuedAt": 1793080800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xb8a03f735461575a825d118d0dc141e3500e9514338e5efb066689be069496ed"
+        "itemsCommitment": "0x8eac0b440e469048cf3c003f594adaf72f16be7f125f68bba450f1a9d8e80d8e"
       },
-      "vendorSig": "0x090ffc2960d889785ec3bb2298a8c1fbe5597d74cdd7b3e2eef86b426bdf032543adea8bc1a571037a8d8d5f65ff10da53d1ded4e953ffe8618d5af7a86045281b",
-      "nullifier": "0xe2700d5861e955aa9671c451162469d6a476f029bb7a877862dc8779d24f1d53",
+      "vendorSig": "0x69bd248894cbaa824c2d77b921b88eb3f8bef88bdfcc01c8e617be4321239eb614e63f6ff0b824e23507c6fab8c9d6305f7ba9d165f71c0bc8fe4ef6687f81691c",
+      "nullifier": "0x69b95b86a5f27c3af7928fa503d08956b0eb1ee49e27ec4b92069a5631cc3d83",
       "reportId": "0x32286f313ddd41b799615fd15ab96ad7ebea130369af5b8b4bae7263bdb350e0"
     },
     {
@@ -1554,18 +1584,18 @@
       "billNo": 479,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Bharat Electricals",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x2f2330a69f50b71988E0cAed7361Fe753BED1Ec0",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 479,
         "amountPaise": 19000000,
         "issuedAt": 1793084400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xa5fe098dca6fb894b01fe00e4d232b805880d7ea4604235cb79ded204e1c57c7"
+        "itemsCommitment": "0xaa00aa43e808e2cc0924d3db8421a489f8c633c296866d4550a391706377b403"
       },
-      "vendorSig": "0x30607a7a5069385dc2c371b5c3e135cc094532d94612d008b1d058ef80f52bdd7eeeae53158f0f43e60d95fb315818eb73bddc54faaebf1ec6dfa8a703d3c5591c",
-      "nullifier": "0xee4ea571f122967066bf55a45691653878981d7f74fa1105808b20ac87c2b94d",
+      "vendorSig": "0xc537c89be5953c086d125f69cf25e08bf3ccec89d111f0c683a1a5f34898c3604c2caf0294dfe4b5a85ba023e6da8f70ab1925fd3d8df5a930ecd75932ddb6101b",
+      "nullifier": "0x02c85e159ef2d2c6ffac870c6f901d348dad2e21ce99b71097273dcb2bf0111b",
       "reportId": "0xdff38d9156732dfcdb9b3e0ed4b646d4bcad00243629023ddab14ef540733426"
     },
     {
@@ -1573,18 +1603,18 @@
       "billNo": 480,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Ramesh Hardware",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x13ED931D1757cc871F465ab98d42C77DFB60c339",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 480,
         "amountPaise": 18000000,
         "issuedAt": 1793088000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x4925e293af834d4ba355af17d777a63188b74e509e76a0c81795274be7440b50"
+        "itemsCommitment": "0xbe633def6654e693737c107b64a8461b4785f5a9bc95e6ce83924f8314591271"
       },
-      "vendorSig": "0xb7da617fe79ab1e158a84ecea42049ce9b27cf8618e23f2c29bd0a143ac903a749ae4be74386435d1fc16dbeb1263e24b4c96ffac70c53bc79eae1c816eb7e741b",
-      "nullifier": "0xfef2a317df43ab9953a46cc0d9ebb95ab027de1b41d041c757c39011974d8b28",
+      "vendorSig": "0x844b806cddd60908603f54ccc0f13054a6d2acdc6b3138ad5dfd57b2de18ac9904c61a16c2695635d88d572a3d8a6d0f4eb904f030e490618f7ea99751323d541c",
+      "nullifier": "0x56ca32282873273fa0cce0ddc1c7e8fd22704754992fc80d9038da9eb31273e6",
       "reportId": "0xfcfed87a53029ab2d1b1dcb763a4385f3808cf43837df6af2f75f55be8570705"
     },
     {
@@ -1600,10 +1630,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793091600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x291b2910d01c4068a026ef35f91ee686bad1ff7b97a1fc20719a660f91ee73aa"
+        "itemsCommitment": "0x350192c44bf342196406d9bb9e6a2b54ec62d388159f97ded46ae79f2d8fc99a"
       },
-      "vendorSig": "0x47a313ddbf86faa90b1826c9a0d5b036bf962c46f8c3310733b2dbd84de365ae586fe176365a5413ba2dc46be54a8b87aa42f086e0d047c531b70ba404aa555c1b",
-      "nullifier": "0x549da0b77db90009d85275d237139178bec8e1f03965746d4363ef68f1d80b1d",
+      "vendorSig": "0xe90f4bfe1a0613c4b172c68c3ff269a50a58ad010a676f46ede793f4bf6fc8aa35e78520bf62b2715e576a85fd5da6432c3c72f59f7da087e3d68d38e431a55a1b",
+      "nullifier": "0x5027125b748056f084dad286b6ce0d2449781c27db6945ed35150e6c5098d801",
       "reportId": "0x05eeaa024edacb32f3517ade9256b49f221571ab111ef77d7c2d7c22755ddf04"
     },
     {
@@ -1619,10 +1649,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793095200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x25147bb41b935272beb002170486f57b43df85f09cf5ad6b7ce380474ecad878"
+        "itemsCommitment": "0x366ea7933fd45b8ca34884b5f5374a878f01b71322086c7ab4af7a3f914de755"
       },
-      "vendorSig": "0x58452aa46ccc3f2ad990465e292543b361335aea6d483b966fe55f7038bca9487b0c2231bb3acd66b36e5b5d902b5ee06b8c87ce18c1ee910632adccf7311c151b",
-      "nullifier": "0xf91743d14a10b47e6c93dfea7f364a7e8a360ac841abe923935d503a48975e5f",
+      "vendorSig": "0x87e7cefc74694bf4c40c5edcd7d7b3111015eda88301e9c3352f7ab9ada8df72014ab0bf52300e44774d25f78fe9a37a25a62c9f7e6dc5d796f3eedb224152781c",
+      "nullifier": "0x05ac29aa812b540db0ab6e9e4953fe10e3b75629623096570f74ae4c14df7d29",
       "reportId": "0xfcd894dbc03e2f11e8e43c3c5e8e8e4a3359f8de10ebb4b024470fbc08686ec4"
     },
     {
@@ -1630,18 +1660,18 @@
       "billNo": 483,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Sai Water Works",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 483,
         "amountPaise": 18000000,
         "issuedAt": 1793098800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x6a513539e38c7de485842aa3a7bf23a73d08652bab2db7fe3651d5327711cc54"
+        "itemsCommitment": "0x424dac5588686179f942433062b2f8e494deeeed52c592c9ee4c0e9f8567de61"
       },
-      "vendorSig": "0x1ee2f85374e4e99f2d3009b11ee475a858af481578be2a7632436e97c683e08e16d14191d0f0a6f91c162e47a4261ad7ba56c406fbc5a73e1be1e09e7332ea481c",
-      "nullifier": "0xe89f097fb81fb0b403cc9fc9aeb3c58a28e1b660cee05c2ffb828e90e05e82d7",
+      "vendorSig": "0x1925de196ca885029f59f2052f432f0a4e27ac90ee0cdc3a6d01929c26621dcf77e814e65baa45b8b50a907727c450f6fe7552ad76c7df940aabd73d646d41741c",
+      "nullifier": "0x61db1ead29ea5753e284282f0cf2d266a135bb6ad6f68f53d56928c8ff178cdc",
       "reportId": "0xf1f9728364bc246173c265d2ed40a4b44c0118732cd613f48f8cfed0e5ebef2e"
     },
     {
@@ -1649,18 +1679,18 @@
       "billNo": 484,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Deccan Pump House",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xFB168836a2f58Aa1330E0EE4d4EE0e6ae2DeBFdc",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 484,
         "amountPaise": 18000000,
         "issuedAt": 1793102400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x5fdcc01929de943fb3fa07462d1100f6f4e4d884a4b670e92f293b62afdd6fce"
+        "itemsCommitment": "0xf67686de5466c5b8809f666add7668deae12a2e730ad32b9273dbaed6aa36689"
       },
-      "vendorSig": "0x2cb30f9e33f54b7a69bbaafae367b867c6833d74c2cfba866150a7df231512a4365bf14923d8882371ba5faee83263c3bd40b46b01e129046ee0a40d0b1db1861c",
-      "nullifier": "0xa5e4651b829a9fb96a5d3f95efde4b78ad87399d2fff4dfdb0d207ce1e86271e",
+      "vendorSig": "0xebf7ef00a9c7a95e2ac0279ea85db452c48cda203fe5fdfd5ea90ee000eb5fcf4ab42cbe3b4cf95d2eb9eadf606107e44caede66f8d3d28b5fae6ee3e859b78d1c",
+      "nullifier": "0x690043864f7cbdb3ea3c97a09f5f6f4b2f4505a65d23f208e4ea82e65d84448d",
       "reportId": "0x1a39cce2f5b6b41d3ed0bc08fffd9a3d0137e1e65d99dd515b52821e17142f4e"
     },
     {
@@ -1668,18 +1698,18 @@
       "billNo": 485,
       "label": "AMBER_SOCKPUPPET",
       "expected": "AMBER",
-      "vendorName": "Shree Supplies",
+      "vendorName": "Jai Bhavani Traders",
       "bill": {
-        "vendor": "0x3B42b9BB32448236712663b213Fd65B6bA9c82D2",
+        "vendor": "0x847E6c1B3CfB246FD26414dcFE1002D3cD24cfd2",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 485,
         "amountPaise": 18000000,
         "issuedAt": 1793106000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x23e92bb69aad59fb290a2e586ae8279414dc75839e45bd4ffb7b7726d8ce132b"
+        "itemsCommitment": "0xa583c762c15f75d5f3e85f81ec64795679bfdeeed3e0c560f040f46b5f4ccac3"
       },
-      "vendorSig": "0xb0cc473db1d97b7206f9654636e9bf4643d69e0e7654adeb6b360b87a64a2a59161fdc0aca83d2be5df7b1606cd24d5688bfdb7e0c675d8294a0b0738b1b8b2a1c",
-      "nullifier": "0x8f5332bafa7c5fa96c40f72976fddfa924aa3db93c5c8aa8d4666a577d45fe48",
+      "vendorSig": "0xb441f46132b1d38f9e5869be91648cad8c4e48def85fbf0d42af2fbe7000d1a336376dc801095b6088d8e304fa3947bd52132332cf251b10459c3eadd6e7505c1c",
+      "nullifier": "0xfdd0d613bc254b875417d92432cca956b0eb8f53e5521e51c3d307652dbe4143",
       "reportId": "0xf13a08dac4b1ddb9cd21e649e4217412652849d333f534c1968f1f9a25dc536c"
     },
     {
@@ -1687,18 +1717,18 @@
       "billNo": 486,
       "label": "AMBER_SOCKPUPPET",
       "expected": "AMBER",
-      "vendorName": "Shree Supplies",
+      "vendorName": "Jai Bhavani Traders",
       "bill": {
-        "vendor": "0x3B42b9BB32448236712663b213Fd65B6bA9c82D2",
+        "vendor": "0x847E6c1B3CfB246FD26414dcFE1002D3cD24cfd2",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 486,
         "amountPaise": 18000000,
         "issuedAt": 1793109600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xc06e23845cce9fa3a124f1aef1834716b62c6789b13806941084a4fb62178b51"
+        "itemsCommitment": "0x229f2731c78256de496c9effa4e7eafe197328c778bbd278b85d22f38d9867d5"
       },
-      "vendorSig": "0xe79bf803b3599f74ba6ae6123bbfc1c50a6c051648d10d7165f044b65514722d167404eb8b72ce0430382a5eecfe7127c7ab2debf1d71274ec99e7770c09a7061c",
-      "nullifier": "0xd07dee6dde0bfc1d00c88dcf5eb458b96b7712f392c7dcc46f7e321a450270d2",
+      "vendorSig": "0xe32e7225cce1a251bdcb5bc377cd8027d9a32e8b69d4750ac0c8f24672ce1de1367f176f6f1612385733f04de1981ae86857122f365de403d22895655a94fa191b",
+      "nullifier": "0x17523bf6dff2ddf1c3fe350f2756671e866e51abc982b8bf61fcacab5fd05c2a",
       "reportId": "0x059f07da6a4ba1c5c5d658f8f2247588e5418677090e852c6fe723dcd52bc19d"
     },
     {
@@ -1714,10 +1744,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793113200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xfec17a7404ffd6db70ff69f270a51a88892b455dd52770cc49c5385a54fd9558"
+        "itemsCommitment": "0xa03e0477436cbe819fefba61f2db8867c752bd2087acff003367ee3b1fe893da"
       },
-      "vendorSig": "0x91436c5ed7f2a0f93ec384bf9103026ebf7af0a2aec0216271175bbd3566503e1d00a9d6f8ed02d9c58aea07fe3b8b999147e757e131f7bd75f8108e48310e321c",
-      "nullifier": "0x0a7bb0b3858c98fe46fe476227c3b352c2a6cb332f5001a450bfe7b1b90d1e93",
+      "vendorSig": "0x095fa5cc4d0ed3f74afd259c0e226ffa1e1638fd816310fd890112ca7a34e09015835db45426021e18ed9cda028e7f76beed0080687a7ba20b82f88202d63bde1b",
+      "nullifier": "0xb62f0d945a82cb9e07c9d6db46babbb4ec0267872fb457e0e4559ebb6f5b43f0",
       "reportId": "0x23eabdbc518d6e60f221424ec313c95d17084989c7a1093845a2f13caf6003ac"
     },
     {
@@ -1725,18 +1755,18 @@
       "billNo": 488,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Sai Water Works",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 488,
         "amountPaise": 18000000,
         "issuedAt": 1793116800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xc01146a98ac5eb10055e9cbebeed36cb2c42e86d53d04c6269f58492b5c8e5bd"
+        "itemsCommitment": "0x1cef299b3b423e804669513618962a546e23b9fd212d17f064d0482482ce593a"
       },
-      "vendorSig": "0x7de1688ac71649883ad1cec00ae2ddfd63309b4cb41f573d94ff3849b9fa0fa7764dd5cebb59e5eb4b9b497fe8bf17f170603f69cefb9687c871ed4b011f10601b",
-      "nullifier": "0x1785546e3d14d358e3f9450ca5072a02e663f3281adc886c4d061ea2d7eedfe0",
+      "vendorSig": "0xf0a14555c9a010f8333fa6912d980d99247a289cf91259e5b22dd57a0f202c7f248617e2460edcb3eb1e78763345513bc55ca1d91666eed37fce6d7120f2511e1c",
+      "nullifier": "0xeb651b8e19834e4388cfbd8c784724fdbabad8f38e014edcd2e2b5660c46f2a0",
       "reportId": "0x11b62cec2e7734d40e1ea5c5f4427974fca768b231d6a88232a6a81439f812b0"
     },
     {
@@ -1752,10 +1782,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1793120400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xeb1ef87e9455e7940b7f8c37396ec860de24641881aef8b96c3f87850680960e"
+        "itemsCommitment": "0x2b0c1dc376e44f6b1006aba11b60e63cb9a0548a5e4d09d7d9c8581d06a87143"
       },
-      "vendorSig": "0x4ef40a3cb66224e1788cc0bd8520ab2c64ed2ec4b1edb13d6a6dd201b90126bd025809d466e97cf1ee73b3f7514d09513bc817c6da25bf83ac1f9531525d0fcb1c",
-      "nullifier": "0xa6327c32b9daac69cb5ce35ab1a62262ada1bb6eb07d62330b9544d222b5ecb0",
+      "vendorSig": "0xd7297c093b9035ad9bf8ead1bbc67cd15c9df5311b47560aa62cd69e279b3ba96c7dd91cced7ca69df6255ba273cc2a28da9fbc91538399db8ce60ac07f658911b",
+      "nullifier": "0x9d6feb620488faa5bfaaec3f851f4473b582f8db0ab8a855a4c738a7419b3ccc",
       "reportId": "0xed3631c7b80a7a77236aa14a322075745c9b347a90ead9dd4fd7572809a2f98d"
     },
     {
@@ -1763,18 +1793,18 @@
       "billNo": 490,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Shivaji Sanitation Co.",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xC51971b03669Cb62Fe3103652BC7Ea6bDfea902C",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 490,
         "amountPaise": 18000000,
         "issuedAt": 1793124000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xb4ed29461fbbd9d2af49367c55eee20bb1b570190589b33480585c6dd252e442"
+        "itemsCommitment": "0xce93beda86a4ff77562bb59665b157baee9532cef576dffa25feb01f04c3f14a"
       },
-      "vendorSig": "0x7fcdd953958b5c86e1b1b65b0df9a4cd82c488204e36cef9f9aa2e813c4a880d359d31a76916876c4d21be2cb0f56f1b43a04b2e38acd91d8904a2d64bbbeb981b",
-      "nullifier": "0xd2981b548591d372fc557abc380a9cf33d3e295a8ed69e98a66bef4eb19197c1",
+      "vendorSig": "0x064830aa70276dcf9ece680f8fbcf5796cf51a9ab8c1feb8726068ae26746cdd774bf1d8b7421f96abd7811285524db5c695e7af19c822002c5d7f05778bc6771b",
+      "nullifier": "0x1b7d4c3b00ac2ddc226cf3ce7ff3480913dc6b6a84a15543fca715213b899ec8",
       "reportId": "0x98b1436a9185e51aac603bf6de11541325cc6c4414217a912faa66a4e4622381"
     },
     {
@@ -1782,18 +1812,18 @@
       "billNo": 491,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Vidarbha Plumbing",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x4fc944003aa393f501b82d4ae4cE967521Ab253D",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 491,
         "amountPaise": 18000000,
         "issuedAt": 1793127600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x952c846f79143dddbd615772fea8bd2a41796e59de02011d55b13154662be536"
+        "itemsCommitment": "0x5d65ed6de6108e3c7312268ec5e7898ee15ad0eab8d3311c4af00fd8b5833706"
       },
-      "vendorSig": "0x64b51c606f86f10f17123c9b9bb7851d6fae544d067b856915b670da09bee50f5d4ea1eb14d1880e2568233576d7fb59efe3b0f7f7c12a7636b52aa5fd64cc881b",
-      "nullifier": "0x6f1a3c0cb8a11d51c02a7dc78b55e69efc82e20415deb9de2fbcaa0efe2ad849",
+      "vendorSig": "0xd28c96bf8193af7c84eb33f7f537dd5f8b0adf08027164caff9532f748a508921e10804061f97181b97770e53d44d13036677891375a10cf8d810f3b666bd08c1b",
+      "nullifier": "0x19e744abb2f310ae5931e6134e4be4ef04142c5556a02f19901ab30e9e65e067",
       "reportId": "0x67788573e6e005df3477f6b93db60422cc198bc4705e010c658579c472625e62"
     },
     {
@@ -1801,18 +1831,18 @@
       "billNo": 492,
       "label": "AMBER_SOCKPUPPET",
       "expected": "AMBER",
-      "vendorName": "Shree Supplies",
+      "vendorName": "Om Enterprises",
       "bill": {
-        "vendor": "0x3B42b9BB32448236712663b213Fd65B6bA9c82D2",
+        "vendor": "0xB933EF914f1210BA355E07C1D125E809d0D6E969",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 492,
         "amountPaise": 18000000,
         "issuedAt": 1793131200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xa0412438ad33778f4fc4daf3b64eaaf16688de7b2e64ed22f15e5e7b15014c19"
+        "itemsCommitment": "0x8a44790f1bc91c15fb16021403f009c53689a7a18a8bac95a3e4a79c894eebd6"
       },
-      "vendorSig": "0xd230926d730642030be3c814e761ecdc46c9ad05f54e4b4bdb65cf621f24ad457512d2868275c736a0d81ac6ecc602f436f4bab73298b131aec73cae0a6015c81c",
-      "nullifier": "0x0ff81dcf2ee7a15ee68385d38ee94d0e04e2bd9f5e0b53bfde0c867bd6e5f36d",
+      "vendorSig": "0x77a1e3964ba219930b063e50e628682275833749139760279fffaa8787894db25978a82c390169e06f84a1bb744dcd568cfdbf4dbc790f3f2e1e78ee5ae018ce1b",
+      "nullifier": "0x615ccb2a7c0a718e1eafe83706792901ea900df8321f97d3106efcb01cb18a69",
       "reportId": "0x0103a74a50d9a8efe9944ce7f366083234aae8b9dd6dd88fbf0e66cc56ae9bc3"
     },
     {
@@ -1828,10 +1858,10 @@
         "amountPaise": 19000000,
         "issuedAt": 1793134800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xc9f9e266c40134952420aaf765eb89824c8709134dc342a1edd84b97b907cdcf"
+        "itemsCommitment": "0xb0d766a33301d53d9e147857dc3132ec5e9a55e8328251e5c9aff7f81946a5cc"
       },
-      "vendorSig": "0x44ae207c0813c6842c538b0bfc7f6c4b816dfb8e2fedf38d60de66a6b5345e034550fdfa0f82e486790ee105a90c2f1603748bd5d27a14d03a59e76ce4ff80521b",
-      "nullifier": "0xbc7749e1e1aac691522562b197494301bec2f72b61616dd2ffc0bc8dc63bbb8a",
+      "vendorSig": "0xa74d2892e8edf06e4df95f34d2b0200b35d7b03af09624cf3e1ff2b18245927c36d7034477324b1940992565f5f7c6c928c94ef751990f22351f794b06a1025f1c",
+      "nullifier": "0xd70aa369ead9589d270c4f7942270817cb29a671019962ca67b2d4d6d7351343",
       "reportId": "0xc30f05727068c8c9ff544cb148fbf4ac4072eaac14c4cba62d65270d72ba1786"
     },
     {
@@ -1839,18 +1869,18 @@
       "billNo": 494,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Mahalaxmi Agro Supplies",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x89FEB1e9c520Ff5083DCE5358C0Dff0A15E3A8c7",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 494,
         "amountPaise": 18000000,
         "issuedAt": 1793138400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xae8634c9b87e06625697f9939e6a7ec935670c5d7e9b92377d0072643460384f"
+        "itemsCommitment": "0xe95c8b1219800f756718b216a1ea5dab717b55b9879b7b9b85a6fc9f8e54bfe7"
       },
-      "vendorSig": "0x84d9b4a512479a1b667480a27645727069d8d522b1b5ff833c151da6e09b837b5802320e7471d6aa9e761c1e63d2229f3f17ce6932c419fc9e26f0b4fea443261b",
-      "nullifier": "0xec75c9b86f772a23a79898a647be1eefbb316aab48cea23c044241d78f61b682",
+      "vendorSig": "0x6e4132b97458d95f0a9158b493b4ed619a3b53cbf04d273ae005c6a99b20c81558f13fa6617141ca3f4b92aca2d15207c7b34945b1925a027a4d85d5ba21ffdf1b",
+      "nullifier": "0x18e9d599ab2178690917f2d69c8fc2f9e5642d593f2687ff2925911cba86bb97",
       "reportId": "0x21cf484de8dd6794df0c1be5cda53b08fbf81288d5d29b9a2acb011daf86dded"
     },
     {
@@ -1858,18 +1888,18 @@
       "billNo": 495,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Ramesh Hardware",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x13ED931D1757cc871F465ab98d42C77DFB60c339",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 495,
         "amountPaise": 18000000,
         "issuedAt": 1793142000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xf28fd9bb9d6e0289703adf86a4e09ce352fff59044efcb7edf893c6f7d72324e"
+        "itemsCommitment": "0xef44b8a5b333b327185396289ae9ef5964de861fdac3e304bb209033fa9ccffd"
       },
-      "vendorSig": "0x90daccadc84cc6766150ee1daf5b931bfbb37a246cdfd1021bd0741b7af6f73060583cd271a96e1e3c4351a703483c2fcdb104b18bb3121f2eb01d6202b5ffc41c",
-      "nullifier": "0xbf09322ca43e428f3d7fbea26f072b50be29fabeb0ddfc042de35ef052ad146e",
+      "vendorSig": "0x95d5199d6b2f44dd3d724e3483965d404390e8aebea3bd39bd45b3507086434a5e5cdf9aaa1021da616daa005f4902748c8482531e891cc7ac55ba6f6db177681b",
+      "nullifier": "0x76b996500535c7a09f735b63adfe2f574916d4c769347ce4fcc40619e9bd1f49",
       "reportId": "0x32eed51b8bd151756776e871821b9f99957349a7330c6f04f5aeceafc37263c7"
     },
     {
@@ -1877,18 +1907,18 @@
       "billNo": 496,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Nagpur Tools",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x53905A4A49cD25fA520114c34a4405cb285173dD",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 496,
         "amountPaise": 18000000,
         "issuedAt": 1793145600,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x32d26bc73b874a2eee715cc3a3b9669254de39640cf6f1b8302fceb5e156d1d1"
+        "itemsCommitment": "0x7a42fb8fec29c448a0dd192e7c2a8e878853f7dc55268726ec05e70e8c0f6cee"
       },
-      "vendorSig": "0xeffddcad97b7e5e9e6bc0e9454f5948fe199b46aa4ad4030e80de4bd1302abc1299c8f540ff84256d3a2e015e25c89291fb86bc934b3602fdeceb42f4364e3871b",
-      "nullifier": "0x875ffc66594c248a507969c9831cdb47a75be82511ccbb3c48ac60b065f5c80e",
+      "vendorSig": "0x90d58687671f81695be25dec53e1394d80479d1d06607d4c8c8c101480b79a3a1a0dfb4504080d4746e3239a2b2af00fb359c1dcc196e23318a41230fba2b87e1b",
+      "nullifier": "0x239b8d78539b3c28c36f955f97e508dff6dc94b7ad4f3d0919b2ffa8d5084431",
       "reportId": "0xf774889e24c14b270226f9d4152687fdcaa30dfad3fb3a03551c6d28199070b7"
     },
     {
@@ -1896,18 +1926,18 @@
       "billNo": 497,
       "label": "GENUINE",
       "expected": "GREEN",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Gupta Cement",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0x6C572a7c6668B28aa707AB0Db4e39c671b3f8735",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 497,
         "amountPaise": 18000000,
         "issuedAt": 1793149200,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x6b7b51b1a594d67fbdbc10d08525f2ecfda2c4900759494c307c1e3e628bbeff"
+        "itemsCommitment": "0x45380a05cde97fc32df3cf527649944a89cc2c5407bc44bd0430ea3e66350297"
       },
-      "vendorSig": "0x30e84e7c94bf3df7ba09b3ac89bf078792cb259498307b51ceac50620691343a63457aa43220bbc83774facf571f85ae4df86df6651fc94cd50b857ac81be70c1b",
-      "nullifier": "0x57c5c43ac1aff29de95d2635e07836f19860b83da96cda36ebf1a95884c03d5e",
+      "vendorSig": "0xd82e90497c42069f58b5a8d10f4b9e15a376316c3ddfda9796e2633b37db41c327270b071b34382fff7ab4d15ef2648f643b725ff7d6850254bdda9fd598d8fe1b",
+      "nullifier": "0x6b1ba18887c516c897f0c9afdcd4efb5b0ba4a09a211a772f94f41b87822c451",
       "reportId": "0xbf7725a20d313771852804279845aa44c2337f985fabbf51bf5fb0188ca8961a"
     },
     {
@@ -1923,10 +1953,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793152800,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x52521467c40030c3f8947c5c0b4e8606b1e0c994ec81c098f4216068eea3f1a5"
+        "itemsCommitment": "0xe6f52d42aa4d4636878214a7f7ae05ff8d191281000ca9fba0ce9799e6b14e8b"
       },
-      "vendorSig": "0x1042790fc59d4a53e56734be8a48617827b6f714245da22d1acbf10c215a9d49213238cc484fb11e38eb44ba63d958a21bbb1b0cd2d01761d5a201888940a22f1c",
-      "nullifier": "0x5bff6dec1fd467ea8e20563c83dc740fad387e5c6cf842e839c5020e7d0b45f6",
+      "vendorSig": "0xc3d9b089b91fad27ca09151383d71c4938b2d672d3545454de05cf92facac7d04c3b7f60f12a03b7c2a6e311fa521108b2bf0041d2c2ecde61ae708e1a6ed9c91b",
+      "nullifier": "0x6ba0e6c0d8e79e17967bff4500be09b37ec0b95f892239a245227a62f6b154c4",
       "reportId": "0xec667f135ce2a1af83e1a7a8db953db685f1faea850349ad37deae1c57cbab69"
     },
     {
@@ -1934,18 +1964,18 @@
       "billNo": 499,
       "label": "FORGED_EDITED_AMOUNT",
       "expected": "FORGED",
-      "vendorName": "Lakshmi Pipes",
+      "vendorName": "Sai Water Works",
       "bill": {
-        "vendor": "0x3F9B69B5f98133dD329C55a213050003B4189DD8",
+        "vendor": "0xEe3A54050593356DA402faB08191e3f7f883CE79",
         "buyerNGO": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
         "billNo": 499,
         "amountPaise": 19000000,
         "issuedAt": 1793156400,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0xd2caeea23a059d9320217c95e63ded43dfc7b20023bf4eeaa348615307578f4b"
+        "itemsCommitment": "0xb5e88cbc12fe0785fb066e32cccfa73a4731f53e448ccd8122403ae051782d7e"
       },
-      "vendorSig": "0x41cb9de4a36f5a07d754cc43fab1c484bd458b545669edc07ab1d9757aa4702e78bf5f30e13493280d57170be1dadc6efb8189f7b13e8129843bb3cf3ec2fa381b",
-      "nullifier": "0x2567a50dc996498b27f53e4d96001669c952a8bf49b98d653d574a16a253a57e",
+      "vendorSig": "0x8b8b9f87d1224843932351cffe444b9315f42622d059e5e56668f14aec01632848a7488e61dfd285dff13a716e790c4a253ce8a670ff7a099d03799084c2ef861b",
+      "nullifier": "0xaf699329e1679f0f1228905e8ad98b54b5653ac9e3e475b42c1484bffe6b700c",
       "reportId": "0x52cd909ca6d95216f6dd7e5ac03516312dce5c4c05fed5aeb5b3dd1d1b5c5a2e"
     }
   ],
@@ -1963,10 +1993,10 @@
         "amountPaise": 18000000,
         "issuedAt": 1793160000,
         "category": "0x9adecaf25b3c35d4e7a76a0173d42d1ab4288c9a4d5e284038214365835af808",
-        "itemsCommitment": "0xfeee93db4a2258f50e88e350d2cfc269be5af7677ddb3007a0d3e36452fcb0e2"
+        "itemsCommitment": "0xa8c96c18ce14aa4cefe4e1a8c434592850ee5785bbd8350dc7e6b165a7c43e2f"
       },
-      "vendorSig": "0x3070e50be8eb07db1425d11c7dc608293a2e7c77dbe160645d532afe2ecd6e0b763b8b159d64b061cc0d7864112cb07b8bc837c09a07152d6d4daabf5800632e1c",
-      "nullifier": "0x0a3a37c04d933d0b5bfa42fc04b169816ed67b961a7c8018faffaf2968e42c76",
+      "vendorSig": "0x512ddd28a456abcd76a69a9d060c7edb732e576e63920cfd3e39acfd36c07fbf04f09eaa0c91ce42e11397b620b2a50dfbec7b685e7238c2791e9bacecf56b311b",
+      "nullifier": "0x72801d092416331198d601f1a5ad8180934665ee7e71575b1e10054abeef2112",
       "reportId": "0xa974fb988e869fa2a1c9294800e406c328fd20e541bc5db287fdff5cb8c8b182"
     },
     {
@@ -1982,10 +2012,10 @@
         "amountPaise": 4000000,
         "issuedAt": 1794240000,
         "category": "0xfc537d9e4bde227edd89e019b0b5604ae1430156fc4d49df1292e6a77867723b",
-        "itemsCommitment": "0x53661bd50fc62bc6bf1b3a6c1e39584525a8643116b70f32ef57540fbb35cf6f"
+        "itemsCommitment": "0xa4ce0c665e5d4d60cdafbab84023479833ffa4c59d554aaebca186c73591ecdc"
       },
-      "vendorSig": "0x6be680825b7bac8ba842e322c7442930ab42be6fd44e467e2ff2928ae826c673443019ea916c4c815f077b7541b3e2c7ee30bd125389f1f51a774d1e490b74b71b",
-      "nullifier": "0x647cabbf17ed33adc3dcef4afbb265860369191005dc7af7754831909fb0368c",
+      "vendorSig": "0xfec568919173b7cffb9ff1e04c307900a1cc4613e432b76844efb5db778a477e6a1d3a861e39adc3a1625dd54193dd7525810f38b2f663f31ecfc5e0f88e3a3e1b",
+      "nullifier": "0x972ea7f8193cc89c2da40bf2f4e3015442b7353dc52c8a10ba4f6a9c3dad2e35",
       "reportId": "0xad64d547c83a901b1dc77a2b6504b5b55a19390b27465ae80b086c0b84d5f905"
     }
   ]
