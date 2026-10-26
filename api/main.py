@@ -11,6 +11,7 @@ import json
 import os
 import subprocess
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
@@ -40,12 +41,14 @@ PLEDGED_PAISE = 2_300_000_000  # §2 synthetic pledge figure (₹2.30 cr)
 NGO_IDX = 1  # §9: NGO = anvil #1 (signs allocations)
 RELAYER_IDX = 9  # any funded account can submit release; #9 is the attacker account in forge30
 PUBLIC_BILL_FIELDS = ("billId", "billNo", "vendorName", "amountPaise", "verdict", "tier", "recoveredSigner", "reason")
+VERDICT_TTL_SECONDS = 5.0
 
 DEFAULT_DEPLOYMENTS = ROOT / "contracts" / "deployments.json"
 DEFAULT_BILLS = ROOT / "sim" / "fixtures" / "bills.json"
 DEFAULT_SNAPSHOT = ROOT / "sim" / "fixtures" / "snapshot.json"
 DEFAULT_EVAL = ROOT / "sim" / "fixtures" / "eval.json"
 WEB_INDEX = ROOT / "web" / "index.html"
+WEB_APP_DIR = ROOT / "web" / "app"
 WEB_EXPERIMENTAL_DIR = ROOT / "web" / "experimental-addons" / "ui"
 
 
@@ -99,6 +102,26 @@ def create_app(
     def bill_entries() -> list[dict]:
         return _read_json(bills)["bills"]
 
+    # verdicts() does one eth_call per vendor plus a block fetch, and the page
+    # polls /api/state every 2s. Without a cache those stack up and the UI looks
+    # hung. Verdicts only change when the chain or fixture does, so a short TTL
+    # is enough to keep polling cheap; reset() and the attack routes clear it.
+    verdict_cache: dict[str, Any] = {"at": 0.0, "key": None, "value": {}}
+    # recover_bill_signer is ~5ms and /api/bills runs it for all 100 bills on
+    # every 2s poll. The result is pure (bill + sig in, address out), so memoize.
+    signer_cache: dict[tuple[str, str], str] = {}
+
+    def _recovered_signer(entry: dict) -> str:
+        key = (entry["billId"], entry["vendorSig"])
+        got = signer_cache.get(key)
+        if got is None:
+            got = recover_bill_signer(entry["bill"], entry["vendorSig"])
+            signer_cache[key] = got
+        return got
+
+    def clear_verdict_cache() -> None:
+        verdict_cache["at"] = 0.0
+
     def verdicts(dep: dict | None, entries: list[dict]) -> dict[str, dict]:
         """Verdict per billNo from verifier/verify.py (Block 14). Empty until that module exists."""
         try:
@@ -107,6 +130,9 @@ def create_app(
             return {}
         if dep is None or "31337" not in dep["chains"]:
             return {}
+        key = (str(deployments), len(entries), entries[0]["billNo"] if entries else None)
+        if verdict_cache["key"] == key and time.monotonic() - verdict_cache["at"] < VERDICT_TTL_SECONDS:
+            return verdict_cache["value"]
         w3 = web3_for(dep, 31337)
         registry = contract(w3, dep["chains"]["31337"]["registry"], "VendorRegistry")
         vendors = {}
@@ -118,7 +144,9 @@ def create_app(
             if enrolled_at:
                 vendors[addr] = {"name": name, "enrolledBy": enrolled_by, "enrolledAt": enrolled_at}
         now = w3.eth.get_block("latest")["timestamp"]
-        return {str(e["billNo"]): verify_bill(e, vendors, dep["registrar"], now) for e in entries}
+        result = {str(e["billNo"]): verify_bill(e, vendors, dep["registrar"], now) for e in entries}
+        verdict_cache.update({"at": time.monotonic(), "key": key, "value": result})
+        return result
 
     def chain_state(dep: dict, chain_id: str) -> dict:
         chain = dep["chains"].get(chain_id, {})
@@ -161,6 +189,9 @@ def create_app(
 
     # Mount experimental UI static files
     app.mount("/experimental", StaticFiles(directory=str(WEB_EXPERIMENTAL_DIR)), name="experimental")
+
+    # Mobile-first vendor view, used by the Android WebView app.
+    app.mount("/app", StaticFiles(directory=str(WEB_APP_DIR), html=True), name="app")
 
     @app.get("/api/health")
     def health() -> dict:
@@ -213,7 +244,7 @@ def create_app(
                 "amountPaise": e["bill"]["amountPaise"],
                 "verdict": v.get("verdict"),
                 "tier": v.get("tier"),
-                "recoveredSigner": recover_bill_signer(e["bill"], e["vendorSig"]),
+                "recoveredSigner": _recovered_signer(e),
                 "reason": v.get("reason"),
             }
             rows.append({k: row[k] for k in PUBLIC_BILL_FIELDS})
@@ -225,6 +256,7 @@ def create_app(
 
     @app.post("/api/release")
     def release(body: ReleaseBody) -> dict:
+        clear_verdict_cache()
         dep = load_dep()
         chain_key = str(body.chainId)
         if chain_key not in dep["chains"]:
@@ -265,10 +297,12 @@ def create_app(
 
     @app.post("/api/attack/forge30")
     def attack_forge30() -> dict:
+        clear_verdict_cache()
         return _run_cli(["-m", "sim.attacks.forge30", "--deployments", str(deployments), "--bills", str(bills)])
 
     @app.post("/api/attack/double-claim")
     def attack_double_claim(body: DoubleClaimBody) -> dict:
+        clear_verdict_cache()
         return _run_cli([
             "-m", "sim.attacks.double_claim",
             "--billNo", str(body.billNo),
@@ -278,6 +312,7 @@ def create_app(
 
     @app.post("/api/watcher/scan")
     def watcher_scan() -> dict:
+        clear_verdict_cache()
         return scan_once(str(deployments))
 
     @app.post("/api/reset")
@@ -291,6 +326,7 @@ def create_app(
         """
         dep = load_dep()
         snap = _read_json(snapshot)
+        clear_verdict_cache()
         reverted: list[str] = []
         stale: list[str] = []
 
