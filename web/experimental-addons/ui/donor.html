@@ -313,9 +313,11 @@ function renderTransparency() {
   const tbody = document.getElementById('transparency-table');
   tbody.innerHTML = '';
   billsList.forEach(b => {
-    const verdictClass = b.verdict === 'GREEN' ? 'green' : b.verdict === 'AMBER' ? 'orange' : b.verdict === 'RED' ? 'red' : 'gray';
+    // Verdicts from /api/bills: GREEN, AMBER, FORGED, UNKNOWN.
+    const verdictClass = b.verdict === 'GREEN' ? 'green' : b.verdict === 'AMBER' ? 'orange' : (b.verdict === 'FORGED' || b.verdict === 'UNKNOWN') ? 'red' : 'gray';
     const verdictLabel = b.verdict || 'PENDING';
-    const chainLabel = b.billId.includes('31337') ? 'Chain A' : 'Chain B';
+    // /api/bills has no chain field; the demo releases on Chain A (31337).
+    const chainLabel = 'Chain A';
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td style="font-weight:600;">#${b.billNo}</td>
