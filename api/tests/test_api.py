@@ -37,6 +37,13 @@ def test_bills_returns_public_fields_only(client):
         assert set(row) == PUBLIC_KEYS
 
 
+def test_root_serves_the_demo_page_not_the_experimental_ui(client):
+    # Plan 8f: GET / is web/index.html. The role-selection UI lives under /experimental.
+    page = client.get("/").text
+    assert "<title>CREDIUM Demo</title>" in page
+    assert client.get("/experimental/index.html").status_code == 200
+
+
 def test_bills_is_a_bare_list_for_the_frontend(client):
     # web/index.html calls list.forEach on the response body directly.
     assert isinstance(client.get("/api/bills").json(), list)

@@ -46,7 +46,6 @@ DEFAULT_BILLS = ROOT / "sim" / "fixtures" / "bills.json"
 DEFAULT_SNAPSHOT = ROOT / "sim" / "fixtures" / "snapshot.json"
 DEFAULT_EVAL = ROOT / "sim" / "fixtures" / "eval.json"
 WEB_INDEX = ROOT / "web" / "index.html"
-WEB_EXPERIMENTAL = ROOT / "web" / "experimental-addons" / "ui" / "index.html"
 WEB_EXPERIMENTAL_DIR = ROOT / "web" / "experimental-addons" / "ui"
 
 
@@ -158,7 +157,7 @@ def create_app(
 
     @app.get("/")
     def index() -> FileResponse:
-        return FileResponse(WEB_EXPERIMENTAL)
+        return FileResponse(WEB_INDEX)
 
     # Mount experimental UI static files
     app.mount("/experimental", StaticFiles(directory=str(WEB_EXPERIMENTAL_DIR)), name="experimental")
