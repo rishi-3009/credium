@@ -226,7 +226,11 @@ def main() -> None:
 
     public_obj = {
         "simulated": True,
-        "vendors": VENDORS,
+        "vendors": [
+            {"name": v["name"], "address": synthetic_account("vendor:" + v["name"])["address"],
+             "tier": v["tier"]}
+            for v in VENDORS
+        ],
         "bills": public_bills,
         "extras": public_extras,
     }
